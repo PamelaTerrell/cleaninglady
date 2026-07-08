@@ -15,6 +15,12 @@ export default function Home() {
           Super Cleaning Lady
         </p>
 
+        <img
+          src="/super-spray-hero.png"
+          alt="Super Cleaning Lady spray bottle superhero mascot"
+          className="mb-8 w-44 drop-shadow-xl md:w-60"
+        />
+
         <h1 className="max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
           Saving homes from dust, clutter, and chaos.
         </h1>
@@ -31,8 +37,6 @@ export default function Home() {
           >
             Start a Mission
           </a>
-
-          
         </div>
       </section>
 
@@ -50,7 +54,7 @@ export default function Home() {
             {missions.map((mission) => (
               <div
                 key={mission}
-                className="rounded-3xl border border-[#eadcc8] bg-[#fffaf2] p-6 shadow-sm"
+                className="rounded-3xl border border-[#eadcc8] bg-[#fffaf2] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
               >
                 <h3 className="text-2xl font-black">{mission}</h3>
                 <p className="mt-3 text-[#6a5a4b]">
