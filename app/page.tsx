@@ -1,37 +1,45 @@
+import Link from "next/link";
 import Footer from "@/components/Footer";
 
 
 const missions = [
   {
     title: "Kitchen Rescue",
+    href: "/missions/kitchen-rescue",
     description:
       "For when the counters have disappeared and the sink is staging a rebellion.",
   },
   {
     title: "Bathroom Reset",
+    href: "#",
     description:
       "Because the mirror should not look like it survived a toothpaste explosion.",
   },
   {
     title: "Laundry Mountain",
+    href: "#",
     description: "Scale the pile. Find the floor. Become the legend.",
   },
   {
     title: "Closet Chaos",
+    href: "#",
     description:
       "Enter bravely. Sort ruthlessly. Try not to awaken the shoe avalanche.",
   },
   {
     title: "Company’s Coming",
+    href: "#",
     description:
       "The emergency clean for when someone texts, “We’re five minutes away.”",
   },
   {
     title: "One-Bag Declutter",
+    href: "#",
     description:
       "One bag. One mission. Fewer things silently judging you from the corner.",
   },
 ];
+ 
 
 const villains = [
   "The Dish Goblin",
@@ -102,16 +110,22 @@ export default function Home() {
 
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {missions.map((mission) => (
-              <div
-                key={mission.title}
-                className="rounded-3xl border border-[#eadcc8] bg-[#fffaf2] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
-              >
-                <h3 className="text-2xl font-black">{mission.title}</h3>
-                <p className="mt-3 leading-7 text-[#6a5a4b]">
-                  {mission.description}
-                </p>
-              </div>
-            ))}
+  <Link
+    key={mission.title}
+    href={mission.href}
+    className="block rounded-3xl border border-[#eadcc8] bg-[#fffaf2] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+  >
+    <h3 className="text-2xl font-black">{mission.title}</h3>
+
+    <p className="mt-3 leading-7 text-[#6a5a4b]">
+      {mission.description}
+    </p>
+
+    <p className="mt-5 text-sm font-black uppercase tracking-[0.18em] text-[#b48635]">
+      Open Mission →
+    </p>
+  </Link>
+))}
           </div>
         </div>
       </section>
