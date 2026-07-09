@@ -1,3 +1,6 @@
+import Footer from "@/components/Footer";
+
+
 const missions = [
   {
     title: "Kitchen Rescue",
@@ -198,6 +201,7 @@ export default function Home() {
           </p>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }
