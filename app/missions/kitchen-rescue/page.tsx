@@ -66,7 +66,7 @@ export default function KitchenRescuePage() {
             <h2 className="mt-3 text-3xl font-black">Medium Chaos</h2>
             <p className="mt-4 leading-7 text-[#6a5a4b]">
               Not a disaster. Not peaceful. Somewhere between “I can fix this”
-              and “why is there a spoon in the living room?”
+              and “why is there a spoon in the living room? We don’t know. We don’t ask questions during rescue missions.”
             </p>
           </div>
 
