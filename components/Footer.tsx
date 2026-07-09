@@ -30,7 +30,7 @@ export default function Footer() {
         </div>
 
         <p className="mt-8 text-xs text-[#8a7866]">
-          © {new Date().getFullYear()} Super Cleaning Lady. Saving homes from
+          © {new Date().getFullYear()} Super Cleaning Lady. A Stabile USA Project. Saving homes from
           chaos, one suspicious sticky spot at a time.
         </p>
       </div>
