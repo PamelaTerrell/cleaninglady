@@ -1,10 +1,44 @@
 const missions = [
-  "Kitchen Rescue",
-  "Bathroom Reset",
+  {
+    title: "Kitchen Rescue",
+    description:
+      "For when the counters have disappeared and the sink is staging a rebellion.",
+  },
+  {
+    title: "Bathroom Reset",
+    description:
+      "Because the mirror should not look like it survived a toothpaste explosion.",
+  },
+  {
+    title: "Laundry Mountain",
+    description: "Scale the pile. Find the floor. Become the legend.",
+  },
+  {
+    title: "Closet Chaos",
+    description:
+      "Enter bravely. Sort ruthlessly. Try not to awaken the shoe avalanche.",
+  },
+  {
+    title: "Company’s Coming",
+    description:
+      "The emergency clean for when someone texts, “We’re five minutes away.”",
+  },
+  {
+    title: "One-Bag Declutter",
+    description:
+      "One bag. One mission. Fewer things silently judging you from the corner.",
+  },
+];
+
+const villains = [
+  "The Dish Goblin",
   "Laundry Mountain",
-  "Closet Chaos",
-  "Company’s Coming",
-  "One-Bag Declutter",
+  "The Doom Basket",
+  "Toothpaste Splatter",
+  "Crumbzilla",
+  "The Paper Pile of Despair",
+  "Mystery Sticky Spot",
+  "The Sock Portal",
 ];
 
 export default function Home() {
@@ -16,26 +50,34 @@ export default function Home() {
         </p>
 
         <img
-          src="/super-spray-hero.png"
+          src="/superhero-cleaning-bottle-mascot.png"
           alt="Super Cleaning Lady spray bottle superhero mascot"
           className="mb-8 w-44 drop-shadow-xl md:w-60"
         />
 
         <h1 className="max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
-          Saving homes from dust, clutter, and chaos.
-        </h1>
+  Your house isn’t messy. It’s just experiencing a plot twist.
+</h1>
 
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-[#6a5a4b] md:text-xl">
-          Cleaning motivation, room rescue missions, sparkle tricks, and real-life
-          resets for people who are tired of feeling buried by their own homes.
-        </p>
+<p className="mt-6 max-w-2xl text-lg leading-8 text-[#6a5a4b] md:text-xl">
+  Fighting dust, dishes, doom piles, and whatever that is under the couch —
+  with rescue missions for homes that are one sock pile away from becoming a
+  wildlife habitat.
+</p>
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
           <a
             href="#missions"
-            className="rounded-full bg-[#2f261f] px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white shadow-lg transition hover:-translate-y-1"
+            className="rounded-full bg-[#2f261f] px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
           >
             Start a Mission
+          </a>
+
+          <a
+            href="#villains"
+            className="rounded-full border border-[#d8c6ad] bg-white px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-[#2f261f] shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+          >
+            Meet the Villains
           </a>
         </div>
       </section>
@@ -43,22 +85,27 @@ export default function Home() {
       <section id="missions" className="bg-white px-6 py-20">
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
-            Choose Your Mission
+            Dispatch Center
           </p>
 
-          <h2 className="mt-3 text-4xl font-black md:text-5xl">
-            One room. One reset. One win at a time.
+          <h2 className="mt-3 max-w-4xl text-4xl font-black md:text-5xl">
+            One room. One reset. One tiny victory over chaos.
           </h2>
+
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
+            You do not need a perfect house. You need a starting point, a trash
+            bag, maybe some music, and the courage to face the doom pile.
+          </p>
 
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {missions.map((mission) => (
               <div
-                key={mission}
+                key={mission.title}
                 className="rounded-3xl border border-[#eadcc8] bg-[#fffaf2] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
               >
-                <h3 className="text-2xl font-black">{mission}</h3>
-                <p className="mt-3 text-[#6a5a4b]">
-                  A simple rescue plan for when this part of the house needs a hero.
+                <h3 className="text-2xl font-black">{mission.title}</h3>
+                <p className="mt-3 leading-7 text-[#6a5a4b]">
+                  {mission.description}
                 </p>
               </div>
             ))}
@@ -66,7 +113,73 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="printables" className="px-6 py-20">
+      <section id="villains" className="px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
+            Villains We Fight
+          </p>
+
+          <h2 className="mt-3 max-w-4xl text-4xl font-black md:text-5xl">
+            Every home has enemies. Some are sticky.
+          </h2>
+
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
+            Some villains live in the sink. Some multiply in laundry baskets.
+            Some hide under furniture and answer to “crumbs.” Super Cleaning Lady
+            believes no villain is too ridiculous to name and defeat.
+          </p>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {villains.map((villain) => (
+              <div
+                key={villain}
+                className="rounded-2xl border border-[#eadcc8] bg-white p-5 text-center font-black shadow-sm"
+              >
+                {villain}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-6 py-20">
+        <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-3">
+          <div className="rounded-[2rem] bg-[#fffaf2] p-8 shadow-sm">
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
+              10-Minute Rescue
+            </p>
+            <h3 className="mt-4 text-3xl font-black">For when motivation is missing.</h3>
+            <p className="mt-4 leading-7 text-[#6a5a4b]">
+              Pick one tiny area, set a timer, and do not negotiate with the
+              clutter. The clutter has had enough chances.
+            </p>
+          </div>
+
+          <div className="rounded-[2rem] bg-[#fffaf2] p-8 shadow-sm">
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
+              Emergency Clean
+            </p>
+            <h3 className="mt-4 text-3xl font-black">For surprise visitors.</h3>
+            <p className="mt-4 leading-7 text-[#6a5a4b]">
+              The doorbell is not a drill. Hide the chaos, wipe the obvious,
+              light a candle, and act natural.
+            </p>
+          </div>
+
+          <div className="rounded-[2rem] bg-[#fffaf2] p-8 shadow-sm">
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
+              Good Enough Glory
+            </p>
+            <h3 className="mt-4 text-3xl font-black">For real-life homes.</h3>
+            <p className="mt-4 leading-7 text-[#6a5a4b]">
+              We are not polishing ceiling fans with a toothbrush today. We are
+              reclaiming peace and possibly the dining room table.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="no-shame" className="px-6 py-20">
         <div className="mx-auto max-w-4xl rounded-[2rem] bg-[#2f261f] p-10 text-white shadow-2xl">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#f4dfb4]">
             No shame. No perfection.
@@ -77,9 +190,11 @@ export default function Home() {
           </h2>
 
           <p className="mt-5 text-lg leading-8 text-[#f7ead6]">
-            I’m Pamela, and I believe cleaning does not have to feel like punishment.
-            Sometimes it can feel like power. Super Cleaning Lady is where home care
-            meets humor, sparkle, survival, and a little bit of superhero energy.
+            I’m Pamela, and I believe cleaning does not have to feel like
+            punishment. This is not a place for perfect pantries, judgmental
+            baseboards, or people who fold fitted sheets for fun. Super Cleaning
+            Lady is for real homes, real messes, and tiny victories that still
+            count.
           </p>
         </div>
       </section>
