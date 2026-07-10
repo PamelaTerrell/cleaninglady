@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Footer from "@/components/Footer";
 
 const quickSteps = [
   "Remove trash, empty bottles, and anything that has been living on the counter rent-free.",
@@ -195,6 +196,7 @@ export default function BathroomResetPage() {
           </Link>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

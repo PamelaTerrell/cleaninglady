@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Footer from "@/components/Footer";
 
 const quickSteps = [
   "Throw away the obvious trash. Do not interview every receipt.",
@@ -195,6 +196,7 @@ export default function KitchenRescuePage() {
           </Link>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

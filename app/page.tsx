@@ -28,7 +28,7 @@ const missions = [
   },
   {
     title: "Company’s Coming",
-    href: "#",
+    href: "/missions/companys-coming",
     description:
       "The emergency clean for when someone texts, “We’re five minutes away.”",
   },

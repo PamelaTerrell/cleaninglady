@@ -2,32 +2,32 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 
 const quickSteps = [
-  "Pick up everything on the closet floor. Yes, the floor is still in there somewhere.",
-  "Remove anything that obviously does not belong in the closet. The coffee mug has no alibi.",
-  "Choose five items to donate, toss, or relocate. Five. We are not filming a makeover show.",
-  "Line up shoes enough to prevent a toe-stubbing incident.",
-  "Close the closet door with dignity, not panic.",
+  "Grab a laundry basket and collect random items from visible surfaces. This is not organizing. This is witness protection.",
+  "Clear the entryway so guests do not immediately know the house has been through something.",
+  "Wipe the bathroom sink and mirror. Guests always find the bathroom. They are talented that way.",
+  "Close doors to rooms that have chosen violence.",
+  "Light a candle or spray something pleasant. We are creating an atmosphere of competence.",
 ];
 
 const deepSteps = [
-  "Take out one section at a time. Do not empty the entire closet unless you enjoy danger.",
-  "Sort items into keep, donate, trash, and why-was-this-in-here.",
-  "Remove clothes that do not fit, do not flatter, or make you feel like a sad beige curtain.",
-  "Group similar items together so the closet stops acting like a mystery box.",
-  "Put shoes, bags, and accessories where they can be found by a normal human.",
-  "Take out donations or trash immediately before they sneak back into the closet.",
+  "Start at the front door and clean the path guests will actually see.",
+  "Clear the living room surfaces: coffee table, side tables, and any chair pretending to be storage.",
+  "Reset the bathroom with a clean hand towel, wiped sink, and toilet check.",
+  "Handle obvious kitchen chaos: dishes contained, counters wiped, trash removed.",
+  "Fluff pillows, straighten blankets, and remove anything that says, “we gave up Wednesday.”",
+  "Do a final walk-through like a secret agent protecting your reputation.",
 ];
 
 const supplies = [
-  "Trash bag",
-  "Donation bag or box",
-  "Hangers",
   "Laundry basket",
-  "Timer",
-  "Emotional support beverage",
+  "Trash bag",
+  "All-purpose cleaner",
+  "Clean hand towel",
+  "Candle or room spray",
+  "Calm face",
 ];
 
-export default function ClosetChaosPage() {
+export default function CompanysComingPage() {
   return (
     <main className="min-h-screen bg-[#fffaf2] text-[#2f261f]">
       <section className="mx-auto max-w-5xl px-6 py-16 text-center md:py-24">
@@ -45,16 +45,16 @@ export default function ClosetChaosPage() {
         />
 
         <p className="mt-8 text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
-          Mission File 004
+          Mission File 005
         </p>
 
         <h1 className="mx-auto mt-4 max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
-          Closet Chaos
+          Company’s Coming
         </h1>
 
         <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#6a5a4b] md:text-xl">
-          For when opening the closet door feels like disturbing a sleeping beast,
-          and one wrong move could trigger a shoe avalanche.
+          The emergency clean for when someone texts, “We’re five minutes away,”
+          and your home immediately enters a witness protection program.
         </p>
       </section>
 
@@ -64,10 +64,10 @@ export default function ClosetChaosPage() {
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
               Difficulty
             </p>
-            <h2 className="mt-3 text-3xl font-black">Hidden Disaster</h2>
+            <h2 className="mt-3 text-3xl font-black">Full Panic Mode</h2>
             <p className="mt-4 leading-7 text-[#6a5a4b]">
-              The room may look fine, but behind that door is a whole documentary
-              about delayed decisions.
+              Time is short. Standards are flexible. The goal is not perfection.
+              The goal is plausible deniability.
             </p>
           </div>
 
@@ -75,10 +75,10 @@ export default function ClosetChaosPage() {
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
               Time Needed
             </p>
-            <h2 className="mt-3 text-3xl font-black">10–45 Minutes</h2>
+            <h2 className="mt-3 text-3xl font-black">5–30 Minutes</h2>
             <p className="mt-4 leading-7 text-[#6a5a4b]">
-              Start with the floor or one shelf. The goal is progress, not a
-              closet that gets its own television special.
+              Whether you have five minutes or half an hour, we are cleaning only
+              what the visitors can see. This is strategy, not deceit.
             </p>
           </div>
 
@@ -86,10 +86,10 @@ export default function ClosetChaosPage() {
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
               Victory Goal
             </p>
-            <h2 className="mt-3 text-3xl font-black">Prevent the Avalanche</h2>
+            <h2 className="mt-3 text-3xl font-black">Look Surprisingly Fine</h2>
             <p className="mt-4 leading-7 text-[#6a5a4b]">
-              If you can open the door without flinching, ducking, or whispering
-              “please no,” this mission is working.
+              If guests walk in and do not immediately whisper “oh no,” this
+              mission has succeeded.
             </p>
           </div>
         </div>
@@ -103,7 +103,7 @@ export default function ClosetChaosPage() {
             </p>
 
             <h2 className="mt-4 text-4xl font-black">
-              Gather your closet-taming tools.
+              Gather your emergency-cleaning equipment.
             </h2>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -124,11 +124,11 @@ export default function ClosetChaosPage() {
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
           <div className="rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm md:p-10">
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
-              10-Minute Rescue
+              5-Minute Panic Clean
             </p>
 
             <h2 className="mt-4 text-4xl font-black">
-              For when the closet has started making threats.
+              For when the driveway has become a threat.
             </h2>
 
             <ol className="mt-8 space-y-4">
@@ -148,11 +148,11 @@ export default function ClosetChaosPage() {
 
           <div className="rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm md:p-10">
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
-              45-Minute Reset
+              30-Minute Emergency Reset
             </p>
 
             <h2 className="mt-4 text-4xl font-black">
-              For when you are ready to enter the danger zone.
+              For when there is still time to fake a lifestyle.
             </h2>
 
             <ol className="mt-8 space-y-4">
@@ -179,13 +179,13 @@ export default function ClosetChaosPage() {
           </p>
 
           <h2 className="mt-4 text-4xl font-black">
-            Congratulations. The closet is no longer a booby trap.
+            Congratulations. The house looks like adults live here.
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#6a5a4b]">
-            It does not need to look like a celebrity closet. If you found the
-            floor, removed a few questionable items, and reduced the chance of
-            being attacked by footwear, this mission counts.
+            It does not have to be spotless. If the bathroom is safe, the main
+            room is presentable, and the secret basket of chaos is hidden
+            somewhere reasonable, this mission counts.
           </p>
 
           <Link

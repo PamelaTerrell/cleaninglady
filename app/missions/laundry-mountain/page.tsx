@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Footer from "@/components/Footer";
 
 const quickSteps = [
   "Gather all laundry into one place. Yes, even the shirt on the chair that has become furniture.",
@@ -196,6 +197,7 @@ export default function LaundryMountainPage() {
           </Link>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }
