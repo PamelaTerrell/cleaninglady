@@ -34,7 +34,7 @@ const missions = [
   },
   {
     title: "One-Bag Declutter",
-    href: "#",
+    href: "/missions/one-bag-declutter",
     description:
       "One bag. One mission. Fewer things silently judging you from the corner.",
   },
