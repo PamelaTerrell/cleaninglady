@@ -42,14 +42,38 @@ const missions = [
  
 
 const villains = [
-  "The Dish Goblin",
-  "Laundry Mountain",
-  "The Doom Basket",
-  "Toothpaste Splatter",
-  "Crumbzilla",
-  "The Paper Pile of Despair",
-  "Mystery Sticky Spot",
-  "The Sock Portal",
+  {
+    name: "The Dish Goblin",
+    href: "#",
+  },
+  {
+    name: "Laundry Mountain",
+    href: "/missions/laundry-mountain",
+  },
+  {
+    name: "The Doom Basket",
+    href: "/villains/doom-basket",
+  },
+  {
+    name: "Toothpaste Splatter",
+    href: "/missions/bathroom-reset",
+  },
+  {
+    name: "Crumbzilla",
+    href: "/villains/crumbzilla",
+  },
+  {
+    name: "The Paper Pile of Despair",
+    href: "#",
+  },
+  {
+    name: "Mystery Sticky Spot",
+    href: "#",
+  },
+  {
+    name: "The Sock Portal",
+    href: "/missions/laundry-mountain",
+  },
 ];
 
 export default function Home() {
@@ -146,16 +170,17 @@ export default function Home() {
             believes no villain is too ridiculous to name and defeat.
           </p>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {villains.map((villain) => (
-              <div
-                key={villain}
-                className="rounded-2xl border border-[#eadcc8] bg-white p-5 text-center font-black shadow-sm"
-              >
-                {villain}
-              </div>
-            ))}
-          </div>
+         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+  {villains.map((villain) => (
+    <Link
+      key={villain.name}
+      href={villain.href}
+      className="rounded-2xl border border-[#eadcc8] bg-white p-5 text-center font-black shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+    >
+      {villain.name}
+    </Link>
+  ))}
+</div>
         </div>
       </section>
 
