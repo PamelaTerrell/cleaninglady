@@ -11,18 +11,18 @@ const missions = [
   },
   {
     title: "Bathroom Reset",
-    href: "#",
+    href: "/missions/bathroom-reset",
     description:
       "Because the mirror should not look like it survived a toothpaste explosion.",
   },
   {
     title: "Laundry Mountain",
-    href: "#",
+    href: "/missions/laundry-mountain",
     description: "Scale the pile. Find the floor. Become the legend.",
   },
   {
     title: "Closet Chaos",
-    href: "#",
+    href: "/missions/closet-chaos",
     description:
       "Enter bravely. Sort ruthlessly. Try not to awaken the shoe avalanche.",
   },
