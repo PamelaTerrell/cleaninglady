@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import { completeMission } from "@/app/actions";
 
 const quickSteps = [
   "Pick up everything on the closet floor. Yes, the floor is still in there somewhere.",
@@ -187,6 +188,17 @@ export default function ClosetChaosPage() {
             floor, removed a few questionable items, and reduced the chance of
             being attacked by footwear, this mission counts.
           </p>
+
+          <form action={completeMission} className="mt-8">
+  <input type="hidden" name="mission" value="kitchen-rescue" />
+
+  <button
+    type="submit"
+    className="rounded-full bg-[#2f261f] px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
+  >
+    I Survived This Mission
+  </button>
+</form>
 
           <Link
             href="/#missions"
