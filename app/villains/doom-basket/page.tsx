@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "The Doom Basket | Super Cleaning Lady",
+  description:
+    "Meet The Doom Basket, the mysterious container of random objects you meant to deal with later, before later became a lifestyle.",
+};
 
 const symptoms = [
   "You have a basket, bin, tote, chair, or bag full of things you were definitely going to deal with later.",

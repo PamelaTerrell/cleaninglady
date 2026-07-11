@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Mystery Sticky Spot | Super Cleaning Lady",
+  description:
+    "Meet Mystery Sticky Spot, the suspicious household villain that appears on counters, floors, handles, and places no one wants to discuss.",
+};
 
 const symptoms = [
   "Your hand touched something and immediately regretted it.",

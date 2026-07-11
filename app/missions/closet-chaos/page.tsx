@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import { completeMission } from "@/app/actions";
+
+export const metadata: Metadata = {
+  title: "Closet Chaos | Super Cleaning Lady",
+  description:
+    "A funny closet cleaning mission for when opening the door feels dangerous and the shoe avalanche risk is no longer theoretical.",
+};
 
 const quickSteps = [
   "Pick up everything on the closet floor. Yes, the floor is still in there somewhere.",

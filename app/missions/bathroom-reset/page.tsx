@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import { completeMission } from "@/app/actions";
+
+export const metadata: Metadata = {
+  title: "Bathroom Reset | Super Cleaning Lady",
+  description:
+    "A funny bathroom cleaning mission for when the mirror survived a toothpaste explosion and the sink area needs adult supervision.",
+};
 
 const quickSteps = [
   "Remove trash, empty bottles, and anything that has been living on the counter rent-free.",

@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import { completeMission } from "@/app/actions";
+
+export const metadata: Metadata = {
+  title: "Laundry Mountain | Super Cleaning Lady",
+  description:
+    "A funny laundry rescue mission for when the clothes have formed a landscape, the socks are missing, and the chair has become a closet.",
+};
 
 const quickSteps = [
   "Gather all laundry into one place. Yes, even the shirt on the chair that has become furniture.",

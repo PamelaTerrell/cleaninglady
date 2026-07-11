@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import { completeMission } from "@/app/actions";
+
+export const metadata: Metadata = {
+  title: "One-Bag Declutter | Super Cleaning Lady",
+  description:
+    "A funny decluttering mission for when you need one bag, one starting point, and fewer things silently judging you from the corner.",
+};
 
 const quickSteps = [
   "Grab one bag. Trash bag, donation bag, grocery bag — any bag that is willing to serve.",

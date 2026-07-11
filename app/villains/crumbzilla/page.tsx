@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Crumbzilla | Super Cleaning Lady",
+  description:
+    "Meet Crumbzilla, the tiny but mighty villain behind crunchy floors, couch mysteries, snack dust, and suspicious crumb communities.",
+};
 
 const symptoms = [
   "There are crumbs in places where no food was officially served.",

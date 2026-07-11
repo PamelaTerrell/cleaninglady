@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import { completeMission } from "@/app/actions";
+
+export const metadata: Metadata = {
+  title: "Company’s Coming | Super Cleaning Lady",
+  description:
+    "A funny emergency cleaning mission for when someone texts that they are five minutes away and the house needs plausible deniability.",
+};
 
 const quickSteps = [
   "Grab a laundry basket and collect random items from visible surfaces. This is not organizing. This is witness protection.",

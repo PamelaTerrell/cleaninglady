@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "The Paper Pile of Despair | Super Cleaning Lady",
+  description:
+    "Meet The Paper Pile of Despair, the stack of mail, receipts, forms, mystery notes, and official-looking envelopes quietly judging you.",
+};
 
 const symptoms = [
   "You have mail from three different emotional eras.",
