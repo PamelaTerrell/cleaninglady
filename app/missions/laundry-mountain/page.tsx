@@ -198,7 +198,7 @@ export default function LaundryMountainPage() {
           </p>
 
           <form action={completeMission} className="mt-8">
-  <input type="hidden" name="mission" value="kitchen-rescue" />
+  <input type="hidden" name="mission" value="laundry-mountain" />
 
   <button
     type="submit"

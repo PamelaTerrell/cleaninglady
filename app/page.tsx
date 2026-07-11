@@ -1,4 +1,5 @@
 import Link from "next/link";
+import MissionProgress from "@/components/MissionProgress";
 import Footer from "@/components/Footer";
 
 
@@ -115,7 +116,10 @@ export default function Home() {
             Meet the Villains
           </a>
         </div>
-      </section>
+      
+            </section>
+
+      <MissionProgress />
 
       <section id="missions" className="bg-white px-6 py-20">
         <div className="mx-auto max-w-6xl">

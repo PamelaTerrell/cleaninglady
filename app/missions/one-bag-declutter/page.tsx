@@ -197,7 +197,7 @@ export default function OneBagDeclutterPage() {
           </p>
 
           <form action={completeMission} className="mt-8">
-  <input type="hidden" name="mission" value="kitchen-rescue" />
+  <input type="hidden" name="mission" value="one-bag-declutter" />
 
   <button
     type="submit"
