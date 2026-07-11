@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import { completeMission } from "@/app/actions";
+
+export const metadata: Metadata = {
+  title: "Kitchen Rescue | Super Cleaning Lady",
+  description:
+    "A funny kitchen cleaning mission for when the counters have disappeared, the sink is staging a rebellion, and one spoon is somehow in the living room.",
+};
 
 const quickSteps = [
   "Throw away the obvious trash. Do not interview every receipt.",

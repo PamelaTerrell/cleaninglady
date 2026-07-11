@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "The Dish Goblin | Super Cleaning Lady",
+  description:
+    "Meet The Dish Goblin, the sink-dwelling villain behind dirty dishes, mystery drain goop, and pans that have been soaking long enough to receive mail.",
+};
 
 const symptoms = [
   "The sink is full, but no one remembers using that many bowls.",
