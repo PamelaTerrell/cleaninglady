@@ -44,7 +44,7 @@ const missions = [
 const villains = [
   {
     name: "The Dish Goblin",
-    href: "#",
+    href: "/villains/dish-goblin",
   },
   {
     name: "Laundry Mountain",
@@ -64,11 +64,11 @@ const villains = [
   },
   {
     name: "The Paper Pile of Despair",
-    href: "#",
+    href: "/villains/paper-pile-of-despair",
   },
   {
     name: "Mystery Sticky Spot",
-    href: "#",
+    href: "/villains/mystery-sticky-spot",
   },
   {
     name: "The Sock Portal",
