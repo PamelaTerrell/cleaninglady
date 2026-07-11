@@ -55,6 +55,7 @@ const villains = [
   {
     name: "The Doom Basket",
     href: "/villains/doom-basket",
+    image: "/doom-basket.png",
   },
   {
     name: "Toothpaste Splatter",

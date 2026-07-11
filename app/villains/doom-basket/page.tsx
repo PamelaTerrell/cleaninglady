@@ -72,6 +72,12 @@ export default function DoomBasketPage() {
           A mysterious container of random objects you planned to deal with
           “later.” Later has now become a lifestyle.
         </p>
+
+        <img
+  src="/doom-basket.png"
+  alt="The Doom Basket, a mischievous basket overflowing with random clutter"
+  className="mx-auto mt-10 w-56 drop-shadow-xl md:w-72"
+/>
       </section>
 
       <section className="bg-white px-6 py-16">
