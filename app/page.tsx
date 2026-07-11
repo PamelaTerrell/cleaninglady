@@ -61,10 +61,12 @@ const villains = [
   {
     name: "Toothpaste Splatter",
     href: "/missions/bathroom-reset",
+    image: "/toothpaste-splatter.png",
   },
   {
     name: "Crumbzilla",
     href: "/villains/crumbzilla",
+    image: "/crumbzilla.png",
   },
   {
     name: "The Paper Pile of Despair",

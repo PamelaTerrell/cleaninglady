@@ -72,6 +72,12 @@ export default function CrumbzillaPage() {
           The tiny-but-mighty villain responsible for crunchy floors, snack dust,
           couch mysteries, and the phrase, “Why is this sticky and crumbly?”
         </p>
+
+        <img
+  src="/crumbzilla.png"
+  alt="Crumbzilla, a crumb monster creating a crunchy mess on the kitchen floor"
+  className="mx-auto mt-10 w-56 drop-shadow-xl md:w-72"
+/>
       </section>
 
       <section className="bg-white px-6 py-16">

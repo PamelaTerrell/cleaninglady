@@ -64,6 +64,12 @@ export default function BathroomResetPage() {
           Because the mirror should not look like it survived a toothpaste
           explosion, and the sink area should not require a search party.
         </p>
+
+        <img
+  src="/toothpaste-splatter.png"
+  alt="Toothpaste Splatter, a mischievous toothpaste villain on a bathroom mirror"
+  className="mx-auto mt-10 w-56 drop-shadow-xl md:w-72"
+/>
       </section>
 
       <section className="bg-white px-6 py-16">
