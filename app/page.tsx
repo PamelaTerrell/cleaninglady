@@ -222,24 +222,29 @@ export default function Home() {
       </section>
 
       <section id="no-shame" className="px-6 py-20">
-        <div className="mx-auto max-w-4xl rounded-[2rem] bg-[#2f261f] p-10 text-white shadow-2xl">
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#f4dfb4]">
-            No shame. No perfection.
-          </p>
+  <div className="mx-auto max-w-4xl rounded-[2rem] bg-[#2f261f] p-10 text-center text-white shadow-2xl">
+    <img
+      src="/cleaning-hero-in-action.png"
+      alt="Super Cleaning Lady looking a little disheveled after battling household chaos"
+      className="mx-auto mb-8 w-44 drop-shadow-xl md:w-52"
+    />
 
-          <h2 className="mt-4 text-4xl font-black">
-            Just one rescue mission at a time.
-          </h2>
+    <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#f4dfb4]">
+      No shame. No perfection.
+    </p>
 
-          <p className="mt-5 text-lg leading-8 text-[#f7ead6]">
-            I’m Pamela, and I believe cleaning does not have to feel like
-            punishment. This is not a place for perfect pantries, judgmental
-            baseboards, or people who fold fitted sheets for fun. Super Cleaning
-            Lady is for real homes, real messes, and tiny victories that still
-            count.
-          </p>
-        </div>
-      </section>
+    <h2 className="mt-4 text-4xl font-black">
+      Just one rescue mission at a time.
+    </h2>
+
+    <p className="mt-5 text-lg leading-8 text-[#f7ead6]">
+      I’m Pamela, and I believe cleaning does not have to feel like punishment.
+      This is not a place for perfect pantries, judgmental baseboards, or people
+      who fold fitted sheets for fun. Super Cleaning Lady is for real homes,
+      real messes, and tiny victories that still count.
+    </p>
+  </div>
+</section>
       <Footer />
     </main>
   );

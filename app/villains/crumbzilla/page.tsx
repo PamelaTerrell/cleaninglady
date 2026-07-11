@@ -183,6 +183,11 @@ export default function CrumbzillaPage() {
 
       <section className="px-6 py-16">
         <div className="mx-auto max-w-4xl rounded-[2rem] bg-[#2f261f] p-8 text-center text-white shadow-2xl md:p-12">
+    <img
+      src="/cleaning-hero-in-action.png"
+      alt="Super Cleaning Lady looking disheveled but victorious after battling household chaos"
+      className="mx-auto mb-6 w-36 drop-shadow-xl md:w-44"
+    />
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#f4dfb4]">
             Victory Message
           </p>

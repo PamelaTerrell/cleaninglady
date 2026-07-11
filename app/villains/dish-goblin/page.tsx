@@ -8,7 +8,7 @@ const symptoms = [
   "The dishwasher is either full, clean, dirty, or in a mysterious third state.",
   "Someone placed a cup beside the sink instead of inside it, which feels personal.",
   "There is goopie stuff in the sink drain, and frankly, no one is emotionally ready to identify it.",
-  "The pan has been “soaking” long enough to qualify for residency.",
+  
 ];
 
 const rescueSteps = [
@@ -185,6 +185,13 @@ export default function DishGoblinPage() {
 
       <section className="px-6 py-16">
         <div className="mx-auto max-w-4xl rounded-[2rem] bg-[#2f261f] p-8 text-center text-white shadow-2xl md:p-12">
+          
+          <img
+    src="/cleaning-hero-in-action.png"
+    alt="Super Cleaning Lady looking disheveled but victorious after battling household chaos"
+    className="mx-auto mb-6 w-36 drop-shadow-xl md:w-44"
+  />
+          
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#f4dfb4]">
             Victory Message
           </p>

@@ -18,20 +18,21 @@ export default function Footer() {
         </p>
 
         <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-sm font-semibold text-[#2f261f]">
-          <a href="#missions" className="transition hover:text-[#b48635]">
+          <a href="/#missions" className="transition hover:text-[#b48635]">
             Missions
           </a>
-          <a href="#villains" className="transition hover:text-[#b48635]">
+          <a href="/#villains" className="transition hover:text-[#b48635]">
             Villains
           </a>
-          <a href="#no-shame" className="transition hover:text-[#b48635]">
+          <a href="/#no-shame" className="transition hover:text-[#b48635]">
             No-Shame Zone
           </a>
         </div>
 
-        <p className="mt-8 text-xs text-[#8a7866]">
-          © {new Date().getFullYear()} Super Cleaning Lady. A Stabile USA Project. Saving homes from
-          chaos, one suspicious sticky spot at a time.
+        <p className="mt-8 text-xs leading-6 text-[#8a7866]">
+          © {new Date().getFullYear()} Super Cleaning Lady. A Stabile USA
+          Project. Saving homes from chaos, one suspicious sticky spot at a
+          time.
         </p>
       </div>
     </footer>
