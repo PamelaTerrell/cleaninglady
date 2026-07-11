@@ -204,7 +204,7 @@ export default function Home() {
                   <img
                     src={villain.image}
                     alt={`${villain.name} villain illustration`}
-                    className="mx-auto mb-4 h-24 w-24 object-contain drop-shadow-md transition group-hover:scale-105"
+                    className="mx-auto mb-4 h-32 w-32 object-contain drop-shadow-md transition group-hover:scale-105"
                   />
                 ) : (
                   <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-[#fffaf2] text-3xl shadow-inner">
