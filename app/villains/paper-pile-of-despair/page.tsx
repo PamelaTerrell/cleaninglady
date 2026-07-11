@@ -76,6 +76,12 @@ export default function PaperPileOfDespairPage() {
           and envelopes that somehow gained emotional weight while you were busy
           trying to live your life.
         </p>
+
+        <img
+  src="/paper-pile-of-despair.png"
+  alt="The Paper Pile of Despair, a monster made of papers, folders, and sticky notes"
+  className="mx-auto mt-10 w-56 drop-shadow-xl md:w-72"
+/>
       </section>
 
       <section className="bg-white px-6 py-16">

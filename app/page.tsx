@@ -71,6 +71,7 @@ const villains = [
   {
     name: "The Paper Pile of Despair",
     href: "/villains/paper-pile-of-despair",
+    image: "/paper-pile-of-despair.png",
   },
   {
     name: "Mystery Sticky Spot",
