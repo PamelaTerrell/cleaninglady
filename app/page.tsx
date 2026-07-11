@@ -51,6 +51,7 @@ const villains = [
   {
     name: "Laundry Mountain",
     href: "/missions/laundry-mountain",
+    image: "/laundry-mountain.png",
   },
   {
     name: "The Doom Basket",

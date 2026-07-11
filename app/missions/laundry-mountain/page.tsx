@@ -65,6 +65,12 @@ export default function LaundryMountainPage() {
           independence, and you are no longer sure what is clean, dirty, or simply
           emotionally complicated.
         </p>
+
+        <img
+  src="/laundry-mountain.png"
+  alt="Laundry Mountain, a cartoon pile of laundry turned into a mischievous villain"
+  className="mx-auto mt-10 w-56 drop-shadow-xl md:w-72"
+/>
       </section>
 
       <section className="bg-white px-6 py-16">
