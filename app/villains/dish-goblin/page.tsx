@@ -15,7 +15,7 @@ const symptoms = [
   "The dishwasher is either full, clean, dirty, or in a mysterious third state.",
   "Someone placed a cup beside the sink instead of inside it, which feels personal.",
   "There is goopie stuff in the sink drain, and frankly, no one is emotionally ready to identify it.",
-  
+  "The pan has been “soaking” long enough to qualify for residency.",
 ];
 
 const rescueSteps = [
@@ -24,6 +24,7 @@ const rescueSteps = [
   "Load the dishwasher if you have one. If not, fill the sink with hot soapy water.",
   "Wash the easy items first to build false confidence.",
   "Handle the worst pan last, because every mission has a final boss.",
+  "Address the goopie drain situation with hot water, dish soap, and the courage of someone who has seen things.",
   "Wipe the sink when you are done so it knows who is in charge.",
 ];
 
@@ -72,14 +73,15 @@ export default function DishGoblinPage() {
 
         <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#6a5a4b] md:text-xl">
           The sink-dwelling villain who appears whenever one innocent plate turns
-          into a ceramic traffic jam.
+          into a ceramic traffic jam, the spoons start forming alliances, and the
+          drain develops a goopie situation no one wants to discuss.
         </p>
 
         <img
-  src="/dish-goblin.png"
-  alt="The Dish Goblin, a goofy sink-dwelling villain made of dirty dishes"
-  className="mx-auto mt-10 w-56 drop-shadow-xl md:w-72"
-/>
+          src="/dish-goblin-friendly.png"
+          alt="The Dish Goblin, a mischievous but silly sink-dwelling dish villain"
+          className="mx-auto mt-10 w-56 drop-shadow-xl md:w-72"
+        />
       </section>
 
       <section className="bg-white px-6 py-16">
@@ -92,7 +94,9 @@ export default function DishGoblinPage() {
               <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
                 {stat.label}
               </p>
+
               <h2 className="mt-3 text-3xl font-black">{stat.value}</h2>
+
               <p className="mt-4 leading-7 text-[#6a5a4b]">{stat.text}</p>
             </div>
           ))}
@@ -137,13 +141,16 @@ export default function DishGoblinPage() {
 
             <p className="mt-6 text-lg leading-8 text-[#6a5a4b]">
               One plate was placed in the sink. Then a cup. Then a fork. Then
-              someone added a pan and suddenly the sink became a gated community
-              for dirty dishes.
+              someone added a pan “to soak,” which is dish-language for “I have
+              abandoned this problem emotionally.” Suddenly the sink became a
+              gated community for dirty dishes, questionable food bits, and
+              whatever that goopie stuff is near the drain.
             </p>
 
             <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
               The Dish Goblin thrives on delay. It loves the phrase, “I’ll get
-              to it later,” because later is where dishes go to multiply.
+              to it later,” because later is where dishes go to multiply, form
+              committees, and begin making long-term plans.
             </p>
           </div>
 
@@ -164,7 +171,8 @@ export default function DishGoblinPage() {
 
             <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
               Do not wait until you feel inspired. No one feels inspired by wet
-              spoons. Begin anyway.
+              spoons, mystery drain goop, or a pan soaking so long it has
+              started receiving mail. Begin anyway.
             </p>
           </div>
         </div>
@@ -189,6 +197,7 @@ export default function DishGoblinPage() {
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#2f261f] text-sm font-black text-white">
                   {index + 1}
                 </span>
+
                 <span className="leading-7 text-[#6a5a4b]">{step}</span>
               </li>
             ))}
@@ -198,13 +207,12 @@ export default function DishGoblinPage() {
 
       <section className="px-6 py-16">
         <div className="mx-auto max-w-4xl rounded-[2rem] bg-[#2f261f] p-8 text-center text-white shadow-2xl md:p-12">
-          
           <img
-    src="/cleaning-hero-in-action.png"
-    alt="Super Cleaning Lady looking disheveled but victorious after battling household chaos"
-    className="mx-auto mb-6 w-36 drop-shadow-xl md:w-44"
-  />
-          
+            src="/cleaning-hero-in-action.png"
+            alt="Super Cleaning Lady looking disheveled but victorious after battling household chaos"
+            className="mx-auto mb-6 w-36 drop-shadow-xl md:w-44"
+          />
+
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#f4dfb4]">
             Victory Message
           </p>
@@ -215,8 +223,8 @@ export default function DishGoblinPage() {
 
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#f7ead6]">
             If the sink is empty, almost empty, or no longer making eye contact
-            with you, this victory counts. The Goblin may return, but today it
-            has been humbled.
+            with you, this victory counts. If the goopie drain creature has been
+            defeated, please accept an honorary medal and a moment of silence.
           </p>
 
           <Link

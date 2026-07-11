@@ -76,6 +76,12 @@ export default function MysteryStickySpotPage() {
           handles, tables, and other places no one is willing to discuss under
           oath.
         </p>
+
+        <img
+  src="/mystery-sticky-spot.png"
+  alt="Mystery Sticky Spot, a gooey wanted-poster household villain"
+  className="mx-auto mt-10 w-56 drop-shadow-xl md:w-72"
+/>
       </section>
 
       <section className="bg-white px-6 py-16">

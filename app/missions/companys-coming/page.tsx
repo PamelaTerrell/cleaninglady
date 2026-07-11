@@ -64,6 +64,12 @@ export default function CompanysComingPage() {
           The emergency clean for when someone texts, “We’re five minutes away,”
           and your home immediately enters a witness protection program.
         </p>
+
+        <img
+  src="/company-is-coming.png"
+  alt="Company’s Coming emergency clean cartoon scene"
+  className="mx-auto mt-10 w-56 drop-shadow-xl md:w-72"
+/>
       </section>
 
       <section className="bg-white px-6 py-16">

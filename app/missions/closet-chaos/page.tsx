@@ -64,6 +64,12 @@ export default function ClosetChaosPage() {
           For when opening the closet door feels like disturbing a sleeping beast,
           and one wrong move could trigger a shoe avalanche.
         </p>
+
+        <img
+  src="/closet-chaos.png"
+  alt="Closet Chaos, a monster made of clothes bursting out of a messy closet"
+  className="mx-auto mt-10 w-56 drop-shadow-xl md:w-72"
+/>
       </section>
 
       <section className="bg-white px-6 py-16">

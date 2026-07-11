@@ -2,52 +2,56 @@ import Link from "next/link";
 import MissionProgress from "@/components/MissionProgress";
 import Footer from "@/components/Footer";
 
-
 const missions = [
   {
     title: "Kitchen Rescue",
     href: "/missions/kitchen-rescue",
+    image: "/dish-goblin.png",
     description:
       "For when the counters have disappeared and the sink is staging a rebellion.",
   },
   {
     title: "Bathroom Reset",
     href: "/missions/bathroom-reset",
+    image: "/toothpaste-splatter.png",
     description:
       "Because the mirror should not look like it survived a toothpaste explosion.",
   },
   {
     title: "Laundry Mountain",
     href: "/missions/laundry-mountain",
+    image: "/laundry-mountain.png",
     description: "Scale the pile. Find the floor. Become the legend.",
   },
   {
     title: "Closet Chaos",
     href: "/missions/closet-chaos",
+    image: "/closet-chaos.png",
     description:
       "Enter bravely. Sort ruthlessly. Try not to awaken the shoe avalanche.",
   },
   {
     title: "Company’s Coming",
     href: "/missions/companys-coming",
+    image: "/company-is-coming.png",
     description:
       "The emergency clean for when someone texts, “We’re five minutes away.”",
   },
   {
     title: "One-Bag Declutter",
     href: "/missions/one-bag-declutter",
+    image: "/one-bag-declutter.png",
     description:
       "One bag. One mission. Fewer things silently judging you from the corner.",
   },
 ];
- 
 
 const villains = [
   {
-    name: "The Dish Goblin",
-    href: "/villains/dish-goblin",
-    image: "/dish-goblin.png",
-  },
+  name: "The Dish Goblin",
+  href: "/villains/dish-goblin",
+  image: "/dish-goblin-friendly.png",
+},
   {
     name: "Laundry Mountain",
     href: "/missions/laundry-mountain",
@@ -76,10 +80,12 @@ const villains = [
   {
     name: "Mystery Sticky Spot",
     href: "/villains/mystery-sticky-spot",
+    image: "/mystery-sticky-spot.png",
   },
   {
     name: "The Sock Portal",
     href: "/missions/laundry-mountain",
+    image: "/sock-portal.png",
   },
 ];
 
@@ -98,14 +104,14 @@ export default function Home() {
         />
 
         <h1 className="max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
-  Your house isn’t messy. It’s just experiencing a plot twist.
-</h1>
+          Your house isn’t messy. It’s just experiencing a plot twist.
+        </h1>
 
-<p className="mt-6 max-w-2xl text-lg leading-8 text-[#6a5a4b] md:text-xl">
-  Fighting dust, dishes, doom piles, and whatever that is under the couch —
-  with rescue missions for homes that are one sock pile away from becoming a
-  wildlife habitat.
-</p>
+        <p className="mt-6 max-w-2xl text-lg leading-8 text-[#6a5a4b] md:text-xl">
+          Fighting dust, dishes, doom piles, and whatever that is under the couch
+          — with rescue missions for homes that are one sock pile away from
+          becoming a wildlife habitat.
+        </p>
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
           <a
@@ -122,8 +128,7 @@ export default function Home() {
             Meet the Villains
           </a>
         </div>
-      
-            </section>
+      </section>
 
       <MissionProgress />
 
@@ -144,22 +149,30 @@ export default function Home() {
 
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {missions.map((mission) => (
-  <Link
-    key={mission.title}
-    href={mission.href}
-    className="block rounded-3xl border border-[#eadcc8] bg-[#fffaf2] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
-  >
-    <h3 className="text-2xl font-black">{mission.title}</h3>
+              <Link
+                key={mission.title}
+                href={mission.href}
+                className="group block rounded-3xl border border-[#eadcc8] bg-[#fffaf2] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+              >
+                {"image" in mission && mission.image ? (
+                  <img
+                    src={mission.image}
+                    alt={`${mission.title} mission illustration`}
+                    className="mb-5 h-32 w-full rounded-2xl object-cover object-center shadow-sm transition group-hover:scale-[1.02]"
+                  />
+                ) : null}
 
-    <p className="mt-3 leading-7 text-[#6a5a4b]">
-      {mission.description}
-    </p>
+                <h3 className="text-2xl font-black">{mission.title}</h3>
 
-    <p className="mt-5 text-sm font-black uppercase tracking-[0.18em] text-[#b48635]">
-      Open Mission →
-    </p>
-  </Link>
-))}
+                <p className="mt-3 leading-7 text-[#6a5a4b]">
+                  {mission.description}
+                </p>
+
+                <p className="mt-5 text-sm font-black uppercase tracking-[0.18em] text-[#b48635]">
+                  Open Mission →
+                </p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -176,33 +189,33 @@ export default function Home() {
 
           <p className="mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
             Some villains live in the sink. Some multiply in laundry baskets.
-            Some hide under furniture and answer to “crumbs.” Super Cleaning Lady
-            believes no villain is too ridiculous to name and defeat.
+            Some hide under furniture and answer to “crumbs.” Super Cleaning
+            Lady believes no villain is too ridiculous to name and defeat.
           </p>
 
-         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-  {villains.map((villain) => (
-    <Link
-      key={villain.name}
-      href={villain.href}
-      className="group rounded-2xl border border-[#eadcc8] bg-white p-5 text-center font-black shadow-sm transition hover:-translate-y-1 hover:shadow-md"
-    >
-      {villain.image ? (
-        <img
-          src={villain.image}
-          alt={`${villain.name} villain illustration`}
-          className="mx-auto mb-4 h-24 w-24 object-contain drop-shadow-md transition group-hover:scale-105"
-        />
-      ) : (
-        <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-[#fffaf2] text-3xl shadow-inner">
-          ⚠️
-        </div>
-      )}
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {villains.map((villain) => (
+              <Link
+                key={villain.name}
+                href={villain.href}
+                className="group rounded-2xl border border-[#eadcc8] bg-white p-5 text-center font-black shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+              >
+                {"image" in villain && villain.image ? (
+                  <img
+                    src={villain.image}
+                    alt={`${villain.name} villain illustration`}
+                    className="mx-auto mb-4 h-24 w-24 object-contain drop-shadow-md transition group-hover:scale-105"
+                  />
+                ) : (
+                  <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-[#fffaf2] text-3xl shadow-inner">
+                    ⚠️
+                  </div>
+                )}
 
-      <span>{villain.name}</span>
-    </Link>
-  ))}
-</div>
+                <span>{villain.name}</span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -212,7 +225,9 @@ export default function Home() {
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
               10-Minute Rescue
             </p>
-            <h3 className="mt-4 text-3xl font-black">For when motivation is missing.</h3>
+            <h3 className="mt-4 text-3xl font-black">
+              For when motivation is missing.
+            </h3>
             <p className="mt-4 leading-7 text-[#6a5a4b]">
               Pick one tiny area, set a timer, and do not negotiate with the
               clutter. The clutter has had enough chances.
@@ -244,29 +259,31 @@ export default function Home() {
       </section>
 
       <section id="no-shame" className="px-6 py-20">
-  <div className="mx-auto max-w-4xl rounded-[2rem] bg-[#2f261f] p-10 text-center text-white shadow-2xl">
-    <img
-      src="/cleaning-hero-in-action.png"
-      alt="Super Cleaning Lady looking a little disheveled after battling household chaos"
-      className="mx-auto mb-8 w-44 drop-shadow-xl md:w-52"
-    />
+        <div className="mx-auto max-w-4xl rounded-[2rem] bg-[#2f261f] p-10 text-center text-white shadow-2xl">
+          <img
+            src="/cleaning-hero-in-action.png"
+            alt="Super Cleaning Lady looking a little disheveled after battling household chaos"
+            className="mx-auto mb-8 w-44 drop-shadow-xl md:w-52"
+          />
 
-    <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#f4dfb4]">
-      No shame. No perfection.
-    </p>
+          <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#f4dfb4]">
+            No shame. No perfection.
+          </p>
 
-    <h2 className="mt-4 text-4xl font-black">
-      Just one rescue mission at a time.
-    </h2>
+          <h2 className="mt-4 text-4xl font-black">
+            Just one rescue mission at a time.
+          </h2>
 
-    <p className="mt-5 text-lg leading-8 text-[#f7ead6]">
-      I’m Pamela, and I believe cleaning does not have to feel like punishment.
-      This is not a place for perfect pantries, judgmental baseboards, or people
-      who fold fitted sheets for fun. Super Cleaning Lady is for real homes,
-      real messes, and tiny victories that still count.
-    </p>
-  </div>
-</section>
+          <p className="mt-5 text-lg leading-8 text-[#f7ead6]">
+            I’m Pamela, and I believe cleaning does not have to feel like
+            punishment. This is not a place for perfect pantries, judgmental
+            baseboards, or people who fold fitted sheets for fun. Super Cleaning
+            Lady is for real homes, real messes, and tiny victories that still
+            count.
+          </p>
+        </div>
+      </section>
+
       <Footer />
     </main>
   );
