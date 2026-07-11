@@ -74,6 +74,12 @@ export default function DishGoblinPage() {
           The sink-dwelling villain who appears whenever one innocent plate turns
           into a ceramic traffic jam.
         </p>
+
+        <img
+  src="/dish-goblin.png"
+  alt="The Dish Goblin, a goofy sink-dwelling villain made of dirty dishes"
+  className="mx-auto mt-10 w-56 drop-shadow-xl md:w-72"
+/>
       </section>
 
       <section className="bg-white px-6 py-16">

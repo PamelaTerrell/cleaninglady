@@ -46,6 +46,7 @@ const villains = [
   {
     name: "The Dish Goblin",
     href: "/villains/dish-goblin",
+    image: "/dish-goblin.png",
   },
   {
     name: "Laundry Mountain",
@@ -179,9 +180,21 @@ export default function Home() {
     <Link
       key={villain.name}
       href={villain.href}
-      className="rounded-2xl border border-[#eadcc8] bg-white p-5 text-center font-black shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+      className="group rounded-2xl border border-[#eadcc8] bg-white p-5 text-center font-black shadow-sm transition hover:-translate-y-1 hover:shadow-md"
     >
-      {villain.name}
+      {villain.image ? (
+        <img
+          src={villain.image}
+          alt={`${villain.name} villain illustration`}
+          className="mx-auto mb-4 h-24 w-24 object-contain drop-shadow-md transition group-hover:scale-105"
+        />
+      ) : (
+        <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-[#fffaf2] text-3xl shadow-inner">
+          ⚠️
+        </div>
+      )}
+
+      <span>{villain.name}</span>
     </Link>
   ))}
 </div>
