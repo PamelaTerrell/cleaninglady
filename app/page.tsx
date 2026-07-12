@@ -48,10 +48,10 @@ const missions = [
 
 const villains = [
   {
-  name: "The Dish Goblin",
-  href: "/villains/dish-goblin",
-  image: "/dish-goblin-friendly.png",
-},
+    name: "The Dish Goblin",
+    href: "/villains/dish-goblin",
+    image: "/dish-goblin-friendly.png",
+  },
   {
     name: "Laundry Mountain",
     href: "/missions/laundry-mountain",
@@ -93,14 +93,12 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#fffaf2] text-[#2f261f]">
       <section className="mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-6 py-20 text-center">
-        <p className="mb-4 rounded-full bg-[#f4dfb4] px-5 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#7a5520]">
-          Super Cleaning Lady
-        </p>
+        
 
         <img
-          src="/superhero-cleaning-bottle-mascot.png"
+          src="/home-superhero-cleaning-bottle-mascot.png"
           alt="Super Cleaning Lady spray bottle superhero mascot"
-          className="mb-8 w-44 drop-shadow-xl md:w-60"
+          className="mb-8 w-80 drop-shadow-xl md:w-[26rem] lg:w-[32rem]"
         />
 
         <h1 className="max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
@@ -204,7 +202,7 @@ export default function Home() {
                   <img
                     src={villain.image}
                     alt={`${villain.name} villain illustration`}
-                    className="mx-auto mb-4 h-32 w-32 object-contain drop-shadow-md transition group-hover:scale-105"
+                    className="mx-auto mb-5 h-32 w-32 object-contain drop-shadow-md transition group-hover:scale-105"
                   />
                 ) : (
                   <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-[#fffaf2] text-3xl shadow-inner">
