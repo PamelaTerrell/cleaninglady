@@ -98,7 +98,7 @@ export default function Home() {
         <img
           src="/home-superhero-cleaning-bottle-mascot.png"
           alt="Super Cleaning Lady spray bottle superhero mascot"
-          className="mb-8 w-80 drop-shadow-xl md:w-[26rem] lg:w-[32rem]"
+          className="mb-8 w-96 drop-shadow-xl md:w-[30rem] lg:w-[36rem]"
         />
 
         <h1 className="max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
