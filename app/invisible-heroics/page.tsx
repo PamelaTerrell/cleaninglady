@@ -2,19 +2,7 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 
 const heroics = [
-  {
-    title: "The Shower Curtain Liner",
-    slug: "shower-curtain-liner",
-    category: "Bathroom Heroics",
-    image: "/comics/shower-curtain-liner.png",
-    alt: "Super Cleaning Lady replaces an old shower curtain liner while everyone else fails to notice",
-    description:
-      "No applause. No medal. Not even a casual, “Hey, the shower looks better.” Just another household crisis quietly defeated.",
-    punchline:
-      "Some heroes save the world. Others replace the shower curtain liner before it becomes self-aware.",
-    missionHref: "/missions/bathroom-reset",
-    missionLabel: "Start the Bathroom Reset",
-  },
+  
 
   {
   title: "The Forgotten Trash Can",
@@ -29,6 +17,20 @@ const heroics = [
   missionHref: "/missions/kitchen-rescue",
   missionLabel: "Start the Kitchen Rescue",
 },
+
+{
+    title: "The Shower Curtain Liner",
+    slug: "shower-curtain-liner",
+    category: "Bathroom Heroics",
+    image: "/comics/shower-curtain-liner.png",
+    alt: "Super Cleaning Lady replaces an old shower curtain liner while everyone else fails to notice",
+    description:
+      "No applause. No medal. Not even a casual, “Hey, the shower looks better.” Just another household crisis quietly defeated.",
+    punchline:
+      "Some heroes save the world. Others replace the shower curtain liner before it becomes self-aware.",
+    missionHref: "/missions/bathroom-reset",
+    missionLabel: "Start the Bathroom Reset",
+  },
 ];
 
 export default function InvisibleHeroicsPage() {
