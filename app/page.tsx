@@ -89,12 +89,30 @@ const villains = [
   },
 ];
 
+/*
+  FEATURED COMIC
+
+  When you create another comic, you can update this object
+  without changing the layout farther down the page.
+*/
+const featuredComic = {
+  series: "Invisible Heroics",
+  title: "The Shower Curtain Liner",
+  image: "/comics/shower-curtain-liner.png",
+  alt: "Super Cleaning Lady replaces an old shower curtain liner while everyone else fails to notice",
+  description:
+    "No applause. No medal. Not even a casual, “Hey, the shower looks better.” Just another household crisis quietly defeated.",
+  quote:
+    "Some heroes save the world. Others replace the shower curtain liner before it becomes self-aware.",
+  relatedHref: "/missions/bathroom-reset",
+  relatedLabel: "Start the Bathroom Reset",
+};
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#fffaf2] text-[#2f261f]">
+      {/* HERO */}
       <section className="mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-6 py-20 text-center">
-        
-
         <img
           src="/home-superhero-cleaning-bottle-mascot.png"
           alt="Super Cleaning Lady spray bottle superhero mascot"
@@ -106,9 +124,9 @@ export default function Home() {
         </h1>
 
         <p className="mt-6 max-w-2xl text-lg leading-8 text-[#6a5a4b] md:text-xl">
-          Fighting dust, dishes, doom piles, and whatever that is under the couch
-          — with rescue missions for homes that are one sock pile away from
-          becoming a wildlife habitat.
+          Fighting dust, dishes, doom piles, and whatever that is under the
+          couch — with rescue missions for homes that are one sock pile away
+          from becoming a wildlife habitat.
         </p>
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -130,6 +148,7 @@ export default function Home() {
 
       <MissionProgress />
 
+      {/* MISSIONS */}
       <section id="missions" className="bg-white px-6 py-20">
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
@@ -152,13 +171,11 @@ export default function Home() {
                 href={mission.href}
                 className="group block rounded-3xl border border-[#eadcc8] bg-[#fffaf2] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
               >
-                {"image" in mission && mission.image ? (
-                  <img
-                    src={mission.image}
-                    alt={`${mission.title} mission illustration`}
-                    className="mb-5 h-32 w-full rounded-2xl object-cover object-center shadow-sm transition group-hover:scale-[1.02]"
-                  />
-                ) : null}
+                <img
+                  src={mission.image}
+                  alt={`${mission.title} mission illustration`}
+                  className="mb-5 h-32 w-full rounded-2xl object-cover object-center shadow-sm transition group-hover:scale-[1.02]"
+                />
 
                 <h3 className="text-2xl font-black">{mission.title}</h3>
 
@@ -175,6 +192,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* VILLAINS */}
       <section id="villains" className="px-6 py-20">
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
@@ -198,17 +216,11 @@ export default function Home() {
                 href={villain.href}
                 className="group rounded-2xl border border-[#eadcc8] bg-white p-5 text-center font-black shadow-sm transition hover:-translate-y-1 hover:shadow-md"
               >
-                {"image" in villain && villain.image ? (
-                  <img
-                    src={villain.image}
-                    alt={`${villain.name} villain illustration`}
-                    className="mx-auto mb-5 h-32 w-32 object-contain drop-shadow-md transition group-hover:scale-105"
-                  />
-                ) : (
-                  <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-[#fffaf2] text-3xl shadow-inner">
-                    ⚠️
-                  </div>
-                )}
+                <img
+                  src={villain.image}
+                  alt={`${villain.name} villain illustration`}
+                  className="mx-auto mb-5 h-32 w-32 object-contain drop-shadow-md transition group-hover:scale-105"
+                />
 
                 <span>{villain.name}</span>
               </Link>
@@ -217,15 +229,85 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FEATURED COMIC */}
+      <section
+        id="invisible-heroics"
+        className="overflow-hidden bg-[#2f261f] px-6 py-20 text-white"
+      >
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-10 text-center">
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#f4c96d]">
+              Meanwhile at Super Cleaning Lady Headquarters…
+            </p>
+
+            <h2 className="mt-4 text-4xl font-black md:text-5xl">
+              Household victories nobody notices.
+            </h2>
+
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#f7ead6]">
+              Welcome to the glamorous world of invisible labor, where the
+              bathroom improves mysteriously and nobody asks how.
+            </p>
+          </div>
+
+          <article className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
+            <div className="overflow-hidden rounded-[2rem] border-4 border-white/10 bg-white shadow-2xl">
+              <img
+                src={featuredComic.image}
+                alt={featuredComic.alt}
+                className="h-auto w-full"
+              />
+            </div>
+
+            <div>
+              <p className="text-sm font-black uppercase tracking-[0.22em] text-[#f4c96d]">
+                {featuredComic.series}
+              </p>
+
+              <h3 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+                {featuredComic.title}
+              </h3>
+
+              <p className="mt-6 text-lg leading-8 text-[#f7ead6]">
+                {featuredComic.description}
+              </p>
+
+              <blockquote className="mt-7 rounded-r-2xl border-l-4 border-[#f4c96d] bg-white/5 px-6 py-5 text-xl font-bold italic leading-8">
+                “{featuredComic.quote}”
+              </blockquote>
+
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row lg:flex-col xl:flex-row">
+                <Link
+                  href={featuredComic.relatedHref}
+                  className="rounded-full bg-[#f4c96d] px-6 py-4 text-center text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a]"
+                >
+                  {featuredComic.relatedLabel}
+                </Link>
+
+                <Link
+  href="/invisible-heroics"
+  className="rounded-full border border-white/30 px-6 py-4 text-center text-sm font-black uppercase tracking-[0.16em] text-white transition hover:-translate-y-1 hover:bg-white/10"
+>
+  See More Heroics
+</Link>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      {/* QUICK RESCUES */}
       <section className="bg-white px-6 py-20">
         <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-3">
           <div className="rounded-[2rem] bg-[#fffaf2] p-8 shadow-sm">
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
               10-Minute Rescue
             </p>
+
             <h3 className="mt-4 text-3xl font-black">
               For when motivation is missing.
             </h3>
+
             <p className="mt-4 leading-7 text-[#6a5a4b]">
               Pick one tiny area, set a timer, and do not negotiate with the
               clutter. The clutter has had enough chances.
@@ -236,7 +318,11 @@ export default function Home() {
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
               Emergency Clean
             </p>
-            <h3 className="mt-4 text-3xl font-black">For surprise visitors.</h3>
+
+            <h3 className="mt-4 text-3xl font-black">
+              For surprise visitors.
+            </h3>
+
             <p className="mt-4 leading-7 text-[#6a5a4b]">
               The doorbell is not a drill. Hide the chaos, wipe the obvious,
               light a candle, and act natural.
@@ -247,15 +333,18 @@ export default function Home() {
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
               Good Enough Glory
             </p>
+
             <h3 className="mt-4 text-3xl font-black">For real-life homes.</h3>
+
             <p className="mt-4 leading-7 text-[#6a5a4b]">
-              We are not polishing ceiling fans with a toothbrush today. We are
-              reclaiming peace and possibly the dining room table.
+              We are not polishing ceiling fans with a toothbrush today. We
+              are reclaiming peace and possibly the dining room table.
             </p>
           </div>
         </div>
       </section>
 
+      {/* NO SHAME */}
       <section id="no-shame" className="px-6 py-20">
         <div className="mx-auto max-w-4xl rounded-[2rem] bg-[#2f261f] p-10 text-center text-white shadow-2xl">
           <img
@@ -275,9 +364,9 @@ export default function Home() {
           <p className="mt-5 text-lg leading-8 text-[#f7ead6]">
             I’m Pamela, and I believe cleaning does not have to feel like
             punishment. This is not a place for perfect pantries, judgmental
-            baseboards, or people who fold fitted sheets for fun. Super Cleaning
-            Lady is for real homes, real messes, and tiny victories that still
-            count.
+            baseboards, or people who fold fitted sheets for fun. Super
+            Cleaning Lady is for real homes, real messes, and tiny victories
+            that still count.
           </p>
         </div>
       </section>
