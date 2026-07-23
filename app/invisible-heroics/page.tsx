@@ -3,6 +3,19 @@ import Footer from "@/components/Footer";
 
 const heroics = [
   
+  {
+  title: "The Mystery Under the Stove",
+  slug: "under-the-stove",
+  category: "Kitchen Heroics",
+  image: "/comics/under-the-stove.png",
+  alt: "Super Cleaning Lady pulls the stove away from the wall and discovers crumbs, grease, pet hair, and dust underneath",
+  description:
+    "Crumbs fall. Grease splatters. Pet hair drifts. Somehow, it all gathers beneath the stove like it reserved the space months ago.",
+  punchline:
+    "No crumb bunker survives on Super Cleaning Lady’s watch.",
+  missionHref: "/missions/kitchen-rescue",
+  missionLabel: "Start the Kitchen Rescue",
+},
 
   {
   title: "The Forgotten Trash Can",
