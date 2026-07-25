@@ -2,6 +2,20 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 
 const heroics = [
+
+  {
+  title: "Company Is Coming: The Ratchet Set Incident",
+  slug: "company-is-coming-ratchet-set",
+  category: "Emergency Heroics",
+  image: "/comics/company-is-coming-ratchet-set.png",
+  alt: "Super Cleaning Lady discovers her husband's ratchet set scattered across the living room five minutes before company arrives",
+  description:
+    "The text arrives: company will be there in five minutes. The pillows are fluffed. The room looks respectable. And somehow an entire ratchet set has established operations on the coffee table.",
+  punchline:
+    "The ratchet set does not live here.",
+  missionHref: "/missions/companys-coming",
+  missionLabel: "Start the Company’s Coming Mission",
+},
   
   {
   title: "The Mystery Under the Stove",

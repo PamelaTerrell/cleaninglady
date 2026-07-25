@@ -65,11 +65,19 @@ export default function CompanysComingPage() {
           and your home immediately enters a witness protection program.
         </p>
 
-        <img
-  src="/company-is-coming.png"
-  alt="Company’s Coming emergency clean cartoon scene"
-  className="mx-auto mt-10 w-56 drop-shadow-xl md:w-72"
-/>
+        <div className="mt-10 flex flex-col items-center gap-8">
+  <img
+    src="/company-is-coming.png"
+    alt="Company’s Coming emergency clean cartoon scene"
+    className="w-56 drop-shadow-xl md:w-72"
+  />
+
+  <img
+    src="/company-is-coming-ratchet-set.png"
+    alt="Super Cleaning Lady discovers a ratchet set in the living room when company is five minutes away"
+    className="w-full max-w-4xl rounded-[2rem] border border-[#eadcc8] shadow-2xl"
+  />
+</div>
       </section>
 
       <section className="bg-white px-6 py-16">
