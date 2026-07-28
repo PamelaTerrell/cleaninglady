@@ -17,6 +17,15 @@ const missions = [
     description:
       "Because the mirror should not look like it survived a toothpaste explosion.",
   },
+
+{
+  title: "Bedroom Reset",
+  href: "/missions/bedroom-reset",
+  image: "/comics/bed-sheets.png",
+  description:
+    "Fresh sheets, a better mood, and one fitted-sheet battle standing between you and victory.",
+},
+
   {
     title: "Laundry Mountain",
     href: "/missions/laundry-mountain",

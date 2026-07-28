@@ -2,50 +2,57 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 
 const heroics = [
-
   {
-  title: "Company Is Coming: The Ratchet Set Incident",
-  slug: "company-is-coming-ratchet-set",
-  category: "Emergency Heroics",
-  image: "/comics/company-is-coming-ratchet-set.png",
-  alt: "Super Cleaning Lady discovers her husband's ratchet set scattered across the living room five minutes before company arrives",
-  description:
-    "The text arrives: company will be there in five minutes. The pillows are fluffed. The room looks respectable. And somehow an entire ratchet set has established operations on the coffee table.",
-  punchline:
-    "The ratchet set does not live here.",
-  missionHref: "/missions/companys-coming",
-  missionLabel: "Start the Company’s Coming Mission",
-},
-  
+    title: "The Power of Clean Sheets",
+    slug: "bed-sheets",
+    category: "Bedroom Heroics",
+    image: "/comics/bed-sheets.png",
+    alt: "Super Cleaning Lady compares a messy bed with old sheets to a fresh bed with clean sheets and a much better day",
+    description:
+      "The old sheets were holding onto crumbs, wrinkles, and several bad decisions. The clean set arrives like a full bedroom reboot.",
+    punchline: "Change the sheets. Change the whole vibe.",
+    missionHref: "/missions/bedroom-reset",
+    missionLabel: "Start the Bedroom Reset",
+  },
   {
-  title: "The Mystery Under the Stove",
-  slug: "under-the-stove",
-  category: "Kitchen Heroics",
-  image: "/comics/under-the-stove.png",
-  alt: "Super Cleaning Lady pulls the stove away from the wall and discovers crumbs, grease, pet hair, and dust underneath",
-  description:
-    "Crumbs fall. Grease splatters. Pet hair drifts. Somehow, it all gathers beneath the stove like it reserved the space months ago.",
-  punchline:
-    "No crumb bunker survives on Super Cleaning Lady’s watch.",
-  missionHref: "/missions/kitchen-rescue",
-  missionLabel: "Start the Kitchen Rescue",
-},
-
+    title: "Company Is Coming: The Ratchet Set Incident",
+    slug: "company-is-coming-ratchet-set",
+    category: "Emergency Heroics",
+    image: "/comics/company-is-coming-ratchet-set.png",
+    alt: "Super Cleaning Lady discovers her husband's ratchet set scattered across the living room five minutes before company arrives",
+    description:
+      "The text arrives: company will be there in five minutes. The pillows are fluffed. The room looks respectable. And somehow an entire ratchet set has established operations on the coffee table.",
+    punchline: "The ratchet set does not live here.",
+    missionHref: "/missions/companys-coming",
+    missionLabel: "Start the Company’s Coming Mission",
+  },
   {
-  title: "The Forgotten Trash Can",
-  slug: "forgotten-trash-can",
-  category: "Kitchen Heroics",
-  image: "/comics/forgotten-trash-can.png",
-  alt: "Super Cleaning Lady heroically washes a dirty household trash can",
-  description:
-    "Everybody uses it. Nobody remembers that the container itself eventually needs help.",
-  punchline:
-    "She cleaned the trash can. Society continued as though nothing remarkable had occurred.",
-  missionHref: "/missions/kitchen-rescue",
-  missionLabel: "Start the Kitchen Rescue",
-},
-
-{
+    title: "The Mystery Under the Stove",
+    slug: "under-the-stove",
+    category: "Kitchen Heroics",
+    image: "/comics/under-the-stove.png",
+    alt: "Super Cleaning Lady pulls the stove away from the wall and discovers crumbs, grease, pet hair, and dust underneath",
+    description:
+      "Crumbs fall. Grease splatters. Pet hair drifts. Somehow, it all gathers beneath the stove like it reserved the space months ago.",
+    punchline:
+      "No crumb bunker survives on Super Cleaning Lady’s watch.",
+    missionHref: "/missions/kitchen-rescue",
+    missionLabel: "Start the Kitchen Rescue",
+  },
+  {
+    title: "The Forgotten Trash Can",
+    slug: "forgotten-trash-can",
+    category: "Kitchen Heroics",
+    image: "/comics/forgotten-trash-can.png",
+    alt: "Super Cleaning Lady heroically washes a dirty household trash can",
+    description:
+      "Everybody uses it. Nobody remembers that the container itself eventually needs help.",
+    punchline:
+      "She cleaned the trash can. Society continued as though nothing remarkable had occurred.",
+    missionHref: "/missions/kitchen-rescue",
+    missionLabel: "Start the Kitchen Rescue",
+  },
+  {
     title: "The Shower Curtain Liner",
     slug: "shower-curtain-liner",
     category: "Bathroom Heroics",
@@ -119,9 +126,9 @@ export default function InvisibleHeroicsPage() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
-            They replace the liner, wipe the mystery splatter, empty the
-            forgotten trash can, and somehow know when the refrigerator has
-            started growing a new civilization.
+            They replace the liner, change the sheets, wipe the mystery
+            splatter, empty the forgotten trash can, and somehow know when the
+            refrigerator has started growing a new civilization.
           </p>
         </div>
       </section>
