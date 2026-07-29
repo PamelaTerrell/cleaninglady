@@ -86,48 +86,99 @@ export default function InvisibleHeroicsPage() {
   return (
     <main className="min-h-screen bg-[#fffaf2] text-[#2f261f]">
       {/* HERO */}
-      <section className="relative overflow-hidden bg-[#2f261f] px-6 py-24 text-white">
+<section className="relative overflow-hidden bg-[#2f261f] px-6 py-14 text-white md:py-18 lg:py-20">
+  <div
+    className="absolute inset-0 opacity-[0.07]"
+    aria-hidden="true"
+    style={{
+      backgroundImage:
+        "radial-gradient(circle, #ffffff 1.5px, transparent 1.5px)",
+      backgroundSize: "24px 24px",
+    }}
+  />
+
+  <div
+    className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-[#d9487d]/20 blur-3xl"
+    aria-hidden="true"
+  />
+
+  <div
+    className="absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-[#4da6d8]/20 blur-3xl"
+    aria-hidden="true"
+  />
+
+  <div className="relative mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
+    {/* CHARACTER IMAGE */}
+    <div className="order-2 flex justify-center lg:order-1">
+      <div className="relative">
         <div
-          className="absolute inset-0 opacity-[0.06]"
+          className="absolute inset-10 rounded-full bg-[#f4c96d]/20 blur-3xl"
           aria-hidden="true"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle, #ffffff 1.5px, transparent 1.5px)",
-            backgroundSize: "24px 24px",
-          }}
         />
 
-        <div className="relative mx-auto max-w-5xl text-center">
-          <p className="text-sm font-black uppercase tracking-[0.28em] text-[#f4c96d]">
-            Super Cleaning Lady Presents
-          </p>
+        <img
+          src="/scl-and-spongie.png"
+          alt="Super Cleaning Lady with her spray bottle and sponge sidekicks"
+          className="relative mx-auto w-full max-w-[22rem] drop-shadow-[0_28px_45px_rgba(0,0,0,0.4)] sm:max-w-md lg:max-w-lg"
+        />
+      </div>
+    </div>
 
-          <h1 className="mt-5 text-5xl font-black leading-tight md:text-7xl">
-            Invisible Heroics
-          </h1>
+    {/* HERO COPY */}
+    <div className="order-1 text-center lg:order-2 lg:text-left">
+      <p className="text-sm font-black uppercase tracking-[0.28em] text-[#f4c96d]">
+        Super Cleaning Lady Presents
+      </p>
 
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#f7ead6] md:text-xl">
-            A celebration of the household victories nobody notices—until
-            somebody stops doing them.
-          </p>
+      <h1 className="mt-5 text-5xl font-black leading-[0.95] tracking-tight sm:text-6xl md:text-7xl">
+        Invisible
+        <span className="block text-[#f4c96d]">Heroics</span>
+      </h1>
 
-          <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link
-              href="/"
-              className="rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.17em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a]"
-            >
-              Back to Headquarters
-            </Link>
+      <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#f7ead6] md:text-xl lg:mx-0">
+        A celebration of the household victories nobody notices—until somebody
+        stops doing them.
+      </p>
 
-            <a
-              href="#heroics"
-              className="rounded-full border border-white/30 px-7 py-4 text-sm font-black uppercase tracking-[0.17em] text-white transition hover:-translate-y-1 hover:bg-white/10"
-            >
-              See the Heroics
-            </a>
-          </div>
-        </div>
-      </section>
+      <p className="mx-auto mt-4 max-w-xl leading-7 text-white/70 lg:mx-0">
+        Meet the heroes battling crumbs, mystery splatter, laundry mountains,
+        and every tiny domestic crisis hiding in plain sight.
+      </p>
+
+      <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
+        <a
+          href="#heroics"
+          className="rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.17em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a] hover:shadow-xl"
+        >
+          See the Heroics
+        </a>
+
+        <Link
+          href="/"
+          className="rounded-full border border-white/30 bg-white/5 px-7 py-4 text-sm font-black uppercase tracking-[0.17em] text-white transition hover:-translate-y-1 hover:bg-white/10"
+        >
+          Back to Headquarters
+        </Link>
+      </div>
+
+      <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
+        {["Real messes", "Tiny victories", "No judgment"].map((item) => (
+          <span
+            key={item}
+            className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#f7ead6]"
+          >
+            {item}
+          </span>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+       
+           
 
       {/* INTRO */}
       <section className="px-6 py-16">
