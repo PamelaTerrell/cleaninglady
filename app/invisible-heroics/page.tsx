@@ -222,6 +222,32 @@ export default function InvisibleHeroicsPage() {
         </div>
       </section>
 
+      {/* HOUSEHOLD TEAM-UPS */}
+<section className="px-6 py-20">
+  <div className="mx-auto max-w-5xl rounded-[2.5rem] bg-[#2f261f] px-8 py-14 text-center text-white shadow-2xl md:px-14">
+    <p className="text-sm font-black uppercase tracking-[0.25em] text-[#f4c96d]">
+      The saga continues
+    </p>
+
+    <h2 className="mt-4 text-4xl font-black md:text-5xl">
+      Meet Super Handy Man.
+    </h2>
+
+    <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#f7ead6]">
+      Follow Super Cleaning Lady and Super Handy Man through ratchet sets,
+      supposedly five-minute repairs, missing screws, and the temporary chaos
+      created in the name of home improvement.
+    </p>
+
+    <Link
+      href="/household-team-ups"
+      className="mt-9 inline-flex rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.17em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a]"
+    >
+      Read Household Team-Ups
+    </Link>
+  </div>
+</section>
+
       {/* COMING SOON */}
       <section className="px-6 py-20">
         <div className="mx-auto max-w-5xl rounded-[2.5rem] bg-[#2f261f] px-8 py-14 text-center text-white shadow-2xl md:px-14">
