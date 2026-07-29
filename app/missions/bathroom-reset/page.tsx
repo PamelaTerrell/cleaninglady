@@ -50,40 +50,36 @@ export default function BathroomResetPage() {
   return (
     <main className="min-h-screen bg-[#fffaf2] text-[#2f261f]">
       {/* HERO */}
-      <section className="mx-auto max-w-5xl px-6 py-16 text-center md:py-24">
-        <Link
-          href="/"
-          className="inline-flex rounded-full border border-[#eadcc8] bg-white px-5 py-2 text-sm font-bold uppercase tracking-[0.18em] text-[#7a5520] transition hover:-translate-y-1 hover:shadow-md"
-        >
-          ← Back to HQ
-        </Link>
+<section className="mx-auto max-w-5xl px-6 py-10 text-center md:py-14">
+  <Link
+    href="/"
+    className="inline-flex rounded-full border border-[#eadcc8] bg-white px-5 py-2 text-sm font-bold uppercase tracking-[0.18em] text-[#7a5520] transition hover:-translate-y-1 hover:shadow-md"
+  >
+    ← Back to HQ
+  </Link>
 
-        <img
-          src="/superhero-cleaning-bottle-mascot.png"
-          alt="Super Cleaning Lady spray bottle superhero mascot"
-          className="mx-auto mt-10 w-40 drop-shadow-xl md:w-56"
-        />
+  <p className="mt-6 text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
+    Mission File 003
+  </p>
 
-        <p className="mt-8 text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
-          Mission File 003
-        </p>
+  <h1 className="mx-auto mt-3 max-w-4xl text-4xl font-black leading-tight tracking-tight sm:text-5xl md:text-6xl">
+    Bathroom Reset
+  </h1>
 
-        <h1 className="mx-auto mt-4 max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
-          Bathroom Reset
-        </h1>
+  <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-[#6a5a4b] sm:text-lg md:leading-8">
+    Because the mirror should not look like it survived a toothpaste
+    explosion, the sink area should not require a search party, and the shower
+    curtain liner should not be developing a personality.
+  </p>
 
-        <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#6a5a4b] md:text-xl">
-          Because the mirror should not look like it survived a toothpaste
-          explosion, the sink area should not require a search party, and the
-          shower curtain liner should not be developing a personality.
-        </p>
+  <img
+    src="/toothpaste-splatter.png"
+    alt="Toothpaste Splatter, a mischievous toothpaste villain on a bathroom mirror"
+    className="mx-auto mt-7 w-44 drop-shadow-xl sm:w-52 md:w-60"
+  />
+</section>
 
-        <img
-          src="/toothpaste-splatter.png"
-          alt="Toothpaste Splatter, a mischievous toothpaste villain on a bathroom mirror"
-          className="mx-auto mt-10 w-56 drop-shadow-xl md:w-72"
-        />
-      </section>
+       
 
       {/* BATHROOM HEROICS */}
       <section className="bg-white px-6 py-16">
