@@ -13,6 +13,11 @@ const navigation = [
     label: "No-Shame",
     href: "/#no-shame",
   },
+
+  {
+  label: "Squad",
+  href: "/#squad",
+},
   {
     label: "Comics",
     href: "/invisible-heroics",

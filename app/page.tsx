@@ -201,6 +201,117 @@ export default function Home() {
         </div>
       </section>
 
+      {/* MEET THE SQUAD */}
+<section id="squad" className="px-6 py-20">
+  <div className="mx-auto max-w-6xl">
+    <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.05fr]">
+      {/* SQUAD IMAGE */}
+      <div className="relative">
+        <div
+          className="absolute inset-8 rounded-full bg-[#f4c96d]/25 blur-3xl"
+          aria-hidden="true"
+        />
+
+        <img
+          src="/clean-squad.png"
+          alt="Super Cleaning Lady, Super Handy Man, the spray bottle mascot, and Spongie standing together"
+          className="relative w-full rounded-[2.5rem] border border-[#eadcc8] shadow-[0_26px_70px_rgba(47,38,31,0.16)]"
+        />
+      </div>
+
+      {/* SQUAD INTRO */}
+      <div>
+        <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+          Meet the Squad
+        </p>
+
+        <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+          Every household crisis needs the right hero.
+        </h2>
+
+        <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
+          Together, they battle dust, clutter, questionable repairs, runaway
+          socks, and every tiny domestic emergency hiding in plain sight.
+        </p>
+
+        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          <article className="rounded-[2rem] border border-[#eadcc8] bg-white p-6 shadow-sm">
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
+              Team Leader
+            </p>
+
+            <h3 className="mt-3 text-2xl font-black">
+              Super Cleaning Lady
+            </h3>
+
+            <p className="mt-3 leading-7 text-[#6a5a4b]">
+              Restores order, defeats mystery grime, and knows exactly where
+              the ratchet set does not live.
+            </p>
+          </article>
+
+          <article className="rounded-[2rem] border border-[#eadcc8] bg-white p-6 shadow-sm">
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
+              Repair Division
+            </p>
+
+            <h3 className="mt-3 text-2xl font-black">Super Handy Man</h3>
+
+            <p className="mt-3 leading-7 text-[#6a5a4b]">
+              Fixes the house, owns every tool, and begins most adventures with,
+              “This should only take five minutes.”
+            </p>
+          </article>
+
+          <article className="rounded-[2rem] border border-[#eadcc8] bg-white p-6 shadow-sm">
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
+              Sparkle Support
+            </p>
+
+            <h3 className="mt-3 text-2xl font-black">
+              The Super Spray Bottle
+            </h3>
+
+            <p className="mt-3 leading-7 text-[#6a5a4b]">
+              Armed with cleaning power, a heroic cape, and unwavering faith
+              that every sticky spot can be defeated.
+            </p>
+          </article>
+
+          <article className="rounded-[2rem] border border-[#eadcc8] bg-white p-6 shadow-sm">
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
+              Tiny Sidekick
+            </p>
+
+            <h3 className="mt-3 text-2xl font-black">Spongie</h3>
+
+            <p className="mt-3 leading-7 text-[#6a5a4b]">
+              Small sponge. Big confidence. Absolutely no fear of mystery
+              splatter.
+            </p>
+          </article>
+        </div>
+
+        <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+          <Link
+            href="/invisible-heroics"
+            className="rounded-full bg-[#2f261f] px-7 py-4 text-center text-sm font-black uppercase tracking-[0.16em] text-white shadow-lg transition hover:-translate-y-1 hover:bg-[#4a3b30] hover:shadow-xl"
+          >
+            See Invisible Heroics
+          </Link>
+
+          <Link
+            href="/household-team-ups"
+            className="rounded-full border border-[#d8c6ad] bg-white px-7 py-4 text-center text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+          >
+            Read the Team-Ups
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
       {/* VILLAINS */}
       <section id="villains" className="px-6 py-20">
         <div className="mx-auto max-w-6xl">
