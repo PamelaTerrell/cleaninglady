@@ -183,7 +183,7 @@ export default function Home() {
                 <img
                   src={mission.image}
                   alt={`${mission.title} mission illustration`}
-                  className="mb-5 h-32 w-full rounded-2xl object-cover object-center shadow-sm transition group-hover:scale-[1.02]"
+                  className="mb-5 h-58 w-full rounded-2xl object-cover object-top shadow-sm transition group-hover:scale-[1.02]"
                 />
 
                 <h3 className="text-2xl font-black">{mission.title}</h3>
