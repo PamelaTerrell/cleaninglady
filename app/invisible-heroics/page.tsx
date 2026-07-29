@@ -2,6 +2,21 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 
 const heroics = [
+
+  {
+  title: "The Coffee Pot Controversy",
+  slug: "coffee-pot",
+  category: "Kitchen Heroics",
+  image: "/comics/coffee-pot.png",
+  alt: "Super Cleaning Lady rejects the idea that coffee tastes better from a dirty coffee maker and cleans the pot, basket, and reservoir",
+  description:
+    "A wise old coffee guru called it seasoning. Super Cleaning Lady called it yesterday’s coffee clinging to the equipment for emotional support.",
+  punchline:
+    "Clean pot. Clean basket. Clean reservoir. Better coffee.",
+  missionHref: "/missions/kitchen-rescue",
+  missionLabel: "Start the Kitchen Rescue",
+},
+
   {
     title: "The Power of Clean Sheets",
     slug: "bed-sheets",
