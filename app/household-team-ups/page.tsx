@@ -42,6 +42,18 @@ const teamUps = [
   quote:
     "The Sock Portal remains a mystery. Super Handy Man remains extremely optimistic.",
 },
+
+{
+  part: "Part 4",
+  title: "The Wobbly Shelf Emergency",
+  slug: "wobbly-shelf-emergency",
+  image: "/comics/wobbly-shelf.png",
+  alt: "Super Cleaning Lady, Super Handy Man, the Super Spray Bottle, and Spongie team up to fix a dangerously wobbly shelf",
+  description:
+    "A shelf starts leaning like it pays rent, and the whole team responds. Super Handy Man brings every tool he owns, Super Cleaning Lady handles the rescue, Super Spray stays ready, and Spongie proudly contributes the duster.",
+  quote:
+    "Some problems need teamwork... and slightly too many tools.",
+},
 ];
 
 const futureReports = [
