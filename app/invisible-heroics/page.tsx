@@ -225,6 +225,12 @@ export default function InvisibleHeroicsPage() {
       {/* HOUSEHOLD TEAM-UPS */}
 <section className="px-6 py-20">
   <div className="mx-auto max-w-5xl rounded-[2.5rem] bg-[#2f261f] px-8 py-14 text-center text-white shadow-2xl md:px-14">
+    <img
+      src="/super-handy-man.png"
+      alt="Super Handy Man wearing glasses, a work shirt, and a tool belt"
+      className="mx-auto mb-8 w-52 drop-shadow-2xl sm:w-64 md:w-72"
+    />
+
     <p className="text-sm font-black uppercase tracking-[0.25em] text-[#f4c96d]">
       The saga continues
     </p>
@@ -239,6 +245,10 @@ export default function InvisibleHeroicsPage() {
       created in the name of home improvement.
     </p>
 
+    <blockquote className="mx-auto mt-7 max-w-2xl rounded-2xl border-l-4 border-[#f4c96d] bg-white/10 px-6 py-5 text-xl font-bold italic leading-8">
+      “He repairs the house. She repairs the aftermath.”
+    </blockquote>
+
     <Link
       href="/household-team-ups"
       className="mt-9 inline-flex rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.17em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a]"
@@ -246,6 +256,7 @@ export default function InvisibleHeroicsPage() {
       Read Household Team-Ups
     </Link>
   </div>
+
 </section>
 
       {/* COMING SOON */}
