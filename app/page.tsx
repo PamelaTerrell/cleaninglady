@@ -35,8 +35,7 @@ const missions = [
     title: "Laundry Mountain",
     href: "/missions/laundry-mountain",
     image: "/laundry-mountain.png",
-    description:
-      "Scale the pile. Find the floor. Become the legend.",
+    description: "Scale the pile. Find the floor. Become the legend.",
   },
   {
     title: "Closet Chaos",
@@ -111,7 +110,8 @@ const squad = [
     description:
       "Restores order, defeats mystery grime, and knows exactly where the ratchet set does not live.",
     image: "/scl.png",
-    alt: "",
+    alt: "Super Cleaning Lady wearing her pink cape and holding a spray bottle",
+    imageClassName: "h-[92%]",
   },
   {
     role: "Repair Division",
@@ -119,7 +119,8 @@ const squad = [
     description:
       "Fixes the house, owns every tool, and begins most adventures with, “This should only take five minutes.”",
     image: "/shm.png",
-    alt: "",
+    alt: "Super Handy Man wearing glasses, work clothes, and a tool belt",
+    imageClassName: "h-[118%]",
   },
   {
     role: "Sparkle Support",
@@ -127,7 +128,8 @@ const squad = [
     description:
       "Armed with cleaning power, a heroic cape, and unwavering faith that every sticky spot can be defeated.",
     image: "/super-spray.png",
-    alt: "",
+    alt: "The Super Spray Bottle wearing a red cape and holding a yellow cleaning cloth",
+    imageClassName: "h-[94%]",
   },
   {
     role: "Tiny Sidekick",
@@ -135,7 +137,8 @@ const squad = [
     description:
       "Small sponge. Big confidence. Absolutely no fear of mystery splatter.",
     image: "/spongie.png",
-    alt: "Spongie, the cheerful sponge sidekick, wearing goggles and a red cape while holding a blue duster",
+    alt: "Spongie wearing goggles and a red cape while holding a blue duster",
+    imageClassName: "h-[122%]",
   },
 ];
 
@@ -143,7 +146,7 @@ const featuredComic = {
   series: "Invisible Heroics",
   title: "Tinkering Totally Counts",
   image: "/comics/tinkering.png",
-  alt: "Super Cleaning Lady moves around the house completing small cleaning and organizing tasks while following her energy",
+  alt: "Super Cleaning Lady completes small cleaning and organizing tasks around the house while following her energy",
   description:
     "No master plan. No full-house reset. Just one pillow fluffed, one surface wiped, one pile handled, and somehow the whole place starts behaving better.",
   quote:
@@ -186,7 +189,7 @@ export default function Home() {
       <section className="mx-auto flex min-h-[68vh] max-w-6xl flex-col items-center justify-center px-6 py-12 text-center md:py-16">
         <img
           src="/clean-squad.png"
-          alt="Super Cleaning Lady, Super Handy Man, the Super Spray Bottle, and Spongie standing together as the household hero team"
+          alt="Super Cleaning Lady, Super Handy Man, the Super Spray Bottle, and Spongie standing together"
           className="mb-8 w-full max-w-3xl rounded-[2rem] drop-shadow-2xl lg:max-w-4xl"
         />
 
@@ -283,84 +286,72 @@ export default function Home() {
       {/* MEET THE SQUAD */}
       <section id="squad" className="scroll-mt-36 px-6 py-20">
         <div className="mx-auto max-w-6xl">
-          <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
-            <div className="relative">
-              <div
-                className="absolute inset-8 rounded-full bg-[#f4c96d]/25 blur-3xl"
-                aria-hidden="true"
-              />
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+              Meet the Squad
+            </p>
 
-              <img
-                src="/clean-squad.png"
-                alt="The four members of the Super Cleaning Lady household hero squad"
-                className="relative w-full rounded-[2.5rem] border border-[#eadcc8] shadow-[0_26px_70px_rgba(47,38,31,0.16)]"
-              />
-            </div>
+            <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+              Every household crisis needs the right hero.
+            </h2>
 
-            <div>
-              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
-                Meet the Squad
-              </p>
+            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
+              Together, they battle dust, clutter, questionable repairs,
+              runaway socks, and every tiny domestic emergency hiding in plain
+              sight.
+            </p>
+          </div>
 
-              <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
-                Every household crisis needs the right hero.
-              </h2>
+          <div className="mt-12 grid items-stretch gap-6 sm:grid-cols-2 xl:grid-cols-4">
+            {squad.map((member) => (
+              <article
+                key={member.name}
+                className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+              >
+                <div className="relative flex h-72 items-center justify-center overflow-hidden bg-[#fffaf2] p-5 sm:h-80">
+                  <div
+                    className="absolute h-44 w-44 rounded-full bg-[#f4c96d]/20 blur-3xl"
+                    aria-hidden="true"
+                  />
 
-              <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
-                Together, they battle dust, clutter, questionable repairs,
-                runaway socks, and every tiny domestic emergency hiding in
-                plain sight.
-              </p>
+                  <img
+                    src={member.image}
+                    alt={member.alt}
+                    className={`relative w-auto max-w-full object-contain drop-shadow-xl transition duration-300 group-hover:scale-[1.03] ${member.imageClassName}`}
+                  />
+                </div>
 
-              <div className="mt-8 grid gap-4 sm:grid-cols-2">
-  {squad.map((member) => (
-    <article
-      key={member.name}
-      className="flex flex-col overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md"
-    >
-      {member.image && (
-        <div className="flex h-64 items-center justify-center overflow-hidden bg-[#fffaf2] p-4">
-          <img
-            src={member.image}
-            alt={member.alt}
-            className="h-full w-full object-contain drop-shadow-xl"
-          />
-        </div>
-      )}
+                <div className="flex flex-1 flex-col p-7">
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
+                    {member.role}
+                  </p>
 
-      <div className="flex flex-1 flex-col p-6">
-        <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
-          {member.role}
-        </p>
+                  <h3 className="mt-3 text-2xl font-black leading-tight">
+                    {member.name}
+                  </h3>
 
-        <h3 className="mt-3 text-2xl font-black">
-          {member.name}
-        </h3>
+                  <p className="mt-4 flex-1 leading-7 text-[#6a5a4b]">
+                    {member.description}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
 
-        <p className="mt-3 leading-7 text-[#6a5a4b]">
-          {member.description}
-        </p>
-      </div>
-    </article>
-  ))}
-</div>
+          <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+            <Link
+              href="/invisible-heroics"
+              className="rounded-full bg-[#2f261f] px-7 py-4 text-center text-sm font-black uppercase tracking-[0.16em] text-white shadow-lg transition hover:-translate-y-1 hover:bg-[#4a3b30] hover:shadow-xl"
+            >
+              See Invisible Heroics
+            </Link>
 
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <Link
-                  href="/invisible-heroics"
-                  className="rounded-full bg-[#2f261f] px-7 py-4 text-center text-sm font-black uppercase tracking-[0.16em] text-white shadow-lg transition hover:-translate-y-1 hover:bg-[#4a3b30] hover:shadow-xl"
-                >
-                  See Invisible Heroics
-                </Link>
-
-                <Link
-                  href="/household-team-ups"
-                  className="rounded-full border border-[#d8c6ad] bg-white px-7 py-4 text-center text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-sm transition hover:-translate-y-1 hover:shadow-md"
-                >
-                  Read the Team-Ups
-                </Link>
-              </div>
-            </div>
+            <Link
+              href="/household-team-ups"
+              className="rounded-full border border-[#d8c6ad] bg-white px-7 py-4 text-center text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+            >
+              Read the Team-Ups
+            </Link>
           </div>
         </div>
       </section>
@@ -472,11 +463,11 @@ export default function Home() {
       {/* HOUSEHOLD TEAM-UPS */}
       <section id="team-ups" className="scroll-mt-36 px-6 py-20">
         <div className="mx-auto grid max-w-6xl overflow-hidden rounded-[2.5rem] border border-[#eadcc8] bg-white shadow-[0_24px_70px_rgba(47,38,31,0.13)] lg:grid-cols-[0.8fr_1.2fr]">
-          <div className="flex items-center justify-center bg-[#2f261f] p-8 sm:p-10">
+          <div className="flex min-h-[440px] items-center justify-center overflow-hidden bg-[#2f261f] p-8 sm:p-10">
             <img
-              src="/super-handy-man.png"
+              src="/shm.png"
               alt="Super Handy Man wearing glasses, a work shirt, and a tool belt"
-              className="w-full max-w-sm drop-shadow-2xl"
+              className="h-full max-h-[520px] w-auto max-w-full object-contain drop-shadow-2xl"
             />
           </div>
 
