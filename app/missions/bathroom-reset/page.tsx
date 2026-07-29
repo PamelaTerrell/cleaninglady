@@ -6,7 +6,7 @@ import { completeMission } from "@/app/actions";
 export const metadata: Metadata = {
   title: "Bathroom Reset | Super Cleaning Lady",
   description:
-    "A funny bathroom cleaning mission for when the mirror survived a toothpaste explosion and the sink area needs adult supervision.",
+    "A funny bathroom cleaning mission for when the mirror survived a toothpaste explosion, the sink needs adult supervision, and the shower curtain liner has entered its villain era.",
 };
 
 const quickSteps = [
@@ -23,6 +23,7 @@ const deepSteps = [
   "Scrub the sink, faucet, and counter.",
   "Clean the toilet inside and out like the brave adult you are.",
   "Wipe the shower or tub walls, especially the soap scum headquarters.",
+  "Check the shower curtain liner. Clean it or replace it before it becomes self-aware.",
   "Sweep or vacuum the floor, then mop if the floor has become emotionally sticky.",
 ];
 
@@ -35,9 +36,20 @@ const supplies = [
   "Courage and possibly gloves",
 ];
 
+const bathroomHeroic = {
+  title: "The Shower Curtain Liner",
+  image: "/comics/shower-curtain-liner.png",
+  alt: "Super Cleaning Lady replaces an old shower curtain liner while everyone else fails to notice",
+  description:
+    "No applause. No medal. Not even a casual, “Hey, the shower looks better.” Just another household crisis quietly defeated.",
+  punchline:
+    "Some heroes save the world. Others replace the shower curtain liner before it becomes self-aware.",
+};
+
 export default function BathroomResetPage() {
   return (
     <main className="min-h-screen bg-[#fffaf2] text-[#2f261f]">
+      {/* HERO */}
       <section className="mx-auto max-w-5xl px-6 py-16 text-center md:py-24">
         <Link
           href="/"
@@ -62,45 +74,114 @@ export default function BathroomResetPage() {
 
         <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#6a5a4b] md:text-xl">
           Because the mirror should not look like it survived a toothpaste
-          explosion, and the sink area should not require a search party.
+          explosion, the sink area should not require a search party, and the
+          shower curtain liner should not be developing a personality.
         </p>
 
         <img
-  src="/toothpaste-splatter.png"
-  alt="Toothpaste Splatter, a mischievous toothpaste villain on a bathroom mirror"
-  className="mx-auto mt-10 w-56 drop-shadow-xl md:w-72"
-/>
+          src="/toothpaste-splatter.png"
+          alt="Toothpaste Splatter, a mischievous toothpaste villain on a bathroom mirror"
+          className="mx-auto mt-10 w-56 drop-shadow-xl md:w-72"
+        />
       </section>
 
+      {/* BATHROOM HEROICS */}
       <section className="bg-white px-6 py-16">
-        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
-          <div className="rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm">
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
-              Difficulty
+        <div className="mx-auto max-w-6xl">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+              Report from the bathroom
             </p>
-            <h2 className="mt-3 text-3xl font-black">Splash Zone Chaos</h2>
-            <p className="mt-4 leading-7 text-[#6a5a4b]">
-              Not impossible. Just damp, suspicious, and somehow covered in tiny
-              dots no one will admit creating.
+
+            <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+              The invisible work nobody notices.
+            </h2>
+
+            <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
+              The bathroom quietly improves. The shower feels fresher. Nobody
+              asks why. Super Cleaning Lady knows exactly what happened.
             </p>
           </div>
 
-          <div className="rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm">
+          <article className="mx-auto mt-12 grid max-w-6xl overflow-hidden rounded-[2.5rem] border border-[#eadcc8] bg-[#fffaf2] shadow-[0_24px_70px_rgba(47,38,31,0.12)] lg:grid-cols-[1.15fr_0.85fr]">
+            <div className="bg-white p-4 sm:p-6">
+              <img
+                src={bathroomHeroic.image}
+                alt={bathroomHeroic.alt}
+                className="h-auto w-full rounded-[1.75rem]"
+              />
+            </div>
+
+            <div className="flex flex-col justify-center p-8 sm:p-10 lg:p-12">
+              <p className="text-sm font-black uppercase tracking-[0.22em] text-[#b48635]">
+                Bathroom Heroics
+              </p>
+
+              <h3 className="mt-4 text-4xl font-black leading-tight">
+                {bathroomHeroic.title}
+              </h3>
+
+              <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
+                {bathroomHeroic.description}
+              </p>
+
+              <blockquote className="mt-7 rounded-2xl border-l-4 border-[#b48635] bg-white p-6 text-xl font-bold italic leading-8 shadow-sm">
+                “{bathroomHeroic.punchline}”
+              </blockquote>
+
+              <div className="mt-8">
+                <Link
+                  href="/invisible-heroics"
+                  className="inline-flex rounded-full border border-[#d8c6ad] bg-white px-6 py-4 text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+                >
+                  See All Invisible Heroics
+                </Link>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      {/* MISSION DETAILS */}
+      <section className="px-6 py-16">
+        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
+          <div className="rounded-[2rem] border border-[#eadcc8] bg-white p-8 shadow-sm">
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
+              Difficulty
+            </p>
+
+            <h2 className="mt-3 text-3xl font-black">
+              Splash Zone Chaos
+            </h2>
+
+            <p className="mt-4 leading-7 text-[#6a5a4b]">
+              Not impossible. Just damp, suspicious, and somehow covered in
+              tiny dots no one will admit creating.
+            </p>
+          </div>
+
+          <div className="rounded-[2rem] border border-[#eadcc8] bg-white p-8 shadow-sm">
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
               Time Needed
             </p>
+
             <h2 className="mt-3 text-3xl font-black">10–30 Minutes</h2>
+
             <p className="mt-4 leading-7 text-[#6a5a4b]">
               A quick wipe can change the whole mood. A full reset can make you
               feel like you live in a civilized society.
             </p>
           </div>
 
-          <div className="rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm">
+          <div className="rounded-[2rem] border border-[#eadcc8] bg-white p-8 shadow-sm">
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
               Victory Goal
             </p>
-            <h2 className="mt-3 text-3xl font-black">Restore the Sparkle</h2>
+
+            <h2 className="mt-3 text-3xl font-black">
+              Restore the Sparkle
+            </h2>
+
             <p className="mt-4 leading-7 text-[#6a5a4b]">
               We are aiming for fresh, not palace-level. If the mirror is clear
               and the sink is no longer alarming, you win.
@@ -109,6 +190,7 @@ export default function BathroomResetPage() {
         </div>
       </section>
 
+      {/* SUPPLIES */}
       <section className="px-6 py-16">
         <div className="mx-auto max-w-6xl">
           <div className="rounded-[2rem] bg-[#2f261f] p-8 text-white shadow-2xl md:p-10">
@@ -134,6 +216,7 @@ export default function BathroomResetPage() {
         </div>
       </section>
 
+      {/* MISSION STEPS */}
       <section className="bg-white px-6 py-16">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
           <div className="rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm md:p-10">
@@ -154,6 +237,7 @@ export default function BathroomResetPage() {
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#2f261f] text-sm font-black text-white">
                     {index + 1}
                   </span>
+
                   <span className="leading-7 text-[#6a5a4b]">{step}</span>
                 </li>
               ))}
@@ -178,6 +262,7 @@ export default function BathroomResetPage() {
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#2f261f] text-sm font-black text-white">
                     {index + 1}
                   </span>
+
                   <span className="leading-7 text-[#6a5a4b]">{step}</span>
                 </li>
               ))}
@@ -186,6 +271,7 @@ export default function BathroomResetPage() {
         </div>
       </section>
 
+      {/* VICTORY */}
       <section className="px-6 py-16">
         <div className="mx-auto max-w-4xl rounded-[2rem] bg-white p-8 text-center shadow-sm md:p-12">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
@@ -197,21 +283,21 @@ export default function BathroomResetPage() {
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#6a5a4b]">
-            It does not need to sparkle like a hotel commercial. If the mirror is
-            clear, the sink is wiped, and the toilet has been addressed with
+            It does not need to sparkle like a hotel commercial. If the mirror
+            is clear, the sink is wiped, and the toilet has been addressed with
             dignity, this mission counts.
           </p>
 
           <form action={completeMission} className="mt-8">
-  <input type="hidden" name="mission" value="bathroom-reset" />
+            <input type="hidden" name="mission" value="bathroom-reset" />
 
-  <button
-    type="submit"
-    className="rounded-full bg-[#2f261f] px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
-  >
-    I Survived This Mission
-  </button>
-</form>
+            <button
+              type="submit"
+              className="rounded-full bg-[#2f261f] px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              I Survived This Mission
+            </button>
+          </form>
 
           <Link
             href="/#missions"
@@ -221,6 +307,7 @@ export default function BathroomResetPage() {
           </Link>
         </div>
       </section>
+
       <Footer />
     </main>
   );

@@ -21,7 +21,7 @@ const deepSteps = [
   "Start or unload the dishwasher.",
   "Wash the dishes that are blocking your will to live.",
   "Clear and wipe all counters.",
-  "Wipe the stove top and the front of the microwave.",
+  "Wipe the stovetop and the front of the microwave.",
   "Sweep the floor, especially the crumb colony near the cabinets.",
   "Take out the trash and replace the bag like the responsible hero you are.",
 ];
@@ -35,9 +35,31 @@ const supplies = [
   "Music, podcast, or dramatic superhero theme",
 ];
 
+const kitchenHeroics = [
+  {
+    title: "The Coffee Pot Controversy",
+    image: "/comics/coffee-pot.png",
+    alt: "Super Cleaning Lady rejects the idea that coffee tastes better from a dirty coffee maker and cleans the pot, basket, and reservoir",
+    description:
+      "A wise old coffee guru called it seasoning. Super Cleaning Lady called it yesterday’s coffee clinging to the equipment for emotional support.",
+    punchline:
+      "Clean pot. Clean basket. Clean reservoir. Better coffee.",
+  },
+  {
+    title: "The Mystery Under the Stove",
+    image: "/comics/under-the-stove.png",
+    alt: "Super Cleaning Lady pulls the stove away from the wall and discovers crumbs, grease, pet hair, and dust underneath",
+    description:
+      "Crumbs fall. Grease splatters. Pet hair drifts. Somehow, it all gathers beneath the stove like it reserved the space months ago.",
+    punchline:
+      "No crumb bunker survives on Super Cleaning Lady’s watch.",
+  },
+];
+
 export default function KitchenRescuePage() {
   return (
     <main className="min-h-screen bg-[#fffaf2] text-[#2f261f]">
+      {/* HERO */}
       <section className="mx-auto max-w-5xl px-6 py-16 text-center md:py-24">
         <Link
           href="/"
@@ -61,40 +83,113 @@ export default function KitchenRescuePage() {
         </h1>
 
         <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#6a5a4b] md:text-xl">
-          For when the counters have disappeared, the sink is staging a rebellion,
-          and something near the toaster is making you question your choices.
+          For when the counters have disappeared, the sink is staging a
+          rebellion, and something near the toaster is making you question your
+          choices.
         </p>
       </section>
 
+      {/* KITCHEN HEROICS */}
       <section className="bg-white px-6 py-16">
+        <div className="mx-auto max-w-6xl">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+              Reports from the kitchen
+            </p>
+
+            <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+              Before the mission begins, review the evidence.
+            </h2>
+
+            <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
+              The kitchen has many ways to create chaos. Some involve crumbs.
+              Others involve coffee residue claiming to be flavor.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-8 lg:grid-cols-2">
+            {kitchenHeroics.map((heroic) => (
+              <article
+                key={heroic.title}
+                className="overflow-hidden rounded-[2.5rem] border border-[#eadcc8] bg-[#fffaf2] shadow-[0_22px_60px_rgba(47,38,31,0.12)]"
+              >
+                <div className="bg-white p-4 sm:p-6">
+                  <img
+                    src={heroic.image}
+                    alt={heroic.alt}
+                    className="h-auto w-full rounded-[1.75rem]"
+                  />
+                </div>
+
+                <div className="p-8 sm:p-10">
+                  <p className="text-sm font-black uppercase tracking-[0.22em] text-[#b48635]">
+                    Kitchen Heroics
+                  </p>
+
+                  <h3 className="mt-4 text-3xl font-black leading-tight md:text-4xl">
+                    {heroic.title}
+                  </h3>
+
+                  <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
+                    {heroic.description}
+                  </p>
+
+                  <blockquote className="mt-6 rounded-2xl border-l-4 border-[#b48635] bg-white p-6 text-lg font-bold italic leading-8 shadow-sm">
+                    “{heroic.punchline}”
+                  </blockquote>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <Link
+              href="/invisible-heroics"
+              className="inline-flex rounded-full border border-[#d8c6ad] bg-[#fffaf2] px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+            >
+              See All Invisible Heroics
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* MISSION DETAILS */}
+      <section className="px-6 py-16">
         <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
-          <div className="rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm">
+          <div className="rounded-[2rem] border border-[#eadcc8] bg-white p-8 shadow-sm">
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
               Difficulty
             </p>
+
             <h2 className="mt-3 text-3xl font-black">Medium Chaos</h2>
+
             <p className="mt-4 leading-7 text-[#6a5a4b]">
               Not a disaster. Not peaceful. Somewhere between “I can fix this”
-              and “why is there a spoon in the living room? We don’t know. We don’t ask questions during rescue missions.”
+              and “Why is there a spoon in the living room?” We do not ask
+              questions during rescue missions.
             </p>
           </div>
 
-          <div className="rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm">
+          <div className="rounded-[2rem] border border-[#eadcc8] bg-white p-8 shadow-sm">
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
               Time Needed
             </p>
+
             <h2 className="mt-3 text-3xl font-black">10–30 Minutes</h2>
+
             <p className="mt-4 leading-7 text-[#6a5a4b]">
-              Choose the quick rescue or the full reset. Either way, the kitchen
-              loses and you win.
+              Choose the quick rescue or the full reset. Either way, the
+              kitchen loses and you win.
             </p>
           </div>
 
-          <div className="rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm">
+          <div className="rounded-[2rem] border border-[#eadcc8] bg-white p-8 shadow-sm">
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
               Victory Goal
             </p>
+
             <h2 className="mt-3 text-3xl font-black">Find the Counter</h2>
+
             <p className="mt-4 leading-7 text-[#6a5a4b]">
               We are not creating a magazine kitchen. We are locating flat
               surfaces and restoring basic civilization.
@@ -103,6 +198,7 @@ export default function KitchenRescuePage() {
         </div>
       </section>
 
+      {/* SUPPLIES */}
       <section className="px-6 py-16">
         <div className="mx-auto max-w-6xl">
           <div className="rounded-[2rem] bg-[#2f261f] p-8 text-white shadow-2xl md:p-10">
@@ -128,6 +224,7 @@ export default function KitchenRescuePage() {
         </div>
       </section>
 
+      {/* MISSION STEPS */}
       <section className="bg-white px-6 py-16">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
           <div className="rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm md:p-10">
@@ -148,6 +245,7 @@ export default function KitchenRescuePage() {
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#2f261f] text-sm font-black text-white">
                     {index + 1}
                   </span>
+
                   <span className="leading-7 text-[#6a5a4b]">{step}</span>
                 </li>
               ))}
@@ -172,6 +270,7 @@ export default function KitchenRescuePage() {
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#2f261f] text-sm font-black text-white">
                     {index + 1}
                   </span>
+
                   <span className="leading-7 text-[#6a5a4b]">{step}</span>
                 </li>
               ))}
@@ -180,6 +279,28 @@ export default function KitchenRescuePage() {
         </div>
       </section>
 
+      {/* OPTIONAL DEEP-CLEAN NOTE */}
+      <section className="px-6 py-16">
+        <div className="mx-auto max-w-4xl rounded-[2rem] border border-[#eadcc8] bg-white p-8 shadow-sm md:p-10">
+          <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+            Bonus Heroics
+          </p>
+
+          <h2 className="mt-4 text-3xl font-black md:text-4xl">
+            Feeling unusually powerful?
+          </h2>
+
+          <p className="mt-5 leading-8 text-[#6a5a4b]">
+            Rinse the removable coffee pot and basket according to the
+            manufacturer’s directions, and check whether the reservoir needs
+            cleaning or descaling. You may also investigate beneath the stove—but
+            only after it is completely cool and only if it can be moved safely.
+            Never pull, disconnect, or strain a gas line for the sake of a crumb.
+          </p>
+        </div>
+      </section>
+
+      {/* VICTORY */}
       <section className="px-6 py-16">
         <div className="mx-auto max-w-4xl rounded-[2rem] bg-white p-8 text-center shadow-sm md:p-12">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
@@ -191,21 +312,21 @@ export default function KitchenRescuePage() {
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#6a5a4b]">
-            It does not have to be perfect. If the counter is visible, the sink is
-            less dramatic, and the mystery sticky spot has been handled, this
-            mission counts.
+            It does not have to be perfect. If the counter is visible, the sink
+            is less dramatic, and the mystery sticky spot has been handled,
+            this mission counts.
           </p>
 
           <form action={completeMission} className="mt-8">
-  <input type="hidden" name="mission" value="kitchen-rescue" />
+            <input type="hidden" name="mission" value="kitchen-rescue" />
 
-  <button
-    type="submit"
-    className="rounded-full bg-[#2f261f] px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
-  >
-    I Survived This Mission
-  </button>
-</form>
+            <button
+              type="submit"
+              className="rounded-full bg-[#2f261f] px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              I Survived This Mission
+            </button>
+          </form>
 
           <Link
             href="/#missions"
@@ -215,6 +336,7 @@ export default function KitchenRescuePage() {
           </Link>
         </div>
       </section>
+
       <Footer />
     </main>
   );
