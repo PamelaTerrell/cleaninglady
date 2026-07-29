@@ -121,39 +121,39 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#fffaf2] text-[#2f261f]">
       {/* HERO */}
-      <section className="mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-6 py-20 text-center">
-        <img
-          src="/home-superhero-cleaning-bottle-mascot.png"
-          alt="Super Cleaning Lady spray bottle superhero mascot"
-          className="mb-8 w-96 drop-shadow-xl md:w-[30rem] lg:w-[36rem]"
-        />
+      <section className="mx-auto flex min-h-[72vh] max-w-6xl flex-col items-center justify-center px-6 py-14 text-center md:py-16">
+  <img
+    src="/home-superhero-cleaning-bottle-mascot.png"
+    alt="Super Cleaning Lady spray bottle superhero mascot"
+    className="mb-6 w-64 drop-shadow-xl sm:w-72 md:w-80 lg:w-96"
+  />
 
-        <h1 className="max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
-          Your house isn’t messy. It’s just experiencing a plot twist.
-        </h1>
+  <h1 className="max-w-4xl text-4xl font-black leading-tight tracking-tight sm:text-5xl md:text-6xl">
+    Your house isn’t messy. It’s just experiencing a plot twist.
+  </h1>
 
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-[#6a5a4b] md:text-xl">
-          Fighting dust, dishes, doom piles, and whatever that is under the
-          couch — with rescue missions for homes that are one sock pile away
-          from becoming a wildlife habitat.
-        </p>
+  <p className="mt-5 max-w-2xl text-base leading-7 text-[#6a5a4b] sm:text-lg md:leading-8">
+    Fighting dust, dishes, doom piles, and whatever that is under the
+    couch — with rescue missions for homes that are one sock pile away
+    from becoming a wildlife habitat.
+  </p>
 
-        <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-          <a
-            href="#missions"
-            className="rounded-full bg-[#2f261f] px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
-          >
-            Start a Mission
-          </a>
+  <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+    <a
+      href="#missions"
+      className="rounded-full bg-[#2f261f] px-7 py-3.5 text-sm font-bold uppercase tracking-[0.18em] text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
+    >
+      Start a Mission
+    </a>
 
-          <a
-            href="#villains"
-            className="rounded-full border border-[#d8c6ad] bg-white px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-[#2f261f] shadow-sm transition hover:-translate-y-1 hover:shadow-md"
-          >
-            Meet the Villains
-          </a>
-        </div>
-      </section>
+    <a
+      href="#villains"
+      className="rounded-full border border-[#d8c6ad] bg-white px-7 py-3.5 text-sm font-bold uppercase tracking-[0.18em] text-[#2f261f] shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+    >
+      Meet the Villains
+    </a>
+  </div>
+</section>
 
       <MissionProgress />
 
