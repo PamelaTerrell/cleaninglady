@@ -97,10 +97,10 @@ const villains = [
     image: "/mystery-sticky-spot.png",
   },
   {
-    name: "The Sock Portal",
-    href: "/missions/laundry-mountain",
-    image: "/sock-portal.png",
-  },
+  name: "The Sock Portal",
+  href: "/villains/sock-portal",
+  image: "/sock-portal.png",
+},
 ];
 
 const squad = [
