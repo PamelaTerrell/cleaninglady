@@ -10,7 +10,7 @@ const navigation = [
     href: "/#villains",
   },
   {
-    label: "No-Shame Zone",
+    label: "No-Shame",
     href: "/#no-shame",
   },
   {
