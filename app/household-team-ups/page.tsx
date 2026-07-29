@@ -30,6 +30,18 @@ const teamUps = [
     quote:
       "He repairs the house. She repairs the aftermath.",
   },
+
+  {
+  part: "Part 3",
+  title: "Every Problem Has a Solution",
+  slug: "sock-portal-investigation",
+  image: "/comics/sock-portal-fix.png",
+  alt: "Super Handy Man investigates the mysterious Sock Portal with numerous tools while Super Cleaning Lady watches",
+  description:
+    "One sock disappears, and Super Handy Man launches a full dryer investigation involving a flashlight, drill, socket set, and unwavering confidence. The dryer survives. The sock does not return.",
+  quote:
+    "The Sock Portal remains a mystery. Super Handy Man remains extremely optimistic.",
+},
 ];
 
 const futureReports = [
