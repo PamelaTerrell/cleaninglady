@@ -4,6 +4,20 @@ import Footer from "@/components/Footer";
 const heroics = [
 
   {
+  title: "Tinkering Totally Counts",
+  slug: "tinkering",
+  category: "Everyday Heroics",
+  image: "/comics/tinkering.png",
+  alt: "Super Cleaning Lady moves around the house completing small cleaning and organizing tasks while following her energy",
+  description:
+    "No master plan. No full-house reset. Just one pillow fluffed, one surface wiped, one pile handled, and somehow the whole place starts behaving better.",
+  punchline:
+    "You do not have to clean the whole house to make the whole house feel better.",
+  missionHref: "/#missions",
+  missionLabel: "Choose a Tiny Mission",
+},
+
+  {
   title: "The Coffee Pot Controversy",
   slug: "coffee-pot",
   category: "Kitchen Heroics",
