@@ -120,12 +120,12 @@ const featuredComic = {
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#fffaf2] text-[#2f261f]">
-      {/* HERO */}
-      <section className="mx-auto flex min-h-[72vh] max-w-6xl flex-col items-center justify-center px-6 py-14 text-center md:py-16">
+     {/* HERO */}
+<section className="mx-auto flex min-h-[72vh] max-w-6xl flex-col items-center justify-center px-6 py-12 text-center md:py-14">
   <img
-    src="/home-superhero-cleaning-bottle-mascot.png"
-    alt="Super Cleaning Lady spray bottle superhero mascot"
-    className="mb-6 w-64 drop-shadow-xl sm:w-72 md:w-80 lg:w-96"
+    src="/clean-squad.png"
+    alt="Super Cleaning Lady, Super Handy Man, the spray bottle mascot, and Spongie standing together as the household hero team"
+    className="mb-8 w-full max-w-3xl rounded-[2rem] drop-shadow-2xl lg:max-w-4xl"
   />
 
   <h1 className="max-w-4xl text-4xl font-black leading-tight tracking-tight sm:text-5xl md:text-6xl">
@@ -133,9 +133,9 @@ export default function Home() {
   </h1>
 
   <p className="mt-5 max-w-2xl text-base leading-7 text-[#6a5a4b] sm:text-lg md:leading-8">
-    Fighting dust, dishes, doom piles, and whatever that is under the
-    couch — with rescue missions for homes that are one sock pile away
-    from becoming a wildlife habitat.
+    Fighting dust, dishes, doom piles, and whatever that is under the couch—with
+    rescue missions for homes that are one sock pile away from becoming a
+    wildlife habitat.
   </p>
 
   <div className="mt-8 flex flex-col gap-4 sm:flex-row">
