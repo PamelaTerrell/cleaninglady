@@ -79,6 +79,18 @@ const teamUps = [
     "I think we found the clog.",
 },
 
+{
+  part: "Part 7",
+  title: "Tiny Mess, Big Drama",
+  slug: "tiny-mess-big-drama",
+  image: "/comics/tiny-mess-big-drama.png",
+  alt: "Spongie and the Super Spray Bottle dramatically team up to defeat one tiny crumb in the kitchen",
+  description:
+    "Super Spray and Spongie discover a microscopic kitchen mess and respond as if the entire kingdom is at stake. Spongie brings the panic, Super Spray brings the polish, and together they save the day one crumb at a time.",
+  quote:
+    "Small mess. Big teamwork.",
+},
+
 ];
 
 const futureReports = [
