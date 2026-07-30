@@ -67,6 +67,18 @@ const teamUps = [
     "No one will notice until they need a lid.",
 },
 
+{
+  part: "Part 6",
+  title: "The Vacuum Fix",
+  slug: "vacuum-fix",
+  image: "/comics/vacuum-fix.png",
+  alt: "Super Handy Man proudly demonstrates a repaired vacuum cleaner just before it blasts a cloud of dust directly onto Super Cleaning Lady",
+  description:
+    "Super Cleaning Lady discovers a clog, and Super Handy Man launches a full repair operation. After tools, testing, and great confidence, the vacuum finally works—just long enough to launch the entire clog directly at her.",
+  quote:
+    "I think we found the clog.",
+},
+
 ];
 
 const futureReports = [
