@@ -54,6 +54,19 @@ const teamUps = [
   quote:
     "Some problems need teamwork... and slightly too many tools.",
 },
+
+{
+  part: "Part 5",
+  title: "The Lid Drawer Uprising",
+  slug: "lid-drawer-uprising",
+  image: "/comics/lid-drawer.png",
+  alt: "Super Cleaning Lady and Spongie confront an avalanche of mismatched food-storage lids spilling from a kitchen cabinet",
+  description:
+    "Super Cleaning Lady attempts to put away one clean container and accidentally triggers a full-scale lid rebellion. With Spongie assisting, she sorts, matches, rescues, and exiles the suspicious extras.",
+  quote:
+    "No one will notice until they need a lid.",
+},
+
 ];
 
 const futureReports = [

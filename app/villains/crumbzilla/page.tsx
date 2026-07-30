@@ -54,11 +54,7 @@ export default function CrumbzillaPage() {
           ← Back to HQ
         </Link>
 
-        <img
-          src="/superhero-cleaning-bottle-mascot.png"
-          alt="Super Cleaning Lady spray bottle superhero mascot"
-          className="mx-auto mt-10 w-40 drop-shadow-xl md:w-56"
-        />
+       
 
         <p className="mt-8 text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
           Villain File 002
