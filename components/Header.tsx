@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const navigation = [
@@ -13,11 +14,10 @@ const navigation = [
     label: "No-Shame",
     href: "/#no-shame",
   },
-
   {
-  label: "Squad",
-  href: "/#squad",
-},
+    label: "Squad",
+    href: "/#squad",
+  },
   {
     label: "Comics",
     href: "/invisible-heroics",
@@ -26,69 +26,60 @@ const navigation = [
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-[#eadcc8] bg-[#fffaf2]/95 shadow-sm backdrop-blur-md">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="flex min-h-16 items-center justify-between gap-3 sm:min-h-20 sm:gap-6">
+    <header className="sticky top-0 z-50 border-b border-[#d9e7f8] bg-white/95 shadow-sm backdrop-blur-md">
+      <div className="mx-auto max-w-7xl px-3 sm:px-5 lg:px-6">
+        <div className="flex min-h-[76px] items-center justify-between gap-3 sm:min-h-[92px] lg:min-h-[104px]">
+          {/* LOGO */}
           <Link
             href="/"
             aria-label="Super Cleaning Lady home"
-            className="group flex shrink-0 items-center gap-3 rounded-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b48635] focus-visible:ring-offset-4 focus-visible:ring-offset-[#fffaf2]"
+            className="group flex min-w-0 shrink items-center rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#155dcc] focus-visible:ring-offset-4"
           >
-            <span className="flex h-11 w-11 items-center justify-center rounded-2xl border border-[#eadcc8] bg-white shadow-sm transition group-hover:-translate-y-0.5 group-hover:shadow-md sm:h-12 sm:w-12">
-              <img
-                src="/super-spray-hero.png"
-                alt=""
-                className="h-9 w-9 object-contain drop-shadow-sm sm:h-10 sm:w-10"
-              />
-            </span>
-
-            <span className="hidden sm:block">
-              <span className="block text-xs font-bold uppercase tracking-[0.25em] text-[#b48635]">
-                Household Heroics
-              </span>
-
-              <span className="mt-1 block text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] lg:text-base">
-                Super Cleaning Lady
-              </span>
-            </span>
-
-            <span className="text-sm font-black uppercase tracking-[0.14em] text-[#2f261f] sm:hidden">
-              SCL
-            </span>
+            <Image
+              src="/super-cleaning-lady-header.png"
+              alt="Super Cleaning Lady"
+              width={600}
+              height={360}
+              priority
+              className="h-auto w-[150px] object-contain transition duration-200 group-hover:scale-[1.02] sm:w-[190px] md:w-[215px] lg:w-[245px] xl:w-[270px]"
+            />
           </Link>
 
+          {/* DESKTOP NAVIGATION */}
           <nav
             aria-label="Primary navigation"
-            className="hidden items-center gap-1 md:flex"
+            className="hidden items-center gap-1 lg:flex"
           >
             {navigation.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-full px-4 py-3 text-xs font-black uppercase tracking-[0.14em] text-[#6a5a4b] transition hover:bg-white hover:text-[#b48635] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b48635]"
+                className="rounded-full px-3 py-3 text-xs font-black uppercase tracking-[0.12em] text-[#1757a6] transition hover:bg-[#edf7ff] hover:text-[#ed3d7f] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#155dcc] xl:px-4"
               >
                 {item.label}
               </Link>
             ))}
           </nav>
 
+          {/* CALL TO ACTION */}
           <Link
             href="/#missions"
-            className="hidden shrink-0 rounded-full bg-[#2f261f] px-5 py-3 text-xs font-black uppercase tracking-[0.15em] text-white shadow-md transition hover:-translate-y-0.5 hover:bg-[#4a3b30] hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b48635] focus-visible:ring-offset-4 sm:inline-flex md:hidden lg:inline-flex"
+            className="hidden shrink-0 rounded-full bg-[#155dcc] px-5 py-3 text-xs font-black uppercase tracking-[0.14em] text-white shadow-md transition hover:-translate-y-0.5 hover:bg-[#104da9] hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd21f] focus-visible:ring-offset-4 sm:inline-flex"
           >
             Start a Mission
           </Link>
         </div>
 
+        {/* TABLET AND MOBILE NAVIGATION */}
         <nav
           aria-label="Mobile navigation"
-          className="grid grid-cols-2 gap-2 border-t border-[#eadcc8] py-3 md:hidden"
+          className="grid grid-cols-3 gap-2 border-t border-[#d9e7f8] py-3 sm:grid-cols-5 lg:hidden"
         >
           {navigation.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-full border border-[#eadcc8] bg-white px-3 py-2 text-center text-[0.67rem] font-black uppercase tracking-[0.1em] text-[#6a5a4b] shadow-sm transition hover:border-[#d4b67e] hover:text-[#b48635] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b48635]"
+              className="rounded-full border border-[#cfe1f7] bg-[#f7fbff] px-2 py-2.5 text-center text-[0.63rem] font-black uppercase tracking-[0.08em] text-[#1757a6] shadow-sm transition hover:border-[#ed77a1] hover:bg-white hover:text-[#ed3d7f] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#155dcc] sm:text-[0.68rem]"
             >
               {item.label}
             </Link>
