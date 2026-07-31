@@ -46,42 +46,65 @@ const villainStats = [
 export default function CrumbzillaPage() {
   return (
     <main className="min-h-screen bg-[#fffaf2] text-[#2f261f]">
-      <section className="mx-auto max-w-5xl px-6 py-16 text-center md:py-24">
-        <Link
-          href="/"
-          className="inline-flex rounded-full border border-[#eadcc8] bg-white px-5 py-2 text-sm font-bold uppercase tracking-[0.18em] text-[#7a5520] transition hover:-translate-y-1 hover:shadow-md"
-        >
-          ← Back to HQ
-        </Link>
+      
+      
+        {/* COMPACT HERO */}
+<section className="mx-auto max-w-5xl px-6 pb-6 pt-8 text-center md:pb-8 md:pt-10">
+  <Link
+    href="/"
+    className="inline-flex rounded-full border border-[#eadcc8] bg-white px-5 py-2 text-sm font-bold uppercase tracking-[0.18em] text-[#7a5520] transition hover:-translate-y-1 hover:shadow-md"
+  >
+    ← Back to HQ
+  </Link>
 
-       
+  <p className="mt-5 text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
+    Villain File 002
+  </p>
 
-        <p className="mt-8 text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
-          Villain File 002
-        </p>
+  <h1 className="mx-auto mt-2 max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-6xl">
+    Crumbzilla
+  </h1>
 
-        <h1 className="mx-auto mt-4 max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
-          Crumbzilla
-        </h1>
+  <p className="mx-auto mt-3 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
+    The tiny-but-mighty villain responsible for crunchy floors, snack dust,
+    couch mysteries, and the phrase, “Why is this sticky and crumbly?”
+  </p>
 
-        <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#6a5a4b] md:text-xl">
-          The tiny-but-mighty villain responsible for crunchy floors, snack dust,
-          couch mysteries, and the phrase, “Why is this sticky and crumbly?”
-        </p>
+  <img
+    src="/crumbzilla.png"
+    alt="Crumbzilla, a crumb monster creating a crunchy mess on the kitchen floor"
+    className="mx-auto mt-5 w-36 drop-shadow-xl sm:w-40 md:w-44"
+  />
+</section>
 
-        <img
-  src="/crumbzilla.png"
-  alt="Crumbzilla, a crumb monster creating a crunchy mess on the kitchen floor"
-  className="mx-auto mt-10 w-56 drop-shadow-xl md:w-72"
-/>
-      </section>
+{/* FEATURED COMIC */}
+<section className="bg-white px-4 pb-12 pt-4 sm:px-6 md:pb-14 md:pt-6">
+  <div className="mx-auto max-w-6xl">
+    <div className="overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-3 shadow-[0_24px_70px_rgba(47,38,31,0.12)] sm:p-5">
+      <img
+        src="/comics/sticky-crumbly.png"
+        alt="Super Cleaning Lady, Spongie, and the Super Spray Bottle investigate and clean up a sticky crumbly mystery mess"
+        className="h-auto w-full rounded-[1.4rem]"
+      />
+    </div>
 
-      <section className="bg-white px-6 py-16">
+    <p className="mx-auto mt-5 max-w-2xl text-center text-lg font-bold italic leading-8 text-[#6a5a4b]">
+      “Some mysteries should stay unsolved.”
+    </p>
+  </div>
+</section>
+
+  
+
+     
+
+      {/* STATS */}
+      <section className="px-6 py-16">
         <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
           {villainStats.map((stat) => (
             <div
               key={stat.label}
-              className="rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm"
+              className="rounded-[2rem] border border-[#eadcc8] bg-white p-8 shadow-sm"
             >
               <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
                 {stat.label}
@@ -93,6 +116,7 @@ export default function CrumbzillaPage() {
         </div>
       </section>
 
+      {/* WARNING SIGNS */}
       <section className="px-6 py-16">
         <div className="mx-auto max-w-6xl">
           <div className="rounded-[2rem] bg-[#2f261f] p-8 text-white shadow-2xl md:p-10">
@@ -118,6 +142,7 @@ export default function CrumbzillaPage() {
         </div>
       </section>
 
+      {/* ORIGIN + ADVICE */}
       <section className="bg-white px-6 py-16">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
           <div className="rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm md:p-10">
@@ -164,6 +189,7 @@ export default function CrumbzillaPage() {
         </div>
       </section>
 
+      {/* DEFEAT PLAN */}
       <section className="px-6 py-16">
         <div className="mx-auto max-w-6xl rounded-[2rem] border border-[#eadcc8] bg-white p-8 shadow-sm md:p-10">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
@@ -190,13 +216,15 @@ export default function CrumbzillaPage() {
         </div>
       </section>
 
+      {/* VICTORY */}
       <section className="px-6 py-16">
         <div className="mx-auto max-w-4xl rounded-[2rem] bg-[#2f261f] p-8 text-center text-white shadow-2xl md:p-12">
-    <img
-      src="/cleaning-hero-in-action.png"
-      alt="Super Cleaning Lady looking disheveled but victorious after battling household chaos"
-      className="mx-auto mb-6 w-36 drop-shadow-xl md:w-44"
-    />
+          <img
+            src="/cleaning-hero-in-action.png"
+            alt="Super Cleaning Lady looking disheveled but victorious after battling household chaos"
+            className="mx-auto mb-6 w-36 drop-shadow-xl md:w-44"
+          />
+
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#f4dfb4]">
             Victory Message
           </p>
