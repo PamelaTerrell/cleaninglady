@@ -67,6 +67,39 @@ export default function LaundryMountainPage() {
   />
 </section>
 
+
+{/* FEATURED LAUNDRY MOUNTAIN COMIC */}
+<section className="bg-white px-4 pb-14 pt-4 sm:px-6 md:pb-16">
+  <div className="mx-auto max-w-6xl">
+    <div className="mx-auto max-w-4xl text-center">
+      <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
+        Laundry Field Report
+      </p>
+
+      <h2 className="mt-3 text-4xl font-black leading-tight md:text-5xl">
+        This is no longer a pile. It is a region.
+      </h2>
+
+      <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
+        Super Cleaning Lady discovers that the chair has disappeared beneath
+        Laundry Mountain, the socks have established their own pass, and
+        Wrinkle Ridge is visible from space.
+      </p>
+    </div>
+
+    <div className="mt-8 overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-3 shadow-[0_24px_70px_rgba(47,38,31,0.12)] sm:p-5">
+      <img
+        src="/comics/laundry-mountain-comic.png"
+        alt="Super Cleaning Lady tackles a towering mountain of laundry one sorted load at a time until the chair becomes visible again"
+        className="h-auto w-full rounded-[1.5rem]"
+      />
+    </div>
+
+    <p className="mx-auto mt-6 max-w-2xl text-center text-lg font-bold italic leading-8 text-[#6a5a4b]">
+      “One load counts. Lower the altitude.”
+    </p>
+  </div>
+</section>
      
 
       <section className="bg-white px-6 py-16">
