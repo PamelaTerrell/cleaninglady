@@ -49,59 +49,90 @@ const villainStats = [
 export default function DishGoblinPage() {
   return (
     <main className="min-h-screen bg-[#fffaf2] text-[#2f261f]">
-      <section className="mx-auto max-w-5xl px-6 py-16 text-center md:py-24">
-        <Link
-          href="/"
-          className="inline-flex rounded-full border border-[#eadcc8] bg-white px-5 py-2 text-sm font-bold uppercase tracking-[0.18em] text-[#7a5520] transition hover:-translate-y-1 hover:shadow-md"
-        >
-          ← Back to HQ
-        </Link>
+      
 
-        <img
-          src="/superhero-cleaning-bottle-mascot.png"
-          alt="Super Cleaning Lady spray bottle superhero mascot"
-          className="mx-auto mt-10 w-40 drop-shadow-xl md:w-56"
-        />
+      {/* COMPACT HERO */}
+<section className="mx-auto max-w-5xl px-6 pb-6 pt-10 text-center md:pb-8 md:pt-14">
+  <Link
+    href="/"
+    className="inline-flex rounded-full border border-[#eadcc8] bg-white px-5 py-2 text-sm font-bold uppercase tracking-[0.18em] text-[#7a5520] transition hover:-translate-y-1 hover:shadow-md"
+  >
+    ← Back to HQ
+  </Link>
 
-        <p className="mt-8 text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
-          Villain File 003
+  <p className="mt-6 text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
+    Villain File 003
+  </p>
+
+  <h1 className="mx-auto mt-3 max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-6xl">
+    The Dish Goblin
+  </h1>
+
+  <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
+    The sink-dwelling villain who appears whenever one innocent plate turns
+    into a ceramic traffic jam, the spoons start forming alliances, and the
+    drain develops a goopie situation no one wants to discuss.
+  </p>
+
+  <img
+    src="/dish-goblin-friendly.png"
+    alt="The Dish Goblin, a mischievous but silly sink-dwelling dish villain"
+    className="mx-auto mt-6 w-44 drop-shadow-xl sm:w-52 md:w-60"
+  />
+</section>
+
+{/* FEATURED DISH GOBLIN COMIC */}
+<section className="bg-white px-4 pb-14 pt-4 sm:px-6 md:pb-16">
+  <div className="mx-auto max-w-6xl">
+    <div className="mx-auto max-w-4xl text-center">
+      <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
+        Sink Emergency Report
+      </p>
+
+      <h2 className="mt-3 text-4xl font-black leading-tight md:text-5xl">
+        Tiny heroes. Huge sink emergency.
+      </h2>
+
+      <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
+        Spongie and Super Spray expected one or two dishes. Instead, they
+        discovered an entire sink-based kingdom ruled by one extremely
+        confident goblin.
+      </p>
+    </div>
+
+    <div className="mt-8 overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-3 shadow-[0_24px_70px_rgba(47,38,31,0.12)] sm:p-5">
+      <img
+        src="/comics/dish-goblin-team-up.png"
+        alt="Super Cleaning Lady assigns Spongie and Super Spray to defeat the Dish Goblin and rescue an overflowing kitchen sink"
+        className="h-auto w-full rounded-[1.5rem]"
+      />
+    </div>
+
+    <p className="mx-auto mt-6 max-w-2xl text-center text-lg font-bold italic leading-8 text-[#6a5a4b]">
+      “Turns out the Dish Goblin hates teamwork.”
+    </p>
+  </div>
+</section>
+
+{/* VILLAIN STATS */}
+<section className="px-6 py-16">
+  <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
+    {villainStats.map((stat) => (
+      <div
+        key={stat.label}
+        className="rounded-[2rem] border border-[#eadcc8] bg-white p-8 shadow-sm"
+      >
+        <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
+          {stat.label}
         </p>
 
-        <h1 className="mx-auto mt-4 max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
-          The Dish Goblin
-        </h1>
+        <h2 className="mt-3 text-3xl font-black">{stat.value}</h2>
 
-        <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#6a5a4b] md:text-xl">
-          The sink-dwelling villain who appears whenever one innocent plate turns
-          into a ceramic traffic jam, the spoons start forming alliances, and the
-          drain develops a goopie situation no one wants to discuss.
-        </p>
-
-        <img
-          src="/dish-goblin-friendly.png"
-          alt="The Dish Goblin, a mischievous but silly sink-dwelling dish villain"
-          className="mx-auto mt-10 w-56 drop-shadow-xl md:w-72"
-        />
-      </section>
-
-      <section className="bg-white px-6 py-16">
-        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
-          {villainStats.map((stat) => (
-            <div
-              key={stat.label}
-              className="rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm"
-            >
-              <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
-                {stat.label}
-              </p>
-
-              <h2 className="mt-3 text-3xl font-black">{stat.value}</h2>
-
-              <p className="mt-4 leading-7 text-[#6a5a4b]">{stat.text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+        <p className="mt-4 leading-7 text-[#6a5a4b]">{stat.text}</p>
+      </div>
+    ))}
+  </div>
+</section>
 
       <section className="px-6 py-16">
         <div className="mx-auto max-w-6xl">
