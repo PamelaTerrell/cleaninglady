@@ -38,29 +38,45 @@ const supplies = [
 export default function OneBagDeclutterPage() {
   return (
     <main className="min-h-screen bg-[#fffaf2] text-[#2f261f]">
-      <section className="mx-auto max-w-5xl px-6 py-16 text-center md:py-24">
-        <Link
-          href="/"
-          className="inline-flex rounded-full border border-[#eadcc8] bg-white px-5 py-2 text-sm font-bold uppercase tracking-[0.18em] text-[#7a5520] transition hover:-translate-y-1 hover:shadow-md"
-        >
-          ← Back to HQ
-        </Link>
+     <section className="mx-auto max-w-5xl px-6 pb-8 pt-10 text-center md:pb-10 md:pt-14">
+  <Link
+    href="/"
+    className="inline-flex rounded-full border border-[#eadcc8] bg-white px-5 py-2 text-sm font-bold uppercase tracking-[0.18em] text-[#7a5520] transition hover:-translate-y-1 hover:shadow-md"
+  >
+    ← Back to HQ
+  </Link>
 
-       
+  <p className="mt-6 text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
+    Mission File 006
+  </p>
 
-        <p className="mt-8 text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
-          Mission File 006
-        </p>
+  <h1 className="mx-auto mt-3 max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
+    One-Bag Declutter
+  </h1>
 
-        <h1 className="mx-auto mt-4 max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
-          One-Bag Declutter
-        </h1>
+  <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-[#6a5a4b] sm:text-lg md:leading-8">
+    One bag. One starting point. Fewer things silently judging you from the corner.
+  </p>
+</section>
 
-        <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#6a5a4b] md:text-xl">
-          One bag. One mission. Fewer things silently judging you from the corner.
-          This is not a whole-life transformation. This is a tactical strike.
-        </p>
-      </section>
+      {/* FEATURED ONE-BAG DECLUTTER COMIC */}
+<section className="bg-white px-4 pb-14 pt-4 sm:px-6 md:pb-16">
+  <div className="mx-auto max-w-6xl">
+   
+
+    <div className="mt-8 overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-3 shadow-[0_24px_70px_rgba(47,38,31,0.12)] sm:p-5">
+      <img
+        src="/comics/one-bag-declutter-comic.png"
+        alt="Super Cleaning Lady fills one bag with trash and donations while clutter objects dramatically protest being removed"
+        className="h-auto w-full rounded-[1.5rem]"
+      />
+    </div>
+
+    <p className="mx-auto mt-6 max-w-2xl text-center text-lg font-bold italic leading-8 text-[#6a5a4b]">
+      “It’s not empty. It’s breathable. That’s a win.”
+    </p>
+  </div>
+</section>
 
       <section className="bg-white px-6 py-16">
         <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
