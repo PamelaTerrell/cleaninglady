@@ -109,6 +109,12 @@ export default function PaperPileOfDespairPage() {
     <p className="mx-auto mt-6 max-w-3xl text-center text-lg font-bold italic leading-8 text-[#6a5a4b]">
       “Every problem has a solution—except, apparently, my receipt system.”
     </p>
+
+    <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
+  Super Handy Man insists every tool receipt is important because it proves
+  what he bought, when he bought it, and that he may someday be able to return
+  something he has already used fourteen times.
+</p>
   </div>
 </section>
 
