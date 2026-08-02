@@ -65,11 +65,7 @@ export default function BedroomResetPage() {
           several bad decisions. It is time for a full bedroom reboot.
         </p>
 
-        <img
-          src="/comics/bed-sheets.png"
-          alt="Super Cleaning Lady compares a bad day with old sheets to a fantastic day with fresh clean sheets"
-          className="mx-auto mt-10 w-full max-w-3xl rounded-[2rem] border border-[#eadcc8] shadow-2xl"
-        />
+       
       </section>
 
       <section className="bg-white px-6 py-16">
