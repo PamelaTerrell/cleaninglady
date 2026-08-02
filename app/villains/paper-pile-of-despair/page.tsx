@@ -49,57 +49,90 @@ const villainStats = [
 export default function PaperPileOfDespairPage() {
   return (
     <main className="min-h-screen bg-[#fffaf2] text-[#2f261f]">
-      <section className="mx-auto max-w-5xl px-6 py-16 text-center md:py-24">
-        <Link
-          href="/"
-          className="inline-flex rounded-full border border-[#eadcc8] bg-white px-5 py-2 text-sm font-bold uppercase tracking-[0.18em] text-[#7a5520] transition hover:-translate-y-1 hover:shadow-md"
-        >
-          ← Back to HQ
-        </Link>
+      {/* COMPACT HERO */}
+<section className="mx-auto max-w-5xl px-6 pb-7 pt-10 text-center md:pb-9 md:pt-14">
+  <Link
+    href="/"
+    className="inline-flex rounded-full border border-[#eadcc8] bg-white px-5 py-2 text-sm font-bold uppercase tracking-[0.18em] text-[#7a5520] transition hover:-translate-y-1 hover:shadow-md"
+  >
+    ← Back to HQ
+  </Link>
 
-        <img
-          src="/superhero-cleaning-bottle-mascot.png"
-          alt="Super Cleaning Lady spray bottle superhero mascot"
-          className="mx-auto mt-10 w-40 drop-shadow-xl md:w-56"
-        />
+  <p className="mt-6 text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
+    Villain File 004
+  </p>
 
-        <p className="mt-8 text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
-          Villain File 004
+  <h1 className="mx-auto mt-3 max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-6xl">
+    The Paper Pile of Despair
+  </h1>
+
+  <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
+    A stack of mail, receipts, forms, coupons, school papers, mystery notes,
+    and envelopes that somehow gained emotional weight while you were busy
+    trying to live your life.
+  </p>
+
+  <img
+    src="/paper-pile-of-despair.png"
+    alt="The Paper Pile of Despair, a monster made of papers, folders, and sticky notes"
+    className="mx-auto mt-6 w-44 drop-shadow-xl sm:w-52 md:w-60"
+  />
+</section>
+
+{/* FEATURED PAPER PILE COMIC */}
+<section className="bg-white px-4 pb-14 pt-4 sm:px-6 md:pb-16">
+  <div className="mx-auto max-w-6xl">
+    <div className="mx-auto max-w-4xl text-center">
+      <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
+        Administrative Incident Report
+      </p>
+
+      <h2 className="mt-3 text-4xl font-black leading-tight md:text-5xl">
+        The tool receipts have entered the pile.
+      </h2>
+
+      <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
+        Super Cleaning Lady thought she was sorting mail and paperwork. Super
+        Handy Man reveals that half the pile is actually a historical archive
+        of screws, bolts, drill bits, and hardware-store adventures.
+      </p>
+    </div>
+
+    <div className="mt-8 overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-3 shadow-[0_24px_70px_rgba(47,38,31,0.12)] sm:p-5">
+      <img
+        src="/comics/paper-pile-tool-receipts.png"
+        alt="Super Cleaning Lady, Super Handy Man, and Spongie confront a mountain of paperwork made partly from Super Handy Man's many tool receipts"
+        className="h-auto w-full rounded-[1.5rem]"
+      />
+    </div>
+
+    <p className="mx-auto mt-6 max-w-3xl text-center text-lg font-bold italic leading-8 text-[#6a5a4b]">
+      “Every problem has a solution—except, apparently, my receipt system.”
+    </p>
+  </div>
+</section>
+
+{/* VILLAIN STATS */}
+<section className="px-6 py-16">
+  <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
+    {villainStats.map((stat) => (
+      <div
+        key={stat.label}
+        className="rounded-[2rem] border border-[#eadcc8] bg-white p-8 shadow-sm"
+      >
+        <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
+          {stat.label}
         </p>
 
-        <h1 className="mx-auto mt-4 max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
-          The Paper Pile of Despair
-        </h1>
+        <h2 className="mt-3 text-3xl font-black">{stat.value}</h2>
 
-        <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#6a5a4b] md:text-xl">
-          A stack of mail, receipts, forms, coupons, school papers, mystery notes,
-          and envelopes that somehow gained emotional weight while you were busy
-          trying to live your life.
-        </p>
+        <p className="mt-4 leading-7 text-[#6a5a4b]">{stat.text}</p>
+      </div>
+    ))}
+  </div>
+</section>
 
-        <img
-  src="/paper-pile-of-despair.png"
-  alt="The Paper Pile of Despair, a monster made of papers, folders, and sticky notes"
-  className="mx-auto mt-10 w-56 drop-shadow-xl md:w-72"
-/>
-      </section>
-
-      <section className="bg-white px-6 py-16">
-        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
-          {villainStats.map((stat) => (
-            <div
-              key={stat.label}
-              className="rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm"
-            >
-              <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
-                {stat.label}
-              </p>
-              <h2 className="mt-3 text-3xl font-black">{stat.value}</h2>
-              <p className="mt-4 leading-7 text-[#6a5a4b]">{stat.text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+     
 
       <section className="px-6 py-16">
         <div className="mx-auto max-w-6xl">
