@@ -46,11 +46,7 @@ export default function BedroomResetPage() {
           ← Back to HQ
         </Link>
 
-        <img
-          src="/superhero-cleaning-bottle-mascot.png"
-          alt="Super Cleaning Lady spray bottle superhero mascot"
-          className="mx-auto mt-10 w-40 drop-shadow-xl md:w-56"
-        />
+       
 
         <p className="mt-8 text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
           Mission File 004
@@ -65,7 +61,11 @@ export default function BedroomResetPage() {
           several bad decisions. It is time for a full bedroom reboot.
         </p>
 
-       
+        <img
+          src="/comics/bed-sheets.png"
+          alt="Super Cleaning Lady compares a bad day with old sheets to a fantastic day with fresh clean sheets"
+          className="mx-auto mt-10 w-full max-w-3xl rounded-[2rem] border border-[#eadcc8] shadow-2xl"
+        />
       </section>
 
       <section className="bg-white px-6 py-16">
