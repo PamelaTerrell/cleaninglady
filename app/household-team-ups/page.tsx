@@ -19,6 +19,21 @@ const teamUps = [
       "Company is five minutes away. The pillows are fluffed. The living room is almost respectable. Then Super Cleaning Lady discovers an entire ratchet set conducting unauthorized operations on the coffee table.",
     quote: "The ratchet set does not live here.",
   },
+
+  {
+  title: "The Case of the Missing Drill",
+  slug: "missing-drill",
+  category: "Household Team-Ups",
+  image: "/comics/missing-drill.png",
+  alt: "Super Handy Man searches through an enormous collection of tools for his missing drill while Super Cleaning Lady, Super Spray, and Spongie help",
+  description:
+    "Super Handy Man confidently announces that every problem has a solution—especially this one. Unfortunately, the current problem is locating his drill inside a workshop containing several thousand possible solutions.",
+  punchline:
+    "Sometimes the problem is too many solutions.",
+  missionHref: "/household-team-ups",
+  missionLabel: "See More Team-Ups",
+},
+
   {
     part: "Part 2",
     title: "The Ratchet Set Returns",
