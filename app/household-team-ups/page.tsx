@@ -20,19 +20,7 @@ const teamUps = [
     quote: "The ratchet set does not live here.",
   },
 
-  {
-  title: "The Case of the Missing Drill",
-  slug: "missing-drill",
-  category: "Household Team-Ups",
-  image: "/comics/missing-drill.png",
-  alt: "Super Handy Man searches through an enormous collection of tools for his missing drill while Super Cleaning Lady, Super Spray, and Spongie help",
-  description:
-    "Super Handy Man confidently announces that every problem has a solution—especially this one. Unfortunately, the current problem is locating his drill inside a workshop containing several thousand possible solutions.",
-  punchline:
-    "Sometimes the problem is too many solutions.",
-  missionHref: "/household-team-ups",
-  missionLabel: "See More Team-Ups",
-},
+  
 
   {
     part: "Part 2",
@@ -57,6 +45,8 @@ const teamUps = [
   quote:
     "The Sock Portal remains a mystery. Super Handy Man remains extremely optimistic.",
 },
+
+
 
 {
   part: "Part 4",
@@ -105,6 +95,17 @@ const teamUps = [
   quote:
     "Small mess. Big teamwork.",
 },
+
+{
+    part: "Part 8",
+    title: "The Case of the Missing Drill",
+    slug: "missing-drill",
+    image: "/comics/missing-drill.png",
+    alt: "Super Handy Man searches through a huge collection of tools for his missing drill while insisting every problem has a solution",
+    description:
+      "Super Handy Man proudly declares, “Every problem has a solution. Especially this one.” Unfortunately, the problem is that he cannot find his drill because his workshop contains approximately fourteen thousand other tools.",
+    quote: "Sometimes the problem is too many solutions.",
+  },
 
 ];
 
