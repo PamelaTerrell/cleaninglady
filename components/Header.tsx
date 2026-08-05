@@ -36,13 +36,14 @@ export default function Header() {
             className="group flex min-w-0 shrink items-center rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#155dcc] focus-visible:ring-offset-4"
           >
             <Image
-              src="/super-cleaning-lady-header.png"
-              alt="Super Cleaning Lady"
-              width={600}
-              height={360}
-              priority
-              className="h-auto w-[150px] object-contain transition duration-200 group-hover:scale-[1.02] sm:w-[190px] md:w-[215px] lg:w-[245px] xl:w-[270px]"
-            />
+  src="/super-cleaning-lady-header.png"
+  alt="Super Cleaning Lady"
+  width={600}
+  height={360}
+  loading="eager"
+  sizes="(max-width: 639px) 150px, (max-width: 767px) 190px, (max-width: 1023px) 215px, (max-width: 1279px) 245px, 270px"
+  className="h-auto w-[150px] object-contain transition duration-200 group-hover:scale-[1.02] sm:w-[190px] md:w-[215px] lg:w-[245px] xl:w-[270px]"
+/>
           </Link>
 
           {/* DESKTOP NAVIGATION */}

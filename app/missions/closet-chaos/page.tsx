@@ -35,6 +35,27 @@ const supplies = [
   "Emotional support beverage",
 ];
 
+const missionDetails = [
+  {
+    label: "Difficulty",
+    value: "Hidden Disaster",
+    description:
+      "The room may look fine, but behind that door is a whole documentary about delayed decisions.",
+  },
+  {
+    label: "Time Needed",
+    value: "10–45 Minutes",
+    description:
+      "Start with the floor or one shelf. The goal is progress, not a closet that gets its own television special.",
+  },
+  {
+    label: "Victory Goal",
+    value: "Prevent the Avalanche",
+    description:
+      "If you can open the door without flinching, ducking, or whispering “please no,” this mission is working.",
+  },
+];
+
 const closetHeroic = {
   title: "Closet Chaos",
   image: "/comics/closet.png",
@@ -48,45 +69,104 @@ const closetHeroic = {
 export default function ClosetChaosPage() {
   return (
     <main className="min-h-screen bg-[#fffaf2] text-[#2f261f]">
-      {/* HERO */}
-      <section className="mx-auto max-w-5xl px-6 py-10 text-center md:py-14">
-  <Link
-    href="/"
-    className="inline-flex rounded-full border border-[#eadcc8] bg-white px-5 py-2 text-sm font-bold uppercase tracking-[0.18em] text-[#7a5520] transition hover:-translate-y-1 hover:shadow-md"
-  >
-    ← Back to HQ
-  </Link>
+      {/* COMPACT HERO */}
+      <section className="mx-auto max-w-5xl px-6 pb-8 pt-10 text-center md:pb-10 md:pt-14">
+        <Link
+          href="/"
+          className="inline-flex rounded-full border border-[#eadcc8] bg-white px-5 py-2 text-sm font-bold uppercase tracking-[0.18em] text-[#7a5520] shadow-sm transition hover:-translate-y-1 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b48635]"
+        >
+          ← Back to HQ
+        </Link>
 
-  <p className="mt-6 text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
-    Mission File 004
-  </p>
+        <p className="mt-6 text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
+          Mission File 004
+        </p>
 
-  <h1 className="mx-auto mt-3 max-w-4xl text-4xl font-black leading-tight tracking-tight sm:text-5xl md:text-6xl">
-    Closet Chaos
-  </h1>
+        <h1 className="mx-auto mt-3 max-w-4xl text-4xl font-black leading-tight tracking-tight sm:text-5xl md:text-6xl">
+          Closet Chaos
+        </h1>
 
-  <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-[#6a5a4b] sm:text-lg md:leading-8">
-    For when opening the closet door feels like disturbing a sleeping beast,
-    and one wrong move could trigger a shoe avalanche.
-  </p>
+        <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-[#6a5a4b] sm:text-lg md:leading-8">
+          For when opening the closet door feels like disturbing a sleeping
+          beast, and one wrong move could trigger a shoe avalanche.
+        </p>
 
-  <img
-    src="/closet-chaos.png"
-    alt="Closet Chaos, a monster made of clothes bursting out of a messy closet"
-    className="mx-auto mt-7 w-44 drop-shadow-xl sm:w-52 md:w-60"
-  />
-</section>
+        <img
+          src="/closet-chaos.png"
+          alt="Closet Chaos, a monster made of clothes bursting out of a messy closet"
+          className="mx-auto mt-6 w-40 drop-shadow-xl sm:w-48 md:w-56"
+        />
+      </section>
 
-      {/* CLOSET HEROICS */}
+      {/* FEATURED SHOE COMMITTEE COMIC */}
+      <section className="bg-white px-5 py-14 sm:px-6 md:py-16">
+        <div className="mx-auto max-w-6xl overflow-hidden rounded-[2.5rem] border border-[#eadcc8] bg-[#fffaf2] shadow-[0_24px_70px_rgba(47,38,31,0.12)]">
+          <div className="grid items-center lg:grid-cols-[1.2fr_0.8fr]">
+            <div className="bg-white p-3 sm:p-5 lg:p-6">
+              <img
+                src="/comics/shoe-committee.png"
+                alt="Super Cleaning Lady holds a humorous shoe-storage committee meeting to solve an overflowing closet problem"
+                className="h-auto w-full rounded-[1.5rem] sm:rounded-[1.75rem]"
+              />
+            </div>
+
+            <div className="p-7 sm:p-10 lg:p-12">
+              <p className="text-sm font-black uppercase tracking-[0.22em] text-[#b48635]">
+                Emergency Shoe Storage Summit
+              </p>
+
+              <h2 className="mt-4 text-3xl font-black leading-tight sm:text-4xl lg:text-5xl">
+                The Shoe Committee is now in session.
+              </h2>
+
+              <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
+                Vertical storage, labeled containers, and a bench with hidden
+                compartments have arrived to present their cases. The shoes
+                remain unwilling to cooperate.
+              </p>
+
+              <blockquote className="mt-7 rounded-2xl border-l-4 border-[#b48635] bg-white p-5 text-lg font-bold italic leading-8 shadow-sm sm:p-6 sm:text-xl">
+                “The committee has reached a sole-ution.”
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* MISSION DETAILS */}
+      <section className="px-6 py-16">
+        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
+          {missionDetails.map((detail) => (
+            <article
+              key={detail.label}
+              className="rounded-[2rem] border border-[#eadcc8] bg-white p-7 shadow-sm sm:p-8"
+            >
+              <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
+                {detail.label}
+              </p>
+
+              <h2 className="mt-3 text-3xl font-black leading-tight">
+                {detail.value}
+              </h2>
+
+              <p className="mt-4 leading-7 text-[#6a5a4b]">
+                {detail.description}
+              </p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* ORIGINAL CLOSET INCIDENT */}
       <section className="bg-white px-6 py-16">
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
-              Report from the closet
+              Earlier Closet Incident
             </p>
 
             <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
-              Operation Organized has begun.
+              Before the committee, there was the avalanche.
             </h2>
 
             <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
@@ -95,7 +175,7 @@ export default function ClosetChaosPage() {
             </p>
           </div>
 
-          <article className="mx-auto mt-12 grid max-w-6xl overflow-hidden rounded-[2.5rem] border border-[#eadcc8] bg-[#fffaf2] shadow-[0_24px_70px_rgba(47,38,31,0.12)] lg:grid-cols-[1.15fr_0.85fr]">
+          <article className="mx-auto mt-10 grid max-w-6xl overflow-hidden rounded-[2.5rem] border border-[#eadcc8] bg-[#fffaf2] shadow-[0_24px_70px_rgba(47,38,31,0.12)] lg:grid-cols-[1.15fr_0.85fr]">
             <div className="bg-white p-4 sm:p-6">
               <img
                 src={closetHeroic.image}
@@ -124,7 +204,7 @@ export default function ClosetChaosPage() {
               <div className="mt-8">
                 <Link
                   href="/invisible-heroics"
-                  className="inline-flex rounded-full border border-[#d8c6ad] bg-white px-6 py-4 text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+                  className="inline-flex rounded-full border border-[#d8c6ad] bg-white px-6 py-4 text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-sm transition hover:-translate-y-1 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b48635]"
                 >
                   See All Invisible Heroics
                 </Link>
@@ -134,61 +214,15 @@ export default function ClosetChaosPage() {
         </div>
       </section>
 
-      {/* MISSION DETAILS */}
-      <section className="px-6 py-16">
-        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
-          <div className="rounded-[2rem] border border-[#eadcc8] bg-white p-8 shadow-sm">
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
-              Difficulty
-            </p>
-
-            <h2 className="mt-3 text-3xl font-black">Hidden Disaster</h2>
-
-            <p className="mt-4 leading-7 text-[#6a5a4b]">
-              The room may look fine, but behind that door is a whole
-              documentary about delayed decisions.
-            </p>
-          </div>
-
-          <div className="rounded-[2rem] border border-[#eadcc8] bg-white p-8 shadow-sm">
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
-              Time Needed
-            </p>
-
-            <h2 className="mt-3 text-3xl font-black">10–45 Minutes</h2>
-
-            <p className="mt-4 leading-7 text-[#6a5a4b]">
-              Start with the floor or one shelf. The goal is progress, not a
-              closet that gets its own television special.
-            </p>
-          </div>
-
-          <div className="rounded-[2rem] border border-[#eadcc8] bg-white p-8 shadow-sm">
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
-              Victory Goal
-            </p>
-
-            <h2 className="mt-3 text-3xl font-black">
-              Prevent the Avalanche
-            </h2>
-
-            <p className="mt-4 leading-7 text-[#6a5a4b]">
-              If you can open the door without flinching, ducking, or
-              whispering “please no,” this mission is working.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* SUPPLIES */}
       <section className="px-6 py-16">
         <div className="mx-auto max-w-6xl">
-          <div className="rounded-[2rem] bg-[#2f261f] p-8 text-white shadow-2xl md:p-10">
+          <div className="rounded-[2.5rem] bg-[#2f261f] p-8 text-white shadow-2xl md:p-10">
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#f4dfb4]">
               Mission Supplies
             </p>
 
-            <h2 className="mt-4 text-4xl font-black">
+            <h2 className="mt-4 text-4xl font-black leading-tight">
               Gather your closet-taming tools.
             </h2>
 
@@ -196,7 +230,7 @@ export default function ClosetChaosPage() {
               {supplies.map((item) => (
                 <div
                   key={item}
-                  className="rounded-2xl bg-white/10 p-5 font-bold text-[#fffaf2]"
+                  className="rounded-2xl border border-white/10 bg-white/10 p-5 font-bold text-[#fffaf2]"
                 >
                   {item}
                 </div>
@@ -209,12 +243,12 @@ export default function ClosetChaosPage() {
       {/* MISSION STEPS */}
       <section className="bg-white px-6 py-16">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
-          <div className="rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm md:p-10">
+          <article className="rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-7 shadow-sm sm:p-8 md:p-10">
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
               10-Minute Rescue
             </p>
 
-            <h2 className="mt-4 text-4xl font-black">
+            <h2 className="mt-4 text-3xl font-black leading-tight sm:text-4xl">
               For when the closet has started making threats.
             </h2>
 
@@ -232,14 +266,14 @@ export default function ClosetChaosPage() {
                 </li>
               ))}
             </ol>
-          </div>
+          </article>
 
-          <div className="rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm md:p-10">
+          <article className="rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-7 shadow-sm sm:p-8 md:p-10">
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
               45-Minute Reset
             </p>
 
-            <h2 className="mt-4 text-4xl font-black">
+            <h2 className="mt-4 text-3xl font-black leading-tight sm:text-4xl">
               For when you are ready to enter the danger zone.
             </h2>
 
@@ -257,18 +291,18 @@ export default function ClosetChaosPage() {
                 </li>
               ))}
             </ol>
-          </div>
+          </article>
         </div>
       </section>
 
       {/* VICTORY */}
       <section className="px-6 py-16">
-        <div className="mx-auto max-w-4xl rounded-[2rem] bg-white p-8 text-center shadow-sm md:p-12">
+        <div className="mx-auto max-w-4xl rounded-[2.5rem] border border-[#eadcc8] bg-white p-8 text-center shadow-sm md:p-12">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
             Victory Condition
           </p>
 
-          <h2 className="mt-4 text-4xl font-black">
+          <h2 className="mt-4 text-4xl font-black leading-tight">
             Congratulations. The closet is no longer a booby trap.
           </h2>
 
@@ -278,23 +312,25 @@ export default function ClosetChaosPage() {
             being attacked by footwear, this mission counts.
           </p>
 
-          <form action={completeMission} className="mt-8">
-            <input type="hidden" name="mission" value="closet-chaos" />
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <form action={completeMission}>
+              <input type="hidden" name="mission" value="closet-chaos" />
 
-            <button
-              type="submit"
-              className="rounded-full bg-[#2f261f] px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
+              <button
+                type="submit"
+                className="rounded-full bg-[#2f261f] px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white shadow-lg transition hover:-translate-y-1 hover:bg-[#4a3b30] hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b48635]"
+              >
+                I Survived This Mission
+              </button>
+            </form>
+
+            <Link
+              href="/#missions"
+              className="inline-flex rounded-full border border-[#d8c6ad] bg-[#fffaf2] px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-[#2f261f] shadow-sm transition hover:-translate-y-1 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b48635]"
             >
-              I Survived This Mission
-            </button>
-          </form>
-
-          <Link
-            href="/#missions"
-            className="mt-8 inline-flex rounded-full bg-[#2f261f] px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
-          >
-            Choose Another Mission
-          </Link>
+              Choose Another Mission
+            </Link>
+          </div>
         </div>
       </section>
 
