@@ -97,10 +97,10 @@ const villains = [
     image: "/mystery-sticky-spot.png",
   },
   {
-  name: "The Sock Portal",
-  href: "/villains/sock-portal",
-  image: "/sock-portal.png",
-},
+    name: "The Sock Portal",
+    href: "/villains/sock-portal",
+    image: "/sock-portal.png",
+  },
 ];
 
 const squad = [
@@ -124,11 +124,11 @@ const squad = [
   },
   {
     role: "Sparkle Support",
-    name: "The Super Spray Bottle",
+    name: "Spritzy",
     description:
       "Armed with cleaning power, a heroic cape, and unwavering faith that every sticky spot can be defeated.",
     image: "/super-spray.png",
-    alt: "The Super Spray Bottle wearing a red cape and holding a yellow cleaning cloth",
+    alt: "Spritzy, the superhero spray bottle, wearing a red cape and holding a yellow cleaning cloth",
     imageClassName: "h-[94%]",
   },
   {
@@ -143,16 +143,16 @@ const squad = [
 ];
 
 const featuredComic = {
-  series: "Invisible Heroics",
-  title: "Tinkering Totally Counts",
-  image: "/comics/tinkering.png",
-  alt: "Super Cleaning Lady completes small cleaning and organizing tasks around the house while following her energy",
+  series: "Laundry Heroics",
+  title: "The Wrinkle Summit",
+  image: "/comics/wrinkle-summit.png",
+  alt: "Super Cleaning Lady and the cleaning squad attend a hilarious wrinkle-removal convention featuring irons, steamers, dryer tricks, and questionable alternative methods",
   description:
-    "No master plan. No full-house reset. Just one pillow fluffed, one surface wiped, one pile handled, and somehow the whole place starts behaving better.",
+    "Irons. Steamers. Damp towels. Dryer tricks. Mattress pressing. And several techniques that probably should not have made it past the convention planning committee. The world’s greatest minds have gathered for one mission: defeat the wrinkle.",
   quote:
-    "You do not have to clean the whole house to make the whole house feel better.",
-  relatedHref: "/invisible-heroics",
-  relatedLabel: "See More Invisible Heroics",
+    "When the shirt is wrinkled, the competition gets personal.",
+  relatedHref: "/missions/laundry-mountain",
+  relatedLabel: "Start Laundry Mountain",
 };
 
 const quickRescues = [
@@ -189,7 +189,7 @@ export default function Home() {
       <section className="mx-auto flex min-h-[68vh] max-w-6xl flex-col items-center justify-center px-6 py-12 text-center md:py-16">
         <img
           src="/clean-squad.png"
-          alt="Super Cleaning Lady, Super Handy Man, the Super Spray Bottle, and Spongie standing together"
+          alt="Super Cleaning Lady, Super Handy Man, Spritzy, and Spongie standing together"
           className="mb-8 w-full max-w-3xl rounded-[2rem] drop-shadow-2xl lg:max-w-4xl"
         />
 
@@ -210,14 +210,14 @@ export default function Home() {
         <div className="mt-8 flex w-full max-w-xl flex-col justify-center gap-4 sm:flex-row">
           <a
             href="#missions"
-            className="rounded-full bg-[#2f261f] px-7 py-4 text-sm font-black uppercase tracking-[0.18em] text-white shadow-lg transition hover:-translate-y-1 hover:bg-[#4a3b30] hover:shadow-xl"
+            className="rounded-full bg-[#2f261f] px-7 py-4 text-sm font-black uppercase tracking-[0.18em] text-white shadow-lg transition hover:-translate-y-1 hover:bg-[#4a3b30] hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b48635]"
           >
             Start a Mission
           </a>
 
           <a
             href="#invisible-heroics"
-            className="rounded-full border border-[#d8c6ad] bg-white px-7 py-4 text-sm font-black uppercase tracking-[0.18em] text-[#2f261f] shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+            className="rounded-full border border-[#d8c6ad] bg-white px-7 py-4 text-sm font-black uppercase tracking-[0.18em] text-[#2f261f] shadow-sm transition hover:-translate-y-1 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b48635]"
           >
             Read the Comics
           </a>
@@ -258,7 +258,7 @@ export default function Home() {
               <Link
                 key={mission.title}
                 href={mission.href}
-                className="group block rounded-3xl border border-[#eadcc8] bg-[#fffaf2] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+                className="group block rounded-3xl border border-[#eadcc8] bg-[#fffaf2] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b48635]"
               >
                 <div className="overflow-hidden rounded-2xl bg-white">
                   <img
@@ -405,16 +405,17 @@ export default function Home() {
             </p>
 
             <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
-              Small household victories still count.
+              Household problems have officially become competitive.
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#f7ead6]">
-              No rigid routine required. Sometimes progress starts by wandering
-              toward the next thing that happens to bother you.
+              Somewhere between an iron, a steamer, and a person trying to press
+              a shirt beneath a mattress, wrinkle removal became a spectator
+              sport.
             </p>
           </div>
 
-          <article className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
+          <article className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="overflow-hidden rounded-[2rem] border-4 border-white/10 bg-white shadow-2xl">
               <img
                 src={featuredComic.image}
@@ -449,10 +450,10 @@ export default function Home() {
                 </Link>
 
                 <Link
-                  href="/#missions"
+                  href="/invisible-heroics"
                   className="rounded-full border border-white/30 px-6 py-4 text-center text-sm font-black uppercase tracking-[0.16em] text-white transition hover:-translate-y-1 hover:bg-white/10"
                 >
-                  Choose a Mission
+                  Read More Comics
                 </Link>
               </div>
             </div>
