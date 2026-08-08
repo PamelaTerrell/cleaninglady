@@ -520,51 +520,114 @@ export default function SuperHandyManPage() {
         </div>
       </section>
 
-      {/* SUPPORT CREW */}
-      <section className="bg-white px-6 py-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
-              Repair Zone Support Crew
-            </p>
+      
+    {/* POST-REPAIR RESPONSE TEAM */}
+<section className="bg-white px-6 py-20">
+  <div className="mx-auto max-w-6xl">
+    <div className="mx-auto max-w-4xl text-center">
+      <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+        Post-Repair Response Team Deployed
+      </p>
 
-            <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
-              Because eventually somebody has to clean this up.
-            </h2>
-          </div>
+      <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+        Because eventually somebody has to clean this up.
+      </h2>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {supportCrew.map((member) => (
-              <article
-                key={member.name}
-                className="overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] text-center shadow-sm"
-              >
-                <div className="flex h-64 items-center justify-center bg-white p-6">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="h-full w-auto max-w-full object-contain drop-shadow-xl"
-                  />
-                </div>
+      <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
+        Once the repair is complete, the Five-Minute Fix Division quietly hands
+        the scene over to the professionals.
+      </p>
+    </div>
 
-                <div className="p-7">
-                  <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
-                    {member.role}
-                  </p>
-
-                  <h3 className="mt-3 text-3xl font-black">
-                    {member.name}
-                  </h3>
-
-                  <p className="mt-4 leading-7 text-[#6a5a4b]">
-                    {member.description}
-                  </p>
-                </div>
-              </article>
-            ))}
-          </div>
+    <div className="mt-12 grid gap-6 md:grid-cols-3">
+      <article className="overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] text-center shadow-sm">
+        <div className="flex h-64 items-center justify-center bg-white p-6">
+          <img
+            src="/scl.png"
+            alt="Super Cleaning Lady"
+            className="h-full w-auto max-w-full object-contain drop-shadow-xl"
+          />
         </div>
-      </section>
+
+        <div className="p-7">
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
+            Restores Civilization
+          </p>
+
+          <h3 className="mt-3 text-3xl font-black">
+            Super Cleaning Lady
+          </h3>
+
+          <p className="mt-4 leading-7 text-[#6a5a4b]">
+            Returns tools, clears packaging, wipes the dust, and determines
+            which rooms unexpectedly became part of the repair.
+          </p>
+        </div>
+      </article>
+
+      <article className="overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] text-center shadow-sm">
+        <div className="flex h-64 items-center justify-center bg-white p-6">
+          <img
+            src="/super-spray.png"
+            alt="Spritzy"
+            className="h-full w-auto max-w-full object-contain drop-shadow-xl"
+          />
+        </div>
+
+        <div className="p-7">
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
+            Surface Recovery
+          </p>
+
+          <h3 className="mt-3 text-3xl font-black">
+            Spritzy
+          </h3>
+
+          <p className="mt-4 leading-7 text-[#6a5a4b]">
+            Handles fingerprints, dust, mystery residue, smudges, and whatever
+            happened near the workbench.
+          </p>
+        </div>
+      </article>
+
+      <article className="overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] text-center shadow-sm">
+        <div className="flex h-64 items-center justify-center bg-white p-6">
+          <img
+            src="/spongie.png"
+            alt="Spongie"
+            className="h-full w-auto max-w-full object-contain drop-shadow-xl"
+          />
+        </div>
+
+        <div className="p-7">
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
+            Morale Division
+          </p>
+
+          <h3 className="mt-3 text-3xl font-black">
+            Spongie
+          </h3>
+
+          <p className="mt-4 leading-7 text-[#6a5a4b]">
+            Provides encouragement, dramatic reactions, and enthusiasm wildly
+            disproportionate to his qualifications.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <div className="mx-auto mt-8 max-w-3xl rounded-[1.75rem] border border-[#eadcc8] bg-[#fffaf2] px-6 py-5 text-center shadow-sm">
+      <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
+        Official Scene Status
+      </p>
+
+      <p className="mt-2 text-lg font-black leading-7 text-[#2f261f]">
+        Repair complete. Cleanup operations now underway.
+      </p>
+    </div>
+  </div>
+</section>
+             
 
       {/* FINAL CTA */}
       <section className="px-6 py-20">
