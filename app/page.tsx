@@ -125,8 +125,8 @@ const squad = [
     image: "/scl.png",
     alt: "Super Cleaning Lady wearing her pink cape and holding a spray bottle",
     imageClassName: "h-[92%]",
-    href: null,
-    cta: null,
+    href: "/super-cleaning-lady",
+    cta: "Enter Restoration & Rescue Command",
   },
   {
     role: "Repair Division",
@@ -147,8 +147,8 @@ const squad = [
     image: "/super-spray.png",
     alt: "Spritzy, the superhero spray bottle, wearing a red cape and holding a yellow cleaning cloth",
     imageClassName: "h-[94%]",
-    href: null,
-    cta: null,
+    href: "/spritzy",
+    cta: "Enter Surface Recovery",
   },
   {
     role: "Tiny Sidekick",
@@ -158,8 +158,8 @@ const squad = [
     image: "/spongie.png",
     alt: "Spongie wearing goggles and a red cape while holding a blue duster",
     imageClassName: "h-[122%]",
-    href: null,
-    cta: null,
+    href: "/spongie",
+    cta: "Enter Tiny Emergency Division",
   },
 ];
 

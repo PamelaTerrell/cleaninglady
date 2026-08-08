@@ -16,11 +16,7 @@ const navigation = [
   },
   {
     label: "Squad",
-    href: "/#squad",
-  },
-  {
-    label: "Handy Man",
-    href: "/super-handy-man",
+    href: "/squad",
   },
   {
     label: "Comics",
@@ -78,7 +74,7 @@ export default function Header() {
         {/* TABLET AND MOBILE NAVIGATION */}
         <nav
           aria-label="Mobile navigation"
-          className="grid grid-cols-3 gap-2 border-t border-[#d9e7f8] py-3 sm:grid-cols-6 lg:hidden"
+          className="grid grid-cols-3 gap-2 border-t border-[#d9e7f8] py-3 sm:grid-cols-5 lg:hidden"
         >
           {navigation.map((item) => (
             <Link

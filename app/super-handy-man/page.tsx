@@ -12,7 +12,8 @@ const personnelStats = [
   {
     label: "Department",
     value: "Repair Division",
-    description: "Fixing things that were broken and occasionally things that were fine.",
+    description:
+      "Fixing things that were broken and occasionally things that were fine.",
   },
   {
     label: "Special Ability",
@@ -102,7 +103,8 @@ const incidents = [
     alt: "Super Cleaning Lady, Super Handy Man, Spritzy, and Spongie respond to a wobbly shelf",
     description:
       "One slightly unstable shelf triggers a response involving the entire squad and considerably more equipment than expected.",
-    quote: "Some problems need teamwork... and slightly too many tools.",
+    quote:
+      "Some problems need teamwork... and slightly too many tools.",
   },
   {
     title: "The Sock Portal Investigation",
@@ -143,11 +145,13 @@ const timeline = [
   },
   {
     time: "1 hr",
-    event: "Super Cleaning Lady begins relocating tools from the dining room.",
+    event:
+      "Super Cleaning Lady begins relocating tools from the dining room.",
   },
   {
     time: "2 hr",
-    event: "“It was actually a good thing we opened this up.”",
+    event:
+      "“It was actually a good thing we opened this up.”",
   },
   {
     time: "3 hr",
@@ -162,46 +166,61 @@ const timeline = [
 const fieldNotes = [
   {
     number: "001",
-    text: "Never clean around an active repair. The repair will expand to occupy the available clean surface.",
+    text:
+      "Never clean around an active repair. The repair will expand to occupy the available clean surface.",
   },
   {
     number: "002",
-    text: "A tool placed on the dining room table becomes invisible to Super Handy Man within approximately six minutes.",
+    text:
+      "A tool placed on the dining room table becomes invisible to Super Handy Man within approximately six minutes.",
   },
   {
     number: "003",
-    text: "Never ask, “Are you almost done?” unless you are emotionally prepared for an explanation.",
+    text:
+      "Never ask, “Are you almost done?” unless you are emotionally prepared for an explanation.",
   },
 ];
 
-const supportCrew = [
+const responseTeam = [
   {
     name: "Super Cleaning Lady",
     role: "Restores Civilization",
     image: "/scl.png",
+    href: "/super-cleaning-lady",
     description:
-      "Returns tools, removes packaging, wipes the dust, and identifies which rooms have accidentally become part of the project.",
+      "Returns tools, clears packaging, wipes the dust, and determines which rooms unexpectedly became part of the repair.",
+    cta: "Visit Restoration & Rescue Command",
+    glow: "bg-[#f4c96d]/20",
   },
   {
     name: "Spritzy",
     role: "Surface Recovery",
     image: "/super-spray.png",
+    href: "/spritzy",
     description:
-      "Standing by for fingerprints, dust, mystery residue, and whatever happened near the workbench.",
+      "Handles fingerprints, dust, mystery residue, smudges, and whatever happened near the workbench.",
+    cta: "Visit Surface Recovery",
+    glow: "bg-[#dceeff]",
   },
   {
     name: "Spongie",
     role: "Morale Division",
     image: "/spongie.png",
+    href: "/spongie",
     description:
-      "Provides enthusiasm dramatically disproportionate to his qualifications.",
+      "Provides encouragement, dramatic reactions, and enthusiasm wildly disproportionate to his qualifications.",
+    cta: "Visit Tiny Emergency Division",
+    glow: "bg-[#f4c96d]/25",
   },
 ];
 
 export default function SuperHandyManPage() {
   return (
     <main className="min-h-screen bg-[#fffaf2] text-[#2f261f]">
-      {/* HERO */}
+      {/* ================================================================ */}
+      {/* HERO                                                             */}
+      {/* ================================================================ */}
+
       <section className="relative overflow-hidden bg-[#2f261f] text-white">
         <div
           className="absolute inset-0 opacity-[0.05]"
@@ -216,10 +235,10 @@ export default function SuperHandyManPage() {
         <div className="relative mx-auto max-w-7xl px-5 pb-16 pt-8 sm:px-6 md:pb-20 md:pt-10">
           <div className="mb-7 flex justify-center">
             <Link
-              href="/"
+              href="/squad"
               className="rounded-full border border-white/20 bg-white/10 px-5 py-2 text-xs font-black uppercase tracking-[0.18em] text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f4c96d]"
             >
-              ← Back to Headquarters
+              ← Back to Squad Headquarters
             </Link>
           </div>
 
@@ -270,7 +289,10 @@ export default function SuperHandyManPage() {
         </div>
       </section>
 
-      {/* PERSONNEL FILE */}
+      {/* ================================================================ */}
+      {/* PERSONNEL FILE                                                   */}
+      {/* ================================================================ */}
+
       <section className="px-6 py-20">
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto max-w-4xl text-center">
@@ -291,7 +313,7 @@ export default function SuperHandyManPage() {
             {personnelStats.map((stat) => (
               <article
                 key={stat.label}
-                className="rounded-[2rem] border border-[#eadcc8] bg-white p-7 shadow-sm"
+                className="rounded-[2rem] border border-[#eadcc8] bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
               >
                 <p className="text-xs font-black uppercase tracking-[0.22em] text-[#b48635]">
                   {stat.label}
@@ -310,7 +332,10 @@ export default function SuperHandyManPage() {
         </div>
       </section>
 
-      {/* THE SHM CODE */}
+      {/* ================================================================ */}
+      {/* SUPER HANDY MAN CODE                                             */}
+      {/* ================================================================ */}
+
       <section className="bg-white px-6 py-20">
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto max-w-4xl text-center">
@@ -346,7 +371,10 @@ export default function SuperHandyManPage() {
         </div>
       </section>
 
-      {/* FEATURED PHILOSOPHICAL CRISIS */}
+      {/* ================================================================ */}
+      {/* PHILOSOPHICAL CRISIS                                             */}
+      {/* ================================================================ */}
+
       <section className="px-5 py-20 sm:px-6">
         <div className="mx-auto max-w-6xl">
           <div className="overflow-hidden rounded-[2.5rem] border border-[#eadcc8] bg-white shadow-[0_24px_70px_rgba(47,38,31,0.14)]">
@@ -388,7 +416,10 @@ export default function SuperHandyManPage() {
         </div>
       </section>
 
-      {/* FIVE MINUTE TIMELINE */}
+      {/* ================================================================ */}
+      {/* FIVE-MINUTE TIMELINE                                             */}
+      {/* ================================================================ */}
+
       <section className="bg-[#2f261f] px-6 py-20 text-white">
         <div className="mx-auto max-w-5xl">
           <div className="text-center">
@@ -428,11 +459,27 @@ export default function SuperHandyManPage() {
               </div>
             ))}
           </div>
+
+          <div className="mx-auto mt-8 max-w-3xl rounded-[1.5rem] border border-[#f4c96d]/20 bg-white/5 p-6 text-center">
+            <p className="text-sm font-black uppercase tracking-[0.18em] text-[#f4c96d]">
+              Final Time Estimate
+            </p>
+
+            <p className="mt-2 text-xl font-black">
+              Still five minutes, technically.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* INCIDENT FILES */}
-      <section id="incident-files" className="scroll-mt-32 bg-white px-6 py-20">
+      {/* ================================================================ */}
+      {/* INCIDENT FILES                                                   */}
+      {/* ================================================================ */}
+
+      <section
+        id="incident-files"
+        className="scroll-mt-32 bg-white px-6 py-20"
+      >
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto max-w-4xl text-center">
             <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
@@ -444,8 +491,8 @@ export default function SuperHandyManPage() {
             </h2>
 
             <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
-              A documented history of optimism, tools, unexpected complications,
-              and eventual victory.
+              A documented history of optimism, tools, unexpected
+              complications, and eventual victory.
             </p>
           </div>
 
@@ -479,6 +526,17 @@ export default function SuperHandyManPage() {
                   <blockquote className="mt-6 border-l-4 border-[#b48635] pl-5 text-lg font-bold italic leading-7">
                     “{incident.quote}”
                   </blockquote>
+
+                  <div className="mt-6 rounded-2xl border border-[#eadcc8] bg-white p-5">
+                    <p className="text-xs font-black uppercase tracking-[0.18em] text-[#b48635]">
+                      Post-Repair Response Team Deployed
+                    </p>
+
+                    <p className="mt-2 text-sm font-bold leading-6 text-[#4d4137]">
+                      Super Cleaning Lady: restoring order · Spritzy: surface
+                      recovery · Spongie: morale support
+                    </p>
+                  </div>
                 </div>
               </article>
             ))}
@@ -486,7 +544,10 @@ export default function SuperHandyManPage() {
         </div>
       </section>
 
-      {/* SCL FIELD NOTES */}
+      {/* ================================================================ */}
+      {/* FIELD NOTES                                                      */}
+      {/* ================================================================ */}
+
       <section className="px-6 py-20">
         <div className="mx-auto max-w-5xl">
           <div className="rounded-[2.5rem] border border-[#eadcc8] bg-white p-8 shadow-sm sm:p-10 md:p-12">
@@ -498,6 +559,11 @@ export default function SuperHandyManPage() {
               <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
                 Observations from the repair zone.
               </h2>
+
+              <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#6a5a4b]">
+                Years of field experience have produced several important
+                operational findings.
+              </p>
             </div>
 
             <div className="mt-10 space-y-5">
@@ -520,117 +586,136 @@ export default function SuperHandyManPage() {
         </div>
       </section>
 
-      
-    {/* POST-REPAIR RESPONSE TEAM */}
-<section className="bg-white px-6 py-20">
-  <div className="mx-auto max-w-6xl">
-    <div className="mx-auto max-w-4xl text-center">
-      <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
-        Post-Repair Response Team Deployed
-      </p>
+      {/* ================================================================ */}
+      {/* POST-REPAIR RESPONSE TEAM                                        */}
+      {/* ================================================================ */}
 
-      <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
-        Because eventually somebody has to clean this up.
-      </h2>
+      <section className="bg-white px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+              Post-Repair Response Team Deployed
+            </p>
 
-      <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
-        Once the repair is complete, the Five-Minute Fix Division quietly hands
-        the scene over to the professionals.
-      </p>
-    </div>
+            <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+              Because eventually somebody has to clean this up.
+            </h2>
 
-    <div className="mt-12 grid gap-6 md:grid-cols-3">
-      <article className="overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] text-center shadow-sm">
-        <div className="flex h-64 items-center justify-center bg-white p-6">
-          <img
-            src="/scl.png"
-            alt="Super Cleaning Lady"
-            className="h-full w-auto max-w-full object-contain drop-shadow-xl"
-          />
+            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
+              Once the repair is complete, the Five-Minute Fix Division quietly
+              hands the scene over to the people who have to live here.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {responseTeam.map((member) => (
+              <Link
+                key={member.name}
+                href={member.href}
+                className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b48635]"
+              >
+                <div className="relative flex h-64 items-center justify-center overflow-hidden bg-white p-6">
+                  <div
+                    className={`absolute h-40 w-40 rounded-full blur-3xl ${member.glow}`}
+                    aria-hidden="true"
+                  />
+
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="relative h-full w-auto max-w-full object-contain drop-shadow-xl transition duration-300 group-hover:scale-[1.03]"
+                  />
+                </div>
+
+                <div className="flex flex-1 flex-col p-7">
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
+                    {member.role}
+                  </p>
+
+                  <h3 className="mt-3 text-3xl font-black">
+                    {member.name}
+                  </h3>
+
+                  <p className="mt-4 flex-1 leading-7 text-[#6a5a4b]">
+                    {member.description}
+                  </p>
+
+                  <p className="mt-6 text-sm font-black uppercase tracking-[0.16em] text-[#b48635]">
+                    {member.cta} →
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          {/* STATUS CARD */}
+          <div className="mx-auto mt-8 max-w-3xl rounded-[1.75rem] border border-[#eadcc8] bg-[#fffaf2] px-6 py-6 text-center shadow-sm">
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
+              Official Scene Status
+            </p>
+
+            <p className="mt-2 text-lg font-black leading-7 text-[#2f261f]">
+              Repair complete. Cleanup operations now underway.
+            </p>
+
+            <p className="mt-2 text-sm font-bold italic text-[#8a7766]">
+              Super Handy Man has already left to find another tool.
+            </p>
+          </div>
         </div>
+      </section>
 
-        <div className="p-7">
-          <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
-            Restores Civilization
-          </p>
+      {/* ================================================================ */}
+      {/* PROJECT REPORT                                                   */}
+      {/* ================================================================ */}
 
-          <h3 className="mt-3 text-3xl font-black">
-            Super Cleaning Lady
-          </h3>
-
-          <p className="mt-4 leading-7 text-[#6a5a4b]">
-            Returns tools, clears packaging, wipes the dust, and determines
-            which rooms unexpectedly became part of the repair.
-          </p>
-        </div>
-      </article>
-
-      <article className="overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] text-center shadow-sm">
-        <div className="flex h-64 items-center justify-center bg-white p-6">
-          <img
-            src="/super-spray.png"
-            alt="Spritzy"
-            className="h-full w-auto max-w-full object-contain drop-shadow-xl"
-          />
-        </div>
-
-        <div className="p-7">
-          <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
-            Surface Recovery
-          </p>
-
-          <h3 className="mt-3 text-3xl font-black">
-            Spritzy
-          </h3>
-
-          <p className="mt-4 leading-7 text-[#6a5a4b]">
-            Handles fingerprints, dust, mystery residue, smudges, and whatever
-            happened near the workbench.
-          </p>
-        </div>
-      </article>
-
-      <article className="overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] text-center shadow-sm">
-        <div className="flex h-64 items-center justify-center bg-white p-6">
-          <img
-            src="/spongie.png"
-            alt="Spongie"
-            className="h-full w-auto max-w-full object-contain drop-shadow-xl"
-          />
-        </div>
-
-        <div className="p-7">
-          <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
-            Morale Division
-          </p>
-
-          <h3 className="mt-3 text-3xl font-black">
-            Spongie
-          </h3>
-
-          <p className="mt-4 leading-7 text-[#6a5a4b]">
-            Provides encouragement, dramatic reactions, and enthusiasm wildly
-            disproportionate to his qualifications.
-          </p>
-        </div>
-      </article>
-    </div>
-
-    <div className="mx-auto mt-8 max-w-3xl rounded-[1.75rem] border border-[#eadcc8] bg-[#fffaf2] px-6 py-5 text-center shadow-sm">
-      <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
-        Official Scene Status
-      </p>
-
-      <p className="mt-2 text-lg font-black leading-7 text-[#2f261f]">
-        Repair complete. Cleanup operations now underway.
-      </p>
-    </div>
-  </div>
-</section>
-             
-
-      {/* FINAL CTA */}
       <section className="px-6 py-20">
+        <div className="mx-auto max-w-5xl">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="rounded-[1.75rem] border border-[#eadcc8] bg-white p-6 text-center shadow-sm">
+              <p className="text-xs font-black uppercase tracking-[0.16em] text-[#b48635]">
+                Original Estimate
+              </p>
+              <p className="mt-2 text-2xl font-black">
+                5 Minutes
+              </p>
+            </div>
+
+            <div className="rounded-[1.75rem] border border-[#eadcc8] bg-white p-6 text-center shadow-sm">
+              <p className="text-xs font-black uppercase tracking-[0.16em] text-[#b48635]">
+                Tools Used
+              </p>
+              <p className="mt-2 text-2xl font-black">
+                Most of Them
+              </p>
+            </div>
+
+            <div className="rounded-[1.75rem] border border-[#eadcc8] bg-white p-6 text-center shadow-sm">
+              <p className="text-xs font-black uppercase tracking-[0.16em] text-[#b48635]">
+                Hardware Runs
+              </p>
+              <p className="mt-2 text-2xl font-black">
+                Classified
+              </p>
+            </div>
+
+            <div className="rounded-[1.75rem] border border-[#eadcc8] bg-white p-6 text-center shadow-sm">
+              <p className="text-xs font-black uppercase tracking-[0.16em] text-[#b48635]">
+                Extra Screws
+              </p>
+              <p className="mt-2 text-2xl font-black">
+                Probably Normal
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================================================================ */}
+      {/* FINAL CTA                                                        */}
+      {/* ================================================================ */}
+
+      <section className="px-6 pb-20">
         <div className="mx-auto max-w-4xl rounded-[2.5rem] bg-[#2f261f] p-8 text-center text-white shadow-2xl sm:p-10 md:p-14">
           <p className="text-sm font-black uppercase tracking-[0.25em] text-[#f4c96d]">
             Project Status
@@ -642,7 +727,8 @@ export default function SuperHandyManPage() {
 
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#f7ead6]">
             Follow Super Handy Man into the next supposedly five-minute repair,
-            or return to headquarters before he asks you to hold the flashlight.
+            or return to Squad Headquarters before he asks you to hold the
+            flashlight.
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
@@ -654,10 +740,10 @@ export default function SuperHandyManPage() {
             </Link>
 
             <Link
-              href="/#missions"
+              href="/squad"
               className="rounded-full border border-white/30 bg-white/5 px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:-translate-y-1 hover:bg-white/10"
             >
-              Escape to a Mission
+              Return to Squad HQ
             </Link>
           </div>
         </div>

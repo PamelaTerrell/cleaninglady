@@ -28,6 +28,7 @@ const teamUps = [
     description:
       "Company is five minutes away. The pillows are fluffed. The living room is almost respectable. Then Super Cleaning Lady discovers an entire ratchet set conducting unauthorized operations on the coffee table.",
     quote: "The ratchet set does not live here.",
+    responseTeam: true,
   },
   {
     part: "Part 2",
@@ -38,6 +39,7 @@ const teamUps = [
     description:
       "Peace has finally returned to the living room. Then Super Handy Man arrives carrying a drill, an extension cord, and the same ratchet set. He promises he is only tightening one thing.",
     quote: "He repairs the house. She repairs the aftermath.",
+    responseTeam: true,
   },
   {
     part: "Part 3",
@@ -49,6 +51,7 @@ const teamUps = [
       "One sock disappears, and Super Handy Man launches a full dryer investigation involving a flashlight, drill, socket set, and unwavering confidence. The dryer survives. The sock does not return.",
     quote:
       "The Sock Portal remains a mystery. Super Handy Man remains extremely optimistic.",
+    responseTeam: true,
   },
   {
     part: "Part 4",
@@ -58,7 +61,9 @@ const teamUps = [
     alt: "Super Cleaning Lady, Super Handy Man, Spritzy, and Spongie team up to fix a dangerously wobbly shelf",
     description:
       "A shelf starts leaning like it pays rent, and the whole team responds. Super Handy Man brings every tool he owns, Super Cleaning Lady handles the rescue, Spritzy stands ready, and Spongie proudly contributes the duster.",
-    quote: "Some problems need teamwork... and slightly too many tools.",
+    quote:
+      "Some problems need teamwork... and slightly too many tools.",
+    responseTeam: true,
   },
   {
     part: "Part 5",
@@ -69,6 +74,7 @@ const teamUps = [
     description:
       "Super Cleaning Lady attempts to put away one clean container and accidentally triggers a full-scale lid rebellion. With Spongie assisting, she sorts, matches, rescues, and exiles the suspicious extras.",
     quote: "No one will notice until they need a lid.",
+    responseTeam: false,
   },
   {
     part: "Part 6",
@@ -79,6 +85,7 @@ const teamUps = [
     description:
       "Super Cleaning Lady discovers a clog, and Super Handy Man launches a full repair operation. After tools, testing, and great confidence, the vacuum finally works—just long enough to launch the entire clog directly at her.",
     quote: "I think we found the clog.",
+    responseTeam: true,
   },
   {
     part: "Part 7",
@@ -89,6 +96,7 @@ const teamUps = [
     description:
       "Spritzy and Spongie discover a microscopic kitchen mess and respond as if the entire kingdom is at stake. Spongie brings the panic, Spritzy brings the polish, and together they save the day one crumb at a time.",
     quote: "Small mess. Big teamwork.",
+    responseTeam: false,
   },
   {
     part: "Part 8",
@@ -99,6 +107,7 @@ const teamUps = [
     description:
       "Super Handy Man proudly declares, “Every problem has a solution. Especially this one.” Unfortunately, the problem is that he cannot find his drill because his workshop contains approximately fourteen thousand other tools.",
     quote: "Sometimes the problem is too many solutions.",
+    responseTeam: true,
   },
 ];
 
@@ -155,10 +164,10 @@ export default function HouseholdTeamUpsPage() {
 
           <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
             <Link
-              href="/"
+              href="/super-handy-man"
               className="rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.17em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a] focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
             >
-              Back to Headquarters
+              Meet Super Handy Man
             </Link>
 
             <a
@@ -167,6 +176,15 @@ export default function HouseholdTeamUpsPage() {
             >
               Read the Saga
             </a>
+          </div>
+
+          <div className="mt-5">
+            <Link
+              href="/"
+              className="text-xs font-black uppercase tracking-[0.16em] text-[#f7ead6] transition hover:text-white"
+            >
+              ← Back to Headquarters
+            </Link>
           </div>
         </div>
       </section>
@@ -221,6 +239,17 @@ export default function HouseholdTeamUpsPage() {
                 <blockquote className="mt-7 rounded-2xl border-l-4 border-[#b48635] bg-white p-6 text-xl font-bold italic leading-8 shadow-sm">
                   “{featuredTeamUp.quote}”
                 </blockquote>
+
+                <div className="mt-6 rounded-2xl border border-[#eadcc8] bg-white p-5">
+                  <p className="text-xs font-black uppercase tracking-[0.18em] text-[#b48635]">
+                    Post-Repair Response Team Deployed
+                  </p>
+
+                  <p className="mt-2 text-sm font-bold leading-6 text-[#4d4137]">
+                    Super Cleaning Lady: restoring order · Spritzy: surface
+                    recovery · Spongie: morale support
+                  </p>
+                </div>
               </div>
             </div>
           </article>
@@ -260,6 +289,13 @@ export default function HouseholdTeamUpsPage() {
               project begins with the words, “This should only take five
               minutes.”
             </p>
+
+            <Link
+              href="/super-handy-man"
+              className="mt-7 inline-flex text-sm font-black uppercase tracking-[0.16em] text-[#b48635] transition hover:text-[#7a5520]"
+            >
+              Enter the Five-Minute Fix Division →
+            </Link>
           </article>
         </div>
       </section>
@@ -326,6 +362,19 @@ export default function HouseholdTeamUpsPage() {
                     <blockquote className="mt-7 rounded-2xl border-l-4 border-[#b48635] bg-white p-6 text-xl font-bold italic leading-8 shadow-sm">
                       “{story.quote}”
                     </blockquote>
+
+                    {story.responseTeam && (
+                      <div className="mt-6 rounded-2xl border border-[#eadcc8] bg-white p-5">
+                        <p className="text-xs font-black uppercase tracking-[0.18em] text-[#b48635]">
+                          Post-Repair Response Team Deployed
+                        </p>
+
+                        <p className="mt-2 text-sm font-bold leading-6 text-[#4d4137]">
+                          Super Cleaning Lady: restoring order · Spritzy:
+                          surface recovery · Spongie: morale support
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </div>
               </article>
@@ -404,7 +453,7 @@ export default function HouseholdTeamUpsPage() {
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto max-w-4xl text-center">
             <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
-              Future Incident Reports
+              Next Incident Pending
             </p>
 
             <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
@@ -437,37 +486,58 @@ export default function HouseholdTeamUpsPage() {
               </article>
             ))}
           </div>
+
+          <div className="mx-auto mt-10 max-w-3xl rounded-[1.75rem] border border-[#eadcc8] bg-[#fffaf2] px-6 py-6 text-center shadow-sm">
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
+              Current Household Status
+            </p>
+
+            <p className="mt-2 text-lg font-black leading-7">
+              Nothing is technically broken at the moment.
+            </p>
+
+            <p className="mt-2 text-sm font-bold text-[#8a7766]">
+              Super Handy Man remains on standby.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* FINAL CTA */}
       <section className="px-6 py-20">
-        <div className="mx-auto max-w-4xl rounded-[2.5rem] border border-[#eadcc8] bg-white p-8 text-center shadow-sm md:p-12">
-          <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+        <div className="mx-auto max-w-4xl rounded-[2.5rem] bg-[#2f261f] p-8 text-center text-white shadow-2xl md:p-12">
+          <p className="text-sm font-black uppercase tracking-[0.25em] text-[#f4c96d]">
             While the Tools Are Out
           </p>
 
-          <h2 className="mt-4 text-4xl font-black leading-tight">
+          <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
             The house still needs rescuing.
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#6a5a4b]">
-            Follow the continuing team-up saga, revisit Super Cleaning Lady’s
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#f7ead6]">
+            Visit the Five-Minute Fix Division, revisit Super Cleaning Lady’s
             solo victories, or choose a mission and confront your own household
             chaos.
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <Link
+              href="/super-handy-man"
+              className="rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a] hover:shadow-xl"
+            >
+              Visit the Fix Division
+            </Link>
+
+            <Link
               href="/invisible-heroics"
-              className="rounded-full border border-[#d8c6ad] bg-[#fffaf2] px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-sm transition hover:-translate-y-1 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b48635]"
+              className="rounded-full border border-white/30 px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:-translate-y-1 hover:bg-white/10"
             >
               See Invisible Heroics
             </Link>
 
             <Link
               href="/#missions"
-              className="rounded-full bg-[#2f261f] px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-white shadow-lg transition hover:-translate-y-1 hover:bg-[#4a3b30] hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b48635]"
+              className="rounded-full border border-white/30 px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:-translate-y-1 hover:bg-white/10"
             >
               Choose a Mission
             </Link>
