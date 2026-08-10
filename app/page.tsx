@@ -229,7 +229,7 @@ export default function Home() {
 
         <div className="relative mx-auto flex min-h-[68vh] max-w-6xl flex-col items-center justify-center px-5 py-12 text-center sm:px-6 md:py-16">
           <img
-            src="/clean-squad.png"
+            src="/full-squad.png"
             alt="Super Cleaning Lady, Super Handy Man, Spritzy, and Spongie standing together"
             className="mb-8 w-full max-w-3xl rounded-[2rem] drop-shadow-2xl lg:max-w-4xl"
           />

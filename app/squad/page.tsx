@@ -133,7 +133,7 @@ export default function SquadPage() {
         <div className="mx-auto max-w-6xl">
           <div className="overflow-hidden rounded-[2.5rem] border border-[#eadcc8] bg-white p-4 shadow-[0_24px_70px_rgba(47,38,31,0.12)] sm:p-6">
             <img
-              src="/clean-squad.png"
+              src="/full-squad.png"
               alt="Super Cleaning Lady, Super Handy Man, Spritzy, and Spongie standing together"
               className="h-auto w-full rounded-[2rem]"
             />
