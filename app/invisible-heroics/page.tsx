@@ -96,6 +96,20 @@ const heroics = [
     missionHref: "/missions/bathroom-reset",
     missionLabel: "Start the Bathroom Reset",
   },
+
+  {
+  title: "The Windowsill Archaeological Dig",
+  slug: "windowsill-archaeological-dig",
+  category: "Invisible Heroics",
+  image: "/comics/windowsill-archaeological-dig.png",
+  alt: "Super Cleaning Lady, Spritzy, and Spongie discover an entire archaeological civilization of dust, crumbs, bugs, and forgotten objects while cleaning a windowsill",
+  description:
+    "It starts with one innocent thought: “I’ll just wipe the windowsill real quick.” Then Spritzy finds evidence of an ancient crumb kingdom, Spongie enters excavation mode, and suddenly everyone is doing archaeology.",
+  punchline:
+    "Nobody plans to deep-clean a windowsill. Sometimes you just uncover a tiny indoor ecosystem.",
+  missionHref: "/missions/living-room-reset",
+  missionLabel: "Start the Living Room Reset",
+},
 ];
 
 export default function InvisibleHeroicsPage() {
