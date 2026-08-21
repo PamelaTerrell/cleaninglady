@@ -44,6 +44,7 @@ const deepSteps = [
   "Scrub the sink, faucet, and counter.",
   "Clean the toilet inside and out like the brave adult you are.",
   "Wipe the shower or tub walls, especially the soap scum headquarters.",
+  "Empty the shower caddy. Toss the empties, retire the rusty razor, and question whether you truly need backup backup shampoo.",
   "Check the shower curtain liner. Clean it or replace it before it becomes self-aware.",
   "Sweep or vacuum the floor, then mop if the floor has become emotionally sticky.",
 ];
@@ -57,15 +58,26 @@ const supplies = [
   "Courage and possibly gloves",
 ];
 
-const bathroomHeroic = {
-  title: "The Shower Curtain Liner",
-  image: "/comics/shower-curtain-liner.png",
-  alt: "Super Cleaning Lady replaces an old shower curtain liner while everyone else fails to notice",
-  description:
-    "No applause. No medal. Not even a casual, “Hey, the shower looks better.” Just another household crisis quietly defeated.",
-  punchline:
-    "Some heroes save the world. Others replace the shower curtain liner before it becomes self-aware.",
-};
+const bathroomHeroics = [
+  {
+    title: "The Shower Caddy Crisis",
+    image: "/comics/shower-caddy.png",
+    alt: "Super Cleaning Lady, Spritzy, and Spongie confront an overflowing shower caddy filled with backup shampoo, a rusty razor, soap-scum goo, and products taking over the bathtub",
+    description:
+      "It started with one harmless idea: tidy the shower caddy real quick. Then came the backup backup shampoo, the rusty razor, the thriving soap-scum goo, and the horrifying realization that the tub rim had become overflow storage.",
+    punchline:
+      "If there’s a rusty razor, soap-scum goo, and backup backup shampoo... it’s cleanup time.",
+  },
+  {
+    title: "The Shower Curtain Liner",
+    image: "/comics/shower-curtain-liner.png",
+    alt: "Super Cleaning Lady replaces an old shower curtain liner while everyone else fails to notice",
+    description:
+      "No applause. No medal. Not even a casual, “Hey, the shower looks better.” Just another household crisis quietly defeated.",
+    punchline:
+      "Some heroes save the world. Others replace the shower curtain liner before it becomes self-aware.",
+  },
+];
 
 export default function BathroomResetPage() {
   return (
@@ -159,62 +171,78 @@ export default function BathroomResetPage() {
         </div>
       </section>
 
-      {/* EARLIER BATHROOM HEROIC */}
-      <section className="bg-white px-6 py-16">
-        <div className="mx-auto max-w-6xl">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
-              Earlier Bathroom Incident
-            </p>
+     {/* BATHROOM HEROICS */}
+<section className="bg-white px-6 py-16">
+  <div className="mx-auto max-w-6xl">
+    <div className="mx-auto max-w-3xl text-center">
+      <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+        Bathroom Heroics
+      </p>
 
-            <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
-              Before the briefing, there was the liner.
-            </h2>
+      <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+        Apparently the bathroom has multiple plotlines.
+      </h2>
 
-            <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
-              The bathroom quietly improved. The shower felt fresher. Nobody
-              asked why. Super Cleaning Lady knew exactly what happened.
-            </p>
+      <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
+        A shower caddy becomes a storage facility. A shower curtain liner
+        quietly enters its villain era. Nobody calls for help, but somehow
+        Super Cleaning Lady gets involved anyway.
+      </p>
+    </div>
+
+    <div className="mt-12 space-y-12">
+      {bathroomHeroics.map((heroic, index) => (
+        <article
+          key={heroic.title}
+          className="grid overflow-hidden rounded-[2.5rem] border border-[#eadcc8] bg-[#fffaf2] shadow-[0_24px_70px_rgba(47,38,31,0.12)] lg:grid-cols-[1.15fr_0.85fr]"
+        >
+          <div
+            className={`bg-white p-4 sm:p-6 ${
+              index % 2 === 1 ? "lg:order-2" : ""
+            }`}
+          >
+            <img
+              src={heroic.image}
+              alt={heroic.alt}
+              className="h-auto w-full rounded-[1.75rem]"
+            />
           </div>
 
-          <article className="mx-auto mt-10 grid max-w-6xl overflow-hidden rounded-[2.5rem] border border-[#eadcc8] bg-[#fffaf2] shadow-[0_24px_70px_rgba(47,38,31,0.12)] lg:grid-cols-[1.15fr_0.85fr]">
-            <div className="bg-white p-4 sm:p-6">
-              <img
-                src={bathroomHeroic.image}
-                alt={bathroomHeroic.alt}
-                className="h-auto w-full rounded-[1.75rem]"
-              />
-            </div>
+          <div
+            className={`flex flex-col justify-center p-8 sm:p-10 lg:p-12 ${
+              index % 2 === 1 ? "lg:order-1" : ""
+            }`}
+          >
+            <p className="text-sm font-black uppercase tracking-[0.22em] text-[#b48635]">
+              Invisible Heroics
+            </p>
 
-            <div className="flex flex-col justify-center p-8 sm:p-10 lg:p-12">
-              <p className="text-sm font-black uppercase tracking-[0.22em] text-[#b48635]">
-                Invisible Heroics
-              </p>
+            <h3 className="mt-4 text-4xl font-black leading-tight">
+              {heroic.title}
+            </h3>
 
-              <h3 className="mt-4 text-4xl font-black leading-tight">
-                {bathroomHeroic.title}
-              </h3>
+            <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
+              {heroic.description}
+            </p>
 
-              <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
-                {bathroomHeroic.description}
-              </p>
+            <blockquote className="mt-7 rounded-2xl border-l-4 border-[#b48635] bg-white p-6 text-xl font-bold italic leading-8 shadow-sm">
+              “{heroic.punchline}”
+            </blockquote>
+          </div>
+        </article>
+      ))}
+    </div>
 
-              <blockquote className="mt-7 rounded-2xl border-l-4 border-[#b48635] bg-white p-6 text-xl font-bold italic leading-8 shadow-sm">
-                “{bathroomHeroic.punchline}”
-              </blockquote>
-
-              <div className="mt-8">
-                <Link
-                  href="/invisible-heroics"
-                  className="inline-flex rounded-full border border-[#d8c6ad] bg-white px-6 py-4 text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-sm transition hover:-translate-y-1 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b48635]"
-                >
-                  See All Invisible Heroics
-                </Link>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
+    <div className="mt-10 text-center">
+      <Link
+        href="/invisible-heroics"
+        className="inline-flex rounded-full border border-[#d8c6ad] bg-white px-6 py-4 text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-sm transition hover:-translate-y-1 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b48635]"
+      >
+        See All Invisible Heroics
+      </Link>
+    </div>
+  </div>
+</section>
 
       {/* MISSION SUPPLIES */}
       <section className="px-6 py-16">
