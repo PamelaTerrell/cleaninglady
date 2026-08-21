@@ -8,6 +8,277 @@ export const metadata: Metadata = {
     "Meet Super Handy Man, repair specialist, tool enthusiast, over-engineering expert, and firm believer that every problem has a solution. Especially this one.",
 };
 
+/* -------------------------------------------------------------------------- */
+/* PAGE STYLES                                                                */
+/* -------------------------------------------------------------------------- */
+
+const styles = {
+  page:
+    "min-h-screen bg-[#fffaf2] text-[#2f261f]",
+
+  heroSection:
+    "relative overflow-hidden bg-[#2f261f] text-white",
+
+  heroPattern:
+    "absolute inset-0 opacity-[0.05]",
+
+  heroContainer:
+    "relative mx-auto max-w-7xl px-5 pb-16 pt-8 sm:px-6 md:pb-20 md:pt-10",
+
+  backToSquadButton:
+    "rounded-full border border-white/20 bg-white/10 px-5 py-2 text-xs font-black uppercase tracking-[0.18em] text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f4c96d]",
+
+  heroImageFrame:
+    "overflow-hidden rounded-[2rem] border border-white/10 bg-white shadow-2xl sm:rounded-[2.5rem]",
+
+  heroContent:
+    "mx-auto mt-10 max-w-4xl text-center",
+
+  heroEyebrow:
+    "text-sm font-black uppercase tracking-[0.28em] text-[#f4c96d]",
+
+  heroTitle:
+    "mt-4 text-4xl font-black leading-tight sm:text-5xl md:text-7xl",
+
+  heroDescription:
+    "mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#f7ead6] md:text-xl",
+
+  heroQuote:
+    "mx-auto mt-7 max-w-3xl text-xl font-black italic leading-8 text-[#f4c96d] sm:text-2xl",
+
+  heroPrimaryButton:
+    "rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a] hover:shadow-xl",
+
+  heroSecondaryButton:
+    "rounded-full border border-white/30 bg-white/5 px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:-translate-y-1 hover:bg-white/10",
+
+  pageSection:
+    "px-6 py-20",
+
+  whiteSection:
+    "bg-white px-6 py-20",
+
+  sectionContainer:
+    "mx-auto max-w-6xl",
+
+  narrowSectionContainer:
+    "mx-auto max-w-5xl",
+
+  sectionHeader:
+    "mx-auto max-w-4xl text-center",
+
+  sectionEyebrow:
+    "text-sm font-black uppercase tracking-[0.25em] text-[#b48635]",
+
+  sectionHeading:
+    "mt-4 text-4xl font-black leading-tight md:text-5xl",
+
+  sectionDescription:
+    "mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]",
+
+  personnelGrid:
+    "mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3",
+
+  personnelCard:
+    "rounded-[2rem] border border-[#eadcc8] bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md",
+
+  cardEyebrow:
+    "text-xs font-black uppercase tracking-[0.22em] text-[#b48635]",
+
+  cardTitle:
+    "mt-3 text-2xl font-black leading-tight",
+
+  cardBody:
+    "mt-4 leading-7 text-[#6a5a4b]",
+
+  codeGrid:
+    "mt-12 grid gap-6 md:grid-cols-3",
+
+  codeCard:
+    "relative overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm",
+
+  codeNumber:
+    "text-6xl font-black text-[#f4c96d]/50",
+
+  codeTitle:
+    "mt-4 text-3xl font-black leading-tight",
+
+  featuredIncidentShell:
+    "overflow-hidden rounded-[2.5rem] border border-[#eadcc8] bg-white shadow-[0_24px_70px_rgba(47,38,31,0.14)]",
+
+  featuredIncidentGrid:
+    "grid items-center lg:grid-cols-[1.2fr_0.8fr]",
+
+  featuredIncidentImageArea:
+    "bg-[#fffaf2] p-4 sm:p-6",
+
+  featuredIncidentImage:
+    "h-auto w-full rounded-[1.75rem]",
+
+  featuredIncidentTextArea:
+    "p-8 sm:p-10 lg:p-12",
+
+  featuredQuote:
+    "mt-7 rounded-2xl border-l-4 border-[#b48635] bg-[#fffaf2] p-6 text-xl font-black italic leading-8",
+
+  timelineSection:
+    "bg-[#2f261f] px-6 py-20 text-white",
+
+  timelineEyebrow:
+    "text-sm font-black uppercase tracking-[0.25em] text-[#f4c96d]",
+
+  timelineDescription:
+    "mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#f7ead6]",
+
+  timelineList:
+    "mx-auto mt-12 max-w-3xl",
+
+  timelineRow:
+    "grid grid-cols-[80px_1fr] gap-5 border-b border-white/10 py-5 sm:grid-cols-[110px_1fr]",
+
+  timelineTime:
+    "font-black text-[#f4c96d]",
+
+  timelineEvent:
+    "text-[#f7ead6]",
+
+  timelineFinalEvent:
+    "font-black text-white",
+
+  finalEstimateCard:
+    "mx-auto mt-8 max-w-3xl rounded-[1.5rem] border border-[#f4c96d]/20 bg-white/5 p-6 text-center",
+
+  incidentArchiveSection:
+    "scroll-mt-32 bg-white px-6 py-20",
+
+  incidentGrid:
+    "mt-12 grid gap-8 md:grid-cols-2",
+
+  incidentCard:
+    "group overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] shadow-sm transition hover:-translate-y-1 hover:shadow-lg",
+
+  incidentImageArea:
+    "overflow-hidden bg-white p-3 sm:p-4",
+
+  incidentImage:
+    "h-auto w-full rounded-[1.5rem] transition duration-300 group-hover:scale-[1.01]",
+
+  incidentContent:
+    "p-7 sm:p-8",
+
+  incidentEyebrow:
+    "text-xs font-black uppercase tracking-[0.2em] text-[#b48635]",
+
+  incidentTitle:
+    "mt-3 text-3xl font-black leading-tight",
+
+  incidentQuote:
+    "mt-6 border-l-4 border-[#b48635] pl-5 text-lg font-bold italic leading-7",
+
+  responseStatusBox:
+    "mt-6 rounded-2xl border border-[#eadcc8] bg-white p-5",
+
+  responseStatusEyebrow:
+    "text-xs font-black uppercase tracking-[0.18em] text-[#b48635]",
+
+  responseStatusText:
+    "mt-2 text-sm font-bold leading-6 text-[#4d4137]",
+
+  fieldNotesCard:
+    "rounded-[2.5rem] border border-[#eadcc8] bg-white p-8 shadow-sm sm:p-10 md:p-12",
+
+  fieldNotesList:
+    "mt-10 space-y-5",
+
+  fieldNote:
+    "grid gap-4 rounded-[1.75rem] bg-[#fffaf2] p-6 sm:grid-cols-[90px_1fr] sm:items-center",
+
+  fieldNoteNumber:
+    "text-sm font-black uppercase tracking-[0.16em] text-[#b48635]",
+
+  fieldNoteText:
+    "text-lg font-bold leading-8 text-[#4d4137]",
+
+  responseTeamGrid:
+    "mt-12 grid gap-6 md:grid-cols-3",
+
+  responseTeamCard:
+    "group flex h-full flex-col overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b48635]",
+
+  responseTeamImageArea:
+    "relative flex h-64 items-center justify-center overflow-hidden bg-white p-6",
+
+  responseTeamGlow:
+    "absolute h-40 w-40 rounded-full blur-3xl",
+
+  responseTeamImage:
+    "relative h-full w-auto max-w-full object-contain drop-shadow-xl transition duration-300 group-hover:scale-[1.03]",
+
+  responseTeamContent:
+    "flex flex-1 flex-col p-7",
+
+  responseTeamRole:
+    "text-xs font-black uppercase tracking-[0.2em] text-[#b48635]",
+
+  responseTeamName:
+    "mt-3 text-3xl font-black",
+
+  responseTeamDescription:
+    "mt-4 flex-1 leading-7 text-[#6a5a4b]",
+
+  responseTeamLinkText:
+    "mt-6 text-sm font-black uppercase tracking-[0.16em] text-[#b48635]",
+
+  sceneStatusCard:
+    "mx-auto mt-8 max-w-3xl rounded-[1.75rem] border border-[#eadcc8] bg-[#fffaf2] px-6 py-6 text-center shadow-sm",
+
+  sceneStatusEyebrow:
+    "text-xs font-black uppercase tracking-[0.2em] text-[#b48635]",
+
+  sceneStatusTitle:
+    "mt-2 text-lg font-black leading-7 text-[#2f261f]",
+
+  sceneStatusNote:
+    "mt-2 text-sm font-bold italic text-[#8a7766]",
+
+  projectReportGrid:
+    "grid gap-4 sm:grid-cols-2 lg:grid-cols-4",
+
+  projectReportCard:
+    "rounded-[1.75rem] border border-[#eadcc8] bg-white p-6 text-center shadow-sm",
+
+  projectReportLabel:
+    "text-xs font-black uppercase tracking-[0.16em] text-[#b48635]",
+
+  projectReportValue:
+    "mt-2 text-2xl font-black",
+
+  finalCalloutSection:
+    "px-6 pb-20",
+
+  finalCalloutCard:
+    "mx-auto max-w-4xl rounded-[2.5rem] bg-[#2f261f] p-8 text-center text-white shadow-2xl sm:p-10 md:p-14",
+
+  finalCalloutEyebrow:
+    "text-sm font-black uppercase tracking-[0.25em] text-[#f4c96d]",
+
+  finalCalloutHeading:
+    "mt-4 text-4xl font-black leading-tight md:text-5xl",
+
+  finalCalloutText:
+    "mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#f7ead6]",
+
+  finalPrimaryButton:
+    "rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a] hover:shadow-xl",
+
+  finalSecondaryButton:
+    "rounded-full border border-white/30 bg-white/5 px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:-translate-y-1 hover:bg-white/10",
+};
+
+/* -------------------------------------------------------------------------- */
+/* PAGE CONTENT                                                               */
+/* -------------------------------------------------------------------------- */
+
 const personnelStats = [
   {
     label: "Department",
@@ -69,15 +340,6 @@ const handyManCode = [
 ];
 
 const incidents = [
-  {
-    title: "The Solution Problem",
-    eyebrow: "Philosophical Crisis",
-    image: "/comics/solution-problem.png",
-    alt: "Super Handy Man questions whether every solution might also have a problem",
-    description:
-      "After years of declaring that every problem has a solution, Super Handy Man encounters an uncomfortable possibility.",
-    quote: "Or is it every solution has a problem?",
-  },
   {
     title: "The Case of the Missing Drill",
     eyebrow: "Workshop Emergency",
@@ -214,16 +476,17 @@ const responseTeam = [
   },
 ];
 
+/* -------------------------------------------------------------------------- */
+/* PAGE                                                                       */
+/* -------------------------------------------------------------------------- */
+
 export default function SuperHandyManPage() {
   return (
-    <main className="min-h-screen bg-[#fffaf2] text-[#2f261f]">
-      {/* ================================================================ */}
-      {/* HERO                                                             */}
-      {/* ================================================================ */}
-
-      <section className="relative overflow-hidden bg-[#2f261f] text-white">
+    <main className={styles.page}>
+      {/* HERO */}
+      <section className={styles.heroSection}>
         <div
-          className="absolute inset-0 opacity-[0.05]"
+          className={styles.heroPattern}
           aria-hidden="true"
           style={{
             backgroundImage:
@@ -232,17 +495,14 @@ export default function SuperHandyManPage() {
           }}
         />
 
-        <div className="relative mx-auto max-w-7xl px-5 pb-16 pt-8 sm:px-6 md:pb-20 md:pt-10">
+        <div className={styles.heroContainer}>
           <div className="mb-7 flex justify-center">
-            <Link
-              href="/squad"
-              className="rounded-full border border-white/20 bg-white/10 px-5 py-2 text-xs font-black uppercase tracking-[0.18em] text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f4c96d]"
-            >
+            <Link href="/squad" className={styles.backToSquadButton}>
               ← Back to Squad Headquarters
             </Link>
           </div>
 
-          <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white shadow-2xl sm:rounded-[2.5rem]">
+          <div className={styles.heroImageFrame}>
             <img
               src="/super-handy-man-hero.png"
               alt="Super Handy Man standing triumphantly inside his hilariously chaotic workshop surrounded by tools and over-engineered inventions"
@@ -250,37 +510,37 @@ export default function SuperHandyManPage() {
             />
           </div>
 
-          <div className="mx-auto mt-10 max-w-4xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.28em] text-[#f4c96d]">
+          <div className={styles.heroContent}>
+            <p className={styles.heroEyebrow}>
               The Five-Minute Fix Division
             </p>
 
-            <h1 className="mt-4 text-4xl font-black leading-tight sm:text-5xl md:text-7xl">
+            <h1 className={styles.heroTitle}>
               Super Handy Man
             </h1>
 
-            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#f7ead6] md:text-xl">
+            <p className={styles.heroDescription}>
               Repair specialist. Tool enthusiast. Occasional philosopher.
               Unwavering believer that every household problem can be solved
               with enough ingenuity, enough tools, and possibly another trip to
               the hardware store.
             </p>
 
-            <blockquote className="mx-auto mt-7 max-w-3xl text-xl font-black italic leading-8 text-[#f4c96d] sm:text-2xl">
+            <blockquote className={styles.heroQuote}>
               “Every problem has a solution. Especially this one.”
             </blockquote>
 
             <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
               <a
                 href="#incident-files"
-                className="rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a] hover:shadow-xl"
+                className={styles.heroPrimaryButton}
               >
                 Open Incident Files
               </a>
 
               <Link
                 href="/household-team-ups"
-                className="rounded-full border border-white/30 bg-white/5 px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:-translate-y-1 hover:bg-white/10"
+                className={styles.heroSecondaryButton}
               >
                 Read the Team-Ups
               </Link>
@@ -289,41 +549,38 @@ export default function SuperHandyManPage() {
         </div>
       </section>
 
-      {/* ================================================================ */}
-      {/* PERSONNEL FILE                                                   */}
-      {/* ================================================================ */}
-
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+      {/* PERSONNEL FILE */}
+      <section className={styles.pageSection}>
+        <div className={styles.sectionContainer}>
+          <div className={styles.sectionHeader}>
+            <p className={styles.sectionEyebrow}>
               Official Personnel File
             </p>
 
-            <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+            <h2 className={styles.sectionHeading}>
               Qualified for almost everything.
             </h2>
 
-            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
+            <p className={styles.sectionDescription}>
               According to Super Handy Man, anyway.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className={styles.personnelGrid}>
             {personnelStats.map((stat) => (
               <article
                 key={stat.label}
-                className="rounded-[2rem] border border-[#eadcc8] bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+                className={styles.personnelCard}
               >
-                <p className="text-xs font-black uppercase tracking-[0.22em] text-[#b48635]">
+                <p className={styles.cardEyebrow}>
                   {stat.label}
                 </p>
 
-                <h3 className="mt-3 text-2xl font-black leading-tight">
+                <h3 className={styles.cardTitle}>
                   {stat.value}
                 </h3>
 
-                <p className="mt-4 leading-7 text-[#6a5a4b]">
+                <p className={styles.cardBody}>
                   {stat.description}
                 </p>
               </article>
@@ -332,37 +589,34 @@ export default function SuperHandyManPage() {
         </div>
       </section>
 
-      {/* ================================================================ */}
-      {/* SUPER HANDY MAN CODE                                             */}
-      {/* ================================================================ */}
-
-      <section className="bg-white px-6 py-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+      {/* SUPER HANDY MAN CODE */}
+      <section className={styles.whiteSection}>
+        <div className={styles.sectionContainer}>
+          <div className={styles.sectionHeader}>
+            <p className={styles.sectionEyebrow}>
               The Super Handy Man Code
             </p>
 
-            <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+            <h2 className={styles.sectionHeading}>
               Three principles. Questionable time estimates.
             </h2>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className={styles.codeGrid}>
             {handyManCode.map((item) => (
               <article
                 key={item.number}
-                className="relative overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm"
+                className={styles.codeCard}
               >
-                <span className="text-6xl font-black text-[#f4c96d]/50">
+                <span className={styles.codeNumber}>
                   {item.number}
                 </span>
 
-                <h3 className="mt-4 text-3xl font-black leading-tight">
+                <h3 className={styles.codeTitle}>
                   {item.title}
                 </h3>
 
-                <p className="mt-5 leading-7 text-[#6a5a4b]">
+                <p className={styles.cardBody}>
                   {item.description}
                 </p>
               </article>
@@ -371,28 +625,25 @@ export default function SuperHandyManPage() {
         </div>
       </section>
 
-      {/* ================================================================ */}
-      {/* PHILOSOPHICAL CRISIS                                             */}
-      {/* ================================================================ */}
-
+      {/* PHILOSOPHICAL CRISIS */}
       <section className="px-5 py-20 sm:px-6">
-        <div className="mx-auto max-w-6xl">
-          <div className="overflow-hidden rounded-[2.5rem] border border-[#eadcc8] bg-white shadow-[0_24px_70px_rgba(47,38,31,0.14)]">
-            <div className="grid items-center lg:grid-cols-[1.2fr_0.8fr]">
-              <div className="bg-[#fffaf2] p-4 sm:p-6">
+        <div className={styles.sectionContainer}>
+          <div className={styles.featuredIncidentShell}>
+            <div className={styles.featuredIncidentGrid}>
+              <div className={styles.featuredIncidentImageArea}>
                 <img
                   src="/comics/solution-problem.png"
                   alt="Super Handy Man discovers that solving one problem may have created several new ones"
-                  className="h-auto w-full rounded-[1.75rem]"
+                  className={styles.featuredIncidentImage}
                 />
               </div>
 
-              <div className="p-8 sm:p-10 lg:p-12">
-                <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+              <div className={styles.featuredIncidentTextArea}>
+                <p className={styles.sectionEyebrow}>
                   Philosophical Crisis
                 </p>
 
-                <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+                <h2 className={styles.sectionHeading}>
                   The Solution Problem
                 </h2>
 
@@ -407,7 +658,7 @@ export default function SuperHandyManPage() {
                   category of problem.
                 </p>
 
-                <blockquote className="mt-7 rounded-2xl border-l-4 border-[#b48635] bg-[#fffaf2] p-6 text-xl font-black italic leading-8">
+                <blockquote className={styles.featuredQuote}>
                   “Or is it every solution has a problem?”
                 </blockquote>
               </div>
@@ -416,42 +667,39 @@ export default function SuperHandyManPage() {
         </div>
       </section>
 
-      {/* ================================================================ */}
-      {/* FIVE-MINUTE TIMELINE                                             */}
-      {/* ================================================================ */}
-
-      <section className="bg-[#2f261f] px-6 py-20 text-white">
-        <div className="mx-auto max-w-5xl">
+      {/* FIVE-MINUTE TIMELINE */}
+      <section className={styles.timelineSection}>
+        <div className={styles.narrowSectionContainer}>
           <div className="text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#f4c96d]">
+            <p className={styles.timelineEyebrow}>
               Official Project Timeline
             </p>
 
-            <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+            <h2 className={styles.sectionHeading}>
               What “five minutes” actually means.
             </h2>
 
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#f7ead6]">
+            <p className={styles.timelineDescription}>
               Estimated times are provided by Super Handy Man and have not been
               reviewed by an independent authority.
             </p>
           </div>
 
-          <div className="mx-auto mt-12 max-w-3xl">
+          <div className={styles.timelineList}>
             {timeline.map((item, index) => (
               <div
                 key={`${item.time}-${item.event}`}
-                className="grid grid-cols-[80px_1fr] gap-5 border-b border-white/10 py-5 sm:grid-cols-[110px_1fr]"
+                className={styles.timelineRow}
               >
-                <div className="font-black text-[#f4c96d]">
+                <div className={styles.timelineTime}>
                   {item.time}
                 </div>
 
                 <div
                   className={
                     index === timeline.length - 1
-                      ? "font-black text-white"
-                      : "text-[#f7ead6]"
+                      ? styles.timelineFinalEvent
+                      : styles.timelineEvent
                   }
                 >
                   {item.event}
@@ -460,7 +708,7 @@ export default function SuperHandyManPage() {
             ))}
           </div>
 
-          <div className="mx-auto mt-8 max-w-3xl rounded-[1.5rem] border border-[#f4c96d]/20 bg-white/5 p-6 text-center">
+          <div className={styles.finalEstimateCard}>
             <p className="text-sm font-black uppercase tracking-[0.18em] text-[#f4c96d]">
               Final Time Estimate
             </p>
@@ -472,67 +720,64 @@ export default function SuperHandyManPage() {
         </div>
       </section>
 
-      {/* ================================================================ */}
-      {/* INCIDENT FILES                                                   */}
-      {/* ================================================================ */}
-
+      {/* INCIDENT FILES */}
       <section
         id="incident-files"
-        className="scroll-mt-32 bg-white px-6 py-20"
+        className={styles.incidentArchiveSection}
       >
-        <div className="mx-auto max-w-6xl">
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+        <div className={styles.sectionContainer}>
+          <div className={styles.sectionHeader}>
+            <p className={styles.sectionEyebrow}>
               Five-Minute Fix Archives
             </p>
 
-            <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+            <h2 className={styles.sectionHeading}>
               Previous repairs. Mixed results.
             </h2>
 
-            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
+            <p className={styles.sectionDescription}>
               A documented history of optimism, tools, unexpected
               complications, and eventual victory.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
+          <div className={styles.incidentGrid}>
             {incidents.map((incident) => (
               <article
                 key={incident.title}
-                className="group overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                className={styles.incidentCard}
               >
-                <div className="overflow-hidden bg-white p-3 sm:p-4">
+                <div className={styles.incidentImageArea}>
                   <img
                     src={incident.image}
                     alt={incident.alt}
-                    className="h-auto w-full rounded-[1.5rem] transition duration-300 group-hover:scale-[1.01]"
+                    className={styles.incidentImage}
                   />
                 </div>
 
-                <div className="p-7 sm:p-8">
-                  <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
+                <div className={styles.incidentContent}>
+                  <p className={styles.incidentEyebrow}>
                     {incident.eyebrow}
                   </p>
 
-                  <h3 className="mt-3 text-3xl font-black leading-tight">
+                  <h3 className={styles.incidentTitle}>
                     {incident.title}
                   </h3>
 
-                  <p className="mt-4 leading-7 text-[#6a5a4b]">
+                  <p className={styles.cardBody}>
                     {incident.description}
                   </p>
 
-                  <blockquote className="mt-6 border-l-4 border-[#b48635] pl-5 text-lg font-bold italic leading-7">
+                  <blockquote className={styles.incidentQuote}>
                     “{incident.quote}”
                   </blockquote>
 
-                  <div className="mt-6 rounded-2xl border border-[#eadcc8] bg-white p-5">
-                    <p className="text-xs font-black uppercase tracking-[0.18em] text-[#b48635]">
+                  <div className={styles.responseStatusBox}>
+                    <p className={styles.responseStatusEyebrow}>
                       Post-Repair Response Team Deployed
                     </p>
 
-                    <p className="mt-2 text-sm font-bold leading-6 text-[#4d4137]">
+                    <p className={styles.responseStatusText}>
                       Super Cleaning Lady: restoring order · Spritzy: surface
                       recovery · Spongie: morale support
                     </p>
@@ -544,19 +789,16 @@ export default function SuperHandyManPage() {
         </div>
       </section>
 
-      {/* ================================================================ */}
-      {/* FIELD NOTES                                                      */}
-      {/* ================================================================ */}
-
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-5xl">
-          <div className="rounded-[2.5rem] border border-[#eadcc8] bg-white p-8 shadow-sm sm:p-10 md:p-12">
+      {/* FIELD NOTES */}
+      <section className={styles.pageSection}>
+        <div className={styles.narrowSectionContainer}>
+          <div className={styles.fieldNotesCard}>
             <div className="text-center">
-              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+              <p className={styles.sectionEyebrow}>
                 Super Cleaning Lady Field Notes
               </p>
 
-              <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+              <h2 className={styles.sectionHeading}>
                 Observations from the repair zone.
               </h2>
 
@@ -566,17 +808,17 @@ export default function SuperHandyManPage() {
               </p>
             </div>
 
-            <div className="mt-10 space-y-5">
+            <div className={styles.fieldNotesList}>
               {fieldNotes.map((note) => (
                 <article
                   key={note.number}
-                  className="grid gap-4 rounded-[1.75rem] bg-[#fffaf2] p-6 sm:grid-cols-[90px_1fr] sm:items-center"
+                  className={styles.fieldNote}
                 >
-                  <span className="text-sm font-black uppercase tracking-[0.16em] text-[#b48635]">
+                  <span className={styles.fieldNoteNumber}>
                     Note {note.number}
                   </span>
 
-                  <p className="text-lg font-bold leading-8 text-[#4d4137]">
+                  <p className={styles.fieldNoteText}>
                     {note.text}
                   </p>
                 </article>
@@ -586,61 +828,58 @@ export default function SuperHandyManPage() {
         </div>
       </section>
 
-      {/* ================================================================ */}
-      {/* POST-REPAIR RESPONSE TEAM                                        */}
-      {/* ================================================================ */}
-
-      <section className="bg-white px-6 py-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+      {/* POST-REPAIR RESPONSE TEAM */}
+      <section className={styles.whiteSection}>
+        <div className={styles.sectionContainer}>
+          <div className={styles.sectionHeader}>
+            <p className={styles.sectionEyebrow}>
               Post-Repair Response Team Deployed
             </p>
 
-            <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+            <h2 className={styles.sectionHeading}>
               Because eventually somebody has to clean this up.
             </h2>
 
-            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
+            <p className={styles.sectionDescription}>
               Once the repair is complete, the Five-Minute Fix Division quietly
               hands the scene over to the people who have to live here.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className={styles.responseTeamGrid}>
             {responseTeam.map((member) => (
               <Link
                 key={member.name}
                 href={member.href}
-                className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b48635]"
+                className={styles.responseTeamCard}
               >
-                <div className="relative flex h-64 items-center justify-center overflow-hidden bg-white p-6">
+                <div className={styles.responseTeamImageArea}>
                   <div
-                    className={`absolute h-40 w-40 rounded-full blur-3xl ${member.glow}`}
+                    className={`${styles.responseTeamGlow} ${member.glow}`}
                     aria-hidden="true"
                   />
 
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="relative h-full w-auto max-w-full object-contain drop-shadow-xl transition duration-300 group-hover:scale-[1.03]"
+                    className={styles.responseTeamImage}
                   />
                 </div>
 
-                <div className="flex flex-1 flex-col p-7">
-                  <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
+                <div className={styles.responseTeamContent}>
+                  <p className={styles.responseTeamRole}>
                     {member.role}
                   </p>
 
-                  <h3 className="mt-3 text-3xl font-black">
+                  <h3 className={styles.responseTeamName}>
                     {member.name}
                   </h3>
 
-                  <p className="mt-4 flex-1 leading-7 text-[#6a5a4b]">
+                  <p className={styles.responseTeamDescription}>
                     {member.description}
                   </p>
 
-                  <p className="mt-6 text-sm font-black uppercase tracking-[0.16em] text-[#b48635]">
+                  <p className={styles.responseTeamLinkText}>
                     {member.cta} →
                   </p>
                 </div>
@@ -648,62 +887,62 @@ export default function SuperHandyManPage() {
             ))}
           </div>
 
-          {/* STATUS CARD */}
-          <div className="mx-auto mt-8 max-w-3xl rounded-[1.75rem] border border-[#eadcc8] bg-[#fffaf2] px-6 py-6 text-center shadow-sm">
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
+          <div className={styles.sceneStatusCard}>
+            <p className={styles.sceneStatusEyebrow}>
               Official Scene Status
             </p>
 
-            <p className="mt-2 text-lg font-black leading-7 text-[#2f261f]">
+            <p className={styles.sceneStatusTitle}>
               Repair complete. Cleanup operations now underway.
             </p>
 
-            <p className="mt-2 text-sm font-bold italic text-[#8a7766]">
+            <p className={styles.sceneStatusNote}>
               Super Handy Man has already left to find another tool.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ================================================================ */}
-      {/* PROJECT REPORT                                                   */}
-      {/* ================================================================ */}
-
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-5xl">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="rounded-[1.75rem] border border-[#eadcc8] bg-white p-6 text-center shadow-sm">
-              <p className="text-xs font-black uppercase tracking-[0.16em] text-[#b48635]">
+      {/* PROJECT REPORT */}
+      <section className={styles.pageSection}>
+        <div className={styles.narrowSectionContainer}>
+          <div className={styles.projectReportGrid}>
+            <div className={styles.projectReportCard}>
+              <p className={styles.projectReportLabel}>
                 Original Estimate
               </p>
-              <p className="mt-2 text-2xl font-black">
+
+              <p className={styles.projectReportValue}>
                 5 Minutes
               </p>
             </div>
 
-            <div className="rounded-[1.75rem] border border-[#eadcc8] bg-white p-6 text-center shadow-sm">
-              <p className="text-xs font-black uppercase tracking-[0.16em] text-[#b48635]">
+            <div className={styles.projectReportCard}>
+              <p className={styles.projectReportLabel}>
                 Tools Used
               </p>
-              <p className="mt-2 text-2xl font-black">
+
+              <p className={styles.projectReportValue}>
                 Most of Them
               </p>
             </div>
 
-            <div className="rounded-[1.75rem] border border-[#eadcc8] bg-white p-6 text-center shadow-sm">
-              <p className="text-xs font-black uppercase tracking-[0.16em] text-[#b48635]">
+            <div className={styles.projectReportCard}>
+              <p className={styles.projectReportLabel}>
                 Hardware Runs
               </p>
-              <p className="mt-2 text-2xl font-black">
+
+              <p className={styles.projectReportValue}>
                 Classified
               </p>
             </div>
 
-            <div className="rounded-[1.75rem] border border-[#eadcc8] bg-white p-6 text-center shadow-sm">
-              <p className="text-xs font-black uppercase tracking-[0.16em] text-[#b48635]">
+            <div className={styles.projectReportCard}>
+              <p className={styles.projectReportLabel}>
                 Extra Screws
               </p>
-              <p className="mt-2 text-2xl font-black">
+
+              <p className={styles.projectReportValue}>
                 Probably Normal
               </p>
             </div>
@@ -711,21 +950,18 @@ export default function SuperHandyManPage() {
         </div>
       </section>
 
-      {/* ================================================================ */}
-      {/* FINAL CTA                                                        */}
-      {/* ================================================================ */}
-
-      <section className="px-6 pb-20">
-        <div className="mx-auto max-w-4xl rounded-[2.5rem] bg-[#2f261f] p-8 text-center text-white shadow-2xl sm:p-10 md:p-14">
-          <p className="text-sm font-black uppercase tracking-[0.25em] text-[#f4c96d]">
+      {/* FINAL CTA */}
+      <section className={styles.finalCalloutSection}>
+        <div className={styles.finalCalloutCard}>
+          <p className={styles.finalCalloutEyebrow}>
             Project Status
           </p>
 
-          <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+          <h2 className={styles.finalCalloutHeading}>
             Something else is probably broken.
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#f7ead6]">
+          <p className={styles.finalCalloutText}>
             Follow Super Handy Man into the next supposedly five-minute repair,
             or return to Squad Headquarters before he asks you to hold the
             flashlight.
@@ -734,14 +970,14 @@ export default function SuperHandyManPage() {
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <Link
               href="/household-team-ups"
-              className="rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a] hover:shadow-xl"
+              className={styles.finalPrimaryButton}
             >
               Read Household Team-Ups
             </Link>
 
             <Link
               href="/squad"
-              className="rounded-full border border-white/30 bg-white/5 px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:-translate-y-1 hover:bg-white/10"
+              className={styles.finalSecondaryButton}
             >
               Return to Squad HQ
             </Link>
