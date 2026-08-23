@@ -1,43 +1,50 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
-import "./globals.css";
-import Header from "@/components/Header";
 import { Analytics } from "@vercel/analytics/next";
+import Header from "@/components/Header";
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://supercleaninglady.com"),
 
   title: {
-    default: "Super Cleaning Lady",
+    default: "Super Cleaning Lady | Household Comedy & Comics",
     template: "%s | Super Cleaning Lady",
   },
 
   description:
-    "A humorous household comic and no-shame cleaning motivation website that turns everyday messes into villains, rescue missions, and small victories.",
+    "A humorous household comic universe starring Super Cleaning Lady, Super Handy Man, Spritzy, and Spongie—where everyday messes, repairs, laundry, clutter, and household chaos become superhero missions.",
 
   applicationName: "Super Cleaning Lady",
 
   keywords: [
-    "cleaning motivation",
-    "household comedy",
-    "domestic satire",
+    "Super Cleaning Lady",
+    "Super Handy Man",
     "cleaning comics",
+    "household comedy",
+    "household humor",
+    "cleaning humor",
+    "funny household comics",
+    "domestic satire",
+    "cleaning motivation",
     "decluttering motivation",
-    "funny cleaning website",
     "room rescue missions",
     "no-shame cleaning",
     "home organization humor",
+    "superhero cleaning comic",
   ],
 
   authors: [
@@ -50,11 +57,15 @@ export const metadata: Metadata = {
   creator: "Pamela J. Terrell",
   publisher: "Stabile USA",
 
+  alternates: {
+    canonical: "/",
+  },
+
   openGraph: {
-    title: "Super Cleaning Lady",
+    title: "Super Cleaning Lady | Household Comedy & Comics",
     description:
-      "Household comedy and no-shame cleaning motivation that turns laundry mountains, doom baskets, dish goblins, and everyday messes into superhero missions.",
-    url: "https://supercleaninglady.com",
+      "Meet Super Cleaning Lady, Super Handy Man, Spritzy, and Spongie in a comic universe where household messes, repairs, clutter, and everyday chaos become superhero missions.",
+    url: "/",
     siteName: "Super Cleaning Lady",
     type: "website",
     locale: "en_US",
@@ -63,23 +74,39 @@ export const metadata: Metadata = {
         url: "/super-cleaning-lady-social.png",
         width: 1200,
         height: 630,
-        alt: "Super Cleaning Lady household comedy and cleaning motivation",
+        alt: "Super Cleaning Lady household comedy and comic universe",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Super Cleaning Lady",
+    title: "Super Cleaning Lady | Household Comedy & Comics",
     description:
-      "A humorous household comic where everyday messes become villains, missions, and small victories.",
+      "A superhero household comedy where everyday messes, repairs, and minor domestic disasters become major missions.",
     images: ["/super-cleaning-lady-social.png"],
   },
 
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
   icons: {
-    icon: "/super-spray-hero.png",
-    shortcut: "/super-spray-hero.png",
-    apple: "/super-spray-hero.png",
+    apple: "/scl.png",
+  },
+
+  formatDetection: {
+    telephone: false,
+    address: false,
+    email: false,
   },
 };
 
@@ -108,9 +135,13 @@ export default function RootLayout({
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-JRJYL8QNWL');
+
+            function gtag() {
+              window.dataLayer.push(arguments);
+            }
+
+            gtag("js", new Date());
+            gtag("config", "G-JRJYL8QNWL");
           `}
         </Script>
       </body>

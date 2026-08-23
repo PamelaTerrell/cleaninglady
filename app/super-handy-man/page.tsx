@@ -341,6 +341,17 @@ const handyManCode = [
 
 const incidents = [
   {
+    
+    title: "The Shredder Dome",
+    eyebrow: "Over-Engineering Achievement",
+    image: "/comics/shredder-dome.png",
+    alt: "Super Cleaning Lady enters the Shredder Dome while Super Handy Man operates an excessively complicated suction control panel",
+    description:
+      "Super Cleaning Lady had one simple complaint: emptying an overstuffed shredder sent paper clippings everywhere. Super Handy Man responded with a person-sized suction dome, multiple pressure gauges, several unnecessary levers, and an entirely new entry procedure.",
+    quote: "Every problem has a solution. Especially this one!",
+  },
+
+    {
     title: "The Case of the Missing Drill",
     eyebrow: "Workshop Emergency",
     image: "/comics/missing-drill.png",
