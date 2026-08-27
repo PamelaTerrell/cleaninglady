@@ -458,7 +458,7 @@ const responseTeam = [
   {
     name: "Super Cleaning Lady",
     role: "Restores Civilization",
-    image: "/scl.png",
+    image: "/super-cleaning-lady-alone.png",
     href: "/super-cleaning-lady",
     description:
       "Returns tools, clears packaging, wipes the dust, and determines which rooms unexpectedly became part of the repair.",

@@ -12,7 +12,7 @@ const squad = [
   {
     name: "Super Cleaning Lady",
     role: "Restoration & Rescue Command",
-    image: "/scl.png",
+    image: "/super-cleaning-lady-alone.png",
     href: "/super-cleaning-lady",
     tagline: "No shame. No perfection. Just one rescue mission at a time.",
     description:
