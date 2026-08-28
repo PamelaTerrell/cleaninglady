@@ -1,38 +1,234 @@
 import Link from "next/link";
 import Footer from "@/components/Footer";
 
+/* -------------------------------------------------------------------------- */
+/* PAGE STYLES                                                                */
+/* -------------------------------------------------------------------------- */
+
+const styles = {
+  page:
+    "min-h-screen bg-[#fffaf2] text-[#2f261f]",
+
+  /* HERO */
+  heroSection:
+    "relative overflow-hidden bg-[#2f261f] px-6 py-14 text-white md:py-18 lg:py-20",
+
+  heroPattern:
+    "absolute inset-0 opacity-[0.07]",
+
+  heroLeftGlow:
+    "absolute -left-24 top-10 h-72 w-72 rounded-full bg-[#d9487d]/20 blur-3xl",
+
+  heroRightGlow:
+    "absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-[#4da6d8]/20 blur-3xl",
+
+  heroContent:
+    "relative mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14",
+
+  heroCharacterArea:
+    "order-2 flex justify-center lg:order-1",
+
+  heroCharacterFrame:
+    "relative",
+
+  heroCharacterGlow:
+    "absolute inset-10 rounded-full bg-[#f4c96d]/20 blur-3xl",
+
+  heroCharacterImage:
+    "relative mx-auto w-full max-w-[22rem] drop-shadow-[0_28px_45px_rgba(0,0,0,0.4)] sm:max-w-md lg:max-w-lg",
+
+  heroCopy:
+    "order-1 text-center lg:order-2 lg:text-left",
+
+  heroSeriesLabel:
+    "text-sm font-black uppercase tracking-[0.28em] text-[#f4c96d]",
+
+  heroTitle:
+    "mt-5 text-5xl font-black leading-[0.95] tracking-tight sm:text-6xl md:text-7xl",
+
+  heroTitleAccent:
+    "block text-[#f4c96d]",
+
+  heroDescription:
+    "mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#f7ead6] md:text-xl lg:mx-0",
+
+  heroSupportingDescription:
+    "mx-auto mt-4 max-w-xl leading-7 text-white/70 lg:mx-0",
+
+  heroActions:
+    "mt-8 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start",
+
+  viewHeroicsLink:
+    "rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.17em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a] hover:shadow-xl",
+
+  backToHeadquartersLink:
+    "rounded-full border border-white/30 bg-white/5 px-7 py-4 text-sm font-black uppercase tracking-[0.17em] text-white transition hover:-translate-y-1 hover:bg-white/10",
+
+  heroValues:
+    "mt-8 flex flex-wrap justify-center gap-3 lg:justify-start",
+
+  heroValueBadge:
+    "rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#f7ead6]",
+
+  /* INTRODUCTION */
+  introductionSection:
+    "px-6 py-16",
+
+  introductionContent:
+    "mx-auto max-w-4xl text-center",
+
+  introductionLabel:
+    "text-sm font-black uppercase tracking-[0.25em] text-[#b48635]",
+
+  introductionTitle:
+    "mt-4 text-4xl font-black leading-tight md:text-5xl",
+
+  introductionDescription:
+    "mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#6a5a4b]",
+
+  /* HEROICS ARCHIVE */
+  heroicsArchiveSection:
+    "bg-white px-6 py-20",
+
+  heroicsArchiveContainer:
+    "mx-auto max-w-6xl",
+
+  heroicsArchiveHeader:
+    "mb-12 flex flex-col gap-5 md:flex-row md:items-end md:justify-between",
+
+  heroicsArchiveHeadingArea:
+    "",
+
+  heroicsArchiveLabel:
+    "text-sm font-black uppercase tracking-[0.25em] text-[#b48635]",
+
+  heroicsArchiveTitle:
+    "mt-3 text-4xl font-black md:text-5xl",
+
+  heroicsArchiveDescription:
+    "max-w-md leading-7 text-[#6a5a4b]",
+
+  heroicsArchiveList:
+    "space-y-14",
+
+  heroicReportCard:
+    "overflow-hidden rounded-[2.5rem] border border-[#eadcc8] bg-[#fffaf2] shadow-[0_24px_70px_rgba(47,38,31,0.12)]",
+
+  heroicReportLayout:
+    "grid lg:grid-cols-[1.15fr_0.85fr]",
+
+  heroicReportImageArea:
+    "bg-white p-4 sm:p-6",
+
+  heroicReportImage:
+    "h-auto w-full rounded-[1.75rem]",
+
+  heroicReportContent:
+    "flex flex-col justify-center p-8 sm:p-10 lg:p-12",
+
+  heroicReportMetadata:
+    "flex flex-wrap items-center gap-3",
+
+  heroicCategoryBadge:
+    "rounded-full bg-[#f4c96d] px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#2f261f]",
+
+  heroicActNumber:
+    "text-sm font-bold text-[#8a7766]",
+
+  heroicReportTitle:
+    "mt-6 text-4xl font-black leading-tight",
+
+  heroicReportDescription:
+    "mt-5 text-lg leading-8 text-[#6a5a4b]",
+
+  heroicPunchline:
+    "mt-7 rounded-2xl border-l-4 border-[#b48635] bg-white p-6 text-xl font-bold italic leading-8 shadow-sm",
+
+  heroicMissionArea:
+    "mt-8",
+
+  heroicMissionLink:
+    "inline-flex rounded-full bg-[#2f261f] px-6 py-4 text-sm font-black uppercase tracking-[0.16em] text-white shadow-lg transition hover:-translate-y-1 hover:bg-[#4a3b30]",
+
+  /* HOUSEHOLD TEAM-UPS */
+  householdTeamUpsSection:
+    "px-6 py-20",
+
+  householdTeamUpsCard:
+    "mx-auto max-w-5xl rounded-[2.5rem] bg-[#2f261f] px-8 py-14 text-center text-white shadow-2xl md:px-14",
+
+  handyManImage:
+    "mx-auto mb-8 w-52 drop-shadow-2xl sm:w-64 md:w-72",
+
+  householdTeamUpsLabel:
+    "text-sm font-black uppercase tracking-[0.25em] text-[#f4c96d]",
+
+  householdTeamUpsTitle:
+    "mt-4 text-4xl font-black md:text-5xl",
+
+  householdTeamUpsDescription:
+    "mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#f7ead6]",
+
+  householdTeamUpsQuote:
+    "mx-auto mt-7 max-w-2xl rounded-2xl border-l-4 border-[#f4c96d] bg-white/10 px-6 py-5 text-xl font-bold italic leading-8",
+
+  householdTeamUpsLink:
+    "mt-9 inline-flex rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.17em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a]",
+
+  /* FUTURE HEROICS */
+  futureHeroicsSection:
+    "px-6 py-20",
+
+  futureHeroicsCard:
+    "mx-auto max-w-5xl rounded-[2.5rem] bg-[#2f261f] px-8 py-14 text-center text-white shadow-2xl md:px-14",
+
+  futureHeroicsIcon:
+    "mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-[#f4c96d] text-4xl shadow-lg",
+
+  futureHeroicsLabel:
+    "mt-7 text-sm font-black uppercase tracking-[0.25em] text-[#f4c96d]",
+
+  futureHeroicsTitle:
+    "mt-4 text-4xl font-black md:text-5xl",
+
+  futureHeroicsDescription:
+    "mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#f7ead6]",
+
+  chooseMissionLink:
+    "mt-9 inline-flex rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.17em] text-[#2f261f] transition hover:-translate-y-1 hover:bg-[#ffe19a]",
+};
+
+/* -------------------------------------------------------------------------- */
+/* HEROICS                                                                    */
+/* -------------------------------------------------------------------------- */
+
 const heroics = [
-
   {
-  title: "Tinkering Totally Counts",
-  slug: "tinkering",
-  category: "Everyday Heroics",
-  image: "/comics/tinkering.png",
-  alt: "Super Cleaning Lady moves around the house completing small cleaning and organizing tasks while following her energy",
-  description:
-    "No master plan. No full-house reset. Just one pillow fluffed, one surface wiped, one pile handled, and somehow the whole place starts behaving better.",
-  punchline:
-    "You do not have to clean the whole house to make the whole house feel better.",
-  missionHref: "/#missions",
-  missionLabel: "Choose a Tiny Mission",
-},
-
-
-
+    title: "Tinkering Totally Counts",
+    slug: "tinkering",
+    category: "Everyday Heroics",
+    image: "/comics/tinkering.png",
+    alt: "Super Cleaning Lady moves around the house completing small cleaning and organizing tasks while following her energy",
+    description:
+      "No master plan. No full-house reset. Just one pillow fluffed, one surface wiped, one pile handled, and somehow the whole place starts behaving better.",
+    punchline:
+      "You do not have to clean the whole house to make the whole house feel better.",
+    missionHref: "/#missions",
+    missionLabel: "Choose a Tiny Mission",
+  },
   {
-  title: "The Coffee Pot Controversy",
-  slug: "coffee-pot",
-  category: "Kitchen Heroics",
-  image: "/comics/coffee-pot.png",
-  alt: "Super Cleaning Lady rejects the idea that coffee tastes better from a dirty coffee maker and cleans the pot, basket, and reservoir",
-  description:
-    "A wise old coffee guru called it seasoning. Super Cleaning Lady called it yesterday’s coffee clinging to the equipment for emotional support.",
-  punchline:
-    "Clean pot. Clean basket. Clean reservoir. Better coffee.",
-  missionHref: "/missions/kitchen-rescue",
-  missionLabel: "Start the Kitchen Rescue",
-},
-
+    title: "The Coffee Pot Controversy",
+    slug: "coffee-pot",
+    category: "Kitchen Heroics",
+    image: "/comics/coffee-pot.png",
+    alt: "Super Cleaning Lady rejects the idea that coffee tastes better from a dirty coffee maker and cleans the pot, basket, and reservoir",
+    description:
+      "A wise old coffee guru called it seasoning. Super Cleaning Lady called it yesterday’s coffee clinging to the equipment for emotional support.",
+    punchline:
+      "Clean pot. Clean basket. Clean reservoir. Better coffee.",
+    missionHref: "/missions/kitchen-rescue",
+    missionLabel: "Start the Kitchen Rescue",
+  },
   {
     title: "The Power of Clean Sheets",
     slug: "bed-sheets",
@@ -41,7 +237,8 @@ const heroics = [
     alt: "Super Cleaning Lady compares a messy bed with old sheets to a fresh bed with clean sheets and a much better day",
     description:
       "The old sheets were holding onto crumbs, wrinkles, and several bad decisions. The clean set arrives like a full bedroom reboot.",
-    punchline: "Change the sheets. Change the whole vibe.",
+    punchline:
+      "Change the sheets. Change the whole vibe.",
     missionHref: "/missions/bedroom-reset",
     missionLabel: "Start the Bedroom Reset",
   },
@@ -53,7 +250,8 @@ const heroics = [
     alt: "Super Cleaning Lady discovers her husband's ratchet set scattered across the living room five minutes before company arrives",
     description:
       "The text arrives: company will be there in five minutes. The pillows are fluffed. The room looks respectable. And somehow an entire ratchet set has established operations on the coffee table.",
-    punchline: "The ratchet set does not live here.",
+    punchline:
+      "The ratchet set does not live here.",
     missionHref: "/missions/companys-coming",
     missionLabel: "Start the Company’s Coming Mission",
   },
@@ -96,132 +294,130 @@ const heroics = [
     missionHref: "/missions/bathroom-reset",
     missionLabel: "Start the Bathroom Reset",
   },
-
   {
-  title: "The Windowsill Archaeological Dig",
-  slug: "windowsill-archaeological-dig",
-  category: "Invisible Heroics",
-  image: "/comics/windowsill-archaeological-dig.png",
-  alt: "Super Cleaning Lady, Spritzy, and Spongie discover an entire archaeological civilization of dust, crumbs, bugs, and forgotten objects while cleaning a windowsill",
-  description:
-    "It starts with one innocent thought: “I’ll just wipe the windowsill real quick.” Then Spritzy finds evidence of an ancient crumb kingdom, Spongie enters excavation mode, and suddenly everyone is doing archaeology.",
-  punchline:
-    "Nobody plans to deep-clean a windowsill. Sometimes you just uncover a tiny indoor ecosystem.",
-  missionHref: "/missions/living-room-reset",
-  missionLabel: "Start the Living Room Reset",
-},
+    title: "The Windowsill Archaeological Dig",
+    slug: "windowsill-archaeological-dig",
+    category: "Invisible Heroics",
+    image: "/comics/windowsill-archaeological-dig.png",
+    alt: "Super Cleaning Lady, Spritzy, and Spongie discover an entire archaeological civilization of dust, crumbs, bugs, and forgotten objects while cleaning a windowsill",
+    description:
+      "It starts with one innocent thought: “I’ll just wipe the windowsill real quick.” Then Spritzy finds evidence of an ancient crumb kingdom, Spongie enters excavation mode, and suddenly everyone is doing archaeology.",
+    punchline:
+      "Nobody plans to deep-clean a windowsill. Sometimes you just uncover a tiny indoor ecosystem.",
+    missionHref: "/missions/living-room-reset",
+    missionLabel: "Start the Living Room Reset",
+  },
 ];
+
+/* -------------------------------------------------------------------------- */
+/* PAGE                                                                       */
+/* -------------------------------------------------------------------------- */
 
 export default function InvisibleHeroicsPage() {
   return (
-    <main className="min-h-screen bg-[#fffaf2] text-[#2f261f]">
+    <main className={styles.page}>
       {/* HERO */}
-<section className="relative overflow-hidden bg-[#2f261f] px-6 py-14 text-white md:py-18 lg:py-20">
-  <div
-    className="absolute inset-0 opacity-[0.07]"
-    aria-hidden="true"
-    style={{
-      backgroundImage:
-        "radial-gradient(circle, #ffffff 1.5px, transparent 1.5px)",
-      backgroundSize: "24px 24px",
-    }}
-  />
-
-  <div
-    className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-[#d9487d]/20 blur-3xl"
-    aria-hidden="true"
-  />
-
-  <div
-    className="absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-[#4da6d8]/20 blur-3xl"
-    aria-hidden="true"
-  />
-
-  <div className="relative mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
-    {/* CHARACTER IMAGE */}
-    <div className="order-2 flex justify-center lg:order-1">
-      <div className="relative">
+      <section className={styles.heroSection}>
         <div
-          className="absolute inset-10 rounded-full bg-[#f4c96d]/20 blur-3xl"
+          className={styles.heroPattern}
+          aria-hidden="true"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, #ffffff 1.5px, transparent 1.5px)",
+            backgroundSize: "24px 24px",
+          }}
+        />
+
+        <div
+          className={styles.heroLeftGlow}
           aria-hidden="true"
         />
 
-        <img
-          src="/scl-and-spongie.png"
-          alt="Super Cleaning Lady with her spray bottle and sponge sidekicks"
-          className="relative mx-auto w-full max-w-[22rem] drop-shadow-[0_28px_45px_rgba(0,0,0,0.4)] sm:max-w-md lg:max-w-lg"
+        <div
+          className={styles.heroRightGlow}
+          aria-hidden="true"
         />
-      </div>
-    </div>
 
-    {/* HERO COPY */}
-    <div className="order-1 text-center lg:order-2 lg:text-left">
-      <p className="text-sm font-black uppercase tracking-[0.28em] text-[#f4c96d]">
-        Super Cleaning Lady Presents
-      </p>
+        <div className={styles.heroContent}>
+          <div className={styles.heroCharacterArea}>
+            <div className={styles.heroCharacterFrame}>
+              <div
+                className={styles.heroCharacterGlow}
+                aria-hidden="true"
+              />
 
-      <h1 className="mt-5 text-5xl font-black leading-[0.95] tracking-tight sm:text-6xl md:text-7xl">
-        Invisible
-        <span className="block text-[#f4c96d]">Heroics</span>
-      </h1>
+              <img
+                src="/scl-and-spongie.png"
+                alt="Super Cleaning Lady with her spray bottle and sponge sidekicks"
+                className={styles.heroCharacterImage}
+              />
+            </div>
+          </div>
 
-      <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#f7ead6] md:text-xl lg:mx-0">
-        A celebration of the household victories nobody notices—until somebody
-        stops doing them.
-      </p>
+          <div className={styles.heroCopy}>
+            <p className={styles.heroSeriesLabel}>
+              Super Cleaning Lady Presents
+            </p>
 
-      <p className="mx-auto mt-4 max-w-xl leading-7 text-white/70 lg:mx-0">
-        Meet the heroes battling crumbs, mystery splatter, laundry mountains,
-        and every tiny domestic crisis hiding in plain sight.
-      </p>
+            <h1 className={styles.heroTitle}>
+              Invisible
+              <span className={styles.heroTitleAccent}>
+                Heroics
+              </span>
+            </h1>
 
-      <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
-        <a
-          href="#heroics"
-          className="rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.17em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a] hover:shadow-xl"
-        >
-          See the Heroics
-        </a>
+            <p className={styles.heroDescription}>
+              A celebration of the household victories nobody notices—until
+              somebody stops doing them.
+            </p>
 
-        <Link
-          href="/"
-          className="rounded-full border border-white/30 bg-white/5 px-7 py-4 text-sm font-black uppercase tracking-[0.17em] text-white transition hover:-translate-y-1 hover:bg-white/10"
-        >
-          Back to Headquarters
-        </Link>
-      </div>
+            <p className={styles.heroSupportingDescription}>
+              Meet the heroes battling crumbs, mystery splatter, laundry
+              mountains, and every tiny domestic crisis hiding in plain sight.
+            </p>
 
-      <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
-        {["Real messes", "Tiny victories", "No judgment"].map((item) => (
-          <span
-            key={item}
-            className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#f7ead6]"
-          >
-            {item}
-          </span>
-        ))}
-      </div>
-    </div>
-  </div>
-</section>
+            <div className={styles.heroActions}>
+              <a
+                href="#heroics"
+                className={styles.viewHeroicsLink}
+              >
+                See the Heroics
+              </a>
 
-  
+              <Link
+                href="/"
+                className={styles.backToHeadquartersLink}
+              >
+                Back to Headquarters
+              </Link>
+            </div>
 
-       
-           
+            <div className={styles.heroValues}>
+              {["Real messes", "Tiny victories", "No judgment"].map((item) => (
+                <span
+                  key={item}
+                  className={styles.heroValueBadge}
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
-      {/* INTRO */}
-      <section className="px-6 py-16">
-        <div className="mx-auto max-w-4xl text-center">
-          <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+      {/* INTRODUCTION */}
+      <section className={styles.introductionSection}>
+        <div className={styles.introductionContent}>
+          <p className={styles.introductionLabel}>
             No parade required
           </p>
 
-          <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+          <h2 className={styles.introductionTitle}>
             Real heroes handle the tiny disasters.
           </h2>
 
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
+          <p className={styles.introductionDescription}>
             They replace the liner, change the sheets, wipe the mystery
             splatter, empty the forgotten trash can, and somehow know when the
             refrigerator has started growing a new civilization.
@@ -230,67 +426,70 @@ export default function InvisibleHeroicsPage() {
       </section>
 
       {/* COMIC ARCHIVE */}
-      <section id="heroics" className="bg-white px-6 py-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-12 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
-            <div>
-              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+      <section
+        id="heroics"
+        className={styles.heroicsArchiveSection}
+      >
+        <div className={styles.heroicsArchiveContainer}>
+          <div className={styles.heroicsArchiveHeader}>
+            <div className={styles.heroicsArchiveHeadingArea}>
+              <p className={styles.heroicsArchiveLabel}>
                 The archives
               </p>
 
-              <h2 className="mt-3 text-4xl font-black md:text-5xl">
+              <h2 className={styles.heroicsArchiveTitle}>
                 Recent acts of domestic bravery
               </h2>
             </div>
 
-            <p className="max-w-md leading-7 text-[#6a5a4b]">
+            <p className={styles.heroicsArchiveDescription}>
               More ridiculous, relatable household victories will be added as
               Super Cleaning Lady encounters them.
             </p>
           </div>
 
-          <div className="space-y-14">
+          <div className={styles.heroicsArchiveList}>
             {heroics.map((heroic, index) => (
               <article
                 key={heroic.slug}
-                className="overflow-hidden rounded-[2.5rem] border border-[#eadcc8] bg-[#fffaf2] shadow-[0_24px_70px_rgba(47,38,31,0.12)]"
+                className={styles.heroicReportCard}
               >
-                <div className="grid lg:grid-cols-[1.15fr_0.85fr]">
-                  <div className="bg-white p-4 sm:p-6">
+                <div className={styles.heroicReportLayout}>
+                  <div className={styles.heroicReportImageArea}>
                     <img
                       src={heroic.image}
                       alt={heroic.alt}
-                      className="h-auto w-full rounded-[1.75rem]"
+                      className={styles.heroicReportImage}
                     />
                   </div>
 
-                  <div className="flex flex-col justify-center p-8 sm:p-10 lg:p-12">
-                    <div className="flex flex-wrap items-center gap-3">
-                      <span className="rounded-full bg-[#f4c96d] px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#2f261f]">
+                  <div className={styles.heroicReportContent}>
+                    <div className={styles.heroicReportMetadata}>
+                      <span className={styles.heroicCategoryBadge}>
                         {heroic.category}
                       </span>
 
-                      <span className="text-sm font-bold text-[#8a7766]">
+                      <span className={styles.heroicActNumber}>
                         Heroic Act #{heroics.length - index}
                       </span>
                     </div>
 
-                    <h3 className="mt-6 text-4xl font-black leading-tight">
+                    <h3 className={styles.heroicReportTitle}>
                       {heroic.title}
                     </h3>
 
-                    <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
+                    <p className={styles.heroicReportDescription}>
                       {heroic.description}
                     </p>
 
-                    <blockquote className="mt-7 rounded-2xl border-l-4 border-[#b48635] bg-white p-6 text-xl font-bold italic leading-8 shadow-sm">
+                    <blockquote className={styles.heroicPunchline}>
                       “{heroic.punchline}”
                     </blockquote>
 
-                    <div className="mt-8">
+                    <div className={styles.heroicMissionArea}>
                       <Link
                         href={heroic.missionHref}
-                        className="inline-flex rounded-full bg-[#2f261f] px-6 py-4 text-sm font-black uppercase tracking-[0.16em] text-white shadow-lg transition hover:-translate-y-1 hover:bg-[#4a3b30]"
+                        className={styles.heroicMissionLink}
                       >
                         {heroic.missionLabel}
                       </Link>
@@ -304,58 +503,57 @@ export default function InvisibleHeroicsPage() {
       </section>
 
       {/* HOUSEHOLD TEAM-UPS */}
-<section className="px-6 py-20">
-  <div className="mx-auto max-w-5xl rounded-[2.5rem] bg-[#2f261f] px-8 py-14 text-center text-white shadow-2xl md:px-14">
-    <img
-      src="/super-handy-man.png"
-      alt="Super Handy Man wearing glasses, a work shirt, and a tool belt"
-      className="mx-auto mb-8 w-52 drop-shadow-2xl sm:w-64 md:w-72"
-    />
+      <section className={styles.householdTeamUpsSection}>
+        <div className={styles.householdTeamUpsCard}>
+          <img
+            src="/super-handy-man.png"
+            alt="Super Handy Man wearing glasses, a work shirt, and a tool belt"
+            className={styles.handyManImage}
+          />
 
-    <p className="text-sm font-black uppercase tracking-[0.25em] text-[#f4c96d]">
-      The saga continues
-    </p>
+          <p className={styles.householdTeamUpsLabel}>
+            The saga continues
+          </p>
 
-    <h2 className="mt-4 text-4xl font-black md:text-5xl">
-      Meet Super Handy Man.
-    </h2>
+          <h2 className={styles.householdTeamUpsTitle}>
+            Meet Super Handy Man.
+          </h2>
 
-    <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#f7ead6]">
-      Follow Super Cleaning Lady and Super Handy Man through ratchet sets,
-      supposedly five-minute repairs, missing screws, and the temporary chaos
-      created in the name of home improvement.
-    </p>
+          <p className={styles.householdTeamUpsDescription}>
+            Follow Super Cleaning Lady and Super Handy Man through ratchet sets,
+            supposedly five-minute repairs, missing screws, and the temporary
+            chaos created in the name of home improvement.
+          </p>
 
-    <blockquote className="mx-auto mt-7 max-w-2xl rounded-2xl border-l-4 border-[#f4c96d] bg-white/10 px-6 py-5 text-xl font-bold italic leading-8">
-      “He repairs the house. She repairs the aftermath.”
-    </blockquote>
+          <blockquote className={styles.householdTeamUpsQuote}>
+            “He repairs the house. She repairs the aftermath.”
+          </blockquote>
 
-    <Link
-      href="/household-team-ups"
-      className="mt-9 inline-flex rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.17em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a]"
-    >
-      Read Household Team-Ups
-    </Link>
-  </div>
+          <Link
+            href="/household-team-ups"
+            className={styles.householdTeamUpsLink}
+          >
+            Read Household Team-Ups
+          </Link>
+        </div>
+      </section>
 
-</section>
-
-      {/* COMING SOON */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-5xl rounded-[2.5rem] bg-[#2f261f] px-8 py-14 text-center text-white shadow-2xl md:px-14">
-          <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-[#f4c96d] text-4xl shadow-lg">
+      {/* FUTURE HEROICS */}
+      <section className={styles.futureHeroicsSection}>
+        <div className={styles.futureHeroicsCard}>
+          <div className={styles.futureHeroicsIcon}>
             ⚡
           </div>
 
-          <p className="mt-7 text-sm font-black uppercase tracking-[0.25em] text-[#f4c96d]">
+          <p className={styles.futureHeroicsLabel}>
             More reports incoming
           </p>
 
-          <h2 className="mt-4 text-4xl font-black md:text-5xl">
+          <h2 className={styles.futureHeroicsTitle}>
             The invisible work never ends.
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#f7ead6]">
+          <p className={styles.futureHeroicsDescription}>
             Future cases may involve rogue toilet paper rolls, suspicious
             refrigerator containers, ceiling-fan dust, lonely socks, and trash
             cans nobody remembers owning.
@@ -363,7 +561,7 @@ export default function InvisibleHeroicsPage() {
 
           <Link
             href="/#missions"
-            className="mt-9 inline-flex rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.17em] text-[#2f261f] transition hover:-translate-y-1 hover:bg-[#ffe19a]"
+            className={styles.chooseMissionLink}
           >
             Choose a Cleaning Mission
           </Link>

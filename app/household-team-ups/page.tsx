@@ -8,6 +8,290 @@ export const metadata: Metadata = {
     "Follow Super Cleaning Lady and Super Handy Man through repairs, missing tools, questionable solutions, and the temporary chaos created in pursuit of home improvement.",
 };
 
+/* -------------------------------------------------------------------------- */
+/* PAGE STYLES                                                                */
+/* -------------------------------------------------------------------------- */
+
+const styles = {
+  page:
+    "min-h-screen bg-[#fffaf2] text-[#2f261f]",
+
+  /* HERO */
+  heroSection:
+    "relative overflow-hidden bg-[#2f261f] px-6 py-16 text-white md:py-20",
+
+  heroPattern:
+    "absolute inset-0 opacity-[0.06]",
+
+  heroContent:
+    "relative mx-auto max-w-5xl text-center",
+
+  heroSeriesLabel:
+    "text-sm font-black uppercase tracking-[0.28em] text-[#f4c96d]",
+
+  heroTitle:
+    "mt-4 text-4xl font-black leading-tight sm:text-5xl md:text-7xl",
+
+  heroDescription:
+    "mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#f7ead6] md:text-xl",
+
+  heroQuote:
+    "mx-auto mt-7 max-w-2xl text-xl font-bold italic text-[#f4c96d]",
+
+  heroActions:
+    "mt-9 flex flex-col justify-center gap-4 sm:flex-row",
+
+  meetHandyManButton:
+    "rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.17em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a] focus:outline-none focus-visible:ring-2 focus-visible:ring-white",
+
+  readSagaButton:
+    "rounded-full border border-white/30 px-7 py-4 text-sm font-black uppercase tracking-[0.17em] text-white transition hover:-translate-y-1 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f4c96d]",
+
+  backToHeadquartersArea:
+    "mt-5",
+
+  backToHeadquartersLink:
+    "text-xs font-black uppercase tracking-[0.16em] text-[#f7ead6] transition hover:text-white",
+
+  /* FEATURED INCIDENT */
+  featuredIncidentSection:
+    "bg-white px-5 py-16 sm:px-6 md:py-20",
+
+  featuredIncidentContainer:
+    "mx-auto max-w-6xl",
+
+  featuredIncidentHeader:
+    "mx-auto mb-10 max-w-3xl text-center",
+
+  featuredIncidentLabel:
+    "text-sm font-black uppercase tracking-[0.25em] text-[#b48635]",
+
+  featuredIncidentHeading:
+    "mt-4 text-4xl font-black leading-tight md:text-5xl",
+
+  featuredIncidentIntroduction:
+    "mt-5 text-lg leading-8 text-[#6a5a4b]",
+
+  featuredIncidentCard:
+    "overflow-hidden rounded-[2.5rem] border border-[#eadcc8] bg-[#fffaf2] shadow-[0_24px_70px_rgba(47,38,31,0.14)]",
+
+  featuredIncidentLayout:
+    "grid items-center lg:grid-cols-[1.2fr_0.8fr]",
+
+  featuredIncidentImageArea:
+    "bg-white p-3 sm:p-5 lg:p-6",
+
+  featuredIncidentImage:
+    "h-auto w-full rounded-[1.5rem] sm:rounded-[1.75rem]",
+
+  featuredIncidentContent:
+    "p-7 sm:p-10 lg:p-12",
+
+  incidentMetadata:
+    "flex flex-wrap items-center gap-3",
+
+  incidentPartBadge:
+    "rounded-full bg-[#f4c96d] px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#2f261f]",
+
+  incidentSeriesLabel:
+    "text-sm font-bold uppercase tracking-[0.14em] text-[#8a7766]",
+
+  featuredIncidentTitle:
+    "mt-6 text-4xl font-black leading-tight md:text-5xl",
+
+  featuredIncidentDescription:
+    "mt-5 text-lg leading-8 text-[#6a5a4b]",
+
+  incidentQuote:
+    "mt-7 rounded-2xl border-l-4 border-[#b48635] bg-white p-6 text-xl font-bold italic leading-8 shadow-sm",
+
+  responseTeamNotice:
+    "mt-6 rounded-2xl border border-[#eadcc8] bg-white p-5",
+
+  responseTeamLabel:
+    "text-xs font-black uppercase tracking-[0.18em] text-[#b48635]",
+
+  responseTeamDescription:
+    "mt-2 text-sm font-bold leading-6 text-[#4d4137]",
+
+  /* CHARACTER INTRODUCTION */
+  characterIntroductionSection:
+    "px-6 py-16",
+
+  characterIntroductionGrid:
+    "mx-auto grid max-w-6xl gap-8 lg:grid-cols-2",
+
+  characterIntroductionCard:
+    "rounded-[2.5rem] border border-[#eadcc8] bg-white p-8 shadow-sm md:p-10",
+
+  characterName:
+    "text-sm font-black uppercase tracking-[0.25em] text-[#b48635]",
+
+  characterRole:
+    "mt-4 text-3xl font-black leading-tight sm:text-4xl",
+
+  characterDescription:
+    "mt-5 text-lg leading-8 text-[#6a5a4b]",
+
+  handyManDivisionLink:
+    "mt-7 inline-flex text-sm font-black uppercase tracking-[0.16em] text-[#b48635] transition hover:text-[#7a5520]",
+
+  /* ONGOING SAGA */
+  sagaSection:
+    "scroll-mt-32 bg-white px-6 py-20",
+
+  sagaContainer:
+    "mx-auto max-w-6xl",
+
+  sagaHeader:
+    "mx-auto max-w-4xl text-center",
+
+  sagaLabel:
+    "text-sm font-black uppercase tracking-[0.25em] text-[#b48635]",
+
+  sagaTitle:
+    "mt-4 text-4xl font-black leading-tight md:text-5xl",
+
+  sagaDescription:
+    "mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]",
+
+  sagaIncidentList:
+    "mt-14 space-y-14",
+
+  sagaIncidentCard:
+    "overflow-hidden rounded-[2.5rem] border border-[#eadcc8] bg-[#fffaf2] shadow-[0_24px_70px_rgba(47,38,31,0.1)]",
+
+  sagaIncidentLayout:
+    "grid items-center lg:grid-cols-2",
+
+  sagaIncidentAlternateLayout:
+    "lg:[&>*:first-child]:order-2",
+
+  sagaIncidentImageArea:
+    "bg-white p-4 sm:p-6",
+
+  sagaIncidentImage:
+    "h-auto w-full rounded-[1.75rem]",
+
+  sagaIncidentContent:
+    "flex flex-col justify-center p-8 sm:p-10 lg:p-12",
+
+  sagaIncidentTitle:
+    "mt-6 text-3xl font-black leading-tight sm:text-4xl md:text-5xl",
+
+  sagaIncidentDescription:
+    "mt-5 text-lg leading-8 text-[#6a5a4b]",
+
+  /* TEAM DYNAMIC */
+  teamDynamicSection:
+    "px-6 py-20",
+
+  teamDynamicCard:
+    "mx-auto max-w-5xl rounded-[2.5rem] bg-[#2f261f] px-8 py-14 text-center text-white shadow-2xl md:px-14",
+
+  teamDynamicLabel:
+    "text-sm font-black uppercase tracking-[0.25em] text-[#f4c96d]",
+
+  teamDynamicTitle:
+    "mt-4 text-4xl font-black leading-tight md:text-5xl",
+
+  teamPowersGrid:
+    "mt-10 grid gap-5 text-left md:grid-cols-3",
+
+  teamPowerCard:
+    "rounded-[2rem] border border-white/10 bg-white/10 p-7",
+
+  teamPowerLabel:
+    "text-sm font-black uppercase tracking-[0.2em] text-[#f4c96d]",
+
+  teamPowerTitle:
+    "mt-3 text-2xl font-black",
+
+  teamPowerDescription:
+    "mt-4 leading-7 text-[#f7ead6]",
+
+  teamDynamicQuote:
+    "mx-auto mt-10 max-w-3xl rounded-2xl border-l-4 border-[#f4c96d] bg-white/5 px-6 py-5 text-xl font-bold italic leading-8",
+
+  /* FUTURE REPORTS */
+  futureReportsSection:
+    "bg-white px-6 py-20",
+
+  futureReportsContainer:
+    "mx-auto max-w-6xl",
+
+  futureReportsHeader:
+    "mx-auto max-w-4xl text-center",
+
+  futureReportsLabel:
+    "text-sm font-black uppercase tracking-[0.25em] text-[#b48635]",
+
+  futureReportsTitle:
+    "mt-4 text-4xl font-black leading-tight md:text-5xl",
+
+  futureReportsDescription:
+    "mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#6a5a4b]",
+
+  futureReportsGrid:
+    "mt-12 grid gap-6 md:grid-cols-3",
+
+  futureReportCard:
+    "rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-md",
+
+  futureReportStatus:
+    "text-sm font-black uppercase tracking-[0.2em] text-[#b48635]",
+
+  futureReportTitle:
+    "mt-4 text-3xl font-black leading-tight",
+
+  futureReportDescription:
+    "mt-4 leading-7 text-[#6a5a4b]",
+
+  householdStatusCard:
+    "mx-auto mt-10 max-w-3xl rounded-[1.75rem] border border-[#eadcc8] bg-[#fffaf2] px-6 py-6 text-center shadow-sm",
+
+  householdStatusLabel:
+    "text-xs font-black uppercase tracking-[0.2em] text-[#b48635]",
+
+  householdStatusMessage:
+    "mt-2 text-lg font-black leading-7",
+
+  householdStatusDetail:
+    "mt-2 text-sm font-bold text-[#8a7766]",
+
+  /* FINAL CALLOUT */
+  finalCalloutSection:
+    "px-6 py-20",
+
+  finalCalloutCard:
+    "mx-auto max-w-4xl rounded-[2.5rem] bg-[#2f261f] p-8 text-center text-white shadow-2xl md:p-12",
+
+  finalCalloutLabel:
+    "text-sm font-black uppercase tracking-[0.25em] text-[#f4c96d]",
+
+  finalCalloutTitle:
+    "mt-4 text-4xl font-black leading-tight md:text-5xl",
+
+  finalCalloutDescription:
+    "mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#f7ead6]",
+
+  finalCalloutActions:
+    "mt-8 flex flex-col justify-center gap-4 sm:flex-row",
+
+  visitFixDivisionButton:
+    "rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a] hover:shadow-xl",
+
+  invisibleHeroicsLink:
+    "rounded-full border border-white/30 px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:-translate-y-1 hover:bg-white/10",
+
+  chooseMissionLink:
+    "rounded-full border border-white/30 px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:-translate-y-1 hover:bg-white/10",
+};
+
+/* -------------------------------------------------------------------------- */
+/* FEATURED TEAM-UP                                                           */
+/* -------------------------------------------------------------------------- */
+
 const featuredTeamUp = {
   part: "Part 9",
   title: "The Solution Problem",
@@ -17,6 +301,10 @@ const featuredTeamUp = {
     "Super Handy Man begins with his usual confidence: every problem has a solution. Especially this one. Several tools, containers, loose parts, and one spectacular new mess later, a troubling philosophical question emerges.",
   quote: "Or is it every solution has a problem?",
 };
+
+/* -------------------------------------------------------------------------- */
+/* TEAM-UPS                                                                   */
+/* -------------------------------------------------------------------------- */
 
 const teamUps = [
   {
@@ -111,6 +399,10 @@ const teamUps = [
   },
 ];
 
+/* -------------------------------------------------------------------------- */
+/* FUTURE REPORTS                                                             */
+/* -------------------------------------------------------------------------- */
+
 const futureReports = [
   {
     title: "The Five-Minute Shelf",
@@ -129,13 +421,17 @@ const futureReports = [
   },
 ];
 
+/* -------------------------------------------------------------------------- */
+/* PAGE                                                                       */
+/* -------------------------------------------------------------------------- */
+
 export default function HouseholdTeamUpsPage() {
   return (
-    <main className="min-h-screen bg-[#fffaf2] text-[#2f261f]">
+    <main className={styles.page}>
       {/* HERO */}
-      <section className="relative overflow-hidden bg-[#2f261f] px-6 py-16 text-white md:py-20">
+      <section className={styles.heroSection}>
         <div
-          className="absolute inset-0 opacity-[0.06]"
+          className={styles.heroPattern}
           aria-hidden="true"
           style={{
             backgroundImage:
@@ -144,44 +440,44 @@ export default function HouseholdTeamUpsPage() {
           }}
         />
 
-        <div className="relative mx-auto max-w-5xl text-center">
-          <p className="text-sm font-black uppercase tracking-[0.28em] text-[#f4c96d]">
+        <div className={styles.heroContent}>
+          <p className={styles.heroSeriesLabel}>
             Super Cleaning Lady Presents
           </p>
 
-          <h1 className="mt-4 text-4xl font-black leading-tight sm:text-5xl md:text-7xl">
+          <h1 className={styles.heroTitle}>
             Household Team-Ups
           </h1>
 
-          <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#f7ead6] md:text-xl">
+          <p className={styles.heroDescription}>
             He fixes what is broken. She restores order after the repair spreads
             across three rooms.
           </p>
 
-          <blockquote className="mx-auto mt-7 max-w-2xl text-xl font-bold italic text-[#f4c96d]">
+          <blockquote className={styles.heroQuote}>
             “Every problem has a solution. Especially this one.”
           </blockquote>
 
-          <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
+          <div className={styles.heroActions}>
             <Link
               href="/super-handy-man"
-              className="rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.17em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a] focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              className={styles.meetHandyManButton}
             >
               Meet Super Handy Man
             </Link>
 
             <a
               href="#saga"
-              className="rounded-full border border-white/30 px-7 py-4 text-sm font-black uppercase tracking-[0.17em] text-white transition hover:-translate-y-1 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f4c96d]"
+              className={styles.readSagaButton}
             >
               Read the Saga
             </a>
           </div>
 
-          <div className="mt-5">
+          <div className={styles.backToHeadquartersArea}>
             <Link
               href="/"
-              className="text-xs font-black uppercase tracking-[0.16em] text-[#f7ead6] transition hover:text-white"
+              className={styles.backToHeadquartersLink}
             >
               ← Back to Headquarters
             </Link>
@@ -190,62 +486,62 @@ export default function HouseholdTeamUpsPage() {
       </section>
 
       {/* FEATURED LATEST INCIDENT */}
-      <section className="bg-white px-5 py-16 sm:px-6 md:py-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="mx-auto mb-10 max-w-3xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+      <section className={styles.featuredIncidentSection}>
+        <div className={styles.featuredIncidentContainer}>
+          <div className={styles.featuredIncidentHeader}>
+            <p className={styles.featuredIncidentLabel}>
               Latest Incident Report
             </p>
 
-            <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+            <h2 className={styles.featuredIncidentHeading}>
               The slogan has encountered a complication.
             </h2>
 
-            <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
+            <p className={styles.featuredIncidentIntroduction}>
               After years of believing every problem has a solution, Super Handy
               Man has stumbled into a deeply inconvenient possibility.
             </p>
           </div>
 
-          <article className="overflow-hidden rounded-[2.5rem] border border-[#eadcc8] bg-[#fffaf2] shadow-[0_24px_70px_rgba(47,38,31,0.14)]">
-            <div className="grid items-center lg:grid-cols-[1.2fr_0.8fr]">
-              <div className="bg-white p-3 sm:p-5 lg:p-6">
+          <article className={styles.featuredIncidentCard}>
+            <div className={styles.featuredIncidentLayout}>
+              <div className={styles.featuredIncidentImageArea}>
                 <img
                   src={featuredTeamUp.image}
                   alt={featuredTeamUp.alt}
-                  className="h-auto w-full rounded-[1.5rem] sm:rounded-[1.75rem]"
+                  className={styles.featuredIncidentImage}
                 />
               </div>
 
-              <div className="p-7 sm:p-10 lg:p-12">
-                <div className="flex flex-wrap items-center gap-3">
-                  <span className="rounded-full bg-[#f4c96d] px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#2f261f]">
+              <div className={styles.featuredIncidentContent}>
+                <div className={styles.incidentMetadata}>
+                  <span className={styles.incidentPartBadge}>
                     {featuredTeamUp.part}
                   </span>
 
-                  <span className="text-sm font-bold uppercase tracking-[0.14em] text-[#8a7766]">
+                  <span className={styles.incidentSeriesLabel}>
                     Household Team-Up
                   </span>
                 </div>
 
-                <h3 className="mt-6 text-4xl font-black leading-tight md:text-5xl">
+                <h3 className={styles.featuredIncidentTitle}>
                   {featuredTeamUp.title}
                 </h3>
 
-                <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
+                <p className={styles.featuredIncidentDescription}>
                   {featuredTeamUp.description}
                 </p>
 
-                <blockquote className="mt-7 rounded-2xl border-l-4 border-[#b48635] bg-white p-6 text-xl font-bold italic leading-8 shadow-sm">
+                <blockquote className={styles.incidentQuote}>
                   “{featuredTeamUp.quote}”
                 </blockquote>
 
-                <div className="mt-6 rounded-2xl border border-[#eadcc8] bg-white p-5">
-                  <p className="text-xs font-black uppercase tracking-[0.18em] text-[#b48635]">
+                <div className={styles.responseTeamNotice}>
+                  <p className={styles.responseTeamLabel}>
                     Post-Repair Response Team Deployed
                   </p>
 
-                  <p className="mt-2 text-sm font-bold leading-6 text-[#4d4137]">
+                  <p className={styles.responseTeamDescription}>
                     Super Cleaning Lady: restoring order · Spritzy: surface
                     recovery · Spongie: morale support
                   </p>
@@ -257,33 +553,33 @@ export default function HouseholdTeamUpsPage() {
       </section>
 
       {/* CHARACTER INTRODUCTION */}
-      <section className="px-6 py-16">
-        <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
-          <article className="rounded-[2.5rem] border border-[#eadcc8] bg-white p-8 shadow-sm md:p-10">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+      <section className={styles.characterIntroductionSection}>
+        <div className={styles.characterIntroductionGrid}>
+          <article className={styles.characterIntroductionCard}>
+            <p className={styles.characterName}>
               Super Cleaning Lady
             </p>
 
-            <h2 className="mt-4 text-3xl font-black leading-tight sm:text-4xl">
+            <h2 className={styles.characterRole}>
               Defender of clean surfaces and proper tool storage.
             </h2>
 
-            <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
+            <p className={styles.characterDescription}>
               She battles dust, doom piles, mystery splatter, and household
               objects that have wandered far from their assigned homes.
             </p>
           </article>
 
-          <article className="rounded-[2.5rem] border border-[#eadcc8] bg-white p-8 shadow-sm md:p-10">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+          <article className={styles.characterIntroductionCard}>
+            <p className={styles.characterName}>
               Super Handy Man
             </p>
 
-            <h2 className="mt-4 text-3xl font-black leading-tight sm:text-4xl">
+            <h2 className={styles.characterRole}>
               Repair specialist. Tool enthusiast. Temporary chaos generator.
             </h2>
 
-            <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
+            <p className={styles.characterDescription}>
               He owns the correct tool, although locating it may require opening
               six cases. He can repair almost anything, eventually, and every
               project begins with the words, “This should only take five
@@ -292,7 +588,7 @@ export default function HouseholdTeamUpsPage() {
 
             <Link
               href="/super-handy-man"
-              className="mt-7 inline-flex text-sm font-black uppercase tracking-[0.16em] text-[#b48635] transition hover:text-[#7a5520]"
+              className={styles.handyManDivisionLink}
             >
               Enter the Five-Minute Fix Division →
             </Link>
@@ -301,75 +597,78 @@ export default function HouseholdTeamUpsPage() {
       </section>
 
       {/* THE SAGA */}
-      <section id="saga" className="scroll-mt-32 bg-white px-6 py-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+      <section
+        id="saga"
+        className={styles.sagaSection}
+      >
+        <div className={styles.sagaContainer}>
+          <div className={styles.sagaHeader}>
+            <p className={styles.sagaLabel}>
               The Ongoing Saga
             </p>
 
-            <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+            <h2 className={styles.sagaTitle}>
               Every repair leaves a story behind.
             </h2>
 
-            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
+            <p className={styles.sagaDescription}>
               What began as one ratchet-set emergency has expanded into missing
               drills, rebellious lids, vacuum explosions, mystery socks, and a
               growing philosophical crisis about solutions.
             </p>
           </div>
 
-          <div className="mt-14 space-y-14">
+          <div className={styles.sagaIncidentList}>
             {teamUps.map((story, index) => (
               <article
                 key={story.slug}
-                className="overflow-hidden rounded-[2.5rem] border border-[#eadcc8] bg-[#fffaf2] shadow-[0_24px_70px_rgba(47,38,31,0.1)]"
+                className={styles.sagaIncidentCard}
               >
                 <div
-                  className={`grid items-center lg:grid-cols-2 ${
+                  className={`${styles.sagaIncidentLayout} ${
                     index % 2 === 1
-                      ? "lg:[&>*:first-child]:order-2"
+                      ? styles.sagaIncidentAlternateLayout
                       : ""
                   }`}
                 >
-                  <div className="bg-white p-4 sm:p-6">
+                  <div className={styles.sagaIncidentImageArea}>
                     <img
                       src={story.image}
                       alt={story.alt}
-                      className="h-auto w-full rounded-[1.75rem]"
+                      className={styles.sagaIncidentImage}
                     />
                   </div>
 
-                  <div className="flex flex-col justify-center p-8 sm:p-10 lg:p-12">
-                    <div className="flex flex-wrap items-center gap-3">
-                      <span className="rounded-full bg-[#f4c96d] px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#2f261f]">
+                  <div className={styles.sagaIncidentContent}>
+                    <div className={styles.incidentMetadata}>
+                      <span className={styles.incidentPartBadge}>
                         {story.part}
                       </span>
 
-                      <span className="text-sm font-bold uppercase tracking-[0.14em] text-[#8a7766]">
+                      <span className={styles.incidentSeriesLabel}>
                         Household Team-Up
                       </span>
                     </div>
 
-                    <h3 className="mt-6 text-3xl font-black leading-tight sm:text-4xl md:text-5xl">
+                    <h3 className={styles.sagaIncidentTitle}>
                       {story.title}
                     </h3>
 
-                    <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
+                    <p className={styles.sagaIncidentDescription}>
                       {story.description}
                     </p>
 
-                    <blockquote className="mt-7 rounded-2xl border-l-4 border-[#b48635] bg-white p-6 text-xl font-bold italic leading-8 shadow-sm">
+                    <blockquote className={styles.incidentQuote}>
                       “{story.quote}”
                     </blockquote>
 
                     {story.responseTeam && (
-                      <div className="mt-6 rounded-2xl border border-[#eadcc8] bg-white p-5">
-                        <p className="text-xs font-black uppercase tracking-[0.18em] text-[#b48635]">
+                      <div className={styles.responseTeamNotice}>
+                        <p className={styles.responseTeamLabel}>
                           Post-Repair Response Team Deployed
                         </p>
 
-                        <p className="mt-2 text-sm font-bold leading-6 text-[#4d4137]">
+                        <p className={styles.responseTeamDescription}>
                           Super Cleaning Lady: restoring order · Spritzy:
                           surface recovery · Spongie: morale support
                         </p>
@@ -384,64 +683,64 @@ export default function HouseholdTeamUpsPage() {
       </section>
 
       {/* TEAM DYNAMIC */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-5xl rounded-[2.5rem] bg-[#2f261f] px-8 py-14 text-center text-white shadow-2xl md:px-14">
-          <p className="text-sm font-black uppercase tracking-[0.25em] text-[#f4c96d]">
+      <section className={styles.teamDynamicSection}>
+        <div className={styles.teamDynamicCard}>
+          <p className={styles.teamDynamicLabel}>
             Their Special Powers
           </p>
 
-          <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+          <h2 className={styles.teamDynamicTitle}>
             Improving the home, one temporary mess at a time.
           </h2>
 
-          <div className="mt-10 grid gap-5 text-left md:grid-cols-3">
-            <article className="rounded-[2rem] border border-white/10 bg-white/10 p-7">
-              <p className="text-sm font-black uppercase tracking-[0.2em] text-[#f4c96d]">
+          <div className={styles.teamPowersGrid}>
+            <article className={styles.teamPowerCard}>
+              <p className={styles.teamPowerLabel}>
                 His Power
               </p>
 
-              <h3 className="mt-3 text-2xl font-black">
+              <h3 className={styles.teamPowerTitle}>
                 Fixing the problem
               </h3>
 
-              <p className="mt-4 leading-7 text-[#f7ead6]">
+              <p className={styles.teamPowerDescription}>
                 Repairing, installing, tightening, measuring, and explaining
                 why the first hardware-store trip did not count.
               </p>
             </article>
 
-            <article className="rounded-[2rem] border border-white/10 bg-white/10 p-7">
-              <p className="text-sm font-black uppercase tracking-[0.2em] text-[#f4c96d]">
+            <article className={styles.teamPowerCard}>
+              <p className={styles.teamPowerLabel}>
                 Her Power
               </p>
 
-              <h3 className="mt-3 text-2xl font-black">
+              <h3 className={styles.teamPowerTitle}>
                 Restoring civilization
               </h3>
 
-              <p className="mt-4 leading-7 text-[#f7ead6]">
+              <p className={styles.teamPowerDescription}>
                 Returning the tools, removing the packaging, wiping the dust,
                 and finding the one socket hiding beneath the sofa.
               </p>
             </article>
 
-            <article className="rounded-[2rem] border border-white/10 bg-white/10 p-7">
-              <p className="text-sm font-black uppercase tracking-[0.2em] text-[#f4c96d]">
+            <article className={styles.teamPowerCard}>
+              <p className={styles.teamPowerLabel}>
                 Combined Power
               </p>
 
-              <h3 className="mt-3 text-2xl font-black">
+              <h3 className={styles.teamPowerTitle}>
                 A better house
               </h3>
 
-              <p className="mt-4 leading-7 text-[#f7ead6]">
+              <p className={styles.teamPowerDescription}>
                 The project gets finished, the room gets rescued, and nobody
                 mentions the mysterious extra screw.
               </p>
             </article>
           </div>
 
-          <blockquote className="mx-auto mt-10 max-w-3xl rounded-2xl border-l-4 border-[#f4c96d] bg-white/5 px-6 py-5 text-xl font-bold italic leading-8">
+          <blockquote className={styles.teamDynamicQuote}>
             “He creates a solution. She determines how many new problems came
             with it.”
           </blockquote>
@@ -449,95 +748,95 @@ export default function HouseholdTeamUpsPage() {
       </section>
 
       {/* FUTURE REPORTS */}
-      <section className="bg-white px-6 py-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+      <section className={styles.futureReportsSection}>
+        <div className={styles.futureReportsContainer}>
+          <div className={styles.futureReportsHeader}>
+            <p className={styles.futureReportsLabel}>
               Next Incident Pending
             </p>
 
-            <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+            <h2 className={styles.futureReportsTitle}>
               More projects are probably already spreading.
             </h2>
 
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#6a5a4b]">
+            <p className={styles.futureReportsDescription}>
               Somewhere in the house, a screw is loose, a shelf is leaning, and
               Super Handy Man is already reaching for the toolbox.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className={styles.futureReportsGrid}>
             {futureReports.map((report) => (
               <article
                 key={report.title}
-                className="rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+                className={styles.futureReportCard}
               >
-                <p className="text-sm font-black uppercase tracking-[0.2em] text-[#b48635]">
+                <p className={styles.futureReportStatus}>
                   Coming Eventually
                 </p>
 
-                <h3 className="mt-4 text-3xl font-black leading-tight">
+                <h3 className={styles.futureReportTitle}>
                   {report.title}
                 </h3>
 
-                <p className="mt-4 leading-7 text-[#6a5a4b]">
+                <p className={styles.futureReportDescription}>
                   {report.description}
                 </p>
               </article>
             ))}
           </div>
 
-          <div className="mx-auto mt-10 max-w-3xl rounded-[1.75rem] border border-[#eadcc8] bg-[#fffaf2] px-6 py-6 text-center shadow-sm">
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
+          <div className={styles.householdStatusCard}>
+            <p className={styles.householdStatusLabel}>
               Current Household Status
             </p>
 
-            <p className="mt-2 text-lg font-black leading-7">
+            <p className={styles.householdStatusMessage}>
               Nothing is technically broken at the moment.
             </p>
 
-            <p className="mt-2 text-sm font-bold text-[#8a7766]">
+            <p className={styles.householdStatusDetail}>
               Super Handy Man remains on standby.
             </p>
           </div>
         </div>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-4xl rounded-[2.5rem] bg-[#2f261f] p-8 text-center text-white shadow-2xl md:p-12">
-          <p className="text-sm font-black uppercase tracking-[0.25em] text-[#f4c96d]">
+      {/* FINAL CALLOUT */}
+      <section className={styles.finalCalloutSection}>
+        <div className={styles.finalCalloutCard}>
+          <p className={styles.finalCalloutLabel}>
             While the Tools Are Out
           </p>
 
-          <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+          <h2 className={styles.finalCalloutTitle}>
             The house still needs rescuing.
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#f7ead6]">
+          <p className={styles.finalCalloutDescription}>
             Visit the Five-Minute Fix Division, revisit Super Cleaning Lady’s
             solo victories, or choose a mission and confront your own household
             chaos.
           </p>
 
-          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+          <div className={styles.finalCalloutActions}>
             <Link
               href="/super-handy-man"
-              className="rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a] hover:shadow-xl"
+              className={styles.visitFixDivisionButton}
             >
               Visit the Fix Division
             </Link>
 
             <Link
               href="/invisible-heroics"
-              className="rounded-full border border-white/30 px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:-translate-y-1 hover:bg-white/10"
+              className={styles.invisibleHeroicsLink}
             >
               See Invisible Heroics
             </Link>
 
             <Link
               href="/#missions"
-              className="rounded-full border border-white/30 px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:-translate-y-1 hover:bg-white/10"
+              className={styles.chooseMissionLink}
             >
               Choose a Mission
             </Link>
