@@ -1,629 +1,522 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Spritzy | Surface Recovery Division",
+  title: "Spritzy | Super Cleaning Lady",
   description:
-    "Meet Spritzy, the cheerful superhero spray bottle of Super Cleaning Lady. Sticky spots, mystery splatter, fingerprints, and suspicious residue do not stand a chance.",
+    "Meet Spritzy, the sparkle support specialist of the Super Cleaning Lady universe—cheerful, loyal, and always ready to defeat sticky spots, suspicious splatters, and household drama.",
 };
+
+/* -------------------------------------------------------------------------- */
+/* PAGE STYLES                                                                */
+/* -------------------------------------------------------------------------- */
+
+const styles = {
+  page:
+    "min-h-screen bg-[#fffaf2] text-[#2f261f]",
+
+  /* HERO */
+  heroSection:
+    "mx-auto max-w-6xl px-6 py-14 md:py-20",
+
+  heroHeader:
+    "text-center",
+
+  backToHeadquartersLink:
+    "inline-flex rounded-full border border-[#d9e7f8] bg-white px-5 py-2 text-sm font-bold uppercase tracking-[0.18em] text-[#155dcc] transition hover:-translate-y-1 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#155dcc]",
+
+  heroSquadLabel:
+    "mt-8 text-sm font-bold uppercase tracking-[0.25em] text-[#ed3d7f]",
+
+  heroTitle:
+    "mx-auto mt-4 max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl",
+
+  heroIntroduction:
+    "mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#6a5a4b] md:text-xl",
+
+  heroFeatureGrid:
+    "mt-12 grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]",
+
+  heroCharacterCard:
+    "rounded-[2rem] border border-[#d9e7f8] bg-white p-5 shadow-[0_24px_70px_rgba(21,93,204,0.10)] md:p-8",
+
+  heroCharacterFrame:
+    "relative mx-auto aspect-square w-full max-w-md",
+
+  heroCharacterImage:
+    "object-contain drop-shadow-xl",
+
+  /* PROFILE */
+  profileCard:
+    "rounded-[2rem] border border-[#d9e7f8] bg-[#f7fbff] p-8 shadow-sm md:p-10",
+
+  profileFileLabel:
+    "text-sm font-bold uppercase tracking-[0.25em] text-[#155dcc]",
+
+  profileTitle:
+    "mt-4 text-4xl font-black leading-tight",
+
+  profileIntroduction:
+    "mt-6 text-lg leading-8 text-[#5e6777]",
+
+  profileSpecialtyDescription:
+    "mt-5 text-lg leading-8 text-[#5e6777]",
+
+  profileActions:
+    "mt-8 flex flex-wrap gap-4",
+
+  profileRivalLink:
+    "inline-flex rounded-full bg-[#155dcc] px-6 py-3 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-md transition hover:-translate-y-1 hover:bg-[#104da9] hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#155dcc]",
+
+  profileTeamUpsLink:
+    "inline-flex rounded-full border border-[#cfe1f7] bg-white px-6 py-3 text-sm font-bold uppercase tracking-[0.16em] text-[#155dcc] shadow-sm transition hover:-translate-y-1 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#155dcc]",
+
+  /* SPRITZY STATS */
+  spritzyStatsSection:
+    "bg-white px-6 py-16",
+
+  spritzyStatsGrid:
+    "mx-auto grid max-w-6xl gap-6 md:grid-cols-3",
+
+  spritzyStatCard:
+    "rounded-[2rem] border border-[#d9e7f8] bg-[#f7fbff] p-8 shadow-sm",
+
+  spritzyStatLabel:
+    "text-sm font-bold uppercase tracking-[0.25em] text-[#155dcc]",
+
+  spritzyStatValue:
+    "mt-3 text-3xl font-black",
+
+  spritzyStatDescription:
+    "mt-4 leading-7 text-[#5e6777]",
+
+  /* SIGNATURE STRENGTHS */
+  signatureStrengthsSection:
+    "px-6 py-16",
+
+  signatureStrengthsCard:
+    "mx-auto max-w-6xl rounded-[2rem] bg-[#155dcc] p-8 text-white shadow-2xl md:p-10",
+
+  signatureStrengthsLabel:
+    "text-sm font-bold uppercase tracking-[0.25em] text-[#dff1ff]",
+
+  signatureStrengthsTitle:
+    "mt-4 text-4xl font-black",
+
+  signatureStrengthsGrid:
+    "mt-8 grid gap-4 md:grid-cols-2",
+
+  signatureStrengthItem:
+    "rounded-2xl bg-white/10 p-5 font-bold leading-7 text-white",
+
+  /* PERSONALITY REPORT */
+  personalitySection:
+    "bg-white px-6 py-16",
+
+  personalityGrid:
+    "mx-auto grid max-w-6xl gap-8 lg:grid-cols-2",
+
+  personalityReportCard:
+    "rounded-[2rem] border border-[#d9e7f8] bg-[#fffaf2] p-8 shadow-sm md:p-10",
+
+  personalityReportLabel:
+    "text-sm font-bold uppercase tracking-[0.25em] text-[#ed3d7f]",
+
+  personalityReportTitle:
+    "mt-4 text-4xl font-black",
+
+  personalityReportDescription:
+    "mt-6 text-lg leading-8 text-[#6a5a4b]",
+
+  personalityReportFollowUp:
+    "mt-5 text-lg leading-8 text-[#6a5a4b]",
+
+  /* SPRITZY SAYS */
+  spritzySaysCard:
+    "rounded-[2rem] border border-[#d9e7f8] bg-[#f7fbff] p-8 shadow-sm md:p-10",
+
+  spritzySaysLabel:
+    "text-sm font-bold uppercase tracking-[0.25em] text-[#155dcc]",
+
+  spritzySaysQuote:
+    "mt-4 text-4xl font-black",
+
+  spritzySaysExplanation:
+    "mt-6 text-lg leading-8 text-[#5e6777]",
+
+  spritzySaysFollowUp:
+    "mt-5 text-lg leading-8 text-[#5e6777]",
+
+  /* SPRITZY IN ACTION */
+  spritzyInActionSection:
+    "px-6 py-16",
+
+  spritzyInActionContainer:
+    "mx-auto max-w-6xl",
+
+  spritzyInActionHeader:
+    "mb-10 text-center",
+
+  spritzyInActionLabel:
+    "text-sm font-bold uppercase tracking-[0.25em] text-[#ed3d7f]",
+
+  spritzyInActionTitle:
+    "mt-4 text-4xl font-black md:text-5xl",
+
+  spritzyInActionGrid:
+    "grid gap-6 lg:grid-cols-3",
+
+  spritzyInActionCard:
+    "flex h-full flex-col rounded-[2rem] border border-[#d9e7f8] bg-white p-8 shadow-sm",
+
+  spritzyInActionCardTitle:
+    "text-2xl font-black",
+
+  spritzyInActionCardDescription:
+    "mt-4 flex-1 leading-7 text-[#6a5a4b]",
+
+  spritzyInActionLink:
+    "mt-6 inline-flex self-start rounded-full border border-[#cfe1f7] bg-[#f7fbff] px-5 py-3 text-sm font-bold uppercase tracking-[0.15em] text-[#155dcc] transition hover:-translate-y-1 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#155dcc]",
+
+  /* SQUAD INVITATION */
+  squadInvitationSection:
+    "px-6 py-16",
+
+  squadInvitationCard:
+    "mx-auto max-w-4xl rounded-[2rem] bg-[#2f261f] p-8 text-center text-white shadow-2xl md:p-12",
+
+  squadInvitationLabel:
+    "text-sm font-bold uppercase tracking-[0.25em] text-[#f4dfb4]",
+
+  squadInvitationTitle:
+    "mt-4 text-4xl font-black",
+
+  squadInvitationDescription:
+    "mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#f7ead6]",
+
+  squadInvitationActions:
+    "mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row",
+
+  meetTheSquadLink:
+    "inline-flex rounded-full bg-white px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:shadow-xl",
+
+  readComicsLink:
+    "inline-flex rounded-full border border-white/30 bg-white/10 px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white transition hover:-translate-y-1 hover:bg-white/20",
+};
+
+/* -------------------------------------------------------------------------- */
+/* SPRITZY STATS                                                              */
+/* -------------------------------------------------------------------------- */
 
 const stats = [
   {
-    label: "Department",
-    value: "Surface Recovery",
-    description:
-      "Responsible for counters, sinks, handles, fingerprints, smudges, and anything that feels weird when you touch it.",
+    label: "Official Role",
+    value: "Sparkle Support",
+    text: "Spritzy brings backup, good attitude, and immediate emotional support for sticky situations.",
   },
   {
-    label: "Special Ability",
-    value: "Sticky Spot Detection",
-    description:
-      "Can identify an emotionally offensive surface from several rooms away.",
+    label: "Special Skill",
+    value: "Surface Rescue",
+    text: "Counters, sinks, handles, tables, and mystery messes rarely survive a Spritzy intervention.",
   },
   {
-    label: "Standard Equipment",
-    value: "Spray + Cloth",
-    description:
-      "Simple, effective, and significantly less complicated than Super Handy Man’s approach to anything.",
-  },
-  {
-    label: "Natural Habitat",
-    value: "Freshly Wiped Surfaces",
-    description:
-      "Frequently spotted in kitchens, bathrooms, and anywhere fingerprints have formed a government.",
-  },
-  {
-    label: "Known Weakness",
-    value: "Mystery Residue",
-    description:
-      "Not because she fears it. Because she absolutely needs to know what happened.",
-  },
-  {
-    label: "Current Status",
-    value: "SPRITZ READY",
-    description:
-      "Cape secured. Cloth ready. Rollers immaculate.",
+    label: "Threat Response",
+    value: "Cheerful but Serious",
+    text: "Adorable? Yes. But fully prepared to end a suspicious splatter on sight.",
   },
 ];
 
-const spritzyCode = [
+/* -------------------------------------------------------------------------- */
+/* SIGNATURE STRENGTHS                                                        */
+/* -------------------------------------------------------------------------- */
+
+const powers = [
+  "Encourages everyone dramatically during cleanup operations.",
+  "Believes every sticky spot can be defeated with enough spray and determination.",
+  "Appears exactly when the counter starts looking emotionally complicated.",
+  "Brings sparkle energy to kitchens, bathrooms, and household emergencies.",
+  "Maintains optimism even when no one knows what the mess actually is.",
+  "Serves as morale support, surface support, and occasional comic relief.",
+];
+
+/* -------------------------------------------------------------------------- */
+/* SPRITZY IN ACTION                                                          */
+/* -------------------------------------------------------------------------- */
+
+const favorites = [
   {
-    number: "01",
-    title: "We do not need the full backstory.",
-    description:
-      "Whatever happened to the counter happened. We can process our emotions after we wipe it.",
+    title: "Mystery Sticky Spot",
+    href: "/villains/mystery-sticky-spot",
+    text: "One of Spritzy’s greatest rivals. Suspicious. Shiny. Emotionally offensive.",
   },
   {
-    number: "02",
-    title: "Sticky is a temporary condition.",
-    description:
-      "Spritzy refuses to accept mystery residue as a permanent design choice.",
+    title: "The Dish Goblin",
+    href: "/villains/dish-goblin",
+    text: "Spritzy is always ready to help when the sink starts looking like a ceramic hostage situation.",
   },
   {
-    number: "03",
-    title: "Spray with purpose.",
-    description:
-      "The goal is surface recovery, not turning the entire room into a weather system.",
-  },
-  {
-    number: "04",
-    title: "Leave it better than you found it.",
-    description:
-      "Shiny is optional. Less alarming is already a major victory.",
+    title: "Bathroom Reset",
+    href: "/missions/bathroom-reset",
+    text: "A natural habitat for sparkle support, fresh surfaces, and restored dignity.",
   },
 ];
 
-const approvedZones = [
-  {
-    place: "Kitchen Counter",
-    status: "APPROVED",
-    note: "High-priority sparkle territory.",
-  },
-  {
-    place: "Bathroom Sink",
-    status: "APPROVED",
-    note: "Frequent toothpaste activity detected.",
-  },
-  {
-    place: "Cabinet Handles",
-    status: "APPROVED",
-    note: "Fingerprint jurisdiction.",
-  },
-  {
-    place: "Mystery Sticky Spot",
-    status: "DEPLOY IMMEDIATELY",
-    note: "Do not ask questions until gloves are available.",
-  },
-];
-
-const prohibitedZones = [
-  {
-    place: "Television Screen",
-    note: "Absolutely not without checking the proper cleaning method.",
-  },
-  {
-    place: "Electronics",
-    note: "Spritzy does not freelance around electricity.",
-  },
-  {
-    place: "Unidentified Antique",
-    note: "Surface recovery has legal limits.",
-  },
-  {
-    place: "Super Handy Man’s Open Toolbox",
-    note: "Technically cleanable. Strategically unwise.",
-  },
-];
-
-const incidents = [
-  {
-    title: "Tiny Mess, Big Drama",
-    image: "/comics/tiny-mess-big-drama.png",
-    alt: "Spritzy and Spongie dramatically respond to a tiny kitchen mess",
-    eyebrow: "Joint Response",
-    description:
-      "A microscopic mess appears in the kitchen. Spritzy brings the polish. Spongie brings the panic.",
-    quote: "Small mess. Big teamwork.",
-  },
-  {
-    title: "Sticky, Crumbly, Unknown",
-    image: "/comics/sticky-crumbly.png",
-    alt: "Spritzy, Spongie, and Super Cleaning Lady investigate a mysterious sticky household mess",
-    eyebrow: "Unidentified Substance",
-    description:
-      "Sticky. Crumbly. Suspicious. Nobody knows what it is, and Spritzy is not leaving until the surface has been restored.",
-    quote: "Some mysteries should stay unsolved.",
-  },
-  {
-    title: "The Wobbly Shelf Emergency",
-    image: "/comics/wobbly-shelf.png",
-    alt: "Spritzy stands ready during a household shelf repair emergency",
-    eyebrow: "Post-Repair Support",
-    description:
-      "Super Handy Man fixes the shelf. Super Cleaning Lady restores order. Spritzy waits patiently for the inevitable fingerprints.",
-    quote:
-      "Some problems need teamwork... and slightly too many tools.",
-  },
-  {
-    title: "Spray the Air, Not the Chair",
-    image: "/comics/spray-the-air-not-the-chair.png",
-    alt: "A humorous bathroom comic about using spray appropriately",
-    eyebrow: "Bathroom Advisory",
-    description:
-      "A fresh bathroom is good. A mysteriously wet toilet seat is not part of the mission.",
-    quote: "Fresh bathroom. Dry toilet seat. Civilization restored.",
-  },
-];
-
-const backupCrew = [
-  {
-    name: "Super Cleaning Lady",
-    role: "Restoration & Rescue Command",
-    image: "/scl.png",
-    href: "/super-cleaning-lady",
-    description:
-      "Identifies what actually needs cleaning and when enough is enough.",
-  },
-  {
-    name: "Super Handy Man",
-    role: "Repair Division",
-    image: "/shm.png",
-    href: "/super-handy-man",
-    description:
-      "Creates an impressive number of surfaces that will eventually require recovery.",
-  },
-  {
-    name: "Spongie",
-    role: "Morale Division",
-    image: "/spongie.png",
-    href: "/spongie",
-    description:
-      "Spritzy’s enthusiastic partner in tiny emergencies and unnecessary escalation.",
-  },
-];
+/* -------------------------------------------------------------------------- */
+/* PAGE                                                                       */
+/* -------------------------------------------------------------------------- */
 
 export default function SpritzyPage() {
   return (
-    <main className="min-h-screen bg-[#fffaf2] text-[#2f261f]">
+    <main className={styles.page}>
       {/* HERO */}
-      <section className="relative overflow-hidden bg-[#2f261f] text-white">
-        <div
-          className="absolute inset-0 opacity-[0.06]"
-          aria-hidden="true"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle, #ffffff 1.5px, transparent 1.5px)",
-            backgroundSize: "22px 22px",
-          }}
-        />
+      <section className={styles.heroSection}>
+        <div className={styles.heroHeader}>
+          <Link
+            href="/"
+            className={styles.backToHeadquartersLink}
+          >
+            ← Back to HQ
+          </Link>
 
-        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-6 py-14 lg:grid-cols-[0.85fr_1.15fr] lg:py-20">
-          <div className="relative flex min-h-[420px] items-center justify-center">
-            <div
-              className="absolute h-72 w-72 rounded-full bg-[#dceeff] blur-3xl"
-              aria-hidden="true"
-            />
+          <p className={styles.heroSquadLabel}>
+            Meet the Squad
+          </p>
 
-            <img
-              src="/super-spray.png"
-              alt="Spritzy, the superhero spray bottle with a red cape, pink rollers, apron, and cleaning cloth"
-              className="relative max-h-[500px] w-auto max-w-full object-contain drop-shadow-2xl"
-            />
+          <h1 className={styles.heroTitle}>
+            Spritzy
+          </h1>
+
+          <p className={styles.heroIntroduction}>
+            The sparkle support specialist of the Super Cleaning Lady universe.
+            Spritzy is cheerful, fearless, and always ready to assist when a
+            household surface gets sticky, grimy, suspicious, or just plain rude.
+          </p>
+        </div>
+
+        <div className={styles.heroFeatureGrid}>
+          <div className={styles.heroCharacterCard}>
+            <div className={styles.heroCharacterFrame}>
+              <Image
+                src="/spritzy.png"
+                alt="Spritzy, the cheerful spray bottle sidekick from Super Cleaning Lady"
+                fill
+                priority
+                sizes="(max-width: 1023px) 90vw, 448px"
+                className={styles.heroCharacterImage}
+              />
+            </div>
           </div>
 
-          <div>
-            <Link
-              href="/"
-              className="inline-flex rounded-full border border-white/20 bg-white/10 px-5 py-2 text-xs font-black uppercase tracking-[0.18em] text-white transition hover:bg-white/20"
-            >
-              ← Back to Headquarters
-            </Link>
-
-            <p className="mt-8 text-sm font-black uppercase tracking-[0.28em] text-[#f4c96d]">
-              Surface Recovery Division
+          <div className={styles.profileCard}>
+            <p className={styles.profileFileLabel}>
+              Squad File 003
             </p>
 
-            <h1 className="mt-4 text-5xl font-black leading-none sm:text-6xl md:text-7xl">
-              Spritzy
-            </h1>
+            <h2 className={styles.profileTitle}>
+              Small bottle.
+              <br />
+              Big sparkle energy.
+            </h2>
 
-            <p className="mt-6 max-w-2xl text-2xl font-black leading-8 text-[#f4c96d]">
-              Sticky, smudged, suspicious? She’s on it.
+            <p className={styles.profileIntroduction}>
+              Spritzy is the team member who shows up smiling, ready to help,
+              and fully convinced that one good cleaning session can change the
+              emotional direction of an entire room.
             </p>
 
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-[#f7ead6]">
-              Sparkle support specialist, mystery-residue investigator, and
-              cheerful defender of every surface that has started feeling a
-              little too personal.
+            <p className={styles.profileSpecialtyDescription}>
+              She specializes in sticky counters, suspicious splatters, sink
+              drama, and all the household messes that make people pause and
+              say, “What exactly happened here?”
             </p>
 
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <a
-                href="#incident-files"
-                className="rounded-full bg-[#f4c96d] px-7 py-4 text-center text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a]"
+            <div className={styles.profileActions}>
+              <Link
+                href="/villains/mystery-sticky-spot"
+                className={styles.profileRivalLink}
               >
-                View Surface Reports
-              </a>
+                See Her Rival
+              </Link>
 
               <Link
-                href="/squad"
-                className="rounded-full border border-white/30 bg-white/5 px-7 py-4 text-center text-sm font-black uppercase tracking-[0.16em] text-white transition hover:-translate-y-1 hover:bg-white/10"
+                href="/household-team-ups"
+                className={styles.profileTeamUpsLink}
               >
-                Visit Squad HQ
+                View Team-Ups
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* OFFICIAL FILE */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
-              Official Sparkle File
-            </p>
+      {/* SPRITZY STATS */}
+      <section className={styles.spritzyStatsSection}>
+        <div className={styles.spritzyStatsGrid}>
+          {stats.map((stat) => (
+            <article
+              key={stat.label}
+              className={styles.spritzyStatCard}
+            >
+              <p className={styles.spritzyStatLabel}>
+                {stat.label}
+              </p>
 
-            <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
-              Cheerful demeanor. Serious cleaning intentions.
-            </h2>
+              <h2 className={styles.spritzyStatValue}>
+                {stat.value}
+              </h2>
 
-            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
-              Spritzy may arrive smiling, but she takes surface recovery very
-              seriously. Especially when the surface in question makes that
-              little sticky sound when you lift your hand.
-            </p>
-          </div>
+              <p className={styles.spritzyStatDescription}>
+                {stat.text}
+              </p>
+            </article>
+          ))}
+        </div>
+      </section>
 
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {stats.map((stat) => (
-              <article
-                key={stat.label}
-                className="rounded-[2rem] border border-[#eadcc8] bg-white p-7 shadow-sm"
+      {/* SIGNATURE STRENGTHS */}
+      <section className={styles.signatureStrengthsSection}>
+        <div className={styles.signatureStrengthsCard}>
+          <p className={styles.signatureStrengthsLabel}>
+            Signature Strengths
+          </p>
+
+          <h2 className={styles.signatureStrengthsTitle}>
+            What Spritzy brings to the cleanup.
+          </h2>
+
+          <div className={styles.signatureStrengthsGrid}>
+            {powers.map((power) => (
+              <div
+                key={power}
+                className={styles.signatureStrengthItem}
               >
-                <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
-                  {stat.label}
-                </p>
-
-                <h3 className="mt-3 text-2xl font-black">
-                  {stat.value}
-                </h3>
-
-                <p className="mt-4 leading-7 text-[#6a5a4b]">
-                  {stat.description}
-                </p>
-              </article>
+                {power}
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* THE SPRITZY CODE */}
-      <section className="bg-white px-6 py-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
-              The Spritzy Code
+      {/* PERSONALITY + SPRITZY SAYS */}
+      <section className={styles.personalitySection}>
+        <div className={styles.personalityGrid}>
+          <article className={styles.personalityReportCard}>
+            <p className={styles.personalityReportLabel}>
+              Personality Report
             </p>
 
-            <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
-              Four rules for suspicious surfaces.
+            <h2 className={styles.personalityReportTitle}>
+              Delightful. Loyal. Slightly dramatic.
+            </h2>
+
+            <p className={styles.personalityReportDescription}>
+              Spritzy has the spirit of a motivational coach and the instincts
+              of a cleanup first responder. She believes in fresh starts,
+              cleaner counters, and the power of not letting sticky things
+              become part of the decor.
+            </p>
+
+            <p className={styles.personalityReportFollowUp}>
+              While other people may hesitate in the face of a suspicious mess,
+              Spritzy chooses courage, optimism, and immediate intervention.
+            </p>
+          </article>
+
+          <article className={styles.spritzySaysCard}>
+            <p className={styles.spritzySaysLabel}>
+              Spritzy Says
+            </p>
+
+            <h2 className={styles.spritzySaysQuote}>
+              “We do not need the full backstory.
+              <br />
+              We just need a cloth.”
+            </h2>
+
+            <p className={styles.spritzySaysExplanation}>
+              Spritzy’s approach is simple: no overthinking, no emotional
+              negotiations with the mess, and absolutely no long committee
+              meeting about whether the sticky spot is still technically there.
+            </p>
+
+            <p className={styles.spritzySaysFollowUp}>
+              If it is suspicious, she sprays. If it is sticky, she assists. If
+              it is crumbly too, she calls in reinforcements.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      {/* SPRITZY IN ACTION */}
+      <section className={styles.spritzyInActionSection}>
+        <div className={styles.spritzyInActionContainer}>
+          <div className={styles.spritzyInActionHeader}>
+            <p className={styles.spritzyInActionLabel}>
+              Spritzy in Action
+            </p>
+
+            <h2 className={styles.spritzyInActionTitle}>
+              Best places to spot her.
             </h2>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {spritzyCode.map((item) => (
+          <div className={styles.spritzyInActionGrid}>
+            {favorites.map((item) => (
               <article
-                key={item.number}
-                className="rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm"
+                key={item.title}
+                className={styles.spritzyInActionCard}
               >
-                <span className="text-6xl font-black text-[#f4c96d]/50">
-                  {item.number}
-                </span>
-
-                <h3 className="mt-4 text-3xl font-black">
+                <h3 className={styles.spritzyInActionCardTitle}>
                   {item.title}
                 </h3>
 
-                <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
-                  {item.description}
+                <p className={styles.spritzyInActionCardDescription}>
+                  {item.text}
                 </p>
+
+                <Link
+                  href={item.href}
+                  className={styles.spritzyInActionLink}
+                >
+                  Visit Page
+                </Link>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* APPROVED / NOT APPROVED */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
-              Official Deployment Guide
-            </p>
-
-            <h2 className="mt-4 text-4xl font-black md:text-5xl">
-              Spritzy has boundaries.
-            </h2>
-
-            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
-              Enthusiastic spraying is not the same thing as indiscriminate
-              spraying. Even superheroes read the surface instructions.
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-8 lg:grid-cols-2">
-            <article className="rounded-[2.5rem] border border-[#eadcc8] bg-white p-8 shadow-sm sm:p-10">
-              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
-                Approved Spritz Zones
-              </p>
-
-              <h3 className="mt-4 text-4xl font-black">
-                Cleared for action.
-              </h3>
-
-              <div className="mt-7 space-y-4">
-                {approvedZones.map((item) => (
-                  <div
-                    key={item.place}
-                    className="rounded-[1.5rem] bg-[#fffaf2] p-5"
-                  >
-                    <div className="flex flex-wrap items-center justify-between gap-3">
-                      <p className="text-lg font-black">{item.place}</p>
-
-                      <span className="rounded-full bg-[#f4c96d] px-3 py-1.5 text-[0.65rem] font-black uppercase tracking-[0.15em]">
-                        {item.status}
-                      </span>
-                    </div>
-
-                    <p className="mt-3 leading-6 text-[#6a5a4b]">
-                      {item.note}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </article>
-
-            <article className="rounded-[2.5rem] bg-[#2f261f] p-8 text-white shadow-xl sm:p-10">
-              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#f4c96d]">
-                Absolutely Not Spritz Zones
-              </p>
-
-              <h3 className="mt-4 text-4xl font-black">
-                Step away from the trigger.
-              </h3>
-
-              <div className="mt-7 space-y-4">
-                {prohibitedZones.map((item) => (
-                  <div
-                    key={item.place}
-                    className="rounded-[1.5rem] border border-white/10 bg-white/10 p-5"
-                  >
-                    <p className="text-lg font-black text-[#f4c96d]">
-                      {item.place}
-                    </p>
-
-                    <p className="mt-3 leading-6 text-[#f7ead6]">
-                      {item.note}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      {/* SPRITZY SAYS */}
-      <section className="bg-white px-6 py-20">
-        <div className="mx-auto max-w-5xl rounded-[2.5rem] border border-[#eadcc8] bg-[#fffaf2] p-8 text-center shadow-sm sm:p-10 md:p-14">
-          <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
-            Spritzy Says
+      {/* SQUAD INVITATION */}
+      <section className={styles.squadInvitationSection}>
+        <div className={styles.squadInvitationCard}>
+          <p className={styles.squadInvitationLabel}>
+            Squad Invitation
           </p>
 
-          <h2 className="mx-auto mt-5 max-w-4xl text-4xl font-black leading-tight md:text-5xl">
-            “We do not need the full backstory. We just need a cloth.”
+          <h2 className={styles.squadInvitationTitle}>
+            Need backup for a suspicious household situation?
           </h2>
 
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
-            There are questions worth asking in life. “How long has this been
-            sticky?” is frequently not one of them.
-          </p>
-        </div>
-      </section>
-
-      {/* INCIDENT FILES */}
-      <section
-        id="incident-files"
-        className="scroll-mt-32 px-6 py-20"
-      >
-        <div className="mx-auto max-w-6xl">
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
-              Surface Recovery Archives
-            </p>
-
-            <h2 className="mt-4 text-4xl font-black md:text-5xl">
-              Previous sparkle emergencies.
-            </h2>
-
-            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
-              A documented history of sticky spots, mystery substances, tiny
-              messes, and surfaces that eventually recovered.
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
-            {incidents.map((incident) => (
-              <article
-                key={incident.title}
-                className="group overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
-              >
-                <div className="bg-[#fffaf2] p-4">
-                  <img
-                    src={incident.image}
-                    alt={incident.alt}
-                    className="h-auto w-full rounded-[1.5rem]"
-                  />
-                </div>
-
-                <div className="p-7">
-                  <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
-                    {incident.eyebrow}
-                  </p>
-
-                  <h3 className="mt-3 text-3xl font-black">
-                    {incident.title}
-                  </h3>
-
-                  <p className="mt-4 leading-7 text-[#6a5a4b]">
-                    {incident.description}
-                  </p>
-
-                  <blockquote className="mt-6 border-l-4 border-[#b48635] pl-5 text-lg font-bold italic leading-7">
-                    “{incident.quote}”
-                  </blockquote>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* PERFORMANCE REVIEW */}
-      <section className="bg-white px-6 py-20">
-        <div className="mx-auto max-w-5xl">
-          <div className="rounded-[2.5rem] bg-[#2f261f] p-8 text-white shadow-2xl sm:p-10 md:p-14">
-            <div className="text-center">
-              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#f4c96d]">
-                Surface Recovery Report
-              </p>
-
-              <h2 className="mt-4 text-4xl font-black md:text-5xl">
-                Current operational metrics.
-              </h2>
-            </div>
-
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              <div className="rounded-[1.5rem] border border-white/10 bg-white/10 p-6 text-center">
-                <p className="text-xs font-black uppercase tracking-[0.16em] text-[#f4c96d]">
-                  Smudges
-                </p>
-                <p className="mt-2 text-2xl font-black">Unwelcome</p>
-              </div>
-
-              <div className="rounded-[1.5rem] border border-white/10 bg-white/10 p-6 text-center">
-                <p className="text-xs font-black uppercase tracking-[0.16em] text-[#f4c96d]">
-                  Sticky Spots
-                </p>
-                <p className="mt-2 text-2xl font-black">Temporary</p>
-              </div>
-
-              <div className="rounded-[1.5rem] border border-white/10 bg-white/10 p-6 text-center">
-                <p className="text-xs font-black uppercase tracking-[0.16em] text-[#f4c96d]">
-                  Fingerprints
-                </p>
-                <p className="mt-2 text-2xl font-black">Under Review</p>
-              </div>
-
-              <div className="rounded-[1.5rem] border border-white/10 bg-white/10 p-6 text-center">
-                <p className="text-xs font-black uppercase tracking-[0.16em] text-[#f4c96d]">
-                  Sparkle Morale
-                </p>
-                <p className="mt-2 text-2xl font-black">Excellent</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* BACKUP CREW */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
-              Backup Has Arrived
-            </p>
-
-            <h2 className="mt-4 text-4xl font-black md:text-5xl">
-              Surface recovery is a team sport.
-            </h2>
-          </div>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {backupCrew.map((member) => (
-              <Link
-                key={member.name}
-                href={member.href}
-                className="group overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-white text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
-              >
-                <div className="relative flex h-64 items-center justify-center overflow-hidden bg-[#fffaf2] p-6">
-                  <div
-                    className="absolute h-40 w-40 rounded-full bg-[#f4c96d]/20 blur-3xl"
-                    aria-hidden="true"
-                  />
-
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="relative h-full w-auto max-w-full object-contain drop-shadow-xl transition duration-300 group-hover:scale-[1.03]"
-                  />
-                </div>
-
-                <div className="p-7">
-                  <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
-                    {member.role}
-                  </p>
-
-                  <h3 className="mt-3 text-3xl font-black">
-                    {member.name}
-                  </h3>
-
-                  <p className="mt-4 leading-7 text-[#6a5a4b]">
-                    {member.description}
-                  </p>
-
-                  <p className="mt-6 text-sm font-black uppercase tracking-[0.16em] text-[#b48635]">
-                    Visit Their HQ →
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FINAL CTA */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-4xl rounded-[2.5rem] bg-[#2f261f] p-8 text-center text-white shadow-2xl sm:p-10 md:p-14">
-          <p className="text-sm font-black uppercase tracking-[0.25em] text-[#f4c96d]">
-            Surface Status
+          <p className={styles.squadInvitationDescription}>
+            Spritzy is ready to assist with sticky spots, sparkle emergencies,
+            and any surface that has started making people uncomfortable.
           </p>
 
-          <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
-            Something somewhere is probably sticky.
-          </h2>
-
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#f7ead6]">
-            Spritzy is standing by with cape flowing, rollers secured, cloth
-            ready, and absolutely no interest in allowing mystery residue to
-            become permanent.
-          </p>
-
-          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+          <div className={styles.squadInvitationActions}>
             <Link
-              href="/#missions"
-              className="rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a]"
+              href="/#squad"
+              className={styles.meetTheSquadLink}
             >
-              Choose a Mission
+              Meet the Squad
             </Link>
 
             <Link
-              href="/squad"
-              className="rounded-full border border-white/30 bg-white/5 px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:-translate-y-1 hover:bg-white/10"
+              href="/invisible-heroics"
+              className={styles.readComicsLink}
             >
-              Return to Squad HQ
+              Read the Comics
             </Link>
           </div>
         </div>

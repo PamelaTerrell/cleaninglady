@@ -8,6 +8,327 @@ export const metadata: Metadata = {
     "Meet Spongie, the tiny but wildly confident sidekick of Super Cleaning Lady. Small sponge. Big confidence. Every crumb is an incident.",
 };
 
+/* -------------------------------------------------------------------------- */
+/* PAGE STYLES                                                                */
+/* -------------------------------------------------------------------------- */
+
+const styles = {
+  page:
+    "min-h-screen bg-[#fffaf2] text-[#2f261f]",
+
+  /* HERO */
+  heroSection:
+    "relative overflow-hidden bg-[#2f261f] text-white",
+
+  heroPattern:
+    "absolute inset-0 opacity-[0.06]",
+
+  heroContainer:
+    "relative mx-auto grid max-w-7xl items-center gap-10 px-6 py-14 lg:grid-cols-[0.85fr_1.15fr] lg:py-20",
+
+  heroCharacterArea:
+    "relative flex min-h-[420px] items-center justify-center",
+
+  heroCharacterGlow:
+    "absolute h-72 w-72 rounded-full bg-[#f4c96d]/20 blur-3xl",
+
+  heroCharacterImage:
+    "relative max-h-[500px] w-auto max-w-full object-contain drop-shadow-2xl",
+
+  backToHeadquartersLink:
+    "inline-flex rounded-full border border-white/20 bg-white/10 px-5 py-2 text-xs font-black uppercase tracking-[0.18em] text-white transition hover:bg-white/20",
+
+  heroDivisionLabel:
+    "mt-8 text-sm font-black uppercase tracking-[0.28em] text-[#f4c96d]",
+
+  heroTitle:
+    "mt-4 text-5xl font-black leading-none sm:text-6xl md:text-7xl",
+
+  heroTagline:
+    "mt-6 max-w-2xl text-2xl font-black leading-8 text-[#f4c96d]",
+
+  heroDescription:
+    "mt-5 max-w-2xl text-lg leading-8 text-[#f7ead6]",
+
+  heroActions:
+    "mt-8 flex flex-col gap-4 sm:flex-row",
+
+  emergencyFilesButton:
+    "rounded-full bg-[#f4c96d] px-7 py-4 text-center text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a]",
+
+  teamUpsLink:
+    "rounded-full border border-white/30 bg-white/5 px-7 py-4 text-center text-sm font-black uppercase tracking-[0.16em] text-white transition hover:-translate-y-1 hover:bg-white/10",
+
+  /* OFFICIAL SIDEKICK FILE */
+  sidekickFileSection:
+    "px-6 py-20",
+
+  sidekickFileContainer:
+    "mx-auto max-w-6xl",
+
+  sidekickFileHeader:
+    "mx-auto max-w-4xl text-center",
+
+  sidekickFileLabel:
+    "text-sm font-black uppercase tracking-[0.25em] text-[#b48635]",
+
+  sidekickFileTitle:
+    "mt-4 text-4xl font-black leading-tight md:text-5xl",
+
+  sidekickFileDescription:
+    "mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]",
+
+  personnelStatsGrid:
+    "mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3",
+
+  personnelStatCard:
+    "rounded-[2rem] border border-[#eadcc8] bg-white p-7 shadow-sm",
+
+  personnelStatLabel:
+    "text-xs font-black uppercase tracking-[0.2em] text-[#b48635]",
+
+  personnelStatValue:
+    "mt-3 text-2xl font-black",
+
+  personnelStatDescription:
+    "mt-4 leading-7 text-[#6a5a4b]",
+
+  /* SPONGIE CODE */
+  spongieCodeSection:
+    "bg-white px-6 py-20",
+
+  spongieCodeContainer:
+    "mx-auto max-w-6xl",
+
+  spongieCodeHeader:
+    "mx-auto max-w-4xl text-center",
+
+  spongieCodeLabel:
+    "text-sm font-black uppercase tracking-[0.25em] text-[#b48635]",
+
+  spongieCodeTitle:
+    "mt-4 text-4xl font-black leading-tight md:text-5xl",
+
+  spongieCodeGrid:
+    "mt-12 grid gap-6 md:grid-cols-2",
+
+  spongieCodeCard:
+    "rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm",
+
+  spongieCodeNumber:
+    "text-6xl font-black text-[#f4c96d]/50",
+
+  spongieCodeRule:
+    "mt-4 text-3xl font-black",
+
+  spongieCodeDescription:
+    "mt-5 text-lg leading-8 text-[#6a5a4b]",
+
+  /* THREAT ASSESSMENT */
+  threatAssessmentSection:
+    "px-6 py-20",
+
+  threatAssessmentCard:
+    "mx-auto max-w-5xl rounded-[2.5rem] bg-[#2f261f] p-8 text-white shadow-2xl sm:p-10 md:p-14",
+
+  threatAssessmentHeader:
+    "text-center",
+
+  threatAssessmentLabel:
+    "text-sm font-black uppercase tracking-[0.25em] text-[#f4c96d]",
+
+  threatAssessmentTitle:
+    "mt-4 text-4xl font-black md:text-5xl",
+
+  threatAssessmentDescription:
+    "mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#f7ead6]",
+
+  threatLevelList:
+    "mt-10 space-y-4",
+
+  threatLevelRow:
+    "grid gap-3 rounded-[1.5rem] border border-white/10 bg-white/10 p-5 sm:grid-cols-[1fr_160px_1.4fr] sm:items-center",
+
+  threatName:
+    "text-lg font-black",
+
+  threatCode:
+    "text-sm font-black uppercase tracking-[0.15em] text-[#f4c96d]",
+
+  threatResponse:
+    "text-[#f7ead6]",
+
+  threatAssessmentNotice:
+    "mt-8 rounded-[1.5rem] border border-[#f4c96d]/30 bg-[#f4c96d]/10 p-6 text-center",
+
+  threatAssessmentNoticeLabel:
+    "text-xs font-black uppercase tracking-[0.2em] text-[#f4c96d]",
+
+  threatAssessmentNoticeText:
+    "mt-2 text-xl font-black",
+
+  /* INCIDENT FILES */
+  incidentFilesSection:
+    "scroll-mt-32 bg-white px-6 py-20",
+
+  incidentFilesContainer:
+    "mx-auto max-w-6xl",
+
+  incidentFilesHeader:
+    "mx-auto max-w-4xl text-center",
+
+  incidentFilesLabel:
+    "text-sm font-black uppercase tracking-[0.25em] text-[#b48635]",
+
+  incidentFilesTitle:
+    "mt-4 text-4xl font-black md:text-5xl",
+
+  incidentFilesDescription:
+    "mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]",
+
+  incidentFilesGrid:
+    "mt-12 grid gap-8 md:grid-cols-2",
+
+  incidentCard:
+    "group overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] shadow-sm transition hover:-translate-y-1 hover:shadow-lg",
+
+  incidentImageArea:
+    "bg-white p-4",
+
+  incidentImage:
+    "h-auto w-full rounded-[1.5rem]",
+
+  incidentContent:
+    "p-7",
+
+  incidentCategory:
+    "text-xs font-black uppercase tracking-[0.2em] text-[#b48635]",
+
+  incidentTitle:
+    "mt-3 text-3xl font-black",
+
+  incidentDescription:
+    "mt-4 leading-7 text-[#6a5a4b]",
+
+  incidentQuote:
+    "mt-6 border-l-4 border-[#b48635] pl-5 text-lg font-bold italic leading-7",
+
+  /* PERFORMANCE REVIEW */
+  performanceReviewSection:
+    "px-6 py-20",
+
+  performanceReviewContainer:
+    "mx-auto max-w-6xl",
+
+  performanceReviewHeader:
+    "mx-auto mb-12 max-w-4xl text-center",
+
+  performanceReviewLabel:
+    "text-sm font-black uppercase tracking-[0.25em] text-[#b48635]",
+
+  performanceReviewTitle:
+    "mt-4 text-4xl font-black md:text-5xl",
+
+  performanceReviewGrid:
+    "grid gap-8 lg:grid-cols-2",
+
+  performanceReviewCard:
+    "rounded-[2.5rem] border border-[#eadcc8] bg-white p-8 shadow-sm sm:p-10",
+
+  performanceReviewCategory:
+    "text-sm font-black uppercase tracking-[0.25em] text-[#b48635]",
+
+  performanceReviewCardTitle:
+    "mt-4 text-4xl font-black",
+
+  performanceReviewItems:
+    "mt-7 space-y-4",
+
+  performanceStrength:
+    "rounded-2xl bg-[#fffaf2] px-5 py-4 font-bold",
+
+  performanceOpportunity:
+    "rounded-2xl bg-[#fffaf2] px-5 py-4 font-bold",
+
+  /* BACKUP CREW */
+  backupCrewSection:
+    "bg-white px-6 py-20",
+
+  backupCrewContainer:
+    "mx-auto max-w-6xl",
+
+  backupCrewHeader:
+    "mx-auto max-w-4xl text-center",
+
+  backupCrewLabel:
+    "text-sm font-black uppercase tracking-[0.25em] text-[#b48635]",
+
+  backupCrewTitle:
+    "mt-4 text-4xl font-black md:text-5xl",
+
+  backupCrewDescription:
+    "mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]",
+
+  backupCrewGrid:
+    "mt-12 grid gap-6 md:grid-cols-3",
+
+  backupCrewCard:
+    "group overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg",
+
+  backupCrewImageArea:
+    "relative flex h-64 items-center justify-center overflow-hidden bg-white p-6",
+
+  backupCrewImageGlow:
+    "absolute h-40 w-40 rounded-full bg-[#f4c96d]/20 blur-3xl",
+
+  backupCrewImage:
+    "relative h-full w-auto max-w-full object-contain drop-shadow-xl transition duration-300 group-hover:scale-[1.03]",
+
+  backupCrewContent:
+    "p-7",
+
+  backupCrewRole:
+    "text-xs font-black uppercase tracking-[0.2em] text-[#b48635]",
+
+  backupCrewName:
+    "mt-3 text-3xl font-black",
+
+  backupCrewDescriptionText:
+    "mt-4 leading-7 text-[#6a5a4b]",
+
+  backupCrewLinkText:
+    "mt-6 text-sm font-black uppercase tracking-[0.16em] text-[#b48635]",
+
+  /* FINAL CALLOUT */
+  finalCalloutSection:
+    "px-6 py-20",
+
+  finalCalloutCard:
+    "mx-auto max-w-4xl rounded-[2.5rem] bg-[#2f261f] p-8 text-center text-white shadow-2xl sm:p-10 md:p-14",
+
+  finalCalloutLabel:
+    "text-sm font-black uppercase tracking-[0.25em] text-[#f4c96d]",
+
+  finalCalloutTitle:
+    "mt-4 text-4xl font-black leading-tight md:text-5xl",
+
+  finalCalloutDescription:
+    "mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#f7ead6]",
+
+  finalCalloutActions:
+    "mt-8 flex flex-col justify-center gap-4 sm:flex-row",
+
+  chooseMissionButton:
+    "rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a]",
+
+  returnToSquadLink:
+    "rounded-full border border-white/30 bg-white/5 px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:-translate-y-1 hover:bg-white/10",
+};
+
+/* -------------------------------------------------------------------------- */
+/* PERSONNEL FILE                                                             */
+/* -------------------------------------------------------------------------- */
+
 const personnelStats = [
   {
     label: "Department",
@@ -47,6 +368,10 @@ const personnelStats = [
   },
 ];
 
+/* -------------------------------------------------------------------------- */
+/* THE SPONGIE CODE                                                           */
+/* -------------------------------------------------------------------------- */
+
 const spongieCode = [
   {
     number: "01",
@@ -74,6 +399,10 @@ const spongieCode = [
   },
 ];
 
+/* -------------------------------------------------------------------------- */
+/* THREAT LEVELS                                                              */
+/* -------------------------------------------------------------------------- */
+
 const threatLevels = [
   {
     threat: "One Crumb",
@@ -96,6 +425,10 @@ const threatLevels = [
     response: "There is no protocol. Panic confidently.",
   },
 ];
+
+/* -------------------------------------------------------------------------- */
+/* INCIDENT FILES                                                             */
+/* -------------------------------------------------------------------------- */
 
 const incidents = [
   {
@@ -137,6 +470,10 @@ const incidents = [
   },
 ];
 
+/* -------------------------------------------------------------------------- */
+/* PERFORMANCE REVIEW                                                         */
+/* -------------------------------------------------------------------------- */
+
 const performanceStrengths = [
   "Arrives quickly.",
   "Brings his own duster.",
@@ -155,11 +492,15 @@ const opportunities = [
   "Accept that the duster is not required for plumbing repairs.",
 ];
 
+/* -------------------------------------------------------------------------- */
+/* BACKUP CREW                                                                */
+/* -------------------------------------------------------------------------- */
+
 const backupCrew = [
   {
     name: "Super Cleaning Lady",
     role: "Actual Adult Supervision",
-    image: "/scl.png",
+    image: "/super-cleaning-lady-alone.png",
     href: "/super-cleaning-lady",
     description:
       "Determines whether the emergency is, in fact, an emergency.",
@@ -182,13 +523,17 @@ const backupCrew = [
   },
 ];
 
+/* -------------------------------------------------------------------------- */
+/* PAGE                                                                       */
+/* -------------------------------------------------------------------------- */
+
 export default function SpongiePage() {
   return (
-    <main className="min-h-screen bg-[#fffaf2] text-[#2f261f]">
+    <main className={styles.page}>
       {/* HERO */}
-      <section className="relative overflow-hidden bg-[#2f261f] text-white">
+      <section className={styles.heroSection}>
         <div
-          className="absolute inset-0 opacity-[0.06]"
+          className={styles.heroPattern}
           aria-hidden="true"
           style={{
             backgroundImage:
@@ -197,57 +542,57 @@ export default function SpongiePage() {
           }}
         />
 
-        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-6 py-14 lg:grid-cols-[0.85fr_1.15fr] lg:py-20">
-          <div className="relative flex min-h-[420px] items-center justify-center">
+        <div className={styles.heroContainer}>
+          <div className={styles.heroCharacterArea}>
             <div
-              className="absolute h-72 w-72 rounded-full bg-[#f4c96d]/20 blur-3xl"
+              className={styles.heroCharacterGlow}
               aria-hidden="true"
             />
 
             <img
               src="/spongie.png"
               alt="Spongie, the tiny sponge superhero wearing goggles and a cape"
-              className="relative max-h-[500px] w-auto max-w-full object-contain drop-shadow-2xl"
+              className={styles.heroCharacterImage}
             />
           </div>
 
           <div>
             <Link
               href="/"
-              className="inline-flex rounded-full border border-white/20 bg-white/10 px-5 py-2 text-xs font-black uppercase tracking-[0.18em] text-white transition hover:bg-white/20"
+              className={styles.backToHeadquartersLink}
             >
               ← Back to Headquarters
             </Link>
 
-            <p className="mt-8 text-sm font-black uppercase tracking-[0.28em] text-[#f4c96d]">
+            <p className={styles.heroDivisionLabel}>
               Morale & Tiny Emergency Division
             </p>
 
-            <h1 className="mt-4 text-5xl font-black leading-none sm:text-6xl md:text-7xl">
+            <h1 className={styles.heroTitle}>
               Spongie
             </h1>
 
-            <p className="mt-6 max-w-2xl text-2xl font-black leading-8 text-[#f4c96d]">
+            <p className={styles.heroTagline}>
               Small sponge. Big confidence.
             </p>
 
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-[#f7ead6]">
+            <p className={styles.heroDescription}>
               Official sidekick, emergency enthusiast, duster operator, and
               living proof that confidence does not always require supporting
               documentation.
             </p>
 
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <div className={styles.heroActions}>
               <a
                 href="#incident-files"
-                className="rounded-full bg-[#f4c96d] px-7 py-4 text-center text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a]"
+                className={styles.emergencyFilesButton}
               >
                 View Emergency Files
               </a>
 
               <Link
                 href="/household-team-ups"
-                className="rounded-full border border-white/30 bg-white/5 px-7 py-4 text-center text-sm font-black uppercase tracking-[0.16em] text-white transition hover:-translate-y-1 hover:bg-white/10"
+                className={styles.teamUpsLink}
               >
                 See the Team-Ups
               </Link>
@@ -256,39 +601,39 @@ export default function SpongiePage() {
         </div>
       </section>
 
-      {/* OFFICIAL FILE */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+      {/* OFFICIAL SIDEKICK FILE */}
+      <section className={styles.sidekickFileSection}>
+        <div className={styles.sidekickFileContainer}>
+          <div className={styles.sidekickFileHeader}>
+            <p className={styles.sidekickFileLabel}>
               Official Sidekick File
             </p>
 
-            <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+            <h2 className={styles.sidekickFileTitle}>
               Qualified by enthusiasm alone.
             </h2>
 
-            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
+            <p className={styles.sidekickFileDescription}>
               Some heroes rely on years of training. Spongie relies on goggles,
               a cape, a duster, and complete certainty that this is his moment.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className={styles.personnelStatsGrid}>
             {personnelStats.map((stat) => (
               <article
                 key={stat.label}
-                className="rounded-[2rem] border border-[#eadcc8] bg-white p-7 shadow-sm"
+                className={styles.personnelStatCard}
               >
-                <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
+                <p className={styles.personnelStatLabel}>
                   {stat.label}
                 </p>
 
-                <h3 className="mt-3 text-2xl font-black">
+                <h3 className={styles.personnelStatValue}>
                   {stat.value}
                 </h3>
 
-                <p className="mt-4 leading-7 text-[#6a5a4b]">
+                <p className={styles.personnelStatDescription}>
                   {stat.description}
                 </p>
               </article>
@@ -298,33 +643,33 @@ export default function SpongiePage() {
       </section>
 
       {/* THE SPONGIE CODE */}
-      <section className="bg-white px-6 py-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+      <section className={styles.spongieCodeSection}>
+        <div className={styles.spongieCodeContainer}>
+          <div className={styles.spongieCodeHeader}>
+            <p className={styles.spongieCodeLabel}>
               The Spongie Code
             </p>
 
-            <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+            <h2 className={styles.spongieCodeTitle}>
               Four rules. Zero hesitation.
             </h2>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
+          <div className={styles.spongieCodeGrid}>
             {spongieCode.map((item) => (
               <article
                 key={item.number}
-                className="rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm"
+                className={styles.spongieCodeCard}
               >
-                <span className="text-6xl font-black text-[#f4c96d]/50">
+                <span className={styles.spongieCodeNumber}>
                   {item.number}
                 </span>
 
-                <h3 className="mt-4 text-3xl font-black">
+                <h3 className={styles.spongieCodeRule}>
                   {item.title}
                 </h3>
 
-                <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
+                <p className={styles.spongieCodeDescription}>
                   {item.description}
                 </p>
               </article>
@@ -334,51 +679,51 @@ export default function SpongiePage() {
       </section>
 
       {/* THREAT ASSESSMENT */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-5xl rounded-[2.5rem] bg-[#2f261f] p-8 text-white shadow-2xl sm:p-10 md:p-14">
-          <div className="text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#f4c96d]">
+      <section className={styles.threatAssessmentSection}>
+        <div className={styles.threatAssessmentCard}>
+          <div className={styles.threatAssessmentHeader}>
+            <p className={styles.threatAssessmentLabel}>
               Official Threat Assessment
             </p>
 
-            <h2 className="mt-4 text-4xl font-black md:text-5xl">
+            <h2 className={styles.threatAssessmentTitle}>
               According to Spongie.
             </h2>
 
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#f7ead6]">
+            <p className={styles.threatAssessmentDescription}>
               These ratings have not been reviewed by Super Cleaning Lady,
               local authorities, or anyone with meaningful emergency-management
               experience.
             </p>
           </div>
 
-          <div className="mt-10 space-y-4">
+          <div className={styles.threatLevelList}>
             {threatLevels.map((item) => (
               <div
                 key={item.threat}
-                className="grid gap-3 rounded-[1.5rem] border border-white/10 bg-white/10 p-5 sm:grid-cols-[1fr_160px_1.4fr] sm:items-center"
+                className={styles.threatLevelRow}
               >
-                <p className="text-lg font-black">
+                <p className={styles.threatName}>
                   {item.threat}
                 </p>
 
-                <p className="text-sm font-black uppercase tracking-[0.15em] text-[#f4c96d]">
+                <p className={styles.threatCode}>
                   {item.level}
                 </p>
 
-                <p className="text-[#f7ead6]">
+                <p className={styles.threatResponse}>
                   {item.response}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="mt-8 rounded-[1.5rem] border border-[#f4c96d]/30 bg-[#f4c96d]/10 p-6 text-center">
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#f4c96d]">
+          <div className={styles.threatAssessmentNotice}>
+            <p className={styles.threatAssessmentNoticeLabel}>
               Important
             </p>
 
-            <p className="mt-2 text-xl font-black">
+            <p className={styles.threatAssessmentNoticeText}>
               Spongie has never assigned anything CODE GREEN.
             </p>
           </div>
@@ -388,51 +733,51 @@ export default function SpongiePage() {
       {/* INCIDENT FILES */}
       <section
         id="incident-files"
-        className="scroll-mt-32 bg-white px-6 py-20"
+        className={styles.incidentFilesSection}
       >
-        <div className="mx-auto max-w-6xl">
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+        <div className={styles.incidentFilesContainer}>
+          <div className={styles.incidentFilesHeader}>
+            <p className={styles.incidentFilesLabel}>
               Tiny Emergency Archives
             </p>
 
-            <h2 className="mt-4 text-4xl font-black md:text-5xl">
+            <h2 className={styles.incidentFilesTitle}>
               His courage has been documented.
             </h2>
 
-            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
+            <p className={styles.incidentFilesDescription}>
               So has the dramatic overreaction.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
+          <div className={styles.incidentFilesGrid}>
             {incidents.map((incident) => (
               <article
                 key={incident.title}
-                className="group overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                className={styles.incidentCard}
               >
-                <div className="bg-white p-4">
+                <div className={styles.incidentImageArea}>
                   <img
                     src={incident.image}
                     alt={incident.alt}
-                    className="h-auto w-full rounded-[1.5rem]"
+                    className={styles.incidentImage}
                   />
                 </div>
 
-                <div className="p-7">
-                  <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
+                <div className={styles.incidentContent}>
+                  <p className={styles.incidentCategory}>
                     {incident.eyebrow}
                   </p>
 
-                  <h3 className="mt-3 text-3xl font-black">
+                  <h3 className={styles.incidentTitle}>
                     {incident.title}
                   </h3>
 
-                  <p className="mt-4 leading-7 text-[#6a5a4b]">
+                  <p className={styles.incidentDescription}>
                     {incident.description}
                   </p>
 
-                  <blockquote className="mt-6 border-l-4 border-[#b48635] pl-5 text-lg font-bold italic leading-7">
+                  <blockquote className={styles.incidentQuote}>
                     “{incident.quote}”
                   </blockquote>
                 </div>
@@ -443,33 +788,33 @@ export default function SpongiePage() {
       </section>
 
       {/* PERFORMANCE REVIEW */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="mx-auto mb-12 max-w-4xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+      <section className={styles.performanceReviewSection}>
+        <div className={styles.performanceReviewContainer}>
+          <div className={styles.performanceReviewHeader}>
+            <p className={styles.performanceReviewLabel}>
               Annual Performance Review
             </p>
 
-            <h2 className="mt-4 text-4xl font-black md:text-5xl">
+            <h2 className={styles.performanceReviewTitle}>
               Management has notes.
             </h2>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-2">
-            <article className="rounded-[2.5rem] border border-[#eadcc8] bg-white p-8 shadow-sm sm:p-10">
-              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+          <div className={styles.performanceReviewGrid}>
+            <article className={styles.performanceReviewCard}>
+              <p className={styles.performanceReviewCategory}>
                 Strengths
               </p>
 
-              <h3 className="mt-4 text-4xl font-black">
+              <h3 className={styles.performanceReviewCardTitle}>
                 Things going extremely well.
               </h3>
 
-              <div className="mt-7 space-y-4">
+              <div className={styles.performanceReviewItems}>
                 {performanceStrengths.map((item) => (
                   <div
                     key={item}
-                    className="rounded-2xl bg-[#fffaf2] px-5 py-4 font-bold"
+                    className={styles.performanceStrength}
                   >
                     ✓ {item}
                   </div>
@@ -477,20 +822,20 @@ export default function SpongiePage() {
               </div>
             </article>
 
-            <article className="rounded-[2.5rem] border border-[#eadcc8] bg-white p-8 shadow-sm sm:p-10">
-              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+            <article className={styles.performanceReviewCard}>
+              <p className={styles.performanceReviewCategory}>
                 Areas for Development
               </p>
 
-              <h3 className="mt-4 text-4xl font-black">
+              <h3 className={styles.performanceReviewCardTitle}>
                 Opportunities.
               </h3>
 
-              <div className="mt-7 space-y-4">
+              <div className={styles.performanceReviewItems}>
                 {opportunities.map((item) => (
                   <div
                     key={item}
-                    className="rounded-2xl bg-[#fffaf2] px-5 py-4 font-bold"
+                    className={styles.performanceOpportunity}
                   >
                     → {item}
                   </div>
@@ -502,57 +847,57 @@ export default function SpongiePage() {
       </section>
 
       {/* BACKUP CREW */}
-      <section className="bg-white px-6 py-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
+      <section className={styles.backupCrewSection}>
+        <div className={styles.backupCrewContainer}>
+          <div className={styles.backupCrewHeader}>
+            <p className={styles.backupCrewLabel}>
               Actual Qualified Backup
             </p>
 
-            <h2 className="mt-4 text-4xl font-black md:text-5xl">
+            <h2 className={styles.backupCrewTitle}>
               Fortunately, Spongie does not work alone.
             </h2>
 
-            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]">
+            <p className={styles.backupCrewDescription}>
               When enthusiasm reaches operational limits, other departments are
               available.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className={styles.backupCrewGrid}>
             {backupCrew.map((member) => (
               <Link
                 key={member.name}
                 href={member.href}
-                className="group overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                className={styles.backupCrewCard}
               >
-                <div className="relative flex h-64 items-center justify-center overflow-hidden bg-white p-6">
+                <div className={styles.backupCrewImageArea}>
                   <div
-                    className="absolute h-40 w-40 rounded-full bg-[#f4c96d]/20 blur-3xl"
+                    className={styles.backupCrewImageGlow}
                     aria-hidden="true"
                   />
 
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="relative h-full w-auto max-w-full object-contain drop-shadow-xl transition duration-300 group-hover:scale-[1.03]"
+                    className={styles.backupCrewImage}
                   />
                 </div>
 
-                <div className="p-7">
-                  <p className="text-xs font-black uppercase tracking-[0.2em] text-[#b48635]">
+                <div className={styles.backupCrewContent}>
+                  <p className={styles.backupCrewRole}>
                     {member.role}
                   </p>
 
-                  <h3 className="mt-3 text-3xl font-black">
+                  <h3 className={styles.backupCrewName}>
                     {member.name}
                   </h3>
 
-                  <p className="mt-4 leading-7 text-[#6a5a4b]">
+                  <p className={styles.backupCrewDescriptionText}>
                     {member.description}
                   </p>
 
-                  <p className="mt-6 text-sm font-black uppercase tracking-[0.16em] text-[#b48635]">
+                  <p className={styles.backupCrewLinkText}>
                     Visit Their HQ →
                   </p>
                 </div>
@@ -562,33 +907,33 @@ export default function SpongiePage() {
         </div>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-4xl rounded-[2.5rem] bg-[#2f261f] p-8 text-center text-white shadow-2xl sm:p-10 md:p-14">
-          <p className="text-sm font-black uppercase tracking-[0.25em] text-[#f4c96d]">
+      {/* FINAL CALLOUT */}
+      <section className={styles.finalCalloutSection}>
+        <div className={styles.finalCalloutCard}>
+          <p className={styles.finalCalloutLabel}>
             Tiny Emergency Status
           </p>
 
-          <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+          <h2 className={styles.finalCalloutTitle}>
             Something somewhere probably needs dusting.
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#f7ead6]">
+          <p className={styles.finalCalloutDescription}>
             Spongie is standing by with goggles secured, cape deployed, and
             confidence levels significantly above recommended limits.
           </p>
 
-          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+          <div className={styles.finalCalloutActions}>
             <Link
               href="/#missions"
-              className="rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a]"
+              className={styles.chooseMissionButton}
             >
               Choose a Mission
             </Link>
 
             <Link
               href="/squad"
-              className="rounded-full border border-white/30 bg-white/5 px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:-translate-y-1 hover:bg-white/10"
+              className={styles.returnToSquadLink}
             >
               Return to Squad HQ
             </Link>
