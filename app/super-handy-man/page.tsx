@@ -16,6 +16,7 @@ const styles = {
   page:
     "min-h-screen bg-[#fffaf2] text-[#2f261f]",
 
+  /* HERO */
   heroSection:
     "relative overflow-hidden bg-[#2f261f] text-white",
 
@@ -25,11 +26,17 @@ const styles = {
   heroContainer:
     "relative mx-auto max-w-7xl px-5 pb-16 pt-8 sm:px-6 md:pb-20 md:pt-10",
 
+  heroNavigation:
+    "mb-7 flex justify-center",
+
   backToSquadButton:
     "rounded-full border border-white/20 bg-white/10 px-5 py-2 text-xs font-black uppercase tracking-[0.18em] text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f4c96d]",
 
   heroImageFrame:
     "overflow-hidden rounded-[2rem] border border-white/10 bg-white shadow-2xl sm:rounded-[2.5rem]",
+
+  heroImage:
+    "h-auto w-full",
 
   heroContent:
     "mx-auto mt-10 max-w-4xl text-center",
@@ -46,18 +53,16 @@ const styles = {
   heroQuote:
     "mx-auto mt-7 max-w-3xl text-xl font-black italic leading-8 text-[#f4c96d] sm:text-2xl",
 
+  heroActions:
+    "mt-9 flex flex-col justify-center gap-4 sm:flex-row",
+
   heroPrimaryButton:
     "rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a] hover:shadow-xl",
 
   heroSecondaryButton:
     "rounded-full border border-white/30 bg-white/5 px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:-translate-y-1 hover:bg-white/10",
 
-  pageSection:
-    "px-6 py-20",
-
-  whiteSection:
-    "bg-white px-6 py-20",
-
+  /* SHARED SECTION STRUCTURE */
   sectionContainer:
     "mx-auto max-w-6xl",
 
@@ -76,32 +81,102 @@ const styles = {
   sectionDescription:
     "mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]",
 
+  /* PERSONNEL FILE */
+  personnelSection:
+    "px-6 py-20",
+
   personnelGrid:
     "mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3",
 
   personnelCard:
     "rounded-[2rem] border border-[#eadcc8] bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md",
 
-  cardEyebrow:
+  personnelLabel:
     "text-xs font-black uppercase tracking-[0.22em] text-[#b48635]",
 
-  cardTitle:
+  personnelValue:
     "mt-3 text-2xl font-black leading-tight",
 
-  cardBody:
+  personnelDescription:
     "mt-4 leading-7 text-[#6a5a4b]",
 
-  codeGrid:
+  /* SUPER HANDY MAN CODE */
+  handyManCodeSection:
+    "bg-white px-6 py-20",
+
+  handyManCodeGrid:
     "mt-12 grid gap-6 md:grid-cols-3",
 
-  codeCard:
+  handyManCodeCard:
     "relative overflow-hidden rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm",
 
-  codeNumber:
+  handyManCodeNumber:
     "text-6xl font-black text-[#f4c96d]/50",
 
-  codeTitle:
+  handyManCodeTitle:
     "mt-4 text-3xl font-black leading-tight",
+
+  handyManCodeDescription:
+    "mt-4 leading-7 text-[#6a5a4b]",
+
+  /* ROLLMAGEDDON 9000 */
+  rollmageddonSection:
+    "px-5 py-20 sm:px-6",
+
+  rollmageddonCard:
+    "overflow-hidden rounded-[2.5rem] border border-[#eadcc8] bg-white shadow-[0_24px_70px_rgba(47,38,31,0.14)]",
+
+  rollmageddonLayout:
+    "flex flex-col",
+
+  rollmageddonImageArea:
+    "bg-[#fffaf2] p-3 sm:p-5 lg:p-6",
+
+  rollmageddonImage:
+    "h-auto w-full rounded-[1.5rem] sm:rounded-[1.75rem]",
+
+  rollmageddonContent:
+    "mx-auto w-full max-w-5xl p-8 text-center sm:p-10 lg:p-12",
+
+  rollmageddonLabel:
+    "text-sm font-black uppercase tracking-[0.25em] text-[#b48635]",
+
+  rollmageddonTitle:
+    "mt-4 text-4xl font-black leading-tight md:text-5xl",
+
+  rollmageddonIntroduction:
+    "mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6a5a4b]",
+
+  rollmageddonStoryGrid:
+    "mt-8 grid gap-6 text-left md:grid-cols-2",
+
+  rollmageddonStoryCard:
+    "rounded-[1.75rem] border border-[#eadcc8] bg-[#fffaf2] p-6",
+
+  rollmageddonStoryLabel:
+    "text-xs font-black uppercase tracking-[0.18em] text-[#b48635]",
+
+  rollmageddonStoryText:
+    "mt-3 text-lg leading-8 text-[#6a5a4b]",
+
+  rollmageddonManual:
+    "mx-auto mt-7 max-w-3xl rounded-[1.75rem] border border-[#eadcc8] bg-[#fffaf2] p-6",
+
+  rollmageddonManualLabel:
+    "text-xs font-black uppercase tracking-[0.18em] text-[#b48635]",
+
+  rollmageddonManualTitle:
+    "mt-2 text-xl font-black italic",
+
+  rollmageddonQuote:
+    "mx-auto mt-7 max-w-3xl rounded-2xl border-l-4 border-[#b48635] bg-[#fffaf2] p-6 text-xl font-black italic leading-8",
+
+  rollmageddonConclusion:
+    "mx-auto mt-6 max-w-3xl text-lg font-bold leading-8 text-[#4d4137]",
+
+  /* PHILOSOPHICAL CRISIS */
+  philosophicalCrisisSection:
+    "px-5 py-20 sm:px-6",
 
   featuredIncidentShell:
     "overflow-hidden rounded-[2.5rem] border border-[#eadcc8] bg-white shadow-[0_24px_70px_rgba(47,38,31,0.14)]",
@@ -118,11 +193,21 @@ const styles = {
   featuredIncidentTextArea:
     "p-8 sm:p-10 lg:p-12",
 
-  featuredQuote:
+  featuredIncidentDescription:
+    "mt-5 text-lg leading-8 text-[#6a5a4b]",
+
+  featuredIncidentFollowUp:
+    "mt-4 text-lg leading-8 text-[#6a5a4b]",
+
+  featuredIncidentQuote:
     "mt-7 rounded-2xl border-l-4 border-[#b48635] bg-[#fffaf2] p-6 text-xl font-black italic leading-8",
 
+  /* FIVE-MINUTE TIMELINE */
   timelineSection:
     "bg-[#2f261f] px-6 py-20 text-white",
+
+  timelineHeader:
+    "text-center",
 
   timelineEyebrow:
     "text-sm font-black uppercase tracking-[0.25em] text-[#f4c96d]",
@@ -148,6 +233,13 @@ const styles = {
   finalEstimateCard:
     "mx-auto mt-8 max-w-3xl rounded-[1.5rem] border border-[#f4c96d]/20 bg-white/5 p-6 text-center",
 
+  finalEstimateLabel:
+    "text-sm font-black uppercase tracking-[0.18em] text-[#f4c96d]",
+
+  finalEstimateValue:
+    "mt-2 text-xl font-black",
+
+  /* INCIDENT ARCHIVE */
   incidentArchiveSection:
     "scroll-mt-32 bg-white px-6 py-20",
 
@@ -172,6 +264,9 @@ const styles = {
   incidentTitle:
     "mt-3 text-3xl font-black leading-tight",
 
+  incidentDescription:
+    "mt-4 leading-7 text-[#6a5a4b]",
+
   incidentQuote:
     "mt-6 border-l-4 border-[#b48635] pl-5 text-lg font-bold italic leading-7",
 
@@ -184,8 +279,18 @@ const styles = {
   responseStatusText:
     "mt-2 text-sm font-bold leading-6 text-[#4d4137]",
 
+  /* FIELD NOTES */
+  fieldNotesSection:
+    "px-6 py-20",
+
   fieldNotesCard:
     "rounded-[2.5rem] border border-[#eadcc8] bg-white p-8 shadow-sm sm:p-10 md:p-12",
+
+  fieldNotesHeader:
+    "text-center",
+
+  fieldNotesDescription:
+    "mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#6a5a4b]",
 
   fieldNotesList:
     "mt-10 space-y-5",
@@ -198,6 +303,10 @@ const styles = {
 
   fieldNoteText:
     "text-lg font-bold leading-8 text-[#4d4137]",
+
+  /* POST-REPAIR RESPONSE TEAM */
+  responseTeamSection:
+    "bg-white px-6 py-20",
 
   responseTeamGrid:
     "mt-12 grid gap-6 md:grid-cols-3",
@@ -241,6 +350,10 @@ const styles = {
   sceneStatusNote:
     "mt-2 text-sm font-bold italic text-[#8a7766]",
 
+  /* PROJECT REPORT */
+  projectReportSection:
+    "px-6 py-20",
+
   projectReportGrid:
     "grid gap-4 sm:grid-cols-2 lg:grid-cols-4",
 
@@ -253,6 +366,7 @@ const styles = {
   projectReportValue:
     "mt-2 text-2xl font-black",
 
+  /* FINAL CALLOUT */
   finalCalloutSection:
     "px-6 pb-20",
 
@@ -268,6 +382,9 @@ const styles = {
   finalCalloutText:
     "mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#f7ead6]",
 
+  finalCalloutActions:
+    "mt-8 flex flex-col justify-center gap-4 sm:flex-row",
+
   finalPrimaryButton:
     "rounded-full bg-[#f4c96d] px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-lg transition hover:-translate-y-1 hover:bg-[#ffe19a] hover:shadow-xl",
 
@@ -276,7 +393,7 @@ const styles = {
 };
 
 /* -------------------------------------------------------------------------- */
-/* PAGE CONTENT                                                               */
+/* PERSONNEL FILE                                                             */
 /* -------------------------------------------------------------------------- */
 
 const personnelStats = [
@@ -318,6 +435,10 @@ const personnelStats = [
   },
 ];
 
+/* -------------------------------------------------------------------------- */
+/* SUPER HANDY MAN CODE                                                       */
+/* -------------------------------------------------------------------------- */
+
 const handyManCode = [
   {
     number: "01",
@@ -339,19 +460,30 @@ const handyManCode = [
   },
 ];
 
+/* -------------------------------------------------------------------------- */
+/* INCIDENT FILES                                                             */
+/* -------------------------------------------------------------------------- */
+
 const incidents = [
   {
-    
+    title: "The Rollmageddon 9000™",
+    eyebrow: "Legendary Over-Engineering",
+    image: "/comics/toilet-paper.png",
+    alt: "Super Handy Man proudly unveils the Rollmageddon 9000, a massive machine that combines thousands of toilet paper rolls into one enormous roll",
+    description:
+      "The toilet paper holder kept running out. Rather than simply replacing the roll, Super Handy Man spent more than seventy-two hours constructing a massive processing system that converts thousands of ordinary rolls into one gigantic Roll of Glory.",
+    quote: "Every Problem has a solution. Especially this one!",
+  },
+  {
     title: "The Shredder Dome",
     eyebrow: "Over-Engineering Achievement",
     image: "/comics/shredder-dome.png",
     alt: "Super Cleaning Lady enters the Shredder Dome while Super Handy Man operates an excessively complicated suction control panel",
     description:
       "Super Cleaning Lady had one simple complaint: emptying an overstuffed shredder sent paper clippings everywhere. Super Handy Man responded with a person-sized suction dome, multiple pressure gauges, several unnecessary levers, and an entirely new entry procedure.",
-    quote: "Every problem has a solution. Especially this one!",
+    quote: "Every Problem has a solution. Especially this one!",
   },
-
-    {
+  {
     title: "The Case of the Missing Drill",
     eyebrow: "Workshop Emergency",
     image: "/comics/missing-drill.png",
@@ -390,6 +522,10 @@ const incidents = [
       "The Sock Portal remains a mystery. Super Handy Man remains extremely optimistic.",
   },
 ];
+
+/* -------------------------------------------------------------------------- */
+/* FIVE-MINUTE TIMELINE                                                       */
+/* -------------------------------------------------------------------------- */
 
 const timeline = [
   {
@@ -436,6 +572,10 @@ const timeline = [
   },
 ];
 
+/* -------------------------------------------------------------------------- */
+/* FIELD NOTES                                                                */
+/* -------------------------------------------------------------------------- */
+
 const fieldNotes = [
   {
     number: "001",
@@ -453,6 +593,10 @@ const fieldNotes = [
       "Never ask, “Are you almost done?” unless you are emotionally prepared for an explanation.",
   },
 ];
+
+/* -------------------------------------------------------------------------- */
+/* RESPONSE TEAM                                                              */
+/* -------------------------------------------------------------------------- */
 
 const responseTeam = [
   {
@@ -507,8 +651,11 @@ export default function SuperHandyManPage() {
         />
 
         <div className={styles.heroContainer}>
-          <div className="mb-7 flex justify-center">
-            <Link href="/squad" className={styles.backToSquadButton}>
+          <div className={styles.heroNavigation}>
+            <Link
+              href="/squad"
+              className={styles.backToSquadButton}
+            >
               ← Back to Squad Headquarters
             </Link>
           </div>
@@ -517,7 +664,7 @@ export default function SuperHandyManPage() {
             <img
               src="/super-handy-man-hero.png"
               alt="Super Handy Man standing triumphantly inside his hilariously chaotic workshop surrounded by tools and over-engineered inventions"
-              className="h-auto w-full"
+              className={styles.heroImage}
             />
           </div>
 
@@ -538,10 +685,10 @@ export default function SuperHandyManPage() {
             </p>
 
             <blockquote className={styles.heroQuote}>
-              “Every problem has a solution. Especially this one.”
+              “Every Problem has a solution. Especially this one!”
             </blockquote>
 
-            <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
+            <div className={styles.heroActions}>
               <a
                 href="#incident-files"
                 className={styles.heroPrimaryButton}
@@ -561,7 +708,7 @@ export default function SuperHandyManPage() {
       </section>
 
       {/* PERSONNEL FILE */}
-      <section className={styles.pageSection}>
+      <section className={styles.personnelSection}>
         <div className={styles.sectionContainer}>
           <div className={styles.sectionHeader}>
             <p className={styles.sectionEyebrow}>
@@ -583,15 +730,15 @@ export default function SuperHandyManPage() {
                 key={stat.label}
                 className={styles.personnelCard}
               >
-                <p className={styles.cardEyebrow}>
+                <p className={styles.personnelLabel}>
                   {stat.label}
                 </p>
 
-                <h3 className={styles.cardTitle}>
+                <h3 className={styles.personnelValue}>
                   {stat.value}
                 </h3>
 
-                <p className={styles.cardBody}>
+                <p className={styles.personnelDescription}>
                   {stat.description}
                 </p>
               </article>
@@ -601,7 +748,7 @@ export default function SuperHandyManPage() {
       </section>
 
       {/* SUPER HANDY MAN CODE */}
-      <section className={styles.whiteSection}>
+      <section className={styles.handyManCodeSection}>
         <div className={styles.sectionContainer}>
           <div className={styles.sectionHeader}>
             <p className={styles.sectionEyebrow}>
@@ -613,21 +760,21 @@ export default function SuperHandyManPage() {
             </h2>
           </div>
 
-          <div className={styles.codeGrid}>
+          <div className={styles.handyManCodeGrid}>
             {handyManCode.map((item) => (
               <article
                 key={item.number}
-                className={styles.codeCard}
+                className={styles.handyManCodeCard}
               >
-                <span className={styles.codeNumber}>
+                <span className={styles.handyManCodeNumber}>
                   {item.number}
                 </span>
 
-                <h3 className={styles.codeTitle}>
+                <h3 className={styles.handyManCodeTitle}>
                   {item.title}
                 </h3>
 
-                <p className={styles.cardBody}>
+                <p className={styles.handyManCodeDescription}>
                   {item.description}
                 </p>
               </article>
@@ -636,8 +783,90 @@ export default function SuperHandyManPage() {
         </div>
       </section>
 
+      {/* ROLLMAGEDDON 9000 */}
+      <section className={styles.rollmageddonSection}>
+        <div className={styles.sectionContainer}>
+          <article className={styles.rollmageddonCard}>
+            <div className={styles.rollmageddonLayout}>
+              <div className={styles.rollmageddonImageArea}>
+                <img
+                  src="/comics/toilet-paper.png"
+                  alt="Super Handy Man spends more than seventy-two hours building the enormous Rollmageddon 9000 machine, which processes thousands of toilet paper rolls into one gigantic roll while Super Cleaning Lady questions the wildly over-engineered solution"
+                  className={styles.rollmageddonImage}
+                />
+              </div>
+
+              <div className={styles.rollmageddonContent}>
+                <p className={styles.rollmageddonLabel}>
+                  Five-Minute Fix of the Month
+                </p>
+
+                <h2 className={styles.rollmageddonTitle}>
+                  The Rollmageddon 9000™
+                </h2>
+
+                <p className={styles.rollmageddonIntroduction}>
+                  One ordinary household inconvenience. One wildly
+                  disproportionate engineering response.
+                </p>
+
+                <div className={styles.rollmageddonStoryGrid}>
+                  <div className={styles.rollmageddonStoryCard}>
+                    <p className={styles.rollmageddonStoryLabel}>
+                      The Problem
+                    </p>
+
+                    <p className={styles.rollmageddonStoryText}>
+                      The toilet paper holder kept running out and somebody had
+                      to put on another roll.
+                    </p>
+                  </div>
+
+                  <div className={styles.rollmageddonStoryCard}>
+                    <p className={styles.rollmageddonStoryLabel}>
+                      The Super Handy Man Solution
+                    </p>
+
+                    <p className={styles.rollmageddonStoryText}>
+                      Build a massive industrial processing system that consumes
+                      thousands of ordinary toilet paper rolls and compresses
+                      them into one enormous Roll of Glory.
+                    </p>
+                  </div>
+                </div>
+
+                <div className={styles.rollmageddonManual}>
+                  <p className={styles.rollmageddonManualLabel}>
+                    Technical Reference Consulted
+                  </p>
+
+                  <p className={styles.rollmageddonManualTitle}>
+                    Advanced Over Engineering for Beginners
+                  </p>
+                </div>
+
+                <blockquote className={styles.rollmageddonQuote}>
+                  “Every Problem has a solution. Especially this one!”
+                </blockquote>
+
+                <p className={styles.rollmageddonConclusion}>
+                  Original estimate: five minutes. Actual completion time:
+                  72 hours, 14 minutes, and 42 seconds.
+                </p>
+
+                <p className={styles.rollmageddonConclusion}>
+                  Super Cleaning Lady supported the operation tirelessly before
+                  finally asking the question everyone else had been thinking:
+                  “Couldn’t we have just put on a new roll?”
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
       {/* PHILOSOPHICAL CRISIS */}
-      <section className="px-5 py-20 sm:px-6">
+      <section className={styles.philosophicalCrisisSection}>
         <div className={styles.sectionContainer}>
           <div className={styles.featuredIncidentShell}>
             <div className={styles.featuredIncidentGrid}>
@@ -658,18 +887,18 @@ export default function SuperHandyManPage() {
                   The Solution Problem
                 </h2>
 
-                <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
+                <p className={styles.featuredIncidentDescription}>
                   Super Handy Man has built his entire repair philosophy around
                   one fundamental truth: every problem has a solution.
                 </p>
 
-                <p className="mt-4 text-lg leading-8 text-[#6a5a4b]">
+                <p className={styles.featuredIncidentFollowUp}>
                   Then one perfectly reasonable solution produced several
                   containers, loose parts, displaced tools, and a completely new
                   category of problem.
                 </p>
 
-                <blockquote className={styles.featuredQuote}>
+                <blockquote className={styles.featuredIncidentQuote}>
                   “Or is it every solution has a problem?”
                 </blockquote>
               </div>
@@ -681,7 +910,7 @@ export default function SuperHandyManPage() {
       {/* FIVE-MINUTE TIMELINE */}
       <section className={styles.timelineSection}>
         <div className={styles.narrowSectionContainer}>
-          <div className="text-center">
+          <div className={styles.timelineHeader}>
             <p className={styles.timelineEyebrow}>
               Official Project Timeline
             </p>
@@ -720,11 +949,11 @@ export default function SuperHandyManPage() {
           </div>
 
           <div className={styles.finalEstimateCard}>
-            <p className="text-sm font-black uppercase tracking-[0.18em] text-[#f4c96d]">
+            <p className={styles.finalEstimateLabel}>
               Final Time Estimate
             </p>
 
-            <p className="mt-2 text-xl font-black">
+            <p className={styles.finalEstimateValue}>
               Still five minutes, technically.
             </p>
           </div>
@@ -775,7 +1004,7 @@ export default function SuperHandyManPage() {
                     {incident.title}
                   </h3>
 
-                  <p className={styles.cardBody}>
+                  <p className={styles.incidentDescription}>
                     {incident.description}
                   </p>
 
@@ -801,10 +1030,10 @@ export default function SuperHandyManPage() {
       </section>
 
       {/* FIELD NOTES */}
-      <section className={styles.pageSection}>
+      <section className={styles.fieldNotesSection}>
         <div className={styles.narrowSectionContainer}>
           <div className={styles.fieldNotesCard}>
-            <div className="text-center">
+            <div className={styles.fieldNotesHeader}>
               <p className={styles.sectionEyebrow}>
                 Super Cleaning Lady Field Notes
               </p>
@@ -813,7 +1042,7 @@ export default function SuperHandyManPage() {
                 Observations from the repair zone.
               </h2>
 
-              <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#6a5a4b]">
+              <p className={styles.fieldNotesDescription}>
                 Years of field experience have produced several important
                 operational findings.
               </p>
@@ -840,7 +1069,7 @@ export default function SuperHandyManPage() {
       </section>
 
       {/* POST-REPAIR RESPONSE TEAM */}
-      <section className={styles.whiteSection}>
+      <section className={styles.responseTeamSection}>
         <div className={styles.sectionContainer}>
           <div className={styles.sectionHeader}>
             <p className={styles.sectionEyebrow}>
@@ -915,7 +1144,7 @@ export default function SuperHandyManPage() {
       </section>
 
       {/* PROJECT REPORT */}
-      <section className={styles.pageSection}>
+      <section className={styles.projectReportSection}>
         <div className={styles.narrowSectionContainer}>
           <div className={styles.projectReportGrid}>
             <div className={styles.projectReportCard}>
@@ -961,7 +1190,7 @@ export default function SuperHandyManPage() {
         </div>
       </section>
 
-      {/* FINAL CTA */}
+      {/* FINAL CALLOUT */}
       <section className={styles.finalCalloutSection}>
         <div className={styles.finalCalloutCard}>
           <p className={styles.finalCalloutEyebrow}>
@@ -978,7 +1207,7 @@ export default function SuperHandyManPage() {
             flashlight.
           </p>
 
-          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+          <div className={styles.finalCalloutActions}>
             <Link
               href="/household-team-ups"
               className={styles.finalPrimaryButton}
