@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
@@ -33,6 +33,8 @@ export const metadata: Metadata = {
   keywords: [
     "Super Cleaning Lady",
     "Super Handy Man",
+    "Spritzy",
+    "Spongie",
     "cleaning comics",
     "household comedy",
     "household humor",
@@ -45,6 +47,9 @@ export const metadata: Metadata = {
     "no-shame cleaning",
     "home organization humor",
     "superhero cleaning comic",
+    "home improvement humor",
+    "DIY humor",
+    "marriage humor",
   ],
 
   authors: [
@@ -57,15 +62,13 @@ export const metadata: Metadata = {
   creator: "Pamela J. Terrell",
   publisher: "Stabile USA",
 
-  alternates: {
-    canonical: "/",
-  },
+  category: "entertainment",
 
   openGraph: {
     title: "Super Cleaning Lady | Household Comedy & Comics",
     description:
       "Meet Super Cleaning Lady, Super Handy Man, Spritzy, and Spongie in a comic universe where household messes, repairs, clutter, and everyday chaos become superhero missions.",
-    url: "/",
+    url: "https://supercleaninglady.com",
     siteName: "Super Cleaning Lady",
     type: "website",
     locale: "en_US",
@@ -100,13 +103,82 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    apple: "/scl.png",
+    icon: [
+      {
+        url: "/favicon.ico",
+      },
+      {
+        url: "/icon-32.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        url: "/icon-16.png",
+        sizes: "16x16",
+        type: "image/png",
+      },
+    ],
+    apple: [
+      {
+        url: "/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
+    ],
   },
+
+  manifest: "/manifest.json",
 
   formatDetection: {
     telephone: false,
     address: false,
     email: false,
+  },
+
+  other: {
+    "google-site-verification": "",
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#2f261f",
+};
+
+const websiteStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Super Cleaning Lady",
+  url: "https://supercleaninglady.com",
+  description:
+    "A humorous household comic universe starring Super Cleaning Lady, Super Handy Man, Spritzy, and Spongie.",
+  creator: {
+    "@type": "Person",
+    name: "Pamela J. Terrell",
+    url: "https://pamelajterrell.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Stabile USA",
+  },
+};
+
+const organizationStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Super Cleaning Lady",
+  url: "https://supercleaninglady.com",
+  logo: "https://supercleaninglady.com/scl.png",
+  founder: {
+    "@type": "Person",
+    name: "Pamela J. Terrell",
+    url: "https://pamelajterrell.com",
+  },
+  parentOrganization: {
+    "@type": "Organization",
+    name: "Stabile USA",
   },
 };
 
@@ -123,9 +195,27 @@ export default function RootLayout({
       <body className="flex min-h-full flex-col">
         <Header />
 
-        {children}
+        <main className="flex-1">
+          {children}
+        </main>
 
         <Analytics />
+
+        <Script
+          id="website-structured-data"
+          type="application/ld+json"
+          strategy="afterInteractive"
+        >
+          {JSON.stringify(websiteStructuredData)}
+        </Script>
+
+        <Script
+          id="organization-structured-data"
+          type="application/ld+json"
+          strategy="afterInteractive"
+        >
+          {JSON.stringify(organizationStructuredData)}
+        </Script>
 
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-JRJYL8QNWL"
@@ -141,7 +231,9 @@ export default function RootLayout({
             }
 
             gtag("js", new Date());
-            gtag("config", "G-JRJYL8QNWL");
+            gtag("config", "G-JRJYL8QNWL", {
+              anonymize_ip: true
+            });
           `}
         </Script>
       </body>

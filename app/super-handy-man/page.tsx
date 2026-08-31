@@ -132,8 +132,17 @@ const styles = {
   rollmageddonImageArea:
     "bg-[#fffaf2] p-3 sm:p-5 lg:p-6",
 
+  rollmageddonImageStack:
+    "space-y-6",
+
+  rollmageddonImageFrame:
+    "overflow-hidden rounded-[1.5rem] border border-[#eadcc8] bg-white shadow-sm sm:rounded-[1.75rem]",
+
   rollmageddonImage:
-    "h-auto w-full rounded-[1.5rem] sm:rounded-[1.75rem]",
+    "h-auto w-full",
+
+  rollmageddonImageCaption:
+    "px-5 pb-5 pt-4 text-center text-sm font-black uppercase tracking-[0.15em] text-[#8a7766]",
 
   rollmageddonContent:
     "mx-auto w-full max-w-5xl p-8 text-center sm:p-10 lg:p-12",
@@ -468,10 +477,10 @@ const incidents = [
   {
     title: "The Rollmageddon 9000™",
     eyebrow: "Legendary Over-Engineering",
-    image: "/comics/toilet-paper.png",
-    alt: "Super Handy Man proudly unveils the Rollmageddon 9000, a massive machine that combines thousands of toilet paper rolls into one enormous roll",
+    image: "/comics/rollmageddon-outside.png",
+    alt: "The completed Rollmageddon 9000 sits outside the house while a supply pipe runs through the bathroom window to feed one enormous toilet paper roll inside",
     description:
-      "The toilet paper holder kept running out. Rather than simply replacing the roll, Super Handy Man spent more than seventy-two hours constructing a massive processing system that converts thousands of ordinary rolls into one gigantic Roll of Glory.",
+      "The toilet paper holder kept running out. Rather than simply replacing the roll, Super Handy Man spent more than seventy-two hours constructing a machine so enormous it had to be installed outside the house, where it processes thousands of ordinary rolls into one gigantic Roll of Glory inside the bathroom.",
     quote: "Every Problem has a solution. Especially this one!",
   },
   {
@@ -789,11 +798,32 @@ export default function SuperHandyManPage() {
           <article className={styles.rollmageddonCard}>
             <div className={styles.rollmageddonLayout}>
               <div className={styles.rollmageddonImageArea}>
-                <img
-                  src="/comics/toilet-paper.png"
-                  alt="Super Handy Man spends more than seventy-two hours building the enormous Rollmageddon 9000 machine, which processes thousands of toilet paper rolls into one gigantic roll while Super Cleaning Lady questions the wildly over-engineered solution"
-                  className={styles.rollmageddonImage}
-                />
+                <div className={styles.rollmageddonImageStack}>
+                  <figure className={styles.rollmageddonImageFrame}>
+                    <img
+                      src="/comics/toilet-paper.png"
+                      alt="Super Handy Man turns a supposedly five-minute toilet paper problem into the wildly over-engineered Rollmageddon 9000"
+                      className={styles.rollmageddonImage}
+                    />
+
+                    <figcaption className={styles.rollmageddonImageCaption}>
+                      Initial Rollmageddon Incident Report
+                    </figcaption>
+                  </figure>
+
+                  <figure className={styles.rollmageddonImageFrame}>
+                    <img
+                      src="/comics/rollmageddon-outside.png"
+                      alt="The completed Rollmageddon 9000 sits outside the house, processing thousands of ordinary toilet paper rolls while a large pipe runs through the bathroom window to supply one enormous toilet paper roll inside"
+                      className={styles.rollmageddonImage}
+                    />
+
+                    <figcaption className={styles.rollmageddonImageCaption}>
+                      Final Installation: Apparently the Backyard Is Part of the
+                      Bathroom Now
+                    </figcaption>
+                  </figure>
+                </div>
               </div>
 
               <div className={styles.rollmageddonContent}>
@@ -828,9 +858,11 @@ export default function SuperHandyManPage() {
                     </p>
 
                     <p className={styles.rollmageddonStoryText}>
-                      Build a massive industrial processing system that consumes
-                      thousands of ordinary toilet paper rolls and compresses
-                      them into one enormous Roll of Glory.
+                      Build a massive industrial processing system so enormous
+                      that it has to live outside the house, dump thousands of
+                      ordinary toilet paper rolls into a giant intake funnel,
+                      and run a supply pipe through the bathroom window to feed
+                      one enormous Roll of Glory inside.
                     </p>
                   </div>
                 </div>
