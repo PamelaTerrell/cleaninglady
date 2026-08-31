@@ -16,6 +16,22 @@ const styles = {
   page:
     "min-h-screen bg-[#fffaf2] text-[#2f261f]",
 
+/* CONTACT COMIC */
+contactComicSection:
+  "px-6 py-16",
+
+contactComicContainer:
+  "mx-auto max-w-6xl",
+
+contactComicCard:
+  "overflow-hidden rounded-[2.5rem] border border-[#eadcc8] bg-white shadow-[0_24px_70px_rgba(47,38,31,0.12)]",
+
+contactComicImage:
+  "h-auto w-full",
+
+contactComicCaption:
+  "border-t border-[#eadcc8] bg-[#fffaf2] px-6 py-5 text-center text-sm font-black uppercase tracking-[0.16em] text-[#8a7766]",
+
   /* HERO */
   heroSection:
     "relative overflow-hidden bg-[#2f261f] px-6 py-16 text-white md:py-20",
@@ -46,6 +62,8 @@ const styles = {
 
   heroStatus:
     "mx-auto mt-8 max-w-2xl rounded-[1.75rem] border border-white/10 bg-white/10 px-6 py-5 text-lg font-bold leading-8",
+
+
 
   /* PUBLISHING OPPORTUNITIES */
   publishingSection:
@@ -306,6 +324,23 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* CONTACT HEADQUARTERS COMIC */}
+<section className={styles.contactComicSection}>
+  <div className={styles.contactComicContainer}>
+    <figure className={styles.contactComicCard}>
+      <img
+        src="/comics/contact-headquarters.png"
+        alt="Super Cleaning Lady, Super Handy Man, Spritzy, and Spongie respond to an incoming publishing inquiry at Contact Headquarters while Super Handy Man builds an absurdly complicated Message Magnifier Deluxe"
+        className={styles.contactComicImage}
+      />
+
+      <figcaption className={styles.contactComicCaption}>
+        Official Headquarters Procedure for Answering One Email
+      </figcaption>
+    </figure>
+  </div>
+</section>
 
       {/* PUBLISHING OPPORTUNITIES */}
       <section className={styles.publishingSection}>
