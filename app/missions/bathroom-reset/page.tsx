@@ -279,7 +279,7 @@ export default function BathroomResetPage() {
         </p>
 
         <img
-          src="/toothpaste-splatter.png"
+          src="/bathroom-reset-friendly.png"
           alt="Toothpaste Splatter, a mischievous toothpaste villain on a bathroom mirror"
           className={styles.heroVillainImage}
         />

@@ -61,7 +61,7 @@ export default function LaundryMountainPage() {
   </p>
 
   <img
-    src="/laundry-mountain.png"
+    src="/laundry-mountain-friendly.png"
     alt="Laundry Mountain, a cartoon pile of laundry turned into a mischievous villain"
     className="mx-auto mt-7 w-44 drop-shadow-xl sm:w-52 md:w-60"
   />

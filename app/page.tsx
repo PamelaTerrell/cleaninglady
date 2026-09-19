@@ -349,16 +349,16 @@ const styles = {
 
 const missions = [
   {
-    title: "Kitchen Rescue",
-    href: "/missions/kitchen-rescue",
-    image: "/dish-goblin.png",
-    description:
-      "For when the counters have disappeared and the sink is staging a rebellion.",
-  },
+  title: "Kitchen Rescue",
+  href: "/missions/kitchen-rescue",
+  image: "/dish-goblin-friendly.png",
+  description:
+    "For when the counters have disappeared and the sink is staging a rebellion.",
+},
   {
     title: "Bathroom Reset",
     href: "/missions/bathroom-reset",
-    image: "/toothpaste-splatter.png",
+    image: "/bathroom-reset-friendly.png",
     description:
       "Because the mirror should not look like it survived a toothpaste explosion.",
   },
@@ -372,14 +372,14 @@ const missions = [
   {
     title: "Laundry Mountain",
     href: "/missions/laundry-mountain",
-    image: "/laundry-mountain.png",
+    image: "/laundry-mountain-friendly.png",
     description:
       "Scale the pile. Find the floor. Become the legend.",
   },
   {
     title: "Closet Chaos",
     href: "/missions/closet-chaos",
-    image: "/closet-chaos.png",
+    image: "/closet-chaos-friendly.png",
     description:
       "Enter bravely. Sort ruthlessly. Try not to awaken the shoe avalanche.",
   },

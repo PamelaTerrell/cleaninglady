@@ -92,7 +92,7 @@ export default function ClosetChaosPage() {
         </p>
 
         <img
-          src="/closet-chaos.png"
+          src="/closet-chaos-friendly.png"
           alt="Closet Chaos, a monster made of clothes bursting out of a messy closet"
           className="mx-auto mt-6 w-40 drop-shadow-xl sm:w-48 md:w-56"
         />
