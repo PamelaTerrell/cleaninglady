@@ -73,7 +73,7 @@ export default function PaperPileOfDespairPage() {
   </p>
 
   <img
-    src="/paper-pile-of-despair.png"
+    src="/paper-pile-of-despair-friendly.png"
     alt="The Paper Pile of Despair, a monster made of papers, folders, and sticky notes"
     className="mx-auto mt-6 w-44 drop-shadow-xl sm:w-52 md:w-60"
   />

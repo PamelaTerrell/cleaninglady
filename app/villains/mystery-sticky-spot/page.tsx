@@ -72,7 +72,7 @@ export default function MysteryStickySpotPage() {
   </p>
 
   <img
-    src="/mystery-sticky-spot.png"
+    src="/mystery-sticky-spot-friendly.png"
     alt="Mystery Sticky Spot, a gooey wanted-poster household villain"
     className="mx-auto mt-6 w-44 drop-shadow-xl sm:w-52 md:w-60"
   />

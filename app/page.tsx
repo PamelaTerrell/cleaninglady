@@ -412,7 +412,7 @@ const villains = [
   {
     name: "Laundry Mountain",
     href: "/missions/laundry-mountain",
-    image: "/laundry-mountain.png",
+    image: "/laundry-mountain-friendly.png",
   },
   {
     name: "The Doom Basket",
@@ -422,7 +422,7 @@ const villains = [
   {
     name: "Toothpaste Splatter",
     href: "/missions/bathroom-reset",
-    image: "/toothpaste-splatter.png",
+    image: "/bathroom-reset-friendly.png",
   },
   {
     name: "Crumbzilla",
@@ -432,12 +432,12 @@ const villains = [
   {
     name: "The Paper Pile of Despair",
     href: "/villains/paper-pile-of-despair",
-    image: "/paper-pile-of-despair.png",
+    image: "/paper-pile-of-despair-friendly.png",
   },
   {
     name: "Mystery Sticky Spot",
     href: "/villains/mystery-sticky-spot",
-    image: "/mystery-sticky-spot.png",
+    image: "/mystery-sticky-spot-friendly.png",
   },
   {
     name: "The Sock Portal",
