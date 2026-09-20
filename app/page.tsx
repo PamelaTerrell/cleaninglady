@@ -2,12 +2,31 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import MissionProgress from "@/components/MissionProgress";
+import HouseholdEmergencyAlert from "@/components/HouseholdEmergencyAlert";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Super Cleaning Lady | Funny Household Comics & Cleaning Motivation",
+  title: "Funny Household Comics & Cleaning Motivation",
   description:
     "Funny cleaning missions, household comics, ridiculous villains, Super Handy Man repairs, no-shame motivation, and small victories for real homes with real messes.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Super Cleaning Lady | Household Comedy & Comics",
+    description:
+      "Funny household comics, ridiculous villains, rescue missions, Super Handy Man repairs, and no-shame motivation for real homes with real messes.",
+    url: "/",
+    type: "website",
+    images: [
+      {
+        url: "/super-cleaning-lady-social.png",
+        width: 1200,
+        height: 630,
+        alt: "Super Cleaning Lady household comedy and comic universe",
+      },
+    ],
+  },
 };
 
 /* -------------------------------------------------------------------------- */
@@ -349,12 +368,12 @@ const styles = {
 
 const missions = [
   {
-  title: "Kitchen Rescue",
-  href: "/missions/kitchen-rescue",
-  image: "/dish-goblin-friendly.png",
-  description:
-    "For when the counters have disappeared and the sink is staging a rebellion.",
-},
+    title: "Kitchen Rescue",
+    href: "/missions/kitchen-rescue",
+    image: "/dish-goblin-friendly.png",
+    description:
+      "For when the counters have disappeared and the sink is staging a rebellion.",
+  },
   {
     title: "Bathroom Reset",
     href: "/missions/bathroom-reset",
@@ -510,7 +529,7 @@ const featuredComics = [
     alt: "Super Cleaning Lady empties a paper shredder from inside the Shredder Dome while Super Handy Man operates an overly complicated suction control panel",
     description:
       "Super Cleaning Lady had one simple complaint: emptying an overstuffed shredder sent paper clippings everywhere. Super Handy Man responded with a person-sized suction dome, multiple pressure gauges, an alarming number of levers, and an entirely new shredder-emptying procedure.",
-    quote: "Every problem has a solution. Especially this one!",
+    quote: "Every Problem has a solution. Especially this one!",
     relatedHref: "/super-handy-man",
     relatedLabel: "Enter the Five-Minute Fix Division",
   },
@@ -522,7 +541,8 @@ const featuredComics = [
     alt: "Super Cleaning Lady and the cleaning squad attend a hilarious wrinkle-removal convention featuring irons, steamers, dryer tricks, and questionable alternative methods",
     description:
       "Irons. Steamers. Damp towels. Dryer tricks. Mattress pressing. And several techniques that probably should not have made it past the convention planning committee. The world’s greatest minds have gathered for one mission: defeat the wrinkle.",
-    quote: "When the shirt is wrinkled, the competition gets personal.",
+    quote:
+      "When the shirt is wrinkled, the competition gets personal.",
     relatedHref: "/missions/laundry-mountain",
     relatedLabel: "Start Laundry Mountain",
   },
@@ -607,7 +627,10 @@ export default function Home() {
           </p>
 
           <div className={styles.heroActions}>
-            <a href="#missions" className={styles.heroPrimaryButton}>
+            <a
+              href="#missions"
+              className={styles.heroPrimaryButton}
+            >
               Start a Mission
             </a>
 
@@ -626,7 +649,10 @@ export default function Home() {
               "Real homes",
               "Questionable villains",
             ].map((item) => (
-              <span key={item} className={styles.heroBadge}>
+              <span
+                key={item}
+                className={styles.heroBadge}
+              >
                 {item}
               </span>
             ))}
@@ -636,10 +662,17 @@ export default function Home() {
 
       <MissionProgress />
 
+      <HouseholdEmergencyAlert />
+
       {/* MISSIONS */}
-      <section id="missions" className={styles.missionsSection}>
+      <section
+        id="missions"
+        className={styles.missionsSection}
+      >
         <div className={styles.sectionContainer}>
-          <p className={styles.sectionEyebrow}>Dispatch Center</p>
+          <p className={styles.sectionEyebrow}>
+            Dispatch Center
+          </p>
 
           <h2 className={styles.leftSectionHeading}>
             One room. One reset. One tiny victory over chaos.
@@ -668,13 +701,17 @@ export default function Home() {
                   />
                 </div>
 
-                <h3 className={styles.missionTitle}>{mission.title}</h3>
+                <h3 className={styles.missionTitle}>
+                  {mission.title}
+                </h3>
 
                 <p className={styles.missionDescription}>
                   {mission.description}
                 </p>
 
-                <p className={styles.missionLinkText}>Open Mission →</p>
+                <p className={styles.missionLinkText}>
+                  Open Mission →
+                </p>
               </Link>
             ))}
           </div>
@@ -682,10 +719,15 @@ export default function Home() {
       </section>
 
       {/* MEET THE SQUAD */}
-      <section id="squad" className={styles.squadSection}>
+      <section
+        id="squad"
+        className={styles.squadSection}
+      >
         <div className={styles.sectionContainer}>
           <div className={styles.centeredSectionHeader}>
-            <p className={styles.sectionEyebrow}>Meet the Squad</p>
+            <p className={styles.sectionEyebrow}>
+              Meet the Squad
+            </p>
 
             <h2 className={styles.sectionHeading}>
               Every household crisis needs the right hero.
@@ -721,9 +763,13 @@ export default function Home() {
                 </div>
 
                 <div className={styles.squadContent}>
-                  <p className={styles.squadRole}>{member.role}</p>
+                  <p className={styles.squadRole}>
+                    {member.role}
+                  </p>
 
-                  <h3 className={styles.squadName}>{member.name}</h3>
+                  <h3 className={styles.squadName}>
+                    {member.name}
+                  </h3>
 
                   <p className={styles.squadDescription}>
                     {member.description}
@@ -756,9 +802,14 @@ export default function Home() {
       </section>
 
       {/* VILLAINS */}
-      <section id="villains" className={styles.villainsSection}>
+      <section
+        id="villains"
+        className={styles.villainsSection}
+      >
         <div className={styles.sectionContainer}>
-          <p className={styles.sectionEyebrow}>Villains We Fight</p>
+          <p className={styles.sectionEyebrow}>
+            Villains We Fight
+          </p>
 
           <h2 className={styles.leftSectionHeading}>
             Every home has enemies. Some are sticky.
@@ -786,7 +837,9 @@ export default function Home() {
                   className={styles.villainImage}
                 />
 
-                <span>{villain.name}</span>
+                <span>
+                  {villain.name}
+                </span>
               </Link>
             ))}
           </div>
@@ -836,7 +889,13 @@ export default function Home() {
                   />
                 </div>
 
-                <div className={index % 2 === 1 ? "lg:order-1" : ""}>
+                <div
+                  className={
+                    index % 2 === 1
+                      ? "lg:order-1"
+                      : ""
+                  }
+                >
                   <p className={styles.comicReportLabel}>
                     {comic.eyebrow}
                   </p>
@@ -938,7 +997,7 @@ export default function Home() {
                 </p>
 
                 <blockquote className={styles.handyManQuote}>
-                  “Every problem has a solution. Especially this one.”
+                  “Every Problem has a solution. Especially this one!”
                 </blockquote>
 
                 <p className={styles.handyManAside}>
@@ -1012,9 +1071,9 @@ export default function Home() {
             </h2>
 
             <p className={styles.sectionDescription}>
-              Ten minutes still counts. One bag still counts. Cleaning the thing
-              that is bothering you most and ignoring everything else also
-              counts.
+              Ten minutes still counts. One bag still counts. Cleaning the
+              thing that is bothering you most and ignoring everything else
+              also counts.
             </p>
           </div>
 
