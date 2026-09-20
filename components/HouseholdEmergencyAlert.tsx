@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 /* -------------------------------------------------------------------------- */
 /* HOUSEHOLD EMERGENCY ALERT                                                  */
 /* -------------------------------------------------------------------------- */
@@ -9,6 +11,7 @@ const styles = {
   panel:
     "mx-auto max-w-6xl overflow-hidden rounded-[2.5rem] border-4 border-[#2f261f] bg-white shadow-[0_24px_70px_rgba(47,38,31,0.16)]",
 
+  /* HEADER */
   header:
     "flex flex-col gap-4 bg-[#2f261f] px-6 py-6 text-white sm:px-8 md:flex-row md:items-center md:justify-between",
 
@@ -27,6 +30,7 @@ const styles = {
   threatBadge:
     "self-start rounded-full bg-[#f4c96d] px-5 py-3 text-xs font-black uppercase tracking-[0.16em] text-[#2f261f] md:self-auto",
 
+  /* MAIN ALERT CONTENT */
   content:
     "grid lg:grid-cols-[1.1fr_0.9fr]",
 
@@ -45,6 +49,7 @@ const styles = {
   advisory:
     "mt-6 rounded-2xl border-l-4 border-[#b48635] bg-[#fffaf2] px-5 py-4 font-bold leading-7 text-[#4a3b30]",
 
+  /* CURRENT CONDITIONS */
   conditions:
     "border-t border-[#eadcc8] bg-[#fffaf2] p-7 sm:p-9 lg:border-l lg:border-t-0 lg:p-10",
 
@@ -72,6 +77,20 @@ const styles = {
   estimateValue:
     "mt-2 text-2xl font-black",
 
+  /* INCIDENT IMAGE */
+  bulletinImageSection:
+    "border-t border-[#eadcc8] bg-white px-7 py-8 sm:px-9 lg:px-10",
+
+  bulletinImageFrame:
+    "relative mx-auto aspect-[16/9] w-full max-w-5xl overflow-hidden rounded-[1.75rem] border border-[#eadcc8] bg-[#fffaf2] shadow-sm",
+
+  bulletinImage:
+    "object-cover",
+
+  bulletinImageCaption:
+    "mx-auto mt-4 max-w-3xl text-center text-xs font-black uppercase tracking-[0.16em] text-[#8a7766]",
+
+  /* TICKER */
   ticker:
     "border-t-4 border-[#2f261f] bg-[#f4c96d] px-6 py-5 sm:px-8",
 
@@ -151,6 +170,7 @@ export default function HouseholdEmergencyAlert() {
 
         {/* ALERT CONTENT */}
         <div className={styles.content}>
+          {/* BULLETIN */}
           <div className={styles.bulletin}>
             <p className={styles.bulletinLabel}>
               Situation Developing
@@ -211,6 +231,23 @@ export default function HouseholdEmergencyAlert() {
               </p>
             </div>
           </aside>
+        </div>
+
+        {/* INCIDENT IMAGE */}
+        <div className={styles.bulletinImageSection}>
+          <div className={styles.bulletinImageFrame}>
+            <Image
+              src="/household-emergency-spongie.png"
+              alt="Spongie dramatically overreacts to a fitted sheet and missing sock emergency in the laundry room"
+              fill
+              sizes="(max-width: 1023px) 100vw, 1024px"
+              className={styles.bulletinImage}
+            />
+          </div>
+
+          <p className={styles.bulletinImageCaption}>
+            Spongie has assessed the situation as extremely alarming.
+          </p>
         </div>
 
         {/* HEADQUARTERS TICKER */}
