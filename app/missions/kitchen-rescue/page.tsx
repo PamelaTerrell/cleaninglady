@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+
 import Link from "next/link";
+
 import Footer from "@/components/Footer";
+
 import { completeMission } from "@/app/actions";
 
 export const metadata: Metadata = {
@@ -35,6 +38,16 @@ const supplies = [
   "Music, podcast, or dramatic superhero theme",
 ];
 
+const featuredKitchenHeroic = {
+  title: "The Leftover Identification System",
+  image: "/comics/leftover-identification-system.png",
+  alt: "Super Cleaning Lady discovers mystery leftovers while Super Handy Man builds an elaborate forensic station to identify everything in the refrigerator",
+  description:
+    "Super Cleaning Lady had one simple question: What is this? Super Handy Man responded by converting the kitchen into a fully operational leftover forensics laboratory.",
+  punchline:
+    "Nothing was thrown away. But everything is now officially identified.",
+};
+
 const kitchenHeroics = [
   {
     title: "The Coffee Pot Controversy",
@@ -60,74 +73,109 @@ export default function KitchenRescuePage() {
   return (
     <main className="min-h-screen bg-[#fffaf2] text-[#2f261f]">
       {/* HERO */}
-      <section className="mx-auto max-w-5xl px-6 py-10 text-center md:py-14">
-  <Link
-    href="/"
-    className="inline-flex rounded-full border border-[#eadcc8] bg-white px-5 py-2 text-sm font-bold uppercase tracking-[0.18em] text-[#7a5520] transition hover:-translate-y-1 hover:shadow-md"
-  >
-    ← Back to HQ
-  </Link>
+      <section className="mx-auto max-w-5xl px-6 py-7 text-center md:py-9">
+        <Link
+          href="/"
+          className="inline-flex rounded-full border border-[#eadcc8] bg-white px-5 py-2 text-sm font-bold uppercase tracking-[0.18em] text-[#7a5520] transition hover:-translate-y-1 hover:shadow-md"
+        >
+          ← Back to HQ
+        </Link>
 
-  <p className="mt-6 text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
-    Mission File 001
-  </p>
+        <p className="mt-4 text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
+          Mission File 001
+        </p>
 
-  <h1 className="mx-auto mt-3 max-w-4xl text-4xl font-black leading-tight tracking-tight sm:text-5xl md:text-6xl">
-    Kitchen Rescue
-  </h1>
+        <h1 className="mx-auto mt-2 max-w-4xl text-4xl font-black leading-tight tracking-tight sm:text-5xl md:text-6xl">
+          Kitchen Rescue
+        </h1>
 
-  <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-[#6a5a4b] sm:text-lg md:leading-8">
-    For when the counters have disappeared, the sink is staging a rebellion,
-    and something near the toaster is making you question your choices.
-  </p>
-</section>
+        <p className="mx-auto mt-3 max-w-3xl text-base leading-7 text-[#6a5a4b] sm:text-lg">
+          For when the counters have disappeared, the sink is staging a rebellion,
+          and something near the toaster is making you question your choices.
+        </p>
+      </section>
 
-      {/* KITCHEN HEROICS */}
-      <section className="bg-white px-6 py-16">
+      {/* FEATURED KITCHEN HEROIC */}
+      <section className="bg-white px-6 py-8">
         <div className="mx-auto max-w-6xl">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
-              Reports from the kitchen
+          <div className="mb-6 text-center">
+            <p className="text-xs font-black uppercase tracking-[0.24em] text-[#b48635]">
+              Latest Kitchen Heroic
             </p>
 
-            <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
-              Before the mission begins, review the evidence.
-            </h2>
-
-            <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
-              The kitchen has many ways to create chaos. Some involve crumbs.
-              Others involve coffee residue claiming to be flavor.
+            <p className="mt-2 text-lg font-bold text-[#2f261f]">
+              Some people clean out the refrigerator. Super Handy Man prefers
+              forensic analysis.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-8 lg:grid-cols-2">
+          <article className="overflow-hidden rounded-[2.5rem] border border-[#eadcc8] bg-[#fffaf2] shadow-[0_20px_55px_rgba(47,38,31,0.12)]">
+            <div className="bg-white p-3 sm:p-5 md:p-6">
+              <img
+                src={featuredKitchenHeroic.image}
+                alt={featuredKitchenHeroic.alt}
+                className="mx-auto h-auto w-full rounded-[1.75rem]"
+              />
+            </div>
+
+            <div className="p-7 sm:p-9 md:p-10">
+              <p className="text-xs font-black uppercase tracking-[0.22em] text-[#b48635]">
+                Super Handy Man Special Report
+              </p>
+
+              <h2 className="mt-3 text-3xl font-black leading-tight sm:text-4xl">
+                {featuredKitchenHeroic.title}
+              </h2>
+
+              <p className="mt-4 max-w-4xl text-base leading-7 text-[#6a5a4b] sm:text-lg sm:leading-8">
+                {featuredKitchenHeroic.description}
+              </p>
+
+              <blockquote className="mt-6 rounded-2xl border-l-4 border-[#b48635] bg-white p-5 text-base font-bold italic leading-7 shadow-sm sm:text-lg">
+                “{featuredKitchenHeroic.punchline}”
+              </blockquote>
+            </div>
+          </article>
+
+          {/* PREVIOUS KITCHEN HEROICS */}
+          <div className="mx-auto mt-12 max-w-3xl text-center">
+            <p className="text-xs font-black uppercase tracking-[0.24em] text-[#b48635]">
+              More Reports From the Kitchen
+            </p>
+
+            <h2 className="mt-2 text-2xl font-black leading-tight md:text-3xl">
+              Previous incidents remain on file.
+            </h2>
+          </div>
+
+          <div className="mt-8 grid gap-8 lg:grid-cols-2">
             {kitchenHeroics.map((heroic) => (
               <article
                 key={heroic.title}
-                className="overflow-hidden rounded-[2.5rem] border border-[#eadcc8] bg-[#fffaf2] shadow-[0_22px_60px_rgba(47,38,31,0.12)]"
+                className="overflow-hidden rounded-[2.25rem] border border-[#eadcc8] bg-[#fffaf2] shadow-[0_18px_45px_rgba(47,38,31,0.1)]"
               >
-                <div className="bg-white p-4 sm:p-6">
+                <div className="bg-white p-4 sm:p-5">
                   <img
                     src={heroic.image}
                     alt={heroic.alt}
-                    className="h-auto w-full rounded-[1.75rem]"
+                    className="h-auto w-full rounded-[1.5rem]"
                   />
                 </div>
 
-                <div className="p-8 sm:p-10">
-                  <p className="text-sm font-black uppercase tracking-[0.22em] text-[#b48635]">
+                <div className="p-7 sm:p-8">
+                  <p className="text-xs font-black uppercase tracking-[0.22em] text-[#b48635]">
                     Kitchen Heroics
                   </p>
 
-                  <h3 className="mt-4 text-3xl font-black leading-tight md:text-4xl">
+                  <h3 className="mt-3 text-2xl font-black leading-tight md:text-3xl">
                     {heroic.title}
                   </h3>
 
-                  <p className="mt-5 text-lg leading-8 text-[#6a5a4b]">
+                  <p className="mt-4 text-base leading-7 text-[#6a5a4b]">
                     {heroic.description}
                   </p>
 
-                  <blockquote className="mt-6 rounded-2xl border-l-4 border-[#b48635] bg-white p-6 text-lg font-bold italic leading-8 shadow-sm">
+                  <blockquote className="mt-5 rounded-2xl border-l-4 border-[#b48635] bg-white p-5 font-bold italic leading-7 shadow-sm">
                     “{heroic.punchline}”
                   </blockquote>
                 </div>
@@ -135,7 +183,7 @@ export default function KitchenRescuePage() {
             ))}
           </div>
 
-          <div className="mt-10 text-center">
+          <div className="mt-8 text-center">
             <Link
               href="/invisible-heroics"
               className="inline-flex rounded-full border border-[#d8c6ad] bg-[#fffaf2] px-7 py-4 text-sm font-black uppercase tracking-[0.16em] text-[#2f261f] shadow-sm transition hover:-translate-y-1 hover:shadow-md"
@@ -147,7 +195,7 @@ export default function KitchenRescuePage() {
       </section>
 
       {/* MISSION DETAILS */}
-      <section className="px-6 py-16">
+      <section className="px-6 py-12">
         <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
           <div className="rounded-[2rem] border border-[#eadcc8] bg-white p-8 shadow-sm">
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
@@ -192,7 +240,7 @@ export default function KitchenRescuePage() {
       </section>
 
       {/* SUPPLIES */}
-      <section className="px-6 py-16">
+      <section className="px-6 py-12">
         <div className="mx-auto max-w-6xl">
           <div className="rounded-[2rem] bg-[#2f261f] p-8 text-white shadow-2xl md:p-10">
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#f4dfb4]">
@@ -218,7 +266,7 @@ export default function KitchenRescuePage() {
       </section>
 
       {/* MISSION STEPS */}
-      <section className="bg-white px-6 py-16">
+      <section className="bg-white px-6 py-12">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
           <div className="rounded-[2rem] border border-[#eadcc8] bg-[#fffaf2] p-8 shadow-sm md:p-10">
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
@@ -273,7 +321,7 @@ export default function KitchenRescuePage() {
       </section>
 
       {/* OPTIONAL DEEP-CLEAN NOTE */}
-      <section className="px-6 py-16">
+      <section className="px-6 py-12">
         <div className="mx-auto max-w-4xl rounded-[2rem] border border-[#eadcc8] bg-white p-8 shadow-sm md:p-10">
           <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b48635]">
             Bonus Heroics
@@ -294,7 +342,7 @@ export default function KitchenRescuePage() {
       </section>
 
       {/* VICTORY */}
-      <section className="px-6 py-16">
+      <section className="px-6 py-12">
         <div className="mx-auto max-w-4xl rounded-[2rem] bg-white p-8 text-center shadow-sm md:p-12">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#b48635]">
             Victory Condition
